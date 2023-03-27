@@ -1,0 +1,93 @@
+.slick-slide {
+  flex: 1;
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 3; 
+  top: 50%;
+  margin: -15px 0 0 0; 
+  padding: 10px;
+  width: 30px;
+  height: 30px; 
+  font-size: 0; 
+  border: none;
+  border-top: 8px solid var(--main-bg);
+  border-right: 8px solid var(--main-bg);
+  background-color: transparent;
+}
+
+.slick-arrow.slick-prev{
+  left: 40px; 
+  transform: rotate(-135deg);
+}
+
+.slick-arrow.slick-next{
+  right: 40px; 
+  transform: rotate(45deg);
+}
+
+/* gallery-slider */
+.gallery__slider .slick-slide {
+  height: 300px;
+}
+
+/* slider-double stair-slider */
+.slider-double {
+  width: calc(100% - 390px);
+  height: 317px;
+}
+
+.slider-double .slick-slide,
+.heat__slider div,
+.electricity__slider div {
+  height: 320px;
+}
+
+.STAIR__img,
+.heat__img,
+.electricity__img {
+  padding: 0 30px;
+}
+
+@media (max-width: 1300px) {
+  .slick-arrow.slick-prev {
+    left: 0;
+  }
+
+  .slick-arrow.slick-next {
+    right: 0;
+  } 
+ } 
+
+
+@media (max-width: 969px) {
+  .slick-arrow.slick-prev {
+    left: 70px;
+  }
+
+  .slick-arrow.slick-next {
+    right: 70px;
+  } 
+
+  .slider-double {
+    width: calc(100% - 30px);
+    height: 317px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-arrow.slick-prev {
+    left: 10px;
+  }
+
+  .slick-arrow.slick-next {
+    right: 10px;
+  } 
+
+  .STAIR__img, 
+  .heat__img, 
+  .electricity__img {
+	  padding: 0;
+}
+ } 
