@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Немецкий дог</title>
+	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+	
+	<!-- style from lib -->
+	<style>
+		.csslider > ul {
+			top: auto;
+			left: auto;
+			border: 0;
+			padding: 10px 0;
+		}
+		.csslider > .navigation {
+			width: 320px;
+			left: calc(50% - 160px);
+		}
+		.csslider > .navigation > div { 
+			width: auto;
+			margin-left: auto;
+		}
+		.csslider > .navigation > div label { 
+			margin: 10px 5px 0 0;
+		}
+		<!--@media print {#ghostery-tracker-tally {display:none !important}}-->
+	</style>
+	
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/effects.css">
+	<link rel="stylesheet" href="css/accordion.css">
+	<link rel="stylesheet" href="css/magnify.css">
+	<link rel="stylesheet" href="css/card.css">
+
+	 <!-- slick slider -->
+	<!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+	<!-- Remember to include jQuery :) -->
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/focus-visible.min.js"></script> 
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>-->
+
+	<script defer src="js/swiper.js"></script>
+	<script defer src="js/move-background.js"></script>
+	<script defer src="js/burger.js"></script>
+	<script defer src="js/lights.js"></script>
+	<script defer src="js/magnify.js"></script>
+	<script defer src="js/electricyty.js"></script>
+	<script defer src="js/heat.js"></script>
+	<link rel="stylesheet" href="css/swiper.css">
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="add-swiper-container">
+			<div class="header__top header-top">
+				<div class="container header-top__container">
+					<button class="btn-reset cursor menu-btn__open" id="burger-button" aria-label="Меню">
+						<div class="burger-button__icon"></div>
+					</button>
+					<div class="menu__container">
+						<button class="btn-reset cursor menu-btn__close">
+							<span class="cross-sign"></sp>
+						</button>
+						<ul class="header-top__list" id="header-top__list">
+							<li class="header-top__item">
+								<a href="#lib" class="cursor header-top__link flowing-scroll">Библиотека</a>
+							</li>
+							<!--<li class="header-top__item">
+								<a href="#heat" class="cursor header-top__link flowing-scroll">Отопление и водоснабжение</a>
+							</li>
+							<li class="header-top__item">
+								<a href="#electricity" class="cursor header-top__link flowing-scroll">Электрика</a>
+							</li>
+							<li class="header-top__item">
+								<a href="#lights" class="cursor header-top__link flowing-scroll">Освещение</a>
+							</li>
+							<li class="header-top__item">
+								<a href="#documents" class="cursor header-top__link flowing-scroll">Договорная документация</a>
+							</li>
+							<li class="header-top__item">
+								<a href="#garden" class="cursor header-top__link flowing-scroll">Сад</a>
+							</li>
+							<li class="header-top__item">
+								<a href="#safety" class="cursor header-top__link flowing-scroll">Автоматизация и безопасность</a>
+							</li>
+							<li class="header-top__item">
+								<a href="#footer" class="cursor header-top__link flowing-scroll">Контакты</a>
+							</li>-->
+						</ul>
+					</div>
+					<img class="header-top__img" src="img/logo.png" alt="Логотип">
+							<!--<a class="header-top__download" href="img/portfolio.pdf" download></a>-->
+					<a class="header-top__download"></a>
+				</div>
+			</div>	
+		</div>
+	</header>
+	<main>
+		<section class="gallery" id="gallery">
+			<div class="container gallery__container">
+				<div class="swipe" id="app">
+					<div class="sw__left">
+						<div class="f-carousel" id="Carousel-1">
+							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-1sw.jpg">
+								<div class="sw__img"><img src="./img/1-1sw.jpg"></div>
+							</div>
+							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-2sw.jpg">
+								<div class="sw__img"><img src="./img/1-2sw.jpg"></div>
+							</div>
+							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-3sw.jpg">
+								<div class="sw__img"><img src="./img/1-3sw.jpg"></div>
+							</div>
+							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-4sw.jpg">
+								<div class="sw__img"><img src="./img/1-4sw.jpg"></div>
+							</div>
+							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-5sw.jpg">
+								<div class="sw__img"><img src="./img/1-5sw.jpg"></div>
+							</div>
+							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-6sw.jpg">
+								<div class="sw__img"><img src="./img/1-6sw.jpg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="sw__right">
+						<div class="sw__right-row">
+							<div class="f-carousel" id="Carousel-2">
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-1sw.jpg">
+									<div class="sw__img"><img src="./img/2-1sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-2sw.jpg">
+									<div class="sw__img"><img src="./img/2-2sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-3sw.jpg">
+									<div class="sw__img"><img src="./img/2-3sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-4sw.jpg">
+									<div class="sw__img"><img src="./img/2-4sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-5sw.jpg">
+									<div class="sw__img"><img src="./img/2-5sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-6sw.jpg">
+									<div class="sw__img"><img src="./img/2-6sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-7sw.jpg">
+									<div class="sw__img"><img src="./img/2-7sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-8sw.jpg">
+									<div class="sw__img"><img src="./img/2-8sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-9sw.jpg">
+									<div class="sw__img"><img src="./img/2-9sw.jpg"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sw__right-row">
+							<div class="f-carousel" id="Carousel-3">
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-1sw.jpg">
+									<div class="sw__img"><img src="./img/3-1sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-2sw.jpg">
+									<div class="sw__img"><img src="./img/3-2sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-3sw.jpg">
+									<div class="sw__img"><img src="./img/3-3sw.jpg"></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-4sw.jpg">
+									<div class="sw__img"><img src="./img/3-4sw.jpg"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script src="./js/swiper.js"></script>
+			</div>
+		</section>
+		
+		<!-- from lib -->
+	<section class="lib" id="lib">
+		<div class="container">
+		<h2 class="second-heading heat__heading">Библиотека</h2>
+			<div id="slider1" class="csslider infinity"> 
+					<input name="slides" id="slides_1" type="radio"> 
+					<input name="slides" id="slides_2" type="radio"> 
+					<input name="slides" id="slides_3" type="radio" checked="checked"> 
+					<input name="slides" id="slides_4" type="radio"><input name="slides" id="slides_5" type="radio">
+					<input name="slides" id="slides_6" type="radio"><input name="slides" id="slides_7" type="radio">
+					<input name="slides" id="slides_8" type="radio"><input name="slides" id="slides_9" type="radio">
+					<input name="slides" id="slides_10" type="radio"><input name="slides" id="slides_11" type="radio">
+					<input name="slides" id="slides_12" type="radio"><input name="slides" id="slides_13" type="radio">
+					<input name="slides" id="slides_14" type="radio"><input name="slides" id="slides_15" type="radio">
+					<input name="slides" id="slides_16" type="radio"><input name="slides" id="slides_17" type="radio">
+					<input name="slides" id="slides_18" type="radio"><input name="slides" id="slides_19" type="radio">
+					<input name="slides" id="slides_20" type="radio"><input name="slides" id="slides_21" type="radio">
+					<input name="slides" id="slides_22" type="radio"><input name="slides" id="slides_23" type="radio">
+					<input name="slides" id="slides_24" type="radio"><input name="slides" id="slides_25" type="radio">
+					<input name="slides" id="slides_26" type="radio"><input name="slides" id="slides_27" type="radio">
+					<input name="slides" id="slides_28" type="radio"><input name="slides" id="slides_29" type="radio">
+					<input name="slides" id="slides_30" type="radio"><input name="slides" id="slides_31" type="radio">
+					<input name="slides" id="slides_32" type="radio">
+					<ul>
+					  <li> 
+					  <big><big><big>GDCA standard 1995</big></big></big>
+						<p>перевод<br>
+						<br>
+						</p>
+						<a href="titles/GDCA_standard_1995.pdf" target="_blank">
+						<img style="border: 0px solid ; width: 201px; height: 228px;" alt="title" src="covers/gdca_logo.png"></a> 
+						</li><li> <big><big><big>FCI standard 235</big></big></big>
+						<p><br>
+						<br>
+						</p>
+						<a href="titles/235g02-en.pdf" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 228px;" alt="title" src="covers/fci-logo-png-transparent.png"></a> 
+						</li><li> <big><big><big>FCI standard 235</big></big></big>
+						<p>Перевод<br>
+						<br>
+						</p>
+						<a href="https://gretdain.github.io/gretdain/titles/FCI-235-2012RU.pdf" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 228px;" alt="title" src="covers/nkp.png"></a> 
+						</li><li>  <big><big><big>Complete Antology</big></big></big>
+						<p><br>
+						<br>
+						</p>
+						<a href="https://disk.yandex.ru/d/tz1UTH8PbQo8LQ" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 340px;" alt="title" src="covers/gd_compl_ant.jpg"></a> 
+						</li><li> <big><big><big>GDCA Illustrated Standard</big></big></big>
+						<p>1976<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/3Tub1n3TI9ngEw" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 160px;" alt="title" src="covers/gauthier1976.png"></a> 	
+						
+						</li><li> <big><big><big>GDCA bulletin</big></big></big>
+						<p>Q4 2017<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/1VPwLsjf2V0feQ" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 160px;" alt="title" src="covers/bulletin-q4-2017.png"></a> 	
+						</li><li>  <big><big><big>GD: Past and Present</big></big></big>
+						<p>by M.Mackenzie<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/d/tz1UTH8PbQo8LQ" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/past_and_present.jpg"></a> 		
+						</li><li> <big><big>25 вопросов</big></big>
+						<p>будущему хозяину<br>
+						<br>
+						</p>
+						<a href="/titles/cv.html" target="_blank">
+						<img style="border: 0px solid ; width: 120px; height: 120px;" alt="title" src="covers/doc.png"></a> 	
+						</li><li> <big><big>Договор передачи</big></big>
+						<p>животного<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/bCnGF6a23zLRDg" target="_blank">
+						<img style="border: 0px solid ; width: 120px; height: 120px;" alt="title" src="covers/doc.png"></a>
+						</li><li><big><big><big>Немецкий дог</big></big></big>
+						<p>В.В. Уваров<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/Rqx_lfmRhtOeRQ" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/uvarov.jpg"></a> 		
+						</li><li> <big><big><big>How to raise and train</big></big></big>
+						<p>by L.Basquette<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/QDD3wdkNLOdetg" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/raise_and_train.jpg"></a> 		
+						</li><li> <big><big><big>О самой большой</big></big></big>
+						<p>и красивой собаке<br>
+						Т.Озерова<br>
+						</p>
+						<a href="https://yadi.sk/d/tbV2IBDZcA2Aew" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/ozerova.jpg"></a> 	
+						</li><li> <big><big><big>The Danes</big></big></big>
+						<p><big><big>of Send Manor</big></big><br>
+						by R.Heal<br>
+						</p>
+						<a href="https://yadi.sk/d/0rwBy7eSyrU02A" target="_blank">
+						<img style="border: 0px solid ; width: 200px; height: 320px;" alt="title" src="covers/send_manor.jpg"></a>
+						</li><li> <big><big><big>Your Great Dane</big></big></big>
+						<p>by L.Basquette<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/d/VONmBoJt-_PKuw" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/your_great_dane.jpg"></a>
+						</li><li> <big><big><big>Немецкий дог</big></big></big>
+						<p>Ф.Краутвюрст<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/d/4Ex6a2aC_wutjw" target="_blank">
+						<img style="border: 0px solid ; width: 200px; height: 320px;" alt="title" src="covers/krau_rus.jpg"></a>
+						 </li><li> <big><big><big>Dane quarterly</big></big></big>
+						<p>winter/spring 1992<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/d/bwXD_xjB8Lg21w" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/dq_jan_1992.jpg"></a> 
+						</li><li>  <big><big><big>Deutsche Dogge</big></big></big>
+						<p>by F.Krautwurst<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/d/eIja9TJG1ndfmw" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/krau_deu.jpg"></a>  
+						</li><li>  <big><big><big>Great Dane review</big></big></big>
+						<p>January 2014<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/d/na9xTkdmZjDyjA" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/gdr_jan_2014.jpg"></a>  
+						</li><li> <big><big><big>Great Dane club</big></big></big>
+						<p>annual 2018<br>
+						by Meadle West England<br>
+						</p>
+						<a href="https://yadi.sk/d/ZnhSjjJNLBuhgA" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/mwe_2018.jpg"></a>  
+						</li><li> <big><big><big>Great Dane reporter</big></big></big>
+						<p>Jan/Feb 1991<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/d/LJf1-1NQ2nYadQ" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/gdrep_jan_1991.jpg"></a> 
+						</li><li> <big><big><big>Dane World</big></big></big>
+						<p>May/June 2003<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/j1d4tcx4w9YEDw" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/dw_may_2003.jpg"></a> 
+						
+						</li><li> <big><big><big>Great Dane reporter</big></big></big>
+						<p>Jul/Aug 1990<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/4QOTyWTJ7ntGFQ" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/gdrep_jul_1990.jpg"></a> 
+						
+						</li><li>  <big><big><big>Dane World</big></big></big>
+						<p>Nov/Dec 2002<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/4U2rKmsK2V4Lkw" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/dw_nov_2002.jpg"></a>  
+						
+						</li><li> <big><big><big>Great Dane reporter</big></big></big>
+						<p>May/Jun 1990<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/XhlwpodBrZ56XA" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/gdrep_may_1990.jpg"></a>  
+						
+						</li><li> <big><big><big>Great Dane reporter</big></big></big>
+						<p>Sep/Oct 1990<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/_TxqVZX0MlAR1Q" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/gdrep_sep_1990.jpg"></a>   
+						
+						</li><li>  <big><big><big>Dane World</big></big></big>
+						<p>Sep/Oct 2003<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/yyEYSsz9PKIJJQ" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/dw_sep_2003.jpg"></a>   
+						
+						</li><li> <big><big><big>GDCA</big></big></big>
+						<p>year book<br>
+						1957-1958<br>
+						</p>
+						<a href="https://yadi.sk/d/XypWjzXyfgd21g" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/gdca_yb_1957.jpg"></a>   
+						
+						</li><li> <big><big><big>GDCA</big></big></big>
+						<p>year book<br>
+						1959-1960<br>
+						</p>
+						<a href="https://yadi.sk/i/gG5QWF1cQgvncg" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/gdca_yb_1959.jpg"></a>    
+						
+						</li><li> <big><big><big>Dane World</big></big></big>
+						<p>May/June 2002<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/Ypb2-ixgPcA-Ag" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/dw_may_2002.jpg"></a>  
+						
+						</li><li> <big><big><big>Almost Human</big></big></big>
+						<p>by B.Woodhouse<br>
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/-VRWRnaQeuYHIQ" target="_blank">
+						<img style="border: 0px solid ; width: 200px; height: 320px;" alt="title" src="covers/almost_human.jpg"></a> 
+						
+						
+						</li><li> <big><big><big>Great Dane Review</big></big></big>
+						<p>July 2016<br>
+						<br>
+						</p>
+						<a href="/titles/gdr_jul_2016.pdf" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/gdr_jul_2016.jpg"></a> 
+						
+						</li><li> Новое поступление</big></big></big>
+						<p><br>
+						<br>
+						</p>
+						<a href="" target="_blank">
+						<img style="border: 0px solid ; width: 240px; height: 320px;" alt="title" src="covers/_.jpg"></a> 
+						
+						</li></ul>
+					
+				<div class="arrows" style="left: 10px; width: 300px; top: 199px; height: 37px;" > 
+					<label for="slides_1"></label> 
+					<label for="slides_2"></label>
+					<label for="slides_3"></label> 
+					<label for="slides_4"></label> 
+					<label for="slides_5"></label> 
+					<label for="slides_6"></label>
+					<label for="slides_7"></label>
+					<label for="slides_8"></label>
+					<label for="slides_9"></label>
+					<label for="slides_10"></label>
+					<label for="slides_11"></label>
+					<label for="slides_12"></label>
+					<label for="slides_13"></label>
+					<label for="slides_14"></label>
+					<label for="slides_15"></label>
+					<label for="slides_16"></label>
+					<label for="slides_17"></label>
+					<label for="slides_18"></label>
+					<label for="slides_19"></label>
+					<label for="slides_20"></label>
+					<label for="slides_21"></label>
+					<label for="slides_22"></label>
+					<label for="slides_23"></label>
+					<label for="slides_24"></label>
+					<label for="slides_25"></label>
+					<label for="slides_26"></label>
+					<label for="slides_27"></label>
+					<label for="slides_28"></label>
+					<label for="slides_29"></label>
+					<label for="slides_30"></label>
+					<label for="slides_31"></label>
+					<label for="slides_32"></label>
+					<label for="slides_1" class="goto-first"></label>
+					<label for="slides_32" class="goto-last"></label> 
+				</div>
+				
+				<div class="navigation">
+					<div> 
+						<label for="slides_1"></label> 
+						<label for="slides_2"></label> 
+						<label for="slides_3"></label> 
+						<label for="slides_4"></label> 
+						<label for="slides_5"></label> 
+						<label for="slides_6"></label>
+						<label for="slides_7"></label>
+						<label for="slides_8"></label>
+						<label for="slides_9"></label>
+						<label for="slides_10"></label>
+						<label for="slides_11"></label>
+						<label for="slides_12"></label>
+						<label for="slides_13"></label>
+						<label for="slides_14"></label>
+						<label for="slides_15"></label>
+						<label for="slides_16"></label>
+						<label for="slides_17"></label>
+						<label for="slides_18"></label>
+						<label for="slides_19"></label>
+						<label for="slides_20"></label>
+						<label for="slides_21"></label>
+						<label for="slides_22"></label>
+						<label for="slides_23"></label>
+						<label for="slides_24"></label>
+						<label for="slides_25"></label>
+						<label for="slides_26"></label>
+						<label for="slides_27"></label>
+						<label for="slides_28"></label>
+						<label for="slides_29"></label>
+						<label for="slides_30"></label>
+						<label for="slides_31"></label>
+						<label for="slides_32"></label>
+					</div>	
+				</div>
+			</div>
+		</div>
+
+<!--<script src="index_files/app.js" type="text/javascript"></script>-->
+	</section>
+	<!-- end lib -->
+	
+		<section class="heat" id="heat">
+			<div class="container">
+				<h2 class="second-heading heat__heading">Отопление и водоснабжение</h2>
+				<div class="heat__container">
+					<div class="electricity__text">
+						<p class="heat__paragraph">Теплотехнический расчет. Расчета теплопотерь по помещениям дома через ограждающие конструкции (наружные стены, пол, кровлю, окна и двери)</p>
+						<p class="heat__paragraph">Обоснование выбора способа отопления и параметров теплоснабжения</p>
+						<p class="heat__paragraph">Выполнение тепломеханической схемы котельной с размещением оборудования</p>
+						<p class="heat__paragraph heat__change-visibility">Выполнение схемы радиаторного отопления на поэтажных планах дома с расстановкой радиаторов, коллекторов и привязкой к трубопроводам отопления</p>
+						<p class="heat__paragraph heat__change-visibility">Выполнение схемы теплого пола на поэтажных планах дома</p>
+						<p class="heat__paragraph heat__change-visibility">Выполнение схем водопровода и канализации на поэтажных планах дома с размещением коллекторов водопровода, указанием трубопроводов и арматуры водоснабжения и канализации</p>
+						<p class="heat__paragraph heat__change-visibility">Расчет системы очистки на подаче воды, рекомендации по выбору оборудования</p>
+						<p class="heat__paragraph heat__change-visibility">Расчет системы очистки канализации, рекомендации по выбору оборудования</p>
+						<p class="heat__paragraph heat__change-visibility">Монтаж системы отопления, водоснабжения, канализации</p>
+						<p class="heat__paragraph heat__change-visibility">Техническое обслуживание системы отопления, водоснабжения, канализации</p>
+						<a class="heat__paragraph heat__change-visibility" href="https://www.forumhouse.ru/entries/3029/" class="lib__link" target="_blank">Методика расчета</a>
+						<a class="heat__paragraph heat__change-visibility" href="https://lovial.narod.ru/statyi/teplo/TepLoViAl.html" class="lib__link" target="_blank">Калькулятор расчета</a>
+						<button class="btn-reset heat__btn cursor">Читать дальше...</button>
+						
+					</div>
+					<!--<div class="slider-double heat__slider">
+						<div><img class="heat__img minimized" src="img/heat-1.png" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-2.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-3.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-4.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-5.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-6.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-7.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-8.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-9.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-10.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-11.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-12.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-13.jpg" alt="lib"></div>
+						<div><img class="heat__img minimized" src="img/heat-14.jpg" alt="lib"></div>
+					</div>-->
+				</div>		
+			</div>
+		</section>
+		<section class="electricity" id="electricity">
+			<div class="container">
+				<h2 class="second-heading electricity__heading">Электрика</h2>
+				<div class="electricity__container">
+					<div class="electricity__text">
+						<p class="electricity__paragraph">Подготовка эскизного (рабочего) проекта для электроснабжения до 0,4кВ</p>
+						<p class="electricity__paragraph">Разработка принципиальных схем электроснабжения электроприемников от основного и резервного источников электроснабжения</p>
+						<p class="electricity__paragraph">Разработка принципиальной схемы сети освещения</p>
+						<p class="electricity__paragraph electricity__change-visibility">Разработка схемы заземления и молниезащиты;</p>
+						<p class="electricity__paragraph electricity__change-visibility">Подготовка поэтажного плана сетей электроснабжения и освещения;</p>
+						<p class="electricity__paragraph electricity__change-visibility">Разработка схемы защиты нагрузки;</p>
+						<p class="electricity__paragraph electricity__change-visibility">Монтаж электрической арматуры, прокладка кабелей, сборка распределительного щитка;</p>
+						<p class="electricity__paragraph electricity__change-visibility">Тестирование электрических соединений;</p>
+						<p class="electricity__paragraph electricity__change-visibility">Техническое обслуживание электропроводки и распределительных устройств</p>
+						<p class="electricity__paragraph electricity__change-visibility">Аварийное восстановление электроснабжения внутри помещений</p>
+						<button class="btn-reset electriity__btn cursor">Читать дальше...</button>
+					</div>
+					<!--<div class="slider-double electricity__slider">
+						<div><img class="electricity__img minimized" src="img/elec-1.png" alt="electricity"></div>
+						<div><img class="electricity__img minimized" src="img/elec-2.jpg" alt="electricity"></div>
+						<div><img class="electricity__img minimized" src="img/elec-3.jpg" alt="electricity"></div>
+						<div><img class="electricity__img minimized" src="img/elec-4.jpg" alt="electricity"></div>
+						<div><img class="electricity__img minimized" src="img/elec-5.jpg" alt="electricity"></div>
+						<div><img class="electricity__img minimized" src="img/elec-6.jpg" alt="electricity"></div>
+						<div><img class="electricity__img minimized" src="img/elec-7.jpg" alt="electricity"></div>
+						<div><img class="electricity__img minimized" src="img/elec-8.jpg" alt="electricity"></div>
+						<div><img class="electricity__img minimized" src="img/elec-9.png" alt="electricity"></div>
+					</div>-->
+				</div>		
+			</div>
+		</section>
+		<section class="lights" id="lights">
+			<div class="container lights__container">
+				<h2 class="second-heading lights__heading">Освещение</h2>
+				<div class="lights__cards-container">
+					<div class="llights__cards" data-mobile="false">
+						<ul class="lights__list">
+							<li class="lights__item sw">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/light-1.jpg" alt="light">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Определение типа осветительных приборов (лента, люстра, панель)</p>
+								</div>
+							</li>
+							<li class="lights__item sw">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/light-2.jpg" alt="light">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Дизайн осветительных элементов и визуализация</p>
+								</div>
+							</li>
+							<li class="lights__item sw">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/light-3.jpg" alt="light">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Светотехнический и электротехнический расчет</p>
+								</div>
+							</li>
+							<li class="lights__item sw">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/light-4.jpg" alt="light">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Изготовление осветительных конструкций</p>
+								</div>
+							</li>
+							<li class="lights__item sw">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/light-5.jpg" alt="light">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Монтаж светильников и элементов управления</p>
+								</div>
+							</li>
+							<li class="lights__item sw">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/light-6.jpg" alt="light">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Ландшафтное освещение</p>
+								</div>
+							</li>
+						</ul>	
+					</div>
+				</div>
+				<div class="lights__btn-container">
+					<button class="btn lights__btn cursor">
+						Еще
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="documents" id="documents">
+			<div class="container documents__container">
+				<h2 class="second-heading documents__heading">Договорная документация</h2>
+				<div class="accordion accordion-flush accordion__documents" id="accordionFlushExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingOneSafety">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneSafety" aria-expanded="false" aria-controls="flush-collapseOneSafety">
+								Формулирование общих, специальных и особых условий договоров
+							</button>
+						</h2>
+						<div id="flush-collapseOneSafety" class="accordion-collapse collapse" aria-labelledby="flush-headingOneSafety" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								Договор - основной юридический акт, из которого возникают обязательственные правоотношения. Он является главным средством регулирования товарно-денежных связей, определяющим содержание правоотношений, права и обязанности его участников. Общие положения о договорах, понятие и условия договора, их заключение, изменение и расторжение в соответствии с подразделом 2 раздела I первой части ГК РФ. Обязательным условием договоров, предусматривающих поставку товаров (выполнение работ или оказание услуг), является определение срока исполнения обязательств по расчетам за поставленные по договору товары (выполненные работы, оказанные услуги). При включении в договор оговорки, предусматривающей конкретный перечень обстоятельств, наступление которых освобождает от ответственности при нарушении обязательства, арбитражные суды могут принять решения о взыскании со стороны убытков, явившихся следствием обстоятельств, находившихся вне контроля, если они не предусмотрены перечнем, содержавшимся в договоре.<br>
+								Любой договор условно можно разделить на четыре части:<br>
+								- Преамбулу (или вводную часть).<br>
+								- Предмет договора.<br>
+								- Дополнительные условия договора.<br>
+								- Прочие условия договора.<br>
+
+								Преамбула (или вводная часть).<br>
+								1. Наименование договора (договор купли-продажи, поставки, комиссии, транспортных услуг, аренды, совместной деятельности и пр.).<br>
+								Сущность договора вытекает не из названия, а из его содержания.<br>
+								2. Дата подписания договора. Ввключает число, месяц и год подписания. Со всеми этими реквизитами связано правильное установление момента заключения договора и окончания срока его действия, а значит, и определенные юридические последствия.<br>
+								3. Место подписания договора (город или населенный пункт). По законодательству того места, где совершается сделка, определяются: а) правоспособность и дееспособность лиц, заключивших сделку, б) форма сделки, в) обязательства, возникшие из сделки ( в последнем случае стороны в договоре могут предусмотреть иное положение ст.432 ГК РФ).<br>
+								4. Полное наименование контрагента, под которым последний зарегистрирован в реестре государственной регистрации, а также сокращенное название сторон по договору ("Заказчик", "Покупатель" и пр.).<br>
+								5. Должности, фамилии, имена и отчества лиц, подписывающих договор, указания на их полномочия на подписание договора.<br>
+								Предмет договора<br>
+								Существенные условия:<br>
+								1. Предмет договора, т.е. о чем конкретно договариваются стороны.<br>
+								2. Обязанности и права сторон по договору.<br>
+								3. Цена договора и порядок расчетов и др.<br>
+								5. Срок выполнения сторонами своих обязательств.<br>
+								Дополнительные условия договора<br>
+								1. Срок действия договора. Даже если названы сроки выполнения сторонами обязательств, надлежит знать, когда договор прекращает свое действие и когда можно будет предъявить соответствующие требования к контрагенту.<br>
+								2. Ответственность сторон. Определяются различного рода санкции в виде пени, неустойки, штрафа, уплачиваемых контрагентом, не выполнившим своих обязательств в отношении одного из согласованных условий. Против каждой обязанности стороны должна быть предусмотрена соответствующая ответственность, в основном в виде штрафной неустойки. Это означает, что убытки при ненадлежащем исполнении обязательств контрагента могут быть взысканы с него сверх неустойки. Если такой вид ответственности отсутствует, неустойка является зачетной и убытки с контрагента можно будет взыскать в части, не покрытой неустойкой (ст. 394 ГК РФ).<br>
+								3. Способы обеспечения обязательств (гл.23 ГК РФ). Российское гражданское законодательство предусматривает следующие основные способы обеспечения обязательств (ст.329 ГК РФ): неустойка, залог, удержание имущества должника, поручительство, банковская гарантия, задаток. Кроме этого могут быть предусмотрены и другие способы, предусмотренные законом или договором.<br>
+								4. Основания изменения или расторжения договора в одностороннем порядке (гл. 29 ГК РФ).<br>
+								5. Условия о конфиденциальности информации по договору.<br>
+								6. Порядок разрешения споров между сторонами по договору. Все споры между сторонами разрешаются в соответствии с законодательством Российской Федерации в арбитражном суде. Однако стороны могут установить и иное положение, в частности, предусмотреть разбирательство споров не в арбитражном, а в третейском суде, создаваемом либо самими сторонами, либо в соответствии с регламентом какого-либо постоянно действующего третейского суда.<br>
+								7. Особенности перемены лиц по договору (уступка права требования по договору может быть осуществлена только с согласия должника (ст. 388 ГК РФ).<br>
+								Прочие условия договора<br>
+								1. Законодательство, регулирующее отношения сторон.<br>
+								2. Особенности согласований связи между сторонами. Для каждой стороны указываются: а) лица, полномочные давать информацию и решать вопросы, относящиеся к исполнению договора, б) сроки связи между сторонами,  в) способы связи: телефон, электронная почта с указанием номеров и иных данных.<br>
+								3. Судьба преддоговорной работы и ее результатов после подписания договора. Стороны устанавливают, что после подписания настоящего договора все предварительные переговоры по нему, переписка, предварительные соглашения и протоколы о намерениях теряют силу.<br>
+								4. Реквизиты сторон: а) почтовые реквизиты, б) местонахождение (адрес) предприятия, в) банковские реквизиты сторон, г) отгрузочные реквизиты (для железнодорожных отправок, для контейнеров, для мелких отправок).<br>
+								5. Количество экземпляров договора.<br>
+								6. Подписи сторон с приложением каждой организации (предприятия).<br>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingTwoSafety">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoSafety" aria-expanded="false" aria-controls="flush-collapseTwoSafety">
+								Оформление документов
+							</button>
+						</h2>
+						<div id="flush-collapseTwoSafety" class="accordion-collapse collapse" aria-labelledby="flush-headingTwoSafety" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								В новом ГОСТ Р 7.0.97-2016 появился раздел Раздел «Общие требования к созданию документов». В нем перечислены основные правила, которые следует соблюдать при создании документов (шрифты, интервалы, элементы форматирования, нумерация страниц и др.).<br>
+								Основные положения этого раздела:<br>
+								• документы могут создаваться на бумажном носителе и в электронной форме с соблюдением установленных правил оформления документов;<br>
+								• предпочтительными гарнитурами и размерами шрифтов для реквизитов документа являются: Times New Roman № 13, 14; Arial № 12, 13; Verdana № 12, 13; Calibri № 14 и приближенные к ним;<br>
+								• вторую и последующие страницы документа нумеруют (номер страницы проставляются посередине верхнего поля документа на расстоянии не менее 10 мм от верхнего края листа);<br>
+								• допускается создание документов на лицевой и оборотной сторонах листа;<br>
+								• абзацный отступ текста документа составляет 1,25 см;<br>
+								• текст документа печатается через 1–1,5 межстрочных интервала, многострочные реквизиты печатаются через один межстрочный интервал;<br>
+								• текст документа выравнивается по ширине листа (по границам левого и правого полей документа);<br>
+								• допускается выделение реквизитов «Адресат», «Заголовок к тексту» или «Подпись», а также отдельных фрагментов текста полужирным шрифтом.<br>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingThreeSafety">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeSafety" aria-expanded="false" aria-controls="flush-collapseThreeSafety">
+								Корректировка технической составляющей документа
+							</button>
+						</h2>
+						<div id="flush-collapseThreeSafety" class="accordion-collapse collapse" aria-labelledby="flush-headingThreeSafety" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								Изменения в бумажные копии вносят заменой старых копий новыми, снятыми с подлинников или контрольных копий, исправленных по извещению об изменении. В случае нецелесообразности замены бумажных копий допускается исправлять их черными тушью, чернилами или пастой по правилам, установленным для подлинников. В этом случае замену (перевыпуск) бумажных копий осуществляют с пери	одичностью, устанавливаемой организацией.<br>
+								Внесение изменений в копии подчисткой не допускается. О необходимости исправления копий указывают в графе «Содержание изменения» извещения: «Копии исправить». (ГОСТ 2 .5 0 3 — 2013)<br>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingFourSafety">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourSafety" aria-expanded="false" aria-controls="flush-collapseFourSafety">
+								Вычитка документов
+							</button>
+						</h2>
+						<div id="flush-collapseFourSafety" class="accordion-collapse collapse" aria-labelledby="flush-headingFourSafety" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								Вычитка текста выполняет ряд задач:<br> 
+								Минимизация или ликвидироватние грамматических, орфографических, пунктуационных и иных ошибок. Чаще всего подобные ошибки совершаются на фоне слабой грамотности или плохого знания русского языка, собственной невнимательности. Вычитка позволяет своевременно устранить недостатки.<br> 
+								Усовершенствование показателя удобочитаемости текста. Чем проще написан материал, тем легче он читается и понимается, но при этом в нем будут присутствовать профессионализмы и прочие нюансы;<br>
+								Устранение недоработки в части оформления и привести документ в соответствии с ГОСТ.<br> 
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingFiveSafety">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFiveSafety" aria-expanded="false" aria-controls="flush-collapseFiveSafety">
+								Исправлении формулировок, не соответствующих нормам права
+							</button>
+						</h2>
+						<div id="flush-collapseFiveSafety" class="accordion-collapse collapse" aria-labelledby="flush-headingFiveSafety" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								Согласно ГК существуют три основания признания договора ¬недействительным вследствие обнаружения собственно ошибки в договоре:<br>
+								Если условия договора не соответствуют закону или иному правовому акту (ст. 168 ГК РФ).<br>
+								Если условия договора выходят за пределы правоспособности одной из сторон договора или обеих сторон (ст. 173 ГК РФ).<br>
+								Если лицо, подписавшее договор, не имело на это полномочий (ст. 174 ГК РФ).<br>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingSixSafety">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixSafety" aria-expanded="false" aria-controls="flush-collapseSixSafety">
+								Внесение условий контроля качества
+							</button>
+						</h2>
+						<div id="flush-collapseSixSafety" class="accordion-collapse collapse" aria-labelledby="flush-headingSixSafety" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								Согласно ГК существуют три основания признания договора ¬недействительным вследствие обнаружения собственно ошибки в договоре:<br>
+								Если условия договора не соответствуют закону или иному правовому акту (ст. 168 ГК РФ).<br>
+								Если условия договора выходят за пределы правоспособности одной из сторон договора или обеих сторон (ст. 173 ГК РФ).<br>
+								Если лицо, подписавшее договор, не имело на это полномочий (ст. 174 ГК РФ).<br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="garden" id="garden">
+			<div class="container garden__container">
+				<h2 class="second-heading lights__heading">Сад</h2>
+				<div class="lights__cards-container">
+					<div class="llights__cards" data-mobile="false">
+						<ul class="lights__list ">
+							<li class="garden__item">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/garden-1.jpg" alt="garden">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Изготовление металлических ворот</p>
+								</div>
+							</li>
+							<li class="garden__item">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/garden-2.jpg" alt="garden">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Беседки и террасы</p>
+								</div>
+							</li>
+							<li class="garden__item">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/garden-3.jpg" alt="garden">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Ландшафтные работы с камнем</p>
+								</div>
+							</li>
+							<li class="garden__item">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/garden-4.jpg" alt="garden">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Наружние лестницы и ограждения</p>
+								</div>
+							</li>
+							<li class="garden__item">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/garden-5.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Наружнее освещение</p>
+								</div>
+							</li>
+							<li class="garden__item">
+								<div class="lights__item-top">
+										<img class="lights__img" src="img/garden-6.jpg" alt="garden">
+									</picture>
+								</div>
+								<div class="lights__item-bottom">
+									<p class="main-text lights__descr">Водоводы</p>
+								</div>
+							</li>
+						</ul>	
+					</div>
+				</div>
+				<div class="lights__btn-container">
+					<button class="btn garden__btn cursor">
+						Еще
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="safety" id="safety">
+			<div class="container safety__container">
+				<h2 class="second-heading documents__heading">Автоматизация и безопасность</h2>
+				<div class="accordion accordion-flush accordion__documents" id="accordionFlushExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingOneOne">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneOne" aria-expanded="false" aria-controls="flush-collapseOneOne">
+								Охранно-тревожная сигнализация
+							</button>
+						</h2>
+						<div id="flush-collapseOneOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOneOne" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								На движение/перемещение;<br>
+								На звук;<br>
+								На открытие/закрытие;<br>
+								На вибрацию.<br>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingTwoTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoTwo" aria-expanded="false" aria-controls="flush-collapseTwoTwo">
+								Система удаленного контроля и управления приборами
+							</button>
+						</h2>
+						<div id="flush-collapseTwoTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwoTwo" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								На основе ССU825 и ZONT
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingThreeThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeThree" aria-expanded="false" aria-controls="flush-collapseThreeThree">
+								Система контроля параметров окружающей среды:
+							</button>
+						</h2>
+						<div id="flush-collapseThreeThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThreeThree" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								Дыма;<br>
+								Затопления;<br>
+								Температуры;<br>
+								Переполнения/исчерпания;<br>
+								Давления;
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingFiveFive">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFiveFive" aria-expanded="false" aria-controls="flush-collapseFiveFive">
+								Система оповещения и реагирования по сценарию
+							</button>
+						</h2>
+						<div id="flush-collapseFiveFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFiveFive" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Срабатывание автоматических устройств при одновременном или последовательном наступлении двух и более событий.<br>
+								Оповещение по звонку, СМС, telegram</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingSixSix">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixSix" aria-expanded="false" aria-controls="flush-collapseSixSix">
+								Установка датчиков, контрольных проборов, прокладка шлейфов
+							</button>
+						</h2>
+						<div id="flush-collapseSixSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSixSix" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">В помещении;<br>
+								На улице;<br>
+								В контролируемых емкостях.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingSevenSeven">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSevenSeven" aria-expanded="false" aria-controls="flush-collapseSevenSeven">
+								Настройка управляющих приборов, тестирование оповещения
+							</button>
+						</h2>
+						<div id="flush-collapseSevenSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSevenSeven" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Выбор эффективного решения для датчиков.</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingEightEight">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEightEight" aria-expanded="false" aria-controls="flush-collapseEightEight">
+								Техническое обслуживание системы обеспечения безопасности
+							</button>
+						</h2>
+						<div id="flush-collapseEightEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEightEight" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Периодическая и по запросу проверка срабатывания датчиков в доме.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer" id="footer"> 
+		<div class="container footer-container">
+			<div class="footer__bottom">
+				<div class="footer__left">
+					<p class="footer__contacts">
+					<h4 class="contacts__left-social-heading contacts__second-heading">Контакты</h4>
+					<div class="footer__phones">
+						<a href="tel:+79688762614" class="footer__tel">+7 (968) 876-26-14</a>
+						<a href="tel:+79056068608" class="footer__tel">+7 (905) 606-86-08</a>
+						<a href="tel:+79163910361" class="footer__tel">+7 (916) 391-03-61</a>
+					</div>
+					<ul class="contacts__left-list">
+						<li class="contacts__left-item">
+							<a href="https://api.whatsapp.com/send?phone=79259238980" target="_blank" class="contacts__left-link cursor" aria-label="вотсап">
+								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path class="outline" d="M38.875 20C38.875 30.4244 30.4244 38.875 20 38.875C9.57563 38.875 1.125 30.4244 1.125 20C1.125 9.57563 9.57563 1.125 20 1.125C30.4244 1.125 38.875 9.57563 38.875 20Z" fill="#30BF39" stroke="#004f7c"/>
+									<path d="M25.8749 21.7509C25.6249 21.6259 24.3124 20.8759 24.0624 20.8134C23.8124 20.6884 23.6249 20.6884 23.4374 20.9384C23.2499 21.1884 22.6874 21.8134 22.5624 21.9384C22.3749 22.1259 22.2499 22.1259 21.9999 22.0009C21.7499 21.8759 20.8749 21.5634 19.8749 20.5634C19.1249 19.8134 18.5624 18.9384 18.4374 18.6259C18.3124 18.3759 18.4374 18.1884 18.5624 18.0634C18.6874 17.9384 18.8124 17.7509 18.9999 17.6259C19.1874 17.5009 19.1874 17.3759 19.3124 17.1884C19.4374 17.0009 19.3749 16.8759 19.3124 16.6884C19.2499 16.5009 18.7499 15.1884 18.5624 14.6259C18.3749 14.0634 18.1249 14.1884 17.9999 14.1259C17.8124 14.1259 17.6874 14.0634 17.4999 14.0634C17.2499 14.0634 16.9374 14.1884 16.7499 14.3759C16.4999 14.6259 15.7499 15.2509 15.7499 16.5634C15.7499 17.8759 16.6249 19.2509 16.7499 19.3759C16.8749 19.5634 18.4999 22.4384 21.1874 23.6259C23.8749 24.8134 23.8749 24.4384 24.3749 24.4384C24.8749 24.4384 25.9999 23.8134 26.2499 23.2509C26.4999 22.6259 26.4999 22.0634 26.4374 22.0009C26.3124 22.0009 26.1249 21.9384 25.8749 21.7509ZM20.8749 28.1884C19.1249 28.1884 17.4999 27.6884 16.0624 26.7509L12.6874 27.8134L13.8124 24.5634C12.7499 23.0634 12.1249 21.2509 12.1249 19.3759C12.1249 14.5009 16.0624 10.5634 20.9374 10.5634C25.8124 10.5634 29.6874 14.5009 29.6874 19.3759C29.6874 24.2509 25.7499 28.1884 20.8749 28.1884ZM20.8749 8.81335C15.0624 8.81335 10.3124 13.5634 10.3124 19.3759C10.3124 21.3134 10.8124 23.1884 11.8124 24.8134L9.87488 30.5009L15.7499 28.6259C17.3124 29.5009 19.0624 29.9384 20.8749 29.9384C26.6874 29.9384 31.4374 25.1884 31.4374 19.3759C31.4374 13.5634 26.7499 8.81335 20.8749 8.81335Z" fill="white"/>
+								</svg>
+							</a>								
+						</li>
+						<li class="contacts__left-item">
+							<a href="https://telegram.im/@gretdane" target="_blank" class="contacts__left-link cursor" aria-label="телеграм">
+								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z" fill="url(#paint0_linear_57972_1461)"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z" fill="white"/>
+									<rect class="outline" x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#004f7c" stroke-linejoin="round"/>
+									<defs>
+									<linearGradient id="paint0_linear_57972_1461" x1="20" y1="0" x2="20" y2="39.7033" gradientUnits="userSpaceOnUse">
+									<stop offset="0" stop-color="#2AABEE"/>
+									<stop offset="1" stop-color="#229ED9"/>
+									</linearGradient>
+									</defs>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					</p>
+				</div>
+				<div class="footer__right">
+					<img class="footer__map-img minimized" src="img/khimki.JPG" alt="Химки">
+					<img class="footer__map-img minimized" src="img/podolsk.JPG" alt="Подольск">
+					<img class="footer__map-img minimized" src="img/tver.JPG" alt="Тверь">
+				</div>
+			</div>
+		</div>
+	</footer>
+	<section class="copyrights">
+		<a href="https://telegram.im/@lihonosova22" class="copyrights__link" target="_blank">Разработка и дизайн П. А. Лихоносова</a>
+	</section>
+	<!-- slik slider -->
+	<!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" async></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" async></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" async></script>-->
+	<!--<script>
+		$(document).ready(function(){
+			$('.gallery__slider').slick({
+				arrows:true,
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 1300,
+						settings: {
+							arrows:true,
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 970,
+						settings: {
+							arrows:true,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+				]
+			});
+			$('.lib__slider').slick({
+				arrows:true,
+				infinite: true,
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 1300,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 970,
+						settings: {
+							arrows:true,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+				]
+			});
+			$('.heat__slider').slick({
+				arrows:true,
+				infinite: true,
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 1300,
+						settings: {
+							arrows:true,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+				]
+			});
+			$('.electricity__slider').slick({
+				arrows:true,
+				infinite: true,
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 1300,
+						settings: {
+							arrows:true,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+				]
+			});
+		});
+	</script>
+	<script defer src="js/flowing-scroll.js"></script>-->
+</body>
+</html>
