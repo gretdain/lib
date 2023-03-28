@@ -6606,7 +6606,8 @@
       Navigation: !1,
       autoStart: !0,
       transition: "slide",
-      Autoplay: {timeout: 3e3, showProgress: !1}
+/*	Pause between slides */
+      Autoplay: {timeout: 8e3, showProgress: !1}
     };
   new H(he, ue, {Autoplay: q}), new H(ce, ue, {Autoplay: q}), new H(de, ue, {Autoplay: q}), le.bind("[data-fancybox]", {
     hideScrollbar: !1,
