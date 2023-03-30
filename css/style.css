@@ -2330,9 +2330,7 @@ display: flex;*/
   display: flex;
   font-size: 1px;
   margin-left: auto;
-  margin-right: auto
-
-*/
+  margin-right: auto;
 }
 
 .header-top {
@@ -2375,11 +2373,12 @@ border-bottom: 2px solid var(--white-inversion);
 
 .menu__container {
 position: absolute;
-top: 0;
-left: 145px;
-padding: 22px 15px 15px 15px;
+/* top: 10;
+/*left: 145px;*/
+padding: 80px 15px 15px 15px;
 max-width: 300px;
 background-color: var(--main-bg);
+border: 3px solid var(--amethyst);
 border-radius: 20px;
 -webkit-transition: all ease-out 0.5s;
 -o-transition: all ease-out 0.5s;
