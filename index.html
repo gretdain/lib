@@ -90,14 +90,14 @@
 						</ul>
 					</div>
 					<img class="header-top__img" src="img/logo.png" alt="Логотип">
-							<!--<a class="header-top__download" href="img/portfolio.pdf" download></a>-->
+					<!--<a class="header-top__download" <!--href="img/portfolio.pdf" download></a>-->
 					<a class="header-top__download"></a>
 				</div>
 			</div>	
 		</div>
 	</header>
 	<main>
-		<section class="gallery" id="gallery">
+		<section class="gallery" id="gallery" style="background-color: var(--main-bg);">
 			<div class="container gallery__container">
 				<div class="swipe" id="app">
 					<div class="sw__left">
@@ -201,8 +201,8 @@
 		</section>
 		
 		<!-- from lib -->
-	<section class="lib" id="lib">
-		<div class="container">
+	<section class="lib" id="lib" >
+		<div class="container" >
 		<h2> Библиотека</h2>
 			<div id="slider1" class="csslider infinity"> 
 					<input name="slides" id="slides_1" type="radio"> 
@@ -237,7 +237,7 @@
 					<input name="slides" id="slides_30" type="radio">
 					<input name="slides" id="slides_31" type="radio">
 					<input name="slides" id="slides_32" type="radio">
-					<ul style="	font-size: 10px; line-height: 10px;">
+					<ul style="	font-size: 10px; line-height: 10px; margin-left: -60px; margin-top:10;">
 					  <li> 
 					  <big>GDCA standard 1995</big>
 						<p>перевод<br>
@@ -448,7 +448,7 @@
 						</li>
 					</ul>
 					
-				<div class="arrows" style="left: 10px; width: 300px; top: 199px; height: 37px;" > 
+				<div class="arrows" style="left: -50px; width: 300px; top: 199px; height: 37px;" > 
 					<label for="slides_1"></label> 
 					<label for="slides_2"></label>
 					<label for="slides_3"></label> 
@@ -966,19 +966,13 @@
 		</section>	-->
 	</main>
 
-	<footer class="footer" id="footer"> 
+	<footer class="footer" style="padding-top: 18px; padding-bottom: 16px;" id="footer"> 
 		<div class="container footer-container">
 			<div class="footer__bottom">
 				<div class="footer__left">
 					<p class="footer__contacts">
-					<h4 class="contacts__left-social-heading contacts__second-heading">Контакты</h4>
-					<!--<div class="footer__phones">
-						<a href="tel:+79688762614" class="footer__tel">+7 (968) 876-26-14</a>
-						<a href="tel:+79056068608" class="footer__tel">+7 (905) 606-86-08</a>
-						<a href="tel:+79163910361" class="footer__tel">+7 (916) 391-03-61</a>
-					</div>-->
 					<ul class="contacts__left-list">
-						<li class="contacts__left-item">
+						<li>
 							<a href="https://api.whatsapp.com/send?phone=7968862614" target="_blank" class="contacts__left-link cursor" aria-label="вотсап">
 								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path class="outline" d="M38.875 20C38.875 30.4244 30.4244 38.875 20 38.875C9.57563 38.875 1.125 30.4244 1.125 20C1.125 9.57563 9.57563 1.125 20 1.125C30.4244 1.125 38.875 9.57563 38.875 20Z" fill="#30BF39" stroke="#004f7c"/>
@@ -986,7 +980,7 @@
 								</svg>
 							</a>								
 						</li>
-						<li class="contacts__left-item">
+						<li>
 							<a href="https://telegram.im/@gretdane" target="_blank" class="contacts__left-link cursor" aria-label="телеграм">
 								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z" fill="url(#paint0_linear_57972_1461)"/>
