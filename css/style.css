@@ -2163,11 +2163,18 @@ button {
 .container {
 margin-right: auto;
 margin-left: auto;
-padding: 0 160px;
+/*padding: 0 160px;*/
 max-width: 1602px;
-	padding: 0 15px;
 /*	  text-align: center;*/
+padding-left: 10%;
+padding-right: 10%;
 }
+
+.container article{
+padding-left: 10%;
+padding-right: 10%;
+}
+
 
 .btn-reset {
 padding: 0;
@@ -2485,9 +2492,9 @@ max-width: 1080px;
 /* gallery */ 
 .gallery,
 .lib,
-.heat,
 .electricity,
 .lights,
+.heat,
 .documents,
 .garden,
 .safety {
@@ -2496,6 +2503,7 @@ max-width: 1080px;
 		padding-bottom: 10px;
 	border-bottom: 1px solid var(--amethyst);
 }
+
 
 /*.heat,
 .electricity,
@@ -2628,6 +2636,17 @@ width: 100%;
       }
 	  
 	  .heat p {
+		text-align: left;
+	  }
+
+
+      .article img {
+        object-fit: contain;
+        max-width: 100%;
+		max-height: 100%;
+		}
+	  
+	  .article p {
 		text-align: left;
 	  }
 
