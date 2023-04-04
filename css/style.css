@@ -2616,6 +2616,22 @@ width: 100%;
 }
 
 /* electricity */ 
+
+      .heat img {
+        object-fit: contain;
+        width: 150px;
+        height: auto;
+		max-width: 70%;
+		max-height: 70%;
+		hspace: 50;
+		vspace: 10;
+      }
+	  
+	  .heat p {
+		text-align: left;
+	  }
+
+
 .electricity {
 margin-bottom: 70px;
 }
