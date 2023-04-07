@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Немецкий дог</title>
 	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
 	
 	<!-- style from lib -->
 	<style>
@@ -43,7 +43,6 @@
 	<script defer src="js/swiper.js"></script>
 	<script defer src="js/move-background.js"></script>
 	<script defer src="js/burger.js"></script>
-		<script defer src="js/links.js"></script>
 	<script defer src="js/lights.js"></script>
 	<script defer src="js/magnify.js"></script>
 	<script defer src="js/electricyty.js"></script>
@@ -56,51 +55,27 @@
 		<div class="add-swiper-container">
 			<div class="header__top header-top">
 				<div class="container header-top__container">
-					<button class="btn-reset cursor menu-btn__open" id="burger-button" aria-label="Меню">
-						<div class="burger-button__icon"></div>
-					</button>
-					<div class="menu__container">
-						<button class="btn-reset cursor menu-btn__close">
-							<span class="cross-sign"></sp>
-						</button>
-						<ul class="header-top__list" id="header-top__list" >
-							<li class="header-top__item">
-								<a href="#lib" class="cursor header-top__link flowing-scroll">Библиотека</a>
-							</li>
-							<!--<li class="header-top__item">
-								<a href="#heat" class="cursor header-top__link flowing-scroll">Отопление и водоснабжение</a>
-							</li>-->
-						</ul>
+					<div class="menu">
+					<button type="button"style="background-color:#878787"><img src="img/download.png" alt="Menu"> </button>
+						<div class="dropdown-content" style="left:1px">
+						<a rel="noopener" href="#lib">Библиотека</a>
+						<a rel="noopener" href="">Статья</a>
+						<a rel="noopener" href="">Статья</a>
+						</div>
 					</div>
 					<img class="header-top__img" src="img/logo.png" style="width: 300px; height: 50px;" alt="Логотип">
-					
-					<button class="btn-reset cursor menu-btn__open-links" id="burger-button-links" aria-label="Link">
-						<div class="burger-button-links"></div>
-					</button>
-					<div class="menu__container-links">
-						<button class="btn-reset cursor menu-btn__close-links">
-							<span class="cross-sign"></sp>
-						</button>
-						<ul class="header-top__list" id="header-top__list-links">
-							<li class="header-top__item">
-								<a href="https://greatdanegnosis.wordpress.com/" target="_blank" class="cursor header-top-links flowing-scroll">Блог нашей Маши</a>
-							</li>
-							<li class="header-top__item">
-								<a href="http://www.verasir.dk/show.php?file=chap24-7.html" target="_blank" class="cursor header-top-links flowing-scroll">История Ф.Рикфорса</a>
-							</li>
-							<li class="header-top__item">
-								<a href="http://nkp.greatdanes.dog/" target="_blank" class="cursor header-top-links flowing-scroll">страничка НКП</a>
-							</li>
-							<li class="header-top__item">
-								<a href="http://greatdanes.dog" target="_blank" class="cursor header-top-links flowing-scroll">Русский портал</a>
-							</li>
-							<li class="header-top__item">
-								<a href="https://www.ginnie.com/greatdanes.htm" target="_blank" class="cursor header-top-links flowing-scroll">Страничка G.Saunders</a>
-							</li>
-						</ul>
-					</div>		
-							<!--<a class="header-top__download" href="img/portfolio.pdf" download></a>
-							<a class="header-top__download"></a>-->
+					<!--<a class="header-top__download" <!--href="img/portfolio.pdf" download></a>-->
+					<div class="links">
+					<button type="button" style="background-color:#878787"><img src="img/links.png" alt="Links"> </button>
+						<div class="dropdown-content" style="right:1px">
+						<a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Блог Маши</a>
+						<a rel="noopener" target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">Рикфорс</a>
+						<a rel="noopener" target="_blank" href="http://nkp.greatdanes.dog">НКП</a>
+						<a rel="noopener" target="_blank" href="http://greatdanes.dog">Портал</a>
+						<a rel="noopener" target="_blank" href="https://www.ginnie.com/greatdanes.htm">Сандерс</a>
+						<a rel="noopener" target="_blank" href="https://gesunde-dogge.de/">R.Stolzewski</a>
+						</div>
+					</div>
 				</div>
 			</div>	
 		</div>
@@ -622,7 +597,6 @@
 				</div>
 			</div>
 		</div>
-		</div>
 
 <!--<script src="index_files/app.js" type="text/javascript"></script>-->
 	</section>
@@ -1087,9 +1061,22 @@
 	<footer class="footer" style="padding-top: 18px; padding-bottom: 16px;" id="footer"> 
 		<div class="container footer-container">
 			<div class="footer__bottom">
-				<div class="footer__left">
+				<div class="footer__left" style="list-style-type:none">
 					<p class="footer__contacts">
-					<ul class="contacts__left-list">
+					<ul class="contacts__left-list" style="list-style-type:none">
+						<li>
+							<a href="mailto:oleg_vsh@umail.ru" target="_blank" class="contacts__left-link cursor" aria-label="mail">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" version="1.1">
+								<g id="surface1">
+								<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 20 0 C 8.953125 0 0 8.953125 0 20 C 0 31.046875 8.953125 40 20 40 C 31.046875 40 40 31.046875 40 20 C 40 8.953125 31.046875 0 20 0 Z M 20 36.875 C 10.679688 36.875 3.125 29.320312 3.125 20 C 3.125 10.679688 10.679688 3.125 20 3.125 C 29.320312 3.125 36.875 10.679688 36.875 20 C 36.875 29.320312 29.320312 36.875 20 36.875 Z M 20 36.875 "/>
+								<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 28.75 18.3125 L 28.75 24.125 L 24.492188 19.484375 L 25.796875 18.601562 C 25.332031 18.480469 24.890625 18.292969 24.496094 18.039062 L 20 21.230469 L 12.992188 16.25 L 22.9375 16.25 C 22.753906 15 22.625 15 22.5625 15 L 10 15 L 10 27.5 L 30 27.5 L 30 17.425781 C 29.640625 17.792969 29.214844 18.089844 28.75 18.3125 Z M 11.25 16.605469 L 15.507812 19.484375 L 11.25 24.125 Z M 20 26.25 L 12.78125 26.25 L 16.339844 20.046875 L 20 22.519531 L 23.660156 20.046875 L 27.21875 26.25 Z M 20 26.25 "/>
+								<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 26.875 11.25 C 25.148438 11.25 23.75 12.648438 23.75 14.375 C 23.75 16.101562 25.148438 17.5 26.875 17.5 C 28.601562 17.5 30 16.101562 30 14.375 C 30 12.648438 28.601562 11.25 26.875 11.25 Z M 28.75 15 L 27.5 15 L 27.5 16.25 L 26.25 16.25 L 26.25 15 L 25 15 L 25 13.75 L 26.25 13.75 L 26.25 12.5 L 27.5 12.5 L 27.5 13.75 L 28.75 13.75 Z M 28.75 15 "/>
+								</g>
+								</svg>
+							</a>								
+						</li>				
+						
+						
 						<li>
 							<a href="https://api.whatsapp.com/send?phone=7968862614" target="_blank" class="contacts__left-link cursor" aria-label="вотсап">
 								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
