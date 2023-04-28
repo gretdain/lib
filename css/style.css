@@ -3358,3 +3358,19 @@ color: var(--amethyst);
 	margin-bottom: 15px;
 }
 }	
+
+figure {
+  float: left;
+  width: 66%;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+img.scaled {
+  width: 100%;
+}
