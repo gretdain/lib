@@ -3374,3 +3374,13 @@ figure {
 img.scaled {
   width: 100%;
 }
+
+/*video {
+    position: relative;
+	float:left;
+    min-width: 80%;
+    min-height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);        
+}*/
