@@ -3375,6 +3375,10 @@ img.scaled {
   width: 100%;
 }
 
+.bg-color {
+	background-color: #F8DEA9;
+}
+
 /*video {
     position: relative;
 	float:left;
