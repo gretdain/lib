@@ -2554,7 +2554,7 @@ max-width: 1080px;
 .lib,
 .electricity,
 .lights,
-.heat,
+.intro,
 .documents,
 .garden,
 .safety {
@@ -2685,7 +2685,7 @@ width: 100%;
 
 /* electricity */ 
 
-      .heat img {
+      .intro img {
         object-fit: contain;
         width: 150px;
         height: auto;
@@ -2695,9 +2695,11 @@ width: 100%;
 		vspace: 10;
       }
 	  
-	  .heat p {
+	  .intro p {
 		text-align: left;
-	  }
+		line-height: 1.5em;
+		color: 3A3A3A;
+		}
 
 
       .article img {
@@ -2708,6 +2710,8 @@ width: 100%;
 	  
 	  .article p {
 		text-align: left;
+		line-height: 1.5em;
+		color: 3A3A3A;
 	  }
 
 
