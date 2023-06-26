@@ -1,0 +1,144 @@
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>great dane faces by gret dain</title>
+	
+	<style>
+
+.mySlides {display: none;}
+
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(--amethyst);
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 5px;
+  width: 5px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: none;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+	
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+
+<body>
+
+<section class="article" id="article">
+	<div class="container" id="bismarck">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="img/faces1-1.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="img/faces1-2.jpg" style="height:100%">
+</div>
+<div class="mySlides fade">
+  <img src="img/faces1-3.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="img/faces1-4.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="img/faces1-5.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="img/faces1-6.jpg" style="height:100%">
+</div>
+<div class="mySlides fade">
+  <img src="img/faces1-7.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="img/faces1-8.jpg" style="height:100%">
+</div>
+<div class="mySlides fade">
+  <img src="img/faces1-9.jpg" style="width:100%">
+</div>
+</div>
+<br>
+
+<div style="text-align:left">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<p >Канцлер Отто фон Бисмарк (1815-1898) был известым почитателем породы Reichshund (ныне - немецкий дог). Один из его догов едва не стал причиной международного конфликта, когда продемонстрировал агрессию по отношению к российскому дипломату Горчакову. Александр Михайлович жестикулировал настолько живо, что  Тирас, лежавший до этого момента на  подстилке, бросился защищать своего хозяина. Он прыгнул на гордого русского и уронил его на пол.  Были принесены и приняты все необходимые извинения.  
+Если другой дог канцлера, Султан, не привечал кого-то, Бисмарк использовал эту оценку собаки для принятия своих решений. Бисмарка всегда сопровождали его любимые собаки, начиная со времени, когда он был студентом юридического факультета и гражданским служащим в Берлине, и позже, во время своих путешествий во многие страны, в эпоху своей дипломатическрй карьеры во Франкфурте, Санкт-Петербурге, Париже и в других местах. Султан, который умер в Varzin в 1877 году, был скорее всего его любимым догом.
+Из всех собак, которые заняли место в истории, Тирас является самым известным. Единственная собака, смерть которой считалась настолько важной, что известие об инциденте распространилось не только по Европе, но и по всему миру. История Тираса не закончилась смертью.  В первый день рождения канцдера после смерти собаки ему подарили другого дога. Почти 60 лет канцлер Бисмарк держал догов, поодиночке и парами. 
+Первая собака, которую он получил, когда жил с родителями в Книфофе, была одной из самых больших и страшных собак для фермеров окрестностей. Позже эта собака сопровождала своего молодого хозяина в Геттингенский университет, где вскоре стала узнаваемой. Однажды Бисмарка вызвали к директору, потому что он выбросил пустую бутылку из окна. Он взял с собой свою огромную собаку, чтобы попугать директора, который быстро при их появлении спрятался за креслом. Там он оставался до тех пор, пока собаку не вывели из комнаты.В дополнение к наказанию, которое Бисмарк получил за свое первоначальное правонарушение, он был оштрафован на пять талеров за то, что привел этого ужасного зверя в кабинет госслужащего.</p>
+
+</div>
+</section>
+
+</body>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+</html>
