@@ -6,61 +6,89 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Great Dane Faces by gret dain</title>
 	
-	<style>
-
-.mySlides1 {display: none;}
-
-.mySlides2 {display: none;}
-
-
-/* Slideshow containers */
-.slideshow-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 300px;
-  border: 1px solid var(--amethyst);
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 5px;
-  width: 5px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: none;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 2.5s;
-}
-
-@keyframes fade {
-  from {opacity: .1} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-</style>
-	
+<!--	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<script defer src="js/swiper-bundle.min.js"></script>-->	
 	<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">-->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+	<style>
+	
+	body, html {
+	  margin: 0;
+	  padding: 0
+	}
+	
+	html {
+	font-family: 'OpenSans', sans-serif;
+	font-weight: 400;
+	}
+
+	.container {
+	margin-right: auto;
+	margin-left: auto;
+	/*padding: 0 160px;*/
+	max-width: 1602px;
+	/*	  text-align: center;*/
+	padding-left: 10%;
+	padding-right: 10%;
+	}
+
+	.container article{
+	padding-left: 10%;
+	padding-right: 10%;
+	}
+	
+	      .article img {
+        object-fit: contain;
+        max-width: 100%;
+		max-height: 100%;
+		color: 3A3A3A;
+		}
+	  
+	  .article p {
+		text-align: left;
+		line-height: 1.5em;
+		color: 3A3A3A;
+	  }
+	  
+
+    .sample-slider{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 300px;
+	  height: 300px;
+	  border: 1px solid var(--amethyst);
+	  float: left;
+	  margin-right: 15px;
+	  margin-bottom: 15px;
+	  margin-top: 30px;
+    }
+    .sample-slider img{
+    }
+	.slideshow-container {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 300px;
+	  height: 300px;
+	  border: 1px solid var(--amethyst);
+	  float: left;
+	  margin-right: 15px;
+	  margin-bottom: 15px;
+	  margin-top: 15px;
+	}
+	.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	</style>
+	
+
 	
 </head>
 
@@ -69,52 +97,21 @@
 <section class="article" id="article">
 	<div class="container" id="bismarck">
 
-<div class="slideshow-container">
-
-<div class="mySlides1 fade">
-  <img src="img/faces1-1.jpg" style="width:100%">
-</div>
-<div class="mySlides1 fade">
-  <img src="img/faces1-2.jpg" style="height:100%">
-</div>
-<div class="mySlides1 fade">
-  <img src="img/faces1-3.jpg" style="width:100%">
-</div>
-<div class="mySlides1 fade">
-  <img src="img/faces1-4.jpg" style="width:100%">
-</div>
-<div class="mySlides1 fade">
-  <img src="img/faces1-5.jpg" style="width:100%">
-</div>
-<div class="mySlides1 fade">
-  <img src="img/faces1-6.jpg" style="height:100%">
-</div>
-<div class="mySlides1 fade">
-  <img src="img/faces1-7.jpg" style="width:100%">
-</div>
-<div class="mySlides1 fade">
-  <img src="img/faces1-8.jpg" style="height:100%">
-</div>
-<div class="mySlides1 fade">
-  <img src="img/faces1-9.jpg" style="width:100%">
+<div class="swiper sample-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/faces1-1.jpg" ></div>
+        <div class="swiper-slide"><img src="img/faces1-2.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces1-3.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces1-4.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces1-5.jpg" ></div>
+        <div class="swiper-slide"><img src="img/faces1-6.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces1-7.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces1-8.jpg"></div>		
+        <div class="swiper-slide"><img src="img/faces1-9.jpg"></div>			
+    </div>
 </div>
 
-<div style="text-align:left">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-</div>
 <br>
-
-
 
 <p >Канцлер Отто фон Бисмарк (1815-1898) был известым почитателем породы Reichshund (ныне - немецкий дог). Один из его догов едва не стал причиной международного конфликта, когда продемонстрировал агрессию по отношению к российскому дипломату Горчакову. Александр Михайлович жестикулировал настолько живо, что  Тирас, лежавший до этого момента на  подстилке, бросился защищать своего хозяина. Он прыгнул на гордого русского и уронил его на пол.  Были принесены и приняты все необходимые извинения.  
 Если другой дог канцлера, Султан, не привечал кого-то, Бисмарк использовал эту оценку собаки для принятия своих решений. Бисмарка всегда сопровождали его любимые собаки, начиная со времени, когда он был студентом юридического факультета и гражданским служащим в Берлине, и позже, во время своих путешествий во многие страны, в эпоху своей дипломатическрй карьеры во Франкфурте, Санкт-Петербурге, Париже и в других местах. Султан, который умер в Varzin в 1877 году, был скорее всего его любимым догом.
@@ -128,53 +125,22 @@
 
 	<div class="container" id="horsefall">			
 
-<div class="slideshow-container">
-
-<div class="mySlides2 fade">
-  <img src="img/faces2-1.jpg" style="height:100%">
-</div>
-<div class="mySlides2 fade">
-  <img src="img/faces2-2.jpg" style="width:100%">
-</div>
-<div class="mySlides2 fade">
-  <img src="img/faces2-3.jpg" style="height:100%">
-</div>
-<div class="mySlides2 fade">
-  <img src="img/faces2-4.jpg" style="width:100%">
-</div>
-<div class="mySlides2 fade">
-  <img src="img/faces2-5.jpg" style="width:100%">
-</div>
-<div class="mySlides2 fade">
-  <img src="img/faces2-6.jpg" style="width:100%">
-</div>
-<div class="mySlides2 fade">
-  <img src="img/faces2-7.jpg" style="height:100%">
-</div>
-<div class="mySlides2 fade">
-  <img src="img/faces2-8.jpg" style="width:100%">
-</div>
-<div class="mySlides2 fade">
-  <img src="img/faces2-9.jpg" style="width:100%">
-</div>
-<!--<div class="mySlides2 fade">
-  <img src="img/faces2-10.jpg" style="width:100%">
-</div> -->
-
-<div style="text-align:left">
-  <span class="dot2"></span> 
-  <span class="dot2"></span> 
-  <span class="dot2"></span> 
-  <span class="dot2"></span> 
-  <span class="dot2"></span> 
-  <span class="dot2"></span> 
-  <span class="dot2"></span> 
-  <span class="dot2"></span> 
-  <span class="dot2"></span> 
-<!--  <span class="dot2"></span> -->
+<div class="swiper sample-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/faces2-1.jpg" ></div>
+        <div class="swiper-slide"><img src="img/faces2-2.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces2-3.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces2-4.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces2-5.jpg" ></div>
+        <div class="swiper-slide"><img src="img/faces2-6.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces2-7.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces2-8.jpg"></div>		
+        <div class="swiper-slide"><img src="img/faces2-9.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces2-10.jpg"></div>
+        <div class="swiper-slide"><img src="img/faces2-11.jpg"></div>		
+    </div>
 </div>
 
-</div>
 <br>
 
 <p style='margin-top:6.0pt'>В последнее десятилетие XIX века Редгрейв-Холл (Англия) был домом победителей выставки Крафтс. Мистер Генри Лик Хорсфолл арендовал Редгрейв Холл у мистера Джорджа Холта Уилсона с 1895 по 1898 год. В это время его жена, Вайолет Энни, разводила догов на конюшне в Редгрейв-парке. Вайолет с детства любила животных. Она любила и ухаживала за дикими животными в оленьем парке Редгрейв-Холла площадью 300 акров, а также за лебедями и другими водоплавающими птицами на сорока шести акрах серпантинного озера, спроектированного Капабли Брауном. Миссис Хорсфолл также была хорошей наездницей и ездила по парку Редгрейв на своей лошади, за которой бежали доги. Это был не первый случай использования конюшни для собак: Джордж Сент-Винсент Уилсон (сквайр с 1826 по 1852 гг.) держал здесь гончих для охоты. Сквайр умер в 1897 г., о нем написан некролог в приходском журнале, Джордж Сент-Винсент отказался от содержания гончих.
@@ -190,44 +156,24 @@
 </body>
 
 <script>
-let slideIndex = 0;
-showSlides();
-showSlides2();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides1");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
-}
-
-function showSlides2() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides2");
-  let dots = document.getElementsByClassName("dot2");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides2, 4000); // Change image every 2 seconds
-}
-
+    const swiper = new Swiper('.sample-slider', {
+        loop: true,                         // loop
+        speed: 1500,
+		effect: 'fade',
+		fadeEffect: {           // added
+        crossFade: true     // added(resolve the overlapping of the slides)
+		},                      // added
+		autoplay: {                         // auto play
+            delay: 2000,
+        },
+        pagination: {                       // pagination(dots)
+            el: '.swiper-pagination',
+        },
+        navigation: {                       // navigation(arrows)
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    })
 </script>
 
 </html>
