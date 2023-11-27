@@ -7,6 +7,84 @@
 	<title>Great Dane inside by gret dain</title>
 	<style> </style>
 	<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+	<style>
+	body, html {
+	  margin: 0;
+	  padding: 0
+	}
+	
+	html {
+	font-family: 'OpenSans', sans-serif;
+	font-weight: 400;
+	}
+
+	.container {
+	margin-right: auto;
+	margin-left: auto;
+	/*padding: 0 160px;*/
+	max-width: 1602px;
+	/*	  text-align: center;*/
+	padding-left: 10%;
+	padding-right: 10%;
+	}
+
+	.container article{
+	padding-left: 10%;
+	padding-right: 10%;
+	}
+	
+	      .article img {
+        object-fit: contain;
+        max-width: 100%;
+		max-height: 100%;
+		color: 3A3A3A;
+		}
+	  
+	  .article p {
+		text-align: left;
+		line-height: 1.5em;
+		color: 3A3A3A;
+	  }
+	  
+
+    .sample-slider{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 300px;
+	  height: 300px;
+	  border: 1px solid var(--amethyst);
+	  float: left;
+	  margin-right: 15px;
+	  margin-bottom: 15px;
+	  margin-top: 30px;
+    }
+    .sample-slider img{
+    }
+	.slideshow-container {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 300px;
+	  height: 300px;
+	  border: 1px solid var(--amethyst);
+	  float: left;
+	  margin-right: 15px;
+	  margin-bottom: 15px;
+	  margin-top: 15px;
+	}
+
+	.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	</style>
+
+
 </head>
 
 <body>
@@ -138,6 +216,39 @@
 			<br>
 			<hr style="width:100%;text-align:left;margin-left:0">	
 			<br>
+	
+<!--	<div class="container" id="Perle"> -->
+
+<div class="swiper sample-slider" style="width:300px;height:300px">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/anatomy016.jpg" ></div>
+        <div class="swiper-slide"><img src="img/anatomy017.jpg"></div>
+        <div class="swiper-slide"><img src="img/anatomy018.jpg"></div>
+        <div class="swiper-slide"><img src="img/anatomy019.jpg"></div>
+        <div class="swiper-slide"><img src="img/anatomy020.jpg" ></div>
+        <div class="swiper-slide"><img src="img/anatomy021.jpg"></div>
+    </div>
+</div>
+
+<p style='margin-top:6.0pt'>Nadine Szczesny (Deutsche Doggen von der Perle am Rhein, https://www.vonderperleamrhein.de) также внесла свой вклад в визуализацию особенностей породы, используя программу Artificial Intelligence (AI). Современные компьютерные технологии дают очень реалистичные изображения, которыми можно пользоваться для изучения строения собаки, хотя в медицинских целях лучше, конечно, использовать анатомические атласы.</p>
+
+			<br>
+			<hr style="width:100%;text-align:left;margin-left:0">	
+			<br>
+<!--</div>	-->
+			
+			
+			<p  style='margin-top:6.0pt'>
+			</p>	
+			
+			<br clear="all">			
+			
+			<br>
+			<hr style="width:100%;text-align:left;margin-left:0">	
+			<br>
+			
+			
+			
 									
 			<p  style='margin-top:6.0pt'>Более детальные сведения об анатомии можно почерпнуть из следующих источников.</p>
 			<a href="https://disk.yandex.ru/i/ykwQvwDlkeK-ng" target="_blank">
@@ -156,5 +267,24 @@
 		</div>
 	</section>
 </body>
-
+	<script>
+    const swiper = new Swiper('.sample-slider', {
+        loop: true,                         // loop
+        speed: 3000,
+		effect: 'fade',
+		fadeEffect: {           // added
+        crossFade: true     // added(resolve the overlapping of the slides)
+		},                      // added
+		autoplay: {                         // auto play
+            delay: 3000,
+        },
+        pagination: {                       // pagination(dots)
+            el: '.swiper-pagination',
+        },
+        navigation: {                       // navigation(arrows)
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    })
+	</script>
 </html>
