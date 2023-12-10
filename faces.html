@@ -6,7 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Great Dane Faces by gret dain</title>
 	
+<!--	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<script defer src="js/swiper-bundle.min.js"></script>-->	
 	<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">-->
 <link rel="stylesheet" href="css/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -36,6 +39,9 @@
 	  font-size: 1rem;
 	  width: 100%;*/
 	}
+	video {
+	width: 100%;
+	}
       .article img {
         object-fit: contain;
         max-width: 100%;
@@ -48,32 +54,25 @@
 /*	figcaption {
     font-size:0.8em;
 	}*/
-    .sample-slider{
-	  display: flex;
+	.sample-slider{
+	display: flex;
 	  justify-content: center;
 	  align-items: center;
-	  width: 95%;
-	  height: auto;
+	  width: 100%;
+	height: 300;
 	  border: 1px solid var(--amethyst);
 	  float: left;
-	margin-left:0;
-	padding:0.5em"
+	  margin-right: 15px;
+	  margin-bottom: 15px;
+	  margin-top: 15px;
     }
-		video {
-	height:auto;
-	width: 95%;
-	float:left;
-	margin-left:0; 
-	margin-right: 0.5em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	}
 	}
 
 @media (min-width: 768px) {
-		figure {
+
+	figure {
 	  float: left;
-	  width: 40%;
+	  width: 50%;
 	  text-align: center;
 	  font-style: italic;
 	  font-size: smaller;
@@ -93,6 +92,9 @@
 	  font-size: 1rem;
 	  width: 100%;*/
 	}
+	video {
+	width: 50%;
+	}
     .article img {
     object-fit: contain;
     max-width: 100%;
@@ -106,34 +108,27 @@
     font-size:0.8em;
 	}*/
     .sample-slider{
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  width: 40%;
-	  height: auto;
-	  border: 1px solid var(--amethyst);
-	  float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 300;
+	border: 1px solid var(--amethyst);
+	float: left;
 	margin:0.5em;
 	padding:0.5em;
     }
-	video {
-	height:auto;
-	width: 40%;
-	float:left;
-	margin-left:0; 	
-	margin-right: 0.5em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;	}
-
+	}
 
 	html {
 	font-family: 'OpenSans', sans-serif;
 	font-weight: 100;
 	}
-	
 	body, html {
-	  margin: 0;
-	  padding: 0
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;
 	}
 	.container {
 	margin-right: auto;
@@ -162,43 +157,37 @@
 		line-height: 1.5em;
 		color: 3A3A3A;
 	  }
-	  
 
-    .sample-slider{
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  border: 1px solid var(--amethyst);
-	  float: left;
-	  margin-right: 15px;
-	  margin-bottom: 15px;
+    .sample-slider img{
     }
-
-	.slideshow-container {
+<!--	.slideshow-container {
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
+	  width: 300px;
+	  height: 300px;
 	  border: 1px solid var(--amethyst);
 	  float: left;
 	  margin-right: 15px;
 	  margin-bottom: 15px;
 	  margin-top: 15px;
 	}
-
-	.swiper {
-	margin-left:0;
-	padding:0.5em;
-	}
-
-	.swiper-wrapper {
-	align-items: center;
-	}
-	
+-->
 	.swiper-slide {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	}
+	      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+	}	    
+
 	</style>
 	
 
@@ -206,7 +195,6 @@
 </head>
 
 <body>
-
 <section class="article" id="article">
 	<div class="container" id="bismarck">
 
@@ -216,7 +204,7 @@
         <div class="swiper-slide"><img src="img/faces1-2.jpg"></div>
         <div class="swiper-slide"><img src="img/faces1-3.jpg"></div>
         <div class="swiper-slide"><img src="img/faces1-4.jpg"></div>
-        <div class="swiper-slide"><img src="img/faces1-5.jpg" ></div>
+        <div class="swiper-slide"><img src="img/faces1-5.jpg"></div>
         <div class="swiper-slide"><img src="img/faces1-6.jpg"></div>
         <div class="swiper-slide"><img src="img/faces1-7.jpg"></div>
         <div class="swiper-slide"><img src="img/faces1-8.jpg"></div>		
@@ -225,7 +213,7 @@
 </div>
 <br>
 
-<p >Канцлер Отто фон Бисмарк (1815-1898) был известным почитателем породы Reichshund (ныне - немецкий дог). Один из его догов едва не стал причиной международного конфликта, когда продемонстрировал агрессию по отношению к российскому дипломату Горчакову. Александр Михайлович жестикулировал настолько живо, что  Тирас, лежавший до этого момента на  подстилке, бросился защищать своего хозяина. Он прыгнул на гордого русского и уронил его на пол.  [С немецкой стороны] Были принесены и приняты все необходимые извинения.  
+<p >Канцлер Отто фон Бисмарк (1815-1898) был известным почитателем породы Reichshund (ныне - немецкий дог). Один из его догов едва не стал причиной международного конфликта, когда продемонстрировал агрессию по отношению к российскому дипломату Горчакову. Александр Михайлович жестикулировал настолько живо, что  Тирас, лежавший до этого момента на  подстилке, бросился защищать своего хозяина. Он прыгнул на гордого русского и уронил его на пол.  [С немецкой стороны] были принесены и [с русской стороны] приняты все необходимые извинения.  
 Если другой дог канцлера, Султан, не привечал кого-то, Бисмарк использовал это отношение собаки для принятия своих политических решений. Бисмарка всегда сопровождали его любимые собаки, начиная со времени, когда он был студентом юридического факультета и гражданским служащим в Берлине, и позже, во время своих путешествий во многие страны, в эпоху своей дипломатическрй карьеры во Франкфурте, Санкт-Петербурге, Париже и в других местах. Султан, который умер в резиденции канцлера в 1877 году, был, скорее всего, его самым любимым догом.
 Из всех собак, которые заняли место в истории, Тирас является наиболее известным. Единственная собака, смерть которой считалась настолько важной, что известие о событии распространилось не только по Европе, но и по всему миру. История Тираса не закончилась смертью.  В первый день рождения канцлера после смерти собаки ему подарили другого дога. Почти 60 лет канцлер Бисмарк держал догов, поодиночке и парами. 
 Первая собака, которую он получил, когда жил с родителями в Книфофе, была одной из самых больших и страшных собак для фермеров окрестностей. Позже эта собака сопровождала своего молодого хозяина в Геттингенский университет, где вскоре стала узнаваемой. Однажды Бисмарка вызвали к директору, потому что он выбросил пустую бутылку из окна. Он взял с собой свою огромную собаку, чтобы попугать директора, который быстро при их появлении спрятался за креслом. Там он оставался до тех пор, пока собаку не вывели из комнаты.В дополнение к наказанию, которое Бисмарк получил за свое первоначальное правонарушение, он был оштрафован на пять талеров за то, что привел этого ужасного зверя в кабинет госслужащего.</p>
@@ -326,8 +314,8 @@
 <p style='margin-top:6.0pt'>В 16 лет Лаура завела своего первого дога, внучку Хайде.</p>
 <p style='margin-top:6.0pt'>Название питомника BMW было выбрано по первым буквам окраса дога -  черный, белый и серомраморный. Некоторые из ее ранних собак были тем, что сейчас называются плащевыми (B&W).</p>
 <p style='margin-top:6.0pt'>К концу 80-х годов выпускниками BMW были 30 чемпионов. Это феноменальное достижение, учитывая, что Лаура производила только один помет в год и почти всегда только дважды вязала одну и ту же суку. Все ее собаки были воспитаны как домашние собаки и обучены послушанию. </p>
-<video preload="metadata" controls>
-          <source src="img/bmw_r_d.mp4" type="video/mp4" />
+<video preload="metadata" style="float:left;margin-right:10pt;margin-bottom:10pt;" controls>
+          <source src="img/bmw_r_d.mp4" type="video/mp4">
         </video>
 <p style='margin-top:6.0pt'>Еще больше впечатляет факт, что после смерти Лауры чемпионами стали более 30 потомков ее собак. Лаура была не только успешна в своей селекционной программе догов, она также работала архитектором и делила свое время между ее домом в Фармингвилле и офисом в Нью-Йорке. В этом ей помогала Холли Сайветс и многие друзья.</p>
 
@@ -357,7 +345,7 @@
 
 <p style='margin-top:6.0pt'>Доги - собаки, которые могут пойти куда угодно и сделать что угодно. Таким был Спарк, не доживший одного дня до своих девяти лет (8.26.2012-8.25.2021) и подаривший нам со своей хозяйкой Ольгой уверенность, что красота - это не только медали и титулы, но также работоспособность, действие, общение, сотрудничество, работа в команде, радость, цель,  товарищество, мотивация, привязанность, доверие, стабильность, универсальность, скорость, сила, выносливость, близость, чуткость, сверхъестественное восприятие, бдительность, смелость, чувство игры, стайный инстинкт, жесткость, бесстрашие, душевное равновесие. "Красота и мозги" - все, что по-настоящему ценно в наших отношениях с собакой. Обучаемость стала приоритетом отбора для заводчика Chomadane, поскольку она является фундаментальной основой нашего общения с собаками. Универсальность - синоним породы, второе имя дога - от охоты до семейной собаки и всего остального, что может потребовать образ жизни владельца. Дог - легендарный "bon viveur" - собака солнечного нрава, позитивная душа, полная радости жизни, воплощение "невозможного ничего нет".</p>
 <p style='margin-top:6.0pt'>В зал славы (АКС) Спарк вошел со множеством титулов по дрессировке (CD BN RE AJP OFP CGCA TKP NW1 NW1-V SPJ SPK ETD NCO-1 TEAM1P GDCA-Versatility Award) и, конечно, с огромной армией почитателей во всем мире благодаря фото, сделанными его хозяйкой (https://www.facebook.com/SparktheGreatDane, www.gadaboutphotography.com).</p>
-<video preload="metadata" controls>
+<video preload="metadata" style="float:left;margin-right:10pt;margin-bottom:10pt;" controls>
           <source src="img/Spark_gd.mp4" type="video/mp4" />
         </video>
 <p style='margin-top:6.0pt'>Теперь мы знаем, что уверенность в себе, крепкие нервы, надежность - элементы темперамента, без которых мы не можем обойтись, потому что на них строится поведение собаки и позитивные, взаимовыгодные отношения между собакой и человеком. Тот факт, что в мире есть люди, готовые работать со своими собаками, вселяет надежду и вдохновляет. В списке собак АКС, получивших рабочие титулы, насчитывется около 50 догов ежегодно. Это значит, что дело Спарка живет. Это значит, что люди заводят себе друга, который может работать и не растерял своих качеств в течение столетий селекции.</p>
