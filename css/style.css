@@ -2095,7 +2095,7 @@ html.with-fancybox body.compensate-for-scrollbar {
     		background: #333;
     		background: rgba(0,0,0,.8);
     		border-radius: 4px;
-    		bottom: 26px;
+    		bottom: 16px;
     		color: #fff;
     		content: attr(data-title);
     		left: 20%;
