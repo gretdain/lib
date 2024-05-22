@@ -50,6 +50,7 @@ src: local(''),
 
 :root {
 /*--main-bg #e7dd89;*/
+--e5-bg: rgba(229, 229, 229, 1);
 --main-bg: #878787;
 --main-bg-05: rgba(231, 221, 137, .5);
 --main-bg-07: rgba(231, 221, 137, .7);
@@ -2102,7 +2103,7 @@ html.with-fancybox body.compensate-for-scrollbar {
     		padding: 5px 15px;
     		position: absolute;
     		z-index: 98;
-    		width: 70%;
+    		width: 50%;
 	   }
 
 .sw__img img {
@@ -2368,13 +2369,14 @@ position: relative;
 /*padding: 9px 175px;*/
 
   width: 100%;
-  max-width: 1024px;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 1px;
   margin-left: auto;
   margin-right: auto;
+  background-color:var(--e5-bg);
 }
 
 .header-top {
@@ -2426,6 +2428,7 @@ border-radius: 5px;
 background-color: rgba(135,135,135,0.9);
 border: 1px solid var(--amethyst);
 color: var(--white-inversion);
+z-index:99;
 }
 
 .menu:hover .dropdown-content {
