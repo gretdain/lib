@@ -7,17 +7,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Great Dane Faces by gret dain</title>
-	
-<!--	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<script defer src="js/swiper-bundle.min.js"></script>-->	
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
-<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">-->
-<link rel="stylesheet" href="css/swiper-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>-->
 
-
-	<style>
-  @media (max-width: 767px) {
+<style>
+@media (max-width: 767px) {
 	figure {
 	  float: left;
 	  width: 100%;
@@ -53,8 +49,8 @@
 	img.scaled {
 	width: 100%;
 	}	
-/*	figcaption {
-    font-size:0.8em;
+	/*	figcaption {
+ 	font-size:0.8em;
 	}*/
 	.sample-slider{
 	display: flex;
@@ -67,7 +63,7 @@
 	  margin-right: 15px;
 	  margin-bottom: 15px;
 	  margin-top: 15px;
-    }
+	}
 	.v-spoiler {
 	height: 500px; /* высота нашего блока */
 	width: 100%; /* ширина нашего блока */
@@ -116,7 +112,7 @@
 	img.scaled {
 	width: 100%;
 	}	
-/*	figcaption {
+	/*	figcaption {
     font-size:0.8em;
 	}*/
     
@@ -130,7 +126,7 @@
 	float: left;
 	margin:0.5em;
 	padding:0.5em;
-    }
+	}
 	.v-spoiler {
 	height: 300px; /* высота нашего блока */
 	width: 100%; /* ширина нашего блока */
@@ -142,7 +138,7 @@
 	border-radius: 10px;
 	}
 	}
-
+/* shared css */
 	html {
 	font-family: 'OpenSans', sans-serif;
 	font-weight: 100;
@@ -156,7 +152,7 @@
 	.container {
 	margin-right: auto;
 	margin-left: auto;
-	/*padding: 0 160px;*/
+	/*padding-top: 0 160px;*/
 	max-width: 100%;
 	/*	  text-align: center;*/
 	padding-left: 10%;
@@ -184,7 +180,7 @@
     .sample-slider img{
 	align-items: center; /* it works */
     }
-<!--	.slideshow-container {
+	<!--	.slideshow-container {
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
@@ -196,7 +192,7 @@
 	  margin-bottom: 15px;
 	  margin-top: 15px;
 	}
--->
+	-->
 	.swiper-wrapper {
 	align-items: center; /* it works */
 	}
@@ -213,20 +209,87 @@
       -ms-flex-align: center;
       -webkit-align-items: center;
 	}	    
-   A {
-    text-decoration: none; /* Убирает подчеркивание для ссылок */
-   } 
-   A:hover { 
-    text-decoration: bold; /* Добавляем подчеркивание при наведении курсора на ссылку */
-    color: red; /* Ссылка красного цвета */
-   } 
-	</style>
+	a {
+	outline: none;
+	text-decoration: none;
+	padding: 1px;
+	}
+
+	a:link {
+	/*  color: blue;
+	font-weight: bold;*/
+	}
+
+	a:visited {
+	color: purple;
+	}
+
+	a:focus,
+	a:hover {
+	border-bottom: 1px solid;
+	}
+
+	a:active {
+	color: blue;
+	}
+
+	a[href*="http"] {
+	background: url(img/ext_link2.svg) no-repeat 100% 0;
+	background-size: 16px 16px;
+	padding-right: 19px;
+	}
+
+	.header-top__container {
+	position: fixed;
+	z-index: 99;
+	background-color: var(--e5-bg);
+	}
+</style>
 	
 
-	
 </head>
 
 <body>
+
+				<div class="container header-top__container">
+					<div class="menu">
+					<button type="button"style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
+						<div class="dropdown-content" style="left:1px">
+						<a href="index.html#eval">Оценка собаки</a>
+						<a href="index.html#health">Анатомия</a>
+						<a href="index.html#history">История в цвете</a>
+						<a href="index.html#breeding">Селекция</a>						
+						<a href="index.html#books">Библиотека</a>
+						<a href="index.html#woodhouse">Почти человек</a>						
+						<a href="index.html#vet">Здоровье</a>
+						</div>
+					</button>
+					</div>
+					<div class="title" style="/*font-size:1200%;*/">
+					<p style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
+					</div>
+
+					<div class="links">
+					<button type="button" style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/ext_link.svg" style="padding-top:5px;" alt="Links"> </button>
+						<div class="dropdown-content" style="right:1px">
+						<a rel="noopener" style="background:url() " target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark view</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://greatdanes.dog">Pedigree RU</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.danesworld.info/pedigree.php?">Pedigree DE</a>	
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://gretdain.com/eu-gallery.html">Europe 1900-1980</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://daneaffaire.com/aboutjill.html">J.Evans memorial</a>
+						</div>
+					</button>	
+					</div>
+				</div>
+
+<section id="blank" style="padding-top:65px;">
+</section>
+
 <section class="article" id="article">
 	<div class="container" id="bismarck">
 
@@ -457,7 +520,7 @@
 </div>
 
 <p style='margin-top:6.0pt'>Доги - собаки, которые могут пойти куда угодно и сделать что угодно. Таким был Спарк, не доживший одного дня до своих девяти лет (8.26.2012-8.25.2021) и подаривший нам со своей хозяйкой Ольгой уверенность, что красота - это не только медали и титулы, но также работоспособность, действие, общение, сотрудничество, работа в команде, радость, цель,  товарищество, мотивация, привязанность, доверие, стабильность, универсальность, скорость, сила, выносливость, близость, чуткость, сверхъестественное восприятие, бдительность, смелость, чувство игры, стайный инстинкт, жесткость, бесстрашие, душевное равновесие. "Красота и мозги" - все, что по-настоящему ценно в наших отношениях с собакой. Обучаемость стала приоритетом отбора для заводчика Chomadane, поскольку она является фундаментальной основой нашего общения с собаками. Универсальность - синоним породы, второе имя дога - от охоты до семейной собаки и всего остального, что может потребовать образ жизни владельца. Дог - легендарный "bon viveur" - собака солнечного нрава, позитивная душа, полная радости жизни, воплощение "невозможного ничего нет".</p>
-<p style='margin-top:6.0pt'>В зал славы (АКС) Спарк вошел со множеством титулов по дрессировке (CD BN RE AJP OFP CGCA TKP NW1 NW1-V SPJ SPK ETD NCO-1 TEAM1P GDCA-Versatility Award) и, конечно, с огромной армией почитателей во всем мире благодаря <a target=”_blank” href="https://www.gadaboutphotography.com">фото, </a>сделанными его хозяйкой . У Спарка в интернете есть своя <a target=”_blank” href="https://www.facebook.com/SparktheGreatDane">страничка</a>.</p>
+<p style='margin-top:6.0pt'>В зал славы (АКС) Спарк вошел со множеством титулов по дрессировке (CD BN RE AJP OFP CGCA TKP NW1 NW1-V SPJ SPK ETD NCO-1 TEAM1P GDCA-Versatility Award) и, конечно, с огромной армией почитателей во всем мире благодаря <a target=”_blank” style="font-weight:bold;" href="https://www.gadaboutphotography.com"> фото</a>, сделанным его хозяйкой. У Спарка в интернете есть своя <a target=”_blank” style="font-weight:bold;" href="https://www.facebook.com/SparktheGreatDane">страничка</a>.</p>
 <video preload="metadata" style="float:left;margin-right:10pt;margin-bottom:10pt;" controls>
           <source src="img/Spark_gd.mp4" type="video/mp4">
         </video>
@@ -485,7 +548,7 @@
 </div>
 
 <p style='margin-top:6.0pt'>Вирджиния Сандерс родом из Рочестера, штат Нью-Йорк, профессиональный художник/дизайнер, живущий в Колумбии, штат Северная Каролина. Окончила Университет штата Нью-Йорк со степенью бакалавра и переехала в Колумбию, чтобы получить степень магистра изящных искусств в Университете Южной Каролины. Там несколько лет преподавала курсы рисования, гравюры и графического дизайна, а также историю искусств в колледже Ньюберри.</p>
-<p style='margin-top:6.0pt'>Вскоре после получения степени магистра заинтересовалась коммерческим искусством, устроилась художником в небольшое рекламное агентство, потом  перешла в графический отдел крупной компании по производству программного обеспечения, конце концов оставила эту должность, чтобы совершить шестимесячное кругосветное путешествие по 18 странам. Первый компьютер появился дома в 1988 году. В 1996 году открылись возможности Интернета и был выучен HTML. В течение 14 лет Вирджиния писала на своей <a target=”_blank” href="https://ginnie.com">страничке </a> о догах, рисовала догов, собрала массу ссылок на интернет ресурсы про догов, и стала, несомненно, самым популярным человеком в англоязычном интернете, пишущим про догов. В XXI веке один человек сделал для популяризации породы больше, чем многие поколения заводчиков. Вся четырнадцатимиллионная аудитория интернет странички смеялась над юмором о характерных признаках хозяев немецкого дога, внимательно читала предостережения о заболеваниях породы, восхищалась фотографиями и коллажами догов на Луне. </p>
+<p style='margin-top:6.0pt'>Вскоре после получения степени магистра заинтересовалась коммерческим искусством, устроилась художником в небольшое рекламное агентство, потом  перешла в графический отдел крупной компании по производству программного обеспечения, конце концов оставила эту должность, чтобы совершить шестимесячное кругосветное путешествие по 18 странам. Первый компьютер появился дома в 1988 году. В 1996 году открылись возможности Интернета и был выучен HTML. В течение 14 лет Вирджиния писала на своей <a target=”_blank” style="font-weight:bold;" href="https://ginnie.com">страничке </a> о догах, рисовала догов, собрала массу ссылок на интернет ресурсы про догов, и стала, несомненно, самым популярным человеком в англоязычном интернете, пишущим про догов. В XXI веке один человек сделал для популяризации породы больше, чем многие поколения заводчиков. Вся четырнадцатимиллионная аудитория интернет странички смеялась над юмором о характерных признаках хозяев немецкого дога, внимательно читала предостережения о заболеваниях породы, восхищалась фотографиями и коллажами догов на Луне. </p>
 	<br clear="all">
 	<figure>
 		<img src="img/faces7-9.jpg">
@@ -494,7 +557,7 @@
 		</figcaption>
 	</figure>
 <p style='margin-top:6.0pt'>4 февраля 1995 года дом Вирджинии превратился в шумный игровой домик. К ней приехали два щенка - Джаббер и Мерлин из питомника Amherst-Harlewood от родителей-чемпионов Bubba Rondo и Gabrielle. Оба щенка выросли прекрасными собаками с великолепным темпераментом. Мерлин был одарен прекрасным здоровьем, а вот Джабберу повезло меньше. Многие из читателей узнали что значит любовь и боль.</p>
-<p style='margin-top:6.0pt'>Проблемы со здоровьем Джаббера были многочисленными и разнообразными. Они с хозяйкой пережили их вместе. Многие из посетителей интеренет странички, читая историю любви и испытаний, надеялись, что радость общения продлится дольше. Джаббер спокойно воспринимал каждую проблему. 2001 год выдался самым тяжелым. В марте Джабберу сделали операцию TPLO, чтобы восстановить разрушенную крестообразную связку в колене. Операция прошла неудачно и оставила Джаббера калекой. Каким-то образом Джаббер держался. Он словно говорил, что не важно, что ты не можешь сделать, главное - что ты МОЖЕШЬ сделать.</p>
+<p style='margin-top:6.0pt'>Проблемы со здоровьем Джаббера были многочисленными и разнообразными. Они с хозяйкой пережили их вместе. Многие из посетителей интеренет странички, читая историю любви и испытаний, надеялись, что радость общения продлится дольше. Джаббер спокойно воспринимал каждую проблему. 2001 год выдался самым тяжелым. В марте Джабберу сделали операцию TPLO, чтобы восстановить разрушенную крестообразную связку в колене. Операция прошла неудачно и оставила Джаббера калекой. Каким-то образом Джаббер держался. Он словно говорил, что не важно, что ты не можешь сделать, главное - что ты <b>МОЖЕШЬ</b> сделать.</p>
 <p style='margin-top:6.0pt'>"Совместное проживание с догом приносит огромную радость, бесчисленные развлечения и некоторые уникальные проблемы. Доги - красивые, энергичные животные. Их пламя горит сильно и ярко. Это пламя, которое согревает вас. Это пламя, которое утешает вас. Это пламя, которое добавляет искру в вашу жизнь. Это пламя, которое освещает вас - и ваших домочадцев - бесчисленными способами.</p>
 <p style='margin-top:6.0pt'>К сожалению, пламя дога - это временное пламя; вы хотите, чтобы оно длилось вечно, но не в силах этого добиться. Когда пламя вашего дога начинает угасать, ваши мысли возвращаются к светлым дням. У вас замирает сердце, когда вы понимаете, что очень скоро вы потеряете это яркое, чудесное пламя. Слишком скоро вам придется с ним попрощаться."</p>
 <p style='margin-top:6.0pt'>Пламя Джаббера мерцало с марта 2001 года. Во вторник, 15 января 2002, пламя было потушено уколом иглы. Со слезами на глазах и комком в горле хозяева попрощались с любимым Бармаглотом.</p>
@@ -504,7 +567,7 @@
 
 <p style='margin-top:6.0pt; text-align:center;'><b>История любви и боли </b></p>
 
-<p style='margin-top:6.0pt'> Февраль 26 2001.  Джабберу шесть лет. Я сделала тройной портрет, в котором отражены несколько его настроений, потому что я беспокоюсь о нем. В пятницу, 2 марта, я соберу его в кучу, и мы поедем на два часа в специальную клинику, где я со слезами на глазах расстанусь на время с моим большим пушистиком, оставив его в руках очень умелого хирурга. Затем, в течение нескольких часов, Джабберу сделают анестезию. Его правую заднюю лапу побреют от бедра до пальцев. Обе задние лапы будут просвечены рентгеном, после чего начнется операция. Операция займет полтора-два часа.</p>
+<p style='margin-top:6.0pt'> Февраль 26, 2001.  Джабберу шесть лет. Я сделала тройной портрет, в котором отражены несколько его настроений, потому что я беспокоюсь о нем. В пятницу, 2 марта, я соберу его в кучу, и мы поедем на два часа в специальную клинику, где я со слезами на глазах расстанусь на время с моим большим пушистиком, оставив его в руках очень умелого хирурга. Затем, в течение нескольких часов, Джабберу сделают анестезию. Его правую заднюю лапу побреют от бедра до пальцев. Обе задние лапы будут просвечены рентгеном, после чего начнется операция. Операция займет полтора-два часа.</p>
 
 <p style='margin-top:6.0pt'>Джабберу предстоит операция TPLO - остеотомия, выравнивающая наклон плато большеберцовой кости. Почему? Потому что он калека. Он порвал крестообразную связку и с тех пор страдает от боли. Хирург вскроет ногу Джаббера и "переделает" его колено, проведя остеотомию. Это очень сложная процедура, которая была разработана как альтернатива традиционной операции по стабилизации крестообразных связок. Традиционная операция по стабилизации крестообразного сочленения имеет не очень хорошие показатели долгосрочного успеха среди собак гигантских пород, а восстановление обычно проходит долго и тяжело как для хозяина, так и для собаки. Я считаю, что TPLO - это лучшее решение. </p>
 
@@ -702,6 +765,9 @@
 
 </section>
 
+
+<script src="js/swiper-bundle.min.js"></script>
+
 <script>
     const swiper = new Swiper('.sample-slider', {
         loop: true,                         // loop
@@ -723,6 +789,7 @@
         },
     })
 </script>
+
 
 </body>
 
