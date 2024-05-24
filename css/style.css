@@ -50,7 +50,7 @@ src: local(''),
 
 :root {
 /*--main-bg #e7dd89;*/
---e5-bg: rgba(229, 229, 229, 1);
+--e5-bg: rgba(213, 213, 213, 1);
 --main-bg: #878787;
 --main-bg-05: rgba(231, 221, 137, .5);
 --main-bg-07: rgba(231, 221, 137, .7);
@@ -2172,9 +2172,31 @@ list-style-type: none;
 }*/
 
 
-a {
-text-decoration: none;
-}
+/* links */	    
+
+	a {
+	outline: none;
+	text-decoration: none;
+	padding: 1px;
+	}
+
+	a:link {
+	color: var(--amethyst);
+	}
+
+	a:visited {
+	/*color: purple;*/
+	}
+
+	a:focus,
+	a:hover {
+	border-bottom: 1px solid;
+	font-weight: bold;
+	}
+
+	a:active {
+	color: blue;
+	}
 
 h1 {
 margin: 0;
