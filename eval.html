@@ -6,8 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Немецкий дог оценка by gret dain</title>
 
-<link rel="stylesheet" href="css/swiper-bundle.min.css">	
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">	
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>-->
 
 <style>
 @media (min-width: 768px) {
@@ -240,12 +243,64 @@
       -ms-flex-align: center;
       -webkit-align-items: center;
 	}	    
+   A {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   } 
+   A:hover { 
+    text-decoration: bold; /* Добавляем подчеркивание при наведении курсора на ссылку */
+    color: red; /* Ссылка красного цвета */
+   } 
 
+	.header-top__container {
+	position: fixed;
+	z-index: 99;
+	background-color: var(--e5-bg);
+	}
 </style>
-<!--	<link rel="stylesheet" href="css/style.css">-->
+
 </head>
 
 <body>
+
+				<div class="container header-top__container">
+					<div class="menu">
+					<button type="button"style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
+						<div class="dropdown-content" style="left:1px">
+						<a href="index.html#health">Анатомия</a>
+						<a href="index.html#history">История в цвете</a>
+						<a href="index.html#breeding">Селекция</a>						
+						<a href="index.html#books">Библиотека</a>
+						<a href="index.html#woodhouse">Почти человек</a>						
+						<a href="index.html#faces">Лица</a>
+						<a href="index.html#vet">Здоровье</a>
+						</div>
+					</button>
+					</div>
+					<div class="title" style="/*font-size:1200%;*/">
+					<p style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
+					</div>
+
+					<div class="links">
+					<button type="button" style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/ext_link.svg" style="padding-top:5px;" alt="Links"> </button>
+						<div class="dropdown-content" style="right:1px">
+						<a rel="noopener" style="background:url() " target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark view</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://greatdanes.dog">Pedigree RU</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.danesworld.info/pedigree.php?">Pedigree DE</a>	
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://gretdain.com/eu-gallery.html">Europe 1900-1980</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://daneaffaire.com/aboutjill.html">J.Evans memorial</a>
+						</div>
+					</button>	
+					</div>
+				</div>
+
+<section id="blank" style="padding-top:65px;">
+</section>
+
 <section class="article" id="article">
 
 	<div class="container" id="evans">
@@ -1386,7 +1441,7 @@ text-align:center; font-size:70%;'>Опубликовано Никки Ригг�
 <td style="height: 10px;" style="padding:10px ;">Палевый окрас должен быть желто-золотым с черной маской. Черный цвет должен быть на ободках глаз и бровях, а также может быть на ушах и кончике хвоста. Предпочтение всегда должно отдаваться насыщенному золотому желтому. Нежелательны белые отметины на груди и пальцах ног, а также грязный окрас. Палевые относятся к семейству палево-тигрового окраса и должны разводиться только с палевыми и тигровыми.</td>
 </tr>
 <tr>
-<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><b>Формула цвета kk/--/mm/S-/D- </b><font></td>
+<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><a href="anatomy.html#color_genes"><b>Формула цвета </b></a> <b>kk/--/mm/S-/D- </b><font></td>
 </tr>
 </table>
 
@@ -1406,7 +1461,7 @@ text-align:center; font-size:70%;'>Опубликовано Никки Ригг�
 <td style="height: 10px;" style="padding:10px ;">Основной окрас тигрового должен быть желто-золотистым и обязательно с яркими черными поперечными полосами в виде шеврона. Предпочтительна черная маска. Черный цвет должен быть на ободках глаз и бровях, а также может быть на ушах и кончике хвоста. Чем интенсивнее основной окрас и чем отчетливее и равномернее полосчатость, тем более предпочтительным будет окрас. Слишком яркая или слишком слабая полосчатость одинаково нежелательны. Нежелательны белые отметины на груди и пальцах ног, черно-подпалые и грязные окрасы. Тигровые относятся к семейству палевого-тигрового окрасов и должны разводиться только с палевыми и тигровыми.</td>
 </tr>
 <tr>
-<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><b>Формула цвета k<sup>br</sup>k/--/mm/S-/D- </b><font></td>
+<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><a href="anatomy.html#color_genes"><b>Формула цвета </b></a> <b>k<sup>br</sup>k/--/mm/S-/D- </b><font></td>
 </tr>
 </table>
 
@@ -1426,7 +1481,7 @@ text-align:center; font-size:70%;'>Опубликовано Никки Ригг�
 <td style="height: 10px;" style="padding:10px ;">Окрас черного дога должен быть глянцево-черным. Белые отметины на груди и пальцах ног нежелательны. Семейство черного окраса имеет три подгруппы: Черные из разведения черных, черные из разведения голубых и черные из разведения арлекинов. Черных из-под черных можно разводить с любой из подгрупп черных, с голубыми и с арлекинами. Черные, несущие ген голубого окраса, не должны разводиться с представителями семейства арлекинов. Черных, несущих нег арлекина, не следует разводить с голубыми.</td>
 </tr>
 <tr>
-<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><b>Формула цвета K-/--/mm/S-/D- </b><font></td>
+<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><a href="anatomy.html#color_genes"><b>Формула цвета </b></a> <b>K-/--/mm/S-/D- </b><font></td>
 </tr>
 </table>
 
@@ -1446,7 +1501,7 @@ text-align:center; font-size:70%;'>Опубликовано Никки Ригг�
 <td style="height: 10px;" style="padding:10px ;">Основной окрас мраморного дога должен быть чисто белым с черными рваными пятнами, неравномерно и хорошо распределенными по всему телу; предпочтительна чисто белая шея. Мерлевые пятна - норма. Ни одно пятно не должно быть настолько большим, чтобы казаться одеялом. Семейство окрасов арлекинов генетически сложное. Стандартные и нестандартные окрасы семейства арлекинов включают мантии, белые, мерле, пиболды, черные со слишком большим количеством белого и другие вариации. Представителей семейства арлекинов не следует разводить с представителями семейств палево-тигровых, голубых или голубых из-под черных окрасов.</td>
 </tr>
 <tr>
-<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><b>Формула цвета K-/Hh/M-/--/D- </b><font></td>
+<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><a href="anatomy.html#color_genes"><b>Формула цвета </b></a> <b>K-/Hh/M-/--/D- </b><font></td>
 </tr>
 </table>
 
@@ -1466,7 +1521,7 @@ text-align:center; font-size:70%;'>Опубликовано Никки Ригг�
 <td style="height: 10px;" style="padding:10px ;">Голубой окрас должен быть чистого стального голубого цвета. Белые отметины на груди и пальцах ног нежелательны. Голубой окрас является разбавленным, и его можно разводить с голубым, черным из-под черных или голубым из-под черных. Голубой не следует разводить с представителями семейства палево-тигровых или арлекинов.</td>
 </tr>
 <tr>
-<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><b>Формула цвета К-/--/mm/S-/dd </b><font></td>
+<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><a href="anatomy.html#color_genes"><b>Формула цвета </b></a> <b>К-/--/mm/S-/dd </b><font></td>
 </tr>
 </table>
 
@@ -1495,7 +1550,7 @@ text-align:center; font-size:70%;'>Опубликовано Никки Ригг�
 <td style="height: 10px;" style="padding:10px ;">Окрас плащевого дога должен быть черно-белым со сплошным черным покрывалом, простирающимся по телу; черный череп с белой мордой; белый подпал необязателен; предпочтителен полностью белый воротник; белая грудь; белые частично или полностью передние и задние ноги; черный хвост с белой окантовкой. Допускается небольшая белая отметина на черном покрывале, а также разрыв в белом ошейнике. Плащевой относится к семейству окрасов Арлекин и должен разводиться с теми же ограничениями, как и Арлекин.</td>
 </tr>
 <tr>
-<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><b>Формула цвета К-/hh/mm/s<sup>i</sup>s<sup>i</sup>/D- </b><font></td>
+<td style="height: 10px; padding:12px; text-align:center;"><font size = "4"><a href="anatomy.html#color_genes"><b>Формула цвета </b></a> <b>К-/hh/mm/s<sup>i</sup>s<sup>i</sup>/D- </b><font></td>
 </tr>
 </table>
 
@@ -1517,6 +1572,9 @@ width=390 height=360 id="Picture 1" src="img/eval000.png"></p>
 
 </section>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 <script>
     const swiper = new Swiper('.sample-slider', {
         loop: true,                         // loop
