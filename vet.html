@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Немецкий дог заболевания by gret dain</title>
+	<link rel="stylesheet" href="css/style.css">
 
 <!--<link rel="stylesheet" href="css/swiper-bundle.min.css">	
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>-->
@@ -393,28 +394,44 @@
 
 /* references */
 
-a {
-  outline: none;
-  text-decoration: none;
-  padding: 1px;
-}
+/* links */	    
 
-a:link {
-  color: blue;
-}
+	a {
+	outline: none;
+	text-decoration: none;
+	padding: 1px;
+	}
 
-a:visited {
-  color: purple;
-}
+	a:link {
+	color: var(--amethyst);
+	}
 
-a:focus,
-a:hover {
-  border-bottom: 1px solid;
-}
+	a:visited {
+	/*color: purple;*/
+	}
 
-a:active {
-  color: red;
-}
+	a:focus,
+	a:hover {
+	border-bottom: 1px solid;
+	font-weight: bold;
+	color: var(--amethyst);
+	}
+
+	a:active {
+	color: var(--amethyst);
+	}
+
+	a[href*="http"] {
+	background: url(img/ext_link2.svg) no-repeat 100% 0;
+	background-size: 16px 16px;
+	padding-right: 19px;
+	}
+
+	.header-top__container {
+	position: fixed;
+	z-index: 99;
+	background-color: var(--e5-bg);
+	}
 
 a[href*="http"] {
   background: url(img/ext_link.svg) no-repeat 100% 0;
@@ -427,6 +444,47 @@ a[href*="http"] {
 </head>
 
 <body>
+
+
+				<div class="container header-top__container">
+					<div class="menu">
+					<button type="button"style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
+						<div class="dropdown-content" style="left:1px">
+						<a href="index.html#eval">Оценка собаки</a>
+						<a href="index.html#health">Анатомия</a>
+						<a href="index.html#faces">Лица</a>
+						<a href="index.html#history">История в цвете</a>						
+						<a href="index.html#books">Библиотека</a>
+						<a href="index.html#woodhouse">Почти человек</a>						
+						<a href="index.html#breeding">Селекция</a>
+						</div>
+					</button>
+					</div>
+					<div class="title" style="/*font-size:1200%;*/">
+					<p style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
+					</div>
+
+					<div class="links">
+					<button type="button" style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/ext_link.svg" style="padding-top:5px;" alt="Links"> </button>
+						<div class="dropdown-content" style="right:1px">
+						<a rel="noopener" style="background:url() " target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark view</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://greatdanes.dog">Pedigree RU</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.danesworld.info/pedigree.php?">Pedigree DE</a>	
+						<a rel="noopener" style="background:url() " target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://gretdain.com/eu-gallery.html">Europe 1900-1980</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://daneaffaire.com/aboutjill.html">J.Evans memorial</a>
+						</div>
+					</button>	
+					</div>
+				</div>
+
+<section id="blank" style="padding-top:65px;">
+</section>
+
 
 <section class="article" id="article">
 
@@ -463,8 +521,7 @@ a[href*="http"] {
 <table cellspacing=7 >
 <tr>
 <td class="color_table" bgcolor="#C6C6C6" align="center">Симптомы</td>
-<td align="left">Собака замирает, выглядит испуганной, глаза выпучиваются, вскоре начинается жевание челюстями, затем - <>br
-припадок, заваливание набок, потеря сознания, мышцы собаки напрягаются, глаза закатываются, дыхание становится тяжелым и громким. Происходит непрерывное жевание, конечности в постоянном движении. Возможна розовая пена изо рта как результат прикусывания губ. Возможно мочеиспускание и/или дефекация. Скулеж и визг. Длительность стадии составляет несколько минут, затем - <br>
+<td align="left">Собака замирает, выглядит испуганной, глаза выпучиваются, вскоре начинается жевание челюстями, затем - припадок, заваливание набок, потеря сознания, мышцы собаки напрягаются, глаза закатываются, дыхание становится тяжелым и громким. Происходит непрерывное жевание, конечности в постоянном движении. Возможна розовая пена изо рта как результат прикусывания губ. Возможно мочеиспускание и/или дефекация. Скулеж и визг. Длительность стадии составляет несколько минут, затем - <br>
 замедление и в полное прекращение судорог, возбуждение либо угнетение. Жажда. Голод</td>
 </tr>
 <td class="color_table" bgcolor="#C6C6C6"  align="center">Возможная причина и описание заболевания</td>
