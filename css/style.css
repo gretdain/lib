@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-/*
+/* размер шрифта
 em - от текущего шоифта
 % - от родительской ширины
 rem - от стиля html
@@ -71,6 +71,7 @@ src: local(''),
 --light-grey: #999;
 --grey-accordion: #cacaca;
 --plug: #b7b7b7;
+--font-grey: #3A3A3A;
 --form-button-color: #d11616!important;
 --swiper-pagination-color: #666!important;
   --f-carousel-dots-width: 24px;
@@ -2184,19 +2185,22 @@ list-style-type: none;
 	color: var(--amethyst);
 	}
 
-	a:visited {
-	/*color: purple;*/
-	}
-
 	a:focus,
 	a:hover {
 	border-bottom: 1px solid;
 	font-weight: bold;
 	}
 
-	a:active {
+/*	a:active {
 	color: blue;
+	}*/
+
+	.ext_link {
+	background: url(img/ext_link2.svg) no-repeat 100% 0;
+	background-size: 16px 16px;
+	padding-right: 19px;
 	}
+
 
 h1 {
 margin: 0;
@@ -2436,13 +2440,12 @@ position: relative;
 
 .dropdown-content {
     display: none;
-    position: absolute;
+	position: absolute;
 	max-width: 300px;
-    width: 500%;
+    width: 800%;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
 padding: 5px 5px;
-font-weight: 100%;
 font-size: 14px;
 line-height: 25px;
 font-family: inherit;
