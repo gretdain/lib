@@ -50,6 +50,7 @@ src: local(''),
 
 :root {
 /*--main-bg #e7dd89;*/
+--l-grey: rgba(245,245,245,1);
 --e5-bg: rgba(213, 213, 213, 1);
 --main-bg: #878787;
 --main-bg-05: rgba(231, 221, 137, .5);
