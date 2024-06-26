@@ -1994,7 +1994,7 @@ html.with-fancybox body.compensate-for-scrollbar {
 .sw__left {
   width: 68.36%;
   padding-top: 48.82%;
-  position: relative
+  position: relative;
 }
 
 .sw__right {
@@ -2003,14 +2003,14 @@ html.with-fancybox body.compensate-for-scrollbar {
 
 .sw__right-row {
   position: relative;
-  height: 50%
+  height: 50%;
 }
 
 .sw__img, .sw__right-row {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
 }
 
 .sw__img {
@@ -2020,7 +2020,7 @@ html.with-fancybox body.compensate-for-scrollbar {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .sw__img:hover::after {
