@@ -397,9 +397,9 @@ padding: 5px 5px;
 font-size: 14px;
 line-height: 25px;
 font-family: inherit;
-border-radius: 5px;
-background-color: rgba(135,135,135,0.9);
-border: 1px solid var(--amethyst);
+border-radius: 8px;
+background-color: rgba(210,210,210,0.9);
+border: 2px solid var(--amethyst);
 color: var(--white-inversion);
 z-index:99;
 }
@@ -423,21 +423,6 @@ z-index:99;
     color: #FFFFFF;
     background-color: #878787;
 }
-
-
-/*.header-top__download {
-	width: 25px;
-	height: 25px;
-	background: url(../img/download.png) center center no-repeat transparent;
-	background-size: cover;
-}
-
-.header-top-links {
-	width: 25px;
-	height: 25px;
-	background: url(../img/links.png) center center no-repeat transparent;
-	background-size: cover;
-}*/
 
 .burger-button__icon {
 position: relative;
