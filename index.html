@@ -30,9 +30,8 @@
 
 <!--	<link rel="stylesheet" href="css/swiper.css"> -->
 	<link rel="stylesheet" href="css/card.css">
-	<link rel="stylesheet" href="css/carousel.css">
 	<link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="css/carousel.css">
 
 <style>
 @media (max-width: 767px) {
@@ -60,6 +59,11 @@
 	.sw__right-row {
 	display:none;
 	}
+	.button_menu {
+	background-color:var(--e5-bg);
+	height:50px;
+	width:50px;
+	}
 	}
 
 @media (min-width: 768px) {
@@ -78,7 +82,7 @@
   	.title-a {
     	display: inline-block;
   	}
-	.sw__left {
+/*	.sw__left {
 	display: flex;
 	}
 	.sw__right {
@@ -89,14 +93,29 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	}*/
+	.button_menu {
+	background-color:var(--e5-bg);
+	height:30px;
+	width:30px;
 	}
 	}
 
 
 /*   shared  */
 
+.dropdown-content {
+    top: 98%;
+	}
+.menu:hover .dropdown-content{
+	display:none;
+	}
+.menu-button{
+	display:block;
+	}
+
 </style>
-	
+
 </head>
 
 <body class="body">
@@ -104,8 +123,8 @@
 		<div class="add-swiper-container">
 			<div class="header__top header-top">
 				<div class="container header-top__container">
-					<div class="menu">
-					<button type="button"style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
+<!--					<div class="menu">
+					<button type="button" class="button_menu" onClick="dropdown()" data-toggle="dropdown"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
 						<div class="dropdown-content" style="left:1px">
 						<a rel="noopener" href="#eval">Оценка собаки</a>
 						<a rel="noopener" href="#anatomy">Анатомия</a>
@@ -117,14 +136,29 @@
 						<a rel="noopener" href="#vet">Здоровье</a>
 						</div>
 					</button>
+					</div> -->
+
+					<div class="menu">
+					<a href="javascript:;" class='menu-button'><img src="img/burger.svg" style="padding:5px; width: 32px; height:32px" alt="Menu"></a>
+					<div class="dropdown-content" style="left:1px">
+						<a rel="noopener" href="#eval">Оценка собаки</a>
+						<a rel="noopener" href="#anatomy">Анатомия</a>
+						<a rel="noopener" href="#history">История в цвете</a>
+						<a rel="noopener" href="#faces">Лица</a>
+						<a rel="noopener" href="#breeding">Селекция</a>            
+						<a rel="noopener" href="#books">Библиотека</a>
+						<a rel="noopener" href="#woodhouse">Почти человек</a>            
+						<a rel="noopener" href="#vet">Здоровье</a>
 					</div>
+					</div>
+
 					<div class="title" style="/*font-size:1200%;*/">
-					<p class="title-b" style="font-size: clamp(0.6rem, 3vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог</p>
+					<p class="title-b" style="font-size: clamp(0.6rem, 4vw, 3rem); padding-top:5px; padding-bottom:5px;">Немецкий дог</p>
 					<p class="title-a" style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
 
 					</div>
 					<div class="links">
-					<button type="button" style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/ext_link.svg" style="padding-top:5px;" alt="Links"> </button>
+					<button type="button"  class="button_menu"><img src="img/ext_link.svg" style="padding-top:5px;" alt="Links"> </button>
 						<div class="dropdown-content" style="right:1px">
 						<a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
 						<a rel="noopener" target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark view</a>
@@ -1026,8 +1060,10 @@
 	<script defer src="js/move-background.js"></script>
 
 	<script defer src="js/swiper-bundle.min.js"></script>
-	<script defer src="js/focus-visible.min.js"></script> 
-
+	<script defer src="js/focus-visible.min.js"></script>
+<!--	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	
 <script>
   // Функция для получения значения параметра из адресной строки
   function getParameterByName(name, url) {
@@ -1057,7 +1093,33 @@
       });
     }
   }
+  
 </script>
+
+<script>
+$(document).ready(function() {
+   
+    $('.menu-button').hover(function() {
+        $(this).siblings('.dropdown-content').stop(true, true).slideDown(200);
+    });
+
+    $('.dropdown-content').hover(function() {
+        $(this).stop(true, true).slideDown(200);
+    }, function() {
+        $(this).stop(true, true).slideUp(200);
+    });
+
+    $('.dropdown-content a').click(function(event) {
+        event.preventDefault();
+        var targetId = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(targetId).offset().top
+        }, 500);
+        $('.dropdown-content').slideUp(200);
+    });
+});
+</script>
+
 
 </body>
 </html>
