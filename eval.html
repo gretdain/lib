@@ -12,13 +12,19 @@
 
 <!--references
 https://gretdain.com/eval.html#evans
-https://gretdain.com/faces.html#riggsbee
-https://gretdain.com/faces.html#move
-https://gretdain.com/faces.html#colors
+https://gretdain.com/eval.html#riggsbee
+https://gretdain.com/eval.html#move
+https://gretdain.com/eval.html#colors
 -->
 
 <style>
 @media (min-width: 768px) {
+	.title-b {
+	display: none;
+  	}
+  	.title-a {
+    	display: inline-block;
+  	}
 	table td {
 	width: 50%;
 	}
@@ -96,6 +102,12 @@ https://gretdain.com/faces.html#colors
     	}
 
   @media (max-width: 767px) {
+	.title-a {
+	display: none;
+  	}
+  	.title-b {
+    	display: inline-block;
+  	}
   	table td {
 	display: inline-table;
 	/*border-style:none;*/
@@ -331,7 +343,7 @@ https://gretdain.com/faces.html#colors
 					<button type="button"style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
 						<div class="dropdown-content" style="left:1px">
 						<a href="index.html#faces">Лица</a>
-						<a href="index.html#health">Анатомия</a>
+						<a href="index.html#anatomy">Анатомия</a>
 						<a href="index.html#history">История в цвете</a>
 						<a href="index.html#breeding">Селекция</a>						
 						<a href="index.html#books">Библиотека</a>
@@ -341,7 +353,8 @@ https://gretdain.com/faces.html#colors
 					</button>
 					</div>
 					<div class="title" style="/*font-size:1200%;*/">
-					<p style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
+					<p class="title-b" style="font-size: clamp(0.6rem, 4vw, 3rem); padding-top:5px; padding-bottom:5px;">Немецкий дог</p>
+					<p class="title-a" style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
 					</div>
 
 					<div class="links">

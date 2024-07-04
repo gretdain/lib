@@ -12,6 +12,12 @@
 
 <style>
 @media (min-width: 768px) {
+	.title-b {
+	display: none;
+  	}
+  	.title-a {
+    	display: inline-block;
+  	}
 	table td {
 	width: 100%;
 	}
@@ -82,6 +88,12 @@
     	}
 
   @media (max-width: 767px) {
+	.title-a {
+	display: none;
+  	}
+  	.title-b {
+    	display: inline-block;
+  	}
   	table td {
 	display: inline-table;
 	width: 100%;
@@ -252,8 +264,9 @@
     align-items:center;
     justify-content:center;
 }
- 
-/* Кнопка для открытия */
+
+/*                 banner                   */ 
+/* Кнопка для открытия баннера */
 .css-modal-details summary {
     display: inline-flex;
     margin: 10px;
@@ -357,7 +370,7 @@
     border-radius: 12px;
     position: absolute;
     z-index: 10;
-    top: 20px;
+    top: 40px;
     right: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
@@ -451,7 +464,7 @@ a[href*="http"] {
 					<button type="button"style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
 						<div class="dropdown-content" style="left:1px">
 						<a href="index.html#eval">Оценка собаки</a>
-						<a href="index.html#health">Анатомия</a>
+						<a href="index.html#anatomy">Анатомия</a>
 						<a href="index.html#faces">Лица</a>
 						<a href="index.html#history">История в цвете</a>						
 						<a href="index.html#books">Библиотека</a>
@@ -461,7 +474,8 @@ a[href*="http"] {
 					</button>
 					</div>
 					<div class="title" style="/*font-size:1200%;*/">
-					<p style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
+					<p class="title-b" style="font-size: clamp(0.6rem, 4vw, 3rem); padding-top:5px; padding-bottom:5px;">Немецкий дог</p>
+					<p class="title-a" style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
 					</div>
 
 					<div class="links">
