@@ -107,6 +107,10 @@
 .dropdown-content {
     top: 98%;
 	}
+
+	.j-dropdown-content {
+    top: 98%;
+	}
 .menu:hover .dropdown-content{
 	display:none;
 	}
@@ -126,7 +130,7 @@
 
 					<div class="menu">
 					<a href="javascript:;" class='menu-button'><img src="img/burger.svg" style="padding:5px; width: 32px; height:32px;" alt="Menu"></a>
-					<div class="dropdown-content" style="left:1px">
+					<div class="j-dropdown-content" style="left:1px">
 						<a rel="noopener" href="#eval">Оценка собаки</a>
 						<a rel="noopener" href="#anatomy">Анатомия</a>
 						<a rel="noopener" href="#history">История в цвете</a>
@@ -1083,10 +1087,10 @@
 $(document).ready(function() {
    
     $('.menu-button').hover(function() {
-        $(this).siblings('.dropdown-content').stop(true, true).slideDown(200);
+        $(this).siblings('.j-dropdown-content').stop(true, true).slideDown(200);
     });
 
-    $('.dropdown-content').hover(function() {
+    $('.j-dropdown-content').hover(function() {
         $(this).stop(true, true).slideDown(200);
     }, function() {
         $(this).stop(true, true).slideUp(200);
@@ -1098,7 +1102,7 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $(targetId).offset().top
         }, 500);
-        $('.dropdown-content').slideUp(200);
+        $('.j-dropdown-content').slideUp(200);
     });
 });
 </script>
