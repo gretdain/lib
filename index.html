@@ -59,10 +59,14 @@
 	.sw__right-row {
 	display:none;
 	}
-	.button_menu {
+	.link-button {
 	background-color:var(--e5-bg);
 	height:50px;
 	width:50px;
+	}
+	.dropdown-content {
+    font-size: 20px;
+    line-height: 30px;
 	}
 	}
 
@@ -94,13 +98,20 @@
 	display: -ms-flexbox;
 	display: flex;
 	}*/
-	.button_menu {
+	.link-button {
 	background-color:var(--e5-bg);
-	height:30px;
-	width:30px;
+	height:32px;
+	width:32px;
+	}
+	.menu-button{
+	height:32px;
+	width:32px;
+	}
+	.dropdown-content {
+	font-size: 18px;
+	line-height: 35px;
 	}
 	}
-
 
 /*   shared  */
 
@@ -110,10 +121,8 @@
     max-width: 300px;
     width: 800%;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
     padding: 5px 5px;
-    font-size: 14px;
-    line-height: 25px;
     font-family: inherit;
     border-radius: 8px;
     background-color: rgba(210, 210, 210, 0.9);
@@ -128,6 +137,10 @@
 .menu-button{
 	display:block;
 }
+.link-button {
+	display:block
+	}
+
 </style>
 
 </head>
@@ -140,10 +153,10 @@
 
 					<div class="menu">
 					<a href="javascript:;" class='menu-button'><img src="img/burger.svg" style="padding:5px; width: 32px; height:32px;" alt="Menu"></a>
-					<div class="dropdown-content j-dropdown-content" style="left:1px">
-						<a rel="noopener" href="#eval">Оценка собаки</a>
-						<a rel="noopener" href="#anatomy">Анатомия</a>
-						<a rel="noopener" href="#history">История в цвете</a>
+					<div class="dropdown-content  j-dropdown-content" style="left:1px">
+						<a rel="noopener" href="#eval">Оценка</a>
+						<a rel="noopener" href="#anatomy">Биология</a>
+						<a rel="noopener" href="#history">История</a>
 						<a rel="noopener" href="#faces">Лица</a>
 						<a rel="noopener" href="#breeding">Селекция</a>            
 						<a rel="noopener" href="#books">Библиотека</a>
@@ -152,23 +165,23 @@
 					</div>
 					</div>
 
-					<div class="title" style="/*font-size:1200%;*/">
-					<p class="title-b" style="font-size: clamp(0.6rem, 4vw, 3rem); padding-top:5px; padding-bottom:5px;">Немецкий дог</p>
-					<p class="title-a" style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
-
+					<div class="title">
+					<p class="title-b" style="font-size: clamp(0.6rem, 4vw, 3rem);">Немецкий дог</p>
+					<p class="title-a" style="font-size: clamp(0.6rem, 2vw, 1.5rem);">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
 					</div>
+
 					<div class="links">
-					<button type="button"><img src="img/ext_link.svg" style="padding:5px; width: 32px; height:32px;" alt="Links"> </button>
+					<button type="button"  class="link-button"><img src="img/ext_link.svg" style="padding:5px; width: 32px; height:32px;" alt="Links"> </button>
 						<div class="dropdown-content" style="right:1px">
 						<a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
-						<a rel="noopener" target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark view</a>
+						<a rel="noopener" target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark version</a>
 						<a rel="noopener" target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
-						<a rel="noopener" target="_blank" href="http://greatdanes.dog">Pedigree RU</a>
+						<a rel="noopener" target="_blank" href="http://greatdanes.dog">Российский портал</a>
 						<a rel="noopener" target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
 						<a rel="noopener" target="_blank" href="https://www.danesworld.info/pedigree.php?">Pedigree DE</a>	
 						<a rel="noopener" target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
 						<a rel="noopener" target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
-						<a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Europe 1900-1980</a>
+						<a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея Eu Ch 1900-1980</a>
 						<a rel="noopener" target="_blank" href="http://daneaffaire.com/aboutjill.html">J.Evans memorial</a>
 						</div>
 					</button>	
