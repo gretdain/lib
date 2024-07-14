@@ -82,6 +82,11 @@
 	float: left;
 	margin-right: 1em;
 	}
+		.dropdown-content {
+    font-size: 18px;
+    line-height: 35px;
+	}
+
 <!--	.swiper-zoom-container {
 	justify-content: left;
 	}-->
@@ -98,15 +103,10 @@
 	display: inline-table;
 	width: 100%;
 	}
-	table {
-	/*border-collapse: collapse;*/
-	/*margin: 5%;*/
-	}
 	tr {
 	border: 1px solid grey; 
 	}
 	td {
-	padding:10px;
 	}
 	.container {
 	padding-left: 5%;
@@ -147,12 +147,6 @@
 	img.scaled {
 	width: 100%;
 	}	
-	/*	figcaption {
-    font-size:0.8em;
-	}*/
-	/*	.table-wrap {
-    overflow-y: scroll;
-	}*/
 	.sample-slider{
 	display: flex;
 	  justify-content: center;
@@ -165,6 +159,11 @@
 	  margin-bottom: 15px;
 	  margin-top: 15px;
     }
+		.dropdown-content {
+    font-size: 20px;
+    line-height: 30px;
+	}
+
 	}  
 
 /* common part */	
@@ -227,6 +226,11 @@
     .sample-slider img{
 	align-items: center; /* it works */
     }
+		hr {
+	width:100%;
+	text-align:left;
+	margin-left:0
+	}
 <!--	.slideshow-container {
 	  display: flex;
 	  justify-content: center;
@@ -445,11 +449,21 @@
 	z-index: 99;
 	background-color: var(--e5-bg);
 	}
-
-a[href*="http"] {
-  background: url(img/ext_link.svg) no-repeat 100% 0;
-  background-size: 16px 16px;
-  padding-right: 19px;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    max-width: 300px;
+    width: 800%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+    padding: 5px 5px;
+    font-family: inherit;
+    border-radius: 8px;
+    background-color: rgba(210, 210, 210, 0.9);
+    border: 2px solid var(--amethyst);
+    color: var(--white-inversion);
+    z-index: 99;
+    top: 98%;
 }
 
 </style>
@@ -463,10 +477,10 @@ a[href*="http"] {
 					<div class="menu">
 					<button type="button"style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
 						<div class="dropdown-content" style="left:1px">
-						<a href="index.html#eval">Оценка собаки</a>
-						<a href="index.html#anatomy">Анатомия</a>
+						<a href="index.html#eval">Оценка</a>
+						<a href="index.html#anatomy">Биология</a>
 						<a href="index.html#faces">Лица</a>
-						<a href="index.html#history">История в цвете</a>						
+						<a href="index.html#history">История</a>						
 						<a href="index.html#books">Библиотека</a>
 						<a href="index.html#woodhouse">Почти человек</a>						
 						<a href="index.html#breeding">Селекция</a>
@@ -479,17 +493,17 @@ a[href*="http"] {
 					</div>
 
 					<div class="links">
-					<button type="button" style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/ext_link.svg" style="padding-top:5px;" alt="Links"> </button>
+					<button type="button" style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/ext_link.svg" style="padding:5px; width: 32px; height:32px;" alt="Links"> </button>
 						<div class="dropdown-content" style="right:1px">
 						<a rel="noopener" style="background:url() " target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark view</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark version</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="http://greatdanes.dog">Pedigree RU</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="https://www.danesworld.info/pedigree.php?">Pedigree DE</a>	
 						<a rel="noopener" style="background:url() " target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="https://gretdain.com/eu-gallery.html">Europe 1900-1980</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея EU Ch 1900-1980</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="http://daneaffaire.com/aboutjill.html">J.Evans memorial</a>
 						</div>
 					</button>	
@@ -526,7 +540,7 @@ a[href*="http"] {
 
 <br>
 
-	<p style="text-align:center">**************************</p>	
+<hr>
 	</div>
 
 	<div class="container" id="epilepsy">
@@ -562,7 +576,7 @@ a[href*="http"] {
 
 <br>
 
-	<p style="text-align:center">**************************</p>	
+<hr>
 	</div>
 
 	<div class="container" id="displasia">
