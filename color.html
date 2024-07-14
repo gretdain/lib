@@ -61,8 +61,12 @@
 	figcaption {
 	font-size:0.8em;
 	}
+	.dropdown-content {
+    font-size: 20px;
+    line-height: 30px;
 	}
-	
+	}
+
 	@media (min-width: 768px) {
 	.title-b {
 	display: none;
@@ -122,8 +126,11 @@
 	margin-right:1em;
 	padding:5px;
 	}
+	.dropdown-content {
+    font-size: 18px;
+    line-height: 35px;
 	}	
-	
+	}
 	
 /*     shared    */
 	html {
@@ -200,6 +207,22 @@
 	z-index: 99;
 	background-color: var(--e5-bg);
 	}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    max-width: 300px;
+    width: 800%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+    padding: 5px 5px;
+    font-family: inherit;
+    border-radius: 8px;
+    background-color: rgba(210, 210, 210, 0.9);
+    border: 2px solid var(--amethyst);
+    color: var(--white-inversion);
+    z-index: 99;
+    top: 98%;
+}
 
 	</style>
 </head>
@@ -208,34 +231,33 @@
 
 				<div class="container header-top__container">
 					<div class="menu">
-					<button type="button"style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/burger.svg" style="padding-top:5px;" alt="Menu"> </button>
+					<button type="button" style="background-color:var(--e5-bg);"><img src="img/burger.svg" style="padding:5px; width: 32px; height:32px;" alt="Menu"> </button>
 						<div class="dropdown-content" style="left:1px">
+						<a href="index.html#eval">Оценка</a>
 						<a href="index.html#faces">Лица</a>
-						<a href="index.html#anatomy">Анатомия</a>
+						<a href="index.html#anatomy">Биология</a>
 						<a href="index.html#breeding">Селекция</a>						
 						<a href="index.html#books">Библиотека</a>
 						<a href="index.html#woodhouse">Почти человек</a>					
 						<a href="index.html#vet">Здоровье</a>
 						</div>
-					<!--</button>-->
 					</div>
-					<div class="title" style="/*font-size:1200%;*/">
-					<p class="title-b" style="font-size: clamp(0.6rem, 4vw, 3rem); padding-top:5px; padding-bottom:5px;">Немецкий дог</p>
-					<p class="title-a" style="font-size: clamp(0.6rem, 2vw, 1.5rem); padding-top:5px; padding-bottom:5px;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
+					<div class="title" >
+					<p class="title-b" style="font-size: clamp(0.6rem, 4vw, 3rem);margin-top:0; ">Немецкий дог</p>
+					<p class="title-a" style="font-size: clamp(0.6rem, 2vw, 1.5rem);margin-top:0;">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
 					</div>
-
 					<div class="links">
-					<button type="button" style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/ext_link.svg" style="padding:5px; width: 32px; height:32px;" alt="Links"> </button>
+					<button type="button" style="background-color:var(--e5-bg);"><img src="img/ext_link.svg" style="padding:5px; width: 32px; height:32px;" alt="Links"> </button>
 						<div class="dropdown-content" style="right:1px">
 						<a rel="noopener" style="background:url(); color:black;" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark view</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark version</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="http://greatdanes.dog">Pedigree RU</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="https://www.danesworld.info/pedigree.php?">Pedigree DE</a>	
 						<a rel="noopener" style="background:url() " target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="https://gretdain.com/eu-gallery.html">Europe 1900-1980</a>
+						<a rel="noopener" style="background:url() " target="_blank" href="https://gretdain.com/eu-gallery.html">ГаллереяEU Ch 1900-1980</a>
 						<a rel="noopener" style="background:url() " target="_blank" href="http://daneaffaire.com/aboutjill.html">J.Evans memorial</a>
 						</div>
 					</button>	
