@@ -15,6 +15,7 @@ https://gretdain.com/eval.html#evans
 https://gretdain.com/eval.html#riggsbee
 https://gretdain.com/eval.html#move
 https://gretdain.com/eval.html#colors
+https://gretdain.com/eval.html#lib
 -->
 
 <style>
@@ -365,7 +366,32 @@ https://gretdain.com/eval.html#colors
     z-index: 99;
     top: 98%;
 }
-
+.swiper-button-next {
+  margin-top: 0px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 25;
+  height: 45px;
+  transform: translateY(-50%);
+  outline: 0;
+	font-weight:bold;
+}
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25;
+  height: 45px;
+  transform: translateY(-50%);
+  margin-top: 0px;
+	font-weight:bold;
+}
+    .sample-slider-lib {
+	display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
 
 </style>
 
@@ -1511,7 +1537,29 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <p img
 width=390 height=360 id="Picture 1" src="img/eval000.png"></p>
 
+			<br>
+			<hr>	
+			<p style="text-align:center">***</p>			
+			<br>
+	
 </div>
+
+		<div class="container" id="lib">
+		<h2>Библиотека</h2>	
+		<br>
+			<div class="swiper sample-slider-lib" style="padding:30;">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/4kTxoD6slsGuKA"><img src="img/eval158.jpg"></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/d/IuwayqeUAnTZtg"><img src="img/eval159.jpg"></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/8oznGE2FXxfnxA"><img src="img/eval160.jpg"></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/ZYjgdggSwqEwHA"><img src="img/eval161.jpg"></a>
+				</div>
+		       <div class="swiper-button-prev"></div>
+		       <div class="swiper-button-next"></div>
+			</div>			
+		</div>									
+
+
 
 </section>
 </body>
@@ -1519,9 +1567,8 @@ width=390 height=360 id="Picture 1" src="img/eval000.png"></p>
 <script src="js/swiper-bundle.min.js"></script>
 
 <script>
-    const swiper = new Swiper('.sample-slider', {
+	    var swiper1 = new Swiper('.sample-slider', {
         loop: true,                         // loop
-		zoom: true,					//zoom
         speed: 1500,
 		effect: 'fade',
 		fadeEffect: {           // added
@@ -1530,13 +1577,24 @@ width=390 height=360 id="Picture 1" src="img/eval000.png"></p>
 		autoplay: {                         // auto play
             delay: 5000,
         },
-        pagination: {                       // pagination(dots)
-            el: '.swiper-pagination',
-        },
+    });
+
+	    var swiper2 = new Swiper('.sample-slider-lib', {
+        loop: true,                         // loop
+        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
         navigation: {                       // navigation(arrows)
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    })
+    	breakpoints: {
+        768: {
+            slidesPerView: 3,
+        spaceBetween: 30,
+        },
+	},
+    });
+	</script>
 </script>
 </html>
