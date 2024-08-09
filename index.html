@@ -20,13 +20,15 @@
 
 <!-- references
 https://gretdain.com#eval
-https://gretdain.com##anatomy
-https://gretdain.com##history
-https://gretdain.com##faces
-https://gretdain.com##breeding
-https://gretdain.com##books
-https://gretdain.com##woodhouse
-https://gretdain.com##vet-->
+https://gretdain.com#anatomy
+https://gretdain.com#history
+https://gretdain.com#faces
+https://gretdain.com#breeding
+https://gretdain.com#books
+https://gretdain.com#woodhouse
+https://gretdain.com#vet
+https://gretdain.com?id=slides_8#books
+-->
 
 <!--	<link rel="stylesheet" href="css/swiper.css"> -->
 	<link rel="stylesheet" href="css/card.css">
@@ -231,6 +233,12 @@ https://gretdain.com##vet-->
 	align-items:center;
 	justify-content:center;
 	}
+.css-modal-target-container1 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	}
 .css-modal-open {
 	display: inline-flex;
 	margin: 15px;
@@ -261,7 +269,7 @@ https://gretdain.com##vet-->
 	bottom: 0;
 	left: 0;
 	border-right: 50px solid transparent;
-	border-top: 50px solid #2D6B9F;
+/*	border-top: 50px solid #2D6B9F; */
 	transition: transform 0.5s;
 	transform: translateX(-100%);
 	z-index: -1;
@@ -275,6 +283,9 @@ https://gretdain.com##vet-->
 
 /* Контейнер, который затемняет страницу */
 .css-modal-target {
+	display: none;
+	}
+.css-modal-target1 {
 	display: none;
 	}
 
@@ -291,9 +302,45 @@ https://gretdain.com##vet-->
 	animation: bg 0.5s ease;
 	background: rgba(51, 122, 183, 0.7);
 	}
+.css-modal-target1:target {
+	display:flex;
+	align-items:center;
+	justify-content:center; 
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+	}
 
 /* Модальное окно */
 .css-modal-target .cmt {
+	font-family: 'OpenSans', sans-serif;
+/*	font-size: 16px; */
+	padding: 5px;
+/*	width: 80%; 	z-index: 8; */
+	max-width: 80%;
+	max-height: 60%;
+	transition: 0.5s;
+	border: 1px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+	width:600px;
+ 	height:320px; 
+	display: flex;
+	margin: 10%;
+	min-width: 50%;
+	min-height: 50%;
+/*	height: auto; 	width: 80%;*/
+	}
+.css-modal-target1 .cmt {
 	font-family: 'OpenSans', sans-serif;
 /*	font-size: 16px; */
 	padding: 5px;
@@ -375,6 +422,11 @@ https://gretdain.com##vet-->
 /*	margin:auto; */
 	}
 
+	a:focus,
+	a:hover {
+	border-bottom: 0px;
+/*	font-weight: bold; */
+	}
 
 </style>
 
@@ -432,7 +484,7 @@ https://gretdain.com##vet-->
 					<div class="sw__left">
 						<div class="f-carousel" id="Carousel-1">
 							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-1sw.jpg" loading="eager">
-								<div class="sw__img" data-title="Am. Ch. Honey Hollow Stormy Rudio&#10{Red golden Fawn Male} W520558 15/07/1954&#10Won 7 BIS, 41 BOB&#10Bred by L.Gilmour owned by C.Clarke  "><img src="./img/1-1sw.jpg" loading="eager" /></div>
+								<div class="sw__img" data-title="Am. Ch. Honey Hollow Stormy Rudio&#10{Red golden Fawn Male} W520558 15/07/1954&#10Won 7 BIS, 41 BOB&#10Bred by L.Gilmour owned by C.Clarke" ><img src="./img/1-1sw.jpg" loading="eager" /></div>
 							</div>
 							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-2sw.jpg" loading="eager">
 								<div class="sw__img" data-title="Am. Ch.CH DUCHESS of ZEL THOR II&#10 Owned by: G. Bordner Dam born: 15. January 1952 &#10 W317997&#10 Westminster BOB winner"><img src="./img/1-2sw.jpg" loading="eager"/></div>
@@ -725,7 +777,7 @@ https://gretdain.com##vet-->
 		<h1>немецкий дог порода книги стандарт</h1>
 		<h2> Библиотека</h2>
 			<div id="slider1" class="csslider infinity"> 
-					<input name="slides" id="slides_1" type="radio"> 
+					<input name="slides" id="slides_1" type="radio" checked="checked"> 
 					<input name="slides" id="slides_2" type="radio"> 
 					<input name="slides" id="slides_3" type="radio"> 
 					<input name="slides" id="slides_4" type="radio">
@@ -736,7 +788,7 @@ https://gretdain.com##vet-->
 					<input name="slides" id="slides_9" type="radio">
 					<input name="slides" id="slides_10" type="radio">
 					<input name="slides" id="slides_11" type="radio">
-					<input name="slides" id="slides_12" type="radio" checked="checked">
+					<input name="slides" id="slides_12" type="radio">
 					<input name="slides" id="slides_13" type="radio">
 					<input name="slides" id="slides_14" type="radio">
 					<input name="slides" id="slides_15" type="radio">
@@ -926,27 +978,12 @@ https://gretdain.com##vet-->
 						<a href="https://yadi.sk/i/yyEYSsz9PKIJJQ" target="_blank">
 						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/dw_sep_2003.jpg" loading="lazy"/>
 						</a>   
-						</li><li> <big>GDCA</big>
-						<p>year book<br>
-						1957-1958
-						</p>
-						<a href="https://yadi.sk/d/XypWjzXyfgd21g" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdca_yb_1957.jpg" loading="lazy"/></a>   
-						
-						</li><li> <big>GDCA</big>
-						<p>year book<br>
-						1959-1960
-						</p>
-						<a href="https://yadi.sk/i/gG5QWF1cQgvncg" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdca_yb_1959.jpg" loading="lazy"/></a>    
-						
-						</li><li> <big>Dane World</big>
-						<p>May/June 2002
-						<br>
-						</p>
-						<a href="https://yadi.sk/i/Ypb2-ixgPcA-Ag" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/dw_may_2002.jpg" loading="lazy"/>
-						</a>  
+						</li><li> <big></big>
+						<p><br><br><br></p>
+						<div class="css-modal-target-container1">
+							<a class="css-modal-open" href="#css-modal-target1">
+							<img style="border: 0px solid ; width: 170px; height: 170px;" alt="title" src="covers/yearbook.jpg"/></a>
+						</div>
 						</li><li> <big>Almost Human</big>
 						<p>by B.Woodhouse
 						<br>
@@ -954,6 +991,13 @@ https://gretdain.com##vet-->
 						<a href="https://yadi.sk/i/-VRWRnaQeuYHIQ" target="_blank">
 						<img style="border: 0px solid ; width: 170px; height: 240px;" alt="title" src="covers/almost_human.jpg" loading="lazy"/>
 						</a> 
+						</li><li> <big>Dane World</big>
+						<p>May/June 2002
+						<br>
+						</p>
+						<a href="https://yadi.sk/i/Ypb2-ixgPcA-Ag" target="_blank">
+						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/dw_may_2002.jpg" loading="lazy"/>
+						</a>  
 						</li><li> <big>Great Dane Review</big>
 						<p>July 2016<br>
 						</p>
@@ -978,16 +1022,12 @@ https://gretdain.com##vet-->
 						</p>
 						<a  href="https://disk.yandex.ru/i/_juhVUpz20-b9A" target="_blank">
 						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="covers/gdr_apr_2015.jpg" loading="lazy"/></a>
-						</li><li><big>GDCA Yearbook</big>
-						<p>1964<br>
+						</li><li><big>Bill Siggers</big>
+						<p><br>
 						</p>
-						<a  href="https://disk.yandex.ru/i/JUoKB2y-OTABSA" target="_blank">
-						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="covers/GDCA1964jubilee.jpg" loading="lazy"/></a> 
-						</li><li><big>GDCA Yearbook</big>
-						<p>1976-1978<br>
-						</p>
-						<a  href="https://disk.yandex.ru/i/VCPswD9-EgPxRg" target="_blank">
-						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="covers/gdca_1976-78.jpg" loading="lazy"/></a> 
+						<a href="https://disk.yandex.ru/i/sk7gQxYf-j1YRQ" target="_blank">
+						<img style="border: 0px solid ; width: 200px; height: 260px;" alt="title" src="covers/bill_siggers.jpg" loading="lazy">
+						</a> 
 						</li><li><big>Almanach 1988</big>
 						<p>DDC<br>
 						</p>
@@ -1004,12 +1044,11 @@ https://gretdain.com##vet-->
 						</p>
 						<a  href="https://disk.yandex.ru/i/zvuKtaa44PcRyw" target="_blank">
 						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="covers/gdr_jan_2019.jpg" loading="lazy"/></a> 
-						</li><li><big>Bill Siggers</big>
-						<p><br>
+						</li><li><big></big>
+						<p>Заходите позже<br>
 						</p>
-						<a href="https://disk.yandex.ru/i/sk7gQxYf-j1YRQ" target="_blank">
-						<img style="border: 0px solid ; width: 200px; height: 260px;" alt="title" src="covers/bill_siggers.jpg" loading="lazy">
-						</a> 
+						<a  href="" target="_blank">
+						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="" loading="lazy"/></a> 
 						</li><li><big>Ожидается</big>
 						<p><br>
 						поступление
@@ -1181,23 +1220,23 @@ https://gretdain.com##vet-->
 				<div class="swiper-wrapper">
 					<a class="swiper-slide" href="titles/235g02-en.pdf" id="slide2">
 						<figure style="width:80%;"><img src="covers/fci-logo-png-transparent.png" alt="">
-						<figcaption>FCI-St.N° 235 / 20.12.2012 Eng</figcaption>
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">FCI-St.N° 235 / 20.12.2012 Eng</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="titles/FCI-235-2012RU.pdf" id="slide3">
 						<figure style="width:80%;"><img src="covers/nkp.png" alt="">
-						<figcaption>FCI No235 / 08.10.12 / D - перевод</figcaption>
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">FCI No235 / 08.10.12 / D - перевод</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="titles/GDCA_standard_1995.pdf" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdca_logo.png" alt="">
-						<figcaption>GDCA. 2012. Перевод.</figcaption>
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA. 2012. Перевод.</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/3Tub1n3TI9ngEw" id="slide1">
 						<figure style="width:80%;"><img src="covers/gauthier1976.png" alt="GDCA illustrated">
-						<figcaption>GDCA. 1976. Illustrated.</figcaption>
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA. 1976. Illustrated.</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="titles/An-Illustrated-Standard-and-Guide-for-the-Evaluation-of-the-Great-Dane.pdf" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdca_logo.png" alt="GDCA illustrated">
-						<figcaption>GDCA. 2018. Illustrated.</figcaption>
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA. 2018. Illustrated.</figcaption>
 						</figure></a>
 												
 				</div>
@@ -1208,6 +1247,38 @@ https://gretdain.com##vet-->
 	</div>
 	<a href="#close" class="css-modal-close"></a> 
 </div>
+
+<div class="css-modal-target1" id="css-modal-target1">
+	<div class="cmt">
+			<div class="swiper sample-slider-lib" style="padding:40;">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="https://yadi.sk/d/XypWjzXyfgd21g" id="slide2">
+						<figure style="width:80%;"><img src="covers/gdca_yb_1957.jpg" alt="">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA Yearbook 1957-1958</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://yadi.sk/i/gG5QWF1cQgvncg" id="slide3">
+						<figure style="width:80%;"><img src="covers/gdca_yb_1959.jpg" alt="">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA Yearbook 1959-1960</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/JUoKB2y-OTABSA" id="slide1">
+						<figure style="width:80%;"><img src="covers/GDCA1964jubilee.jpg" alt="">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA Yearbook 1964</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/VCPswD9-EgPxRg" id="slide1">
+						<figure style="width:80%;"><img src="covers/gdca_1976-78.jpg" alt="GDCA illustrated">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA Yearbook 1976-1978</figcaption>
+						</figure></a>
+																	
+				</div>
+		       <div class="swiper-button-prev"></div>
+		       <div class="swiper-button-next"></div>
+			</div>			
+
+	</div>
+	<a href="#close" class="css-modal-close"></a> 
+</div>
+
+
 	</section>
 	</main>
 
