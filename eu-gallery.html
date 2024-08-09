@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width,initial-scale=1" name="viewport">
-	<title>Europe great dane 1900-1980</title>
+	<title>Europe Great Dane Champions 1900-1980</title>
 	<meta content="description" name="description">
-<!--	<link href="static/favicon.ico" rel="shortcut icon" type="image/x-icon">-->
+<!--	<link href="static/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	https://atuin.ru/blog/fancybox-3-s-temoj-oformleniya/
+-->
 	<link href="./css/eu-gallery.css" rel="stylesheet">
 </head>
 </html>
@@ -13,7 +15,7 @@
 <div class="swipe" id="app">
 	<div class="sw__left">
 		<div class="f-carousel" id="Carousel-1">
-			<div class="f-carousel__slide" data-fancybox="gallery" data-src="./eu-gallery/BELLIS VON BIRKENHOF.jpg">
+			<div class="f-carousel__slide" title="caption" data-caption="This is the caption" data-fancybox="gallery" data-src="./eu-gallery/BELLIS VON BIRKENHOF.jpg">
 				<div class="sw__img"><img src="./eu-gallery/BELLIS VON BIRKENHOF.jpg"></div>
 			</div>
 			<div class="f-carousel__slide" data-fancybox="gallery" data-src="./eu-gallery/CERES VOM FREIGERICHT.jpg">
@@ -940,4 +942,16 @@
 		</div>
 </div>
 <script src="./js/swiper.js"></script>
+
+<!--
+<script>
+$(document).ready(function() {
+ $('.fancybox').fancybox({
+  beforeShow : function(){
+   this.title =  $(this.element).data("caption");
+  }
+ });
+}); // ready
+</script>
+-->
 </body>
