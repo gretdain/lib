@@ -2025,18 +2025,19 @@ html.with-fancybox body.compensate-for-scrollbar {
 
 .sw__img:hover::after {
 	    font-family: 'OpenSans'; /* Гарнитура шрифта */
-		font-size: 1vw; /* Размер текста подсказки */
+		font-size: clamp(12px,0.5vw + 0.1rem,16px);
+/*		font-size: 1vw;  Размер текста подсказки */
     		background: #333;
     		background: rgba(0,0,0,.8);
     		border-radius: 4px;
-    		bottom: 16px;
+    		bottom: 1px;
     		color: #fff;
     		content: attr(data-title);
-    		left: 20%;
-    		padding: 5px 15px;
+    		left: 10%;
+    		padding: 5px 5px;
     		position: absolute;
-    		z-index: 98;
-    		width: 50%;
+/*    		z-index: 98; */
+    		width: 80%;
 	   }
 
 .sw__img img {
