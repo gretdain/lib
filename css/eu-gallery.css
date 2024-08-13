@@ -1189,6 +1189,8 @@ html.with-fancybox body.compensate-for-scrollbar {
 }
 
 .fancybox__caption {
+    font-family: 'OpenSans', sans-serif;
+	text-align: center;
   -ms-flex-item-align: center;
   align-self: center;
   max-width: 100%;
@@ -1991,13 +1993,12 @@ body, html {
   font-size: 1px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .sw__left {
   width: 100%;
   padding-top: 48.82%;
-  position: relative
+  position: relative;
 }
 
 .sw__right {
@@ -2009,12 +2010,20 @@ body, html {
   height: 50%
 }
 
-.sw__img, .sw__right-row {
+.sw__img {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex
 }
+
+.sw__right-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
 
 .sw__img {
   height: 100%;
