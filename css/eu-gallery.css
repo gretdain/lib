@@ -1201,7 +1201,7 @@ html.with-fancybox body.compensate-for-scrollbar {
   overflow-wrap: anywhere;
   line-height: 1.375;
   color: var(--fancybox-color, currentColor);
-  opacity: var(--fancybox-opacity, 1);
+/*  opacity: var(--fancybox-opacity, 1);*/
   cursor: auto;
   visibility: visible
 }
