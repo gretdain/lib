@@ -2045,6 +2045,23 @@ body, html {
   flex-grow: 0
 }
 
+/*.sw__img:hover::after {
+	    font-family: 'OpenSans'; 
+		font-size: clamp(12px,0.5vw + 0.1rem,16px);
+		font-size: 1vw;  Размер текста подсказки 
+    		background: #333;
+    		background: rgba(0,0,0,.8);
+    		border-radius: 4px;
+    		bottom: 1px;
+    		color: #fff;
+    		content: attr(data-title);
+    		left: 10%;
+    		padding: 5px 5px;
+    		position: absolute;
+    		z-index: 98; 
+    		width: 80%;
+	   } */
+
 .f-carousel {
   --f-carousel-slide-width: 100%;
   --f-carousel-slide-height: 100%;
