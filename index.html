@@ -28,6 +28,9 @@ https://gretdain.com#books
 https://gretdain.com#woodhouse
 https://gretdain.com#vet
 https://gretdain.com?id=slides_8#books
+
+
+https://gretdain.com#gallery-1	Stormi Rudio
 -->
 
 <!--	<link rel="stylesheet" href="css/swiper.css"> -->
@@ -35,6 +38,10 @@ https://gretdain.com?id=slides_8#books
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/carousel.css">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+<!--	
+https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
+-->
 
 <style>
 @media (max-width: 767px) {
@@ -300,7 +307,7 @@ https://gretdain.com?id=slides_8#books
 	width: 100%;
 	height: 100%;
 	animation: bg 0.5s ease;
-	background: rgba(51, 122, 183, 0.7);
+	background: rgba(159, 159, 159, 0.7);
 	}
 .css-modal-target1:target {
 	display:flex;
@@ -313,7 +320,7 @@ https://gretdain.com?id=slides_8#books
 	width: 100%;
 	height: 100%;
 	animation: bg 0.5s ease;
-	background: rgba(51, 122, 183, 0.7);
+	background: rgba(159, 159, 159, 0.7);
 	}
 
 /* Модальное окно */
@@ -422,11 +429,20 @@ https://gretdain.com?id=slides_8#books
 /*	margin:auto; */
 	}
 
+/* links */
+
 	a:focus,
 	a:hover {
-	border-bottom: 0px;
-/*	font-weight: bold; */
+	border-bottom: 1px solid; 
+	font-weight: bold; 
 	}
+
+	a.custom:focus,
+	a.custom:hover {
+	border-bottom: 0px; 
+	font-weight: bold; 
+	}
+
 
 </style>
 
@@ -755,7 +771,7 @@ https://gretdain.com?id=slides_8#books
 	<section class="intro" id="vet">
 	<div class="container">
 				<p style="hyphens:auto;"> <img align="left" src="img/vet01.png" hspace="10" vspace="10">
-Средняя продолжительность жизни дога вне зависимости от пола и окраса составляет 6,57 лет (<a target=”_blank” href="https://greatdanes.dog/post.php?postid=19&ysclid=lw5ygd3jbt345532096">подсчитаны</a> данные о смерти 7409 догов).
+Средняя продолжительность жизни дога вне зависимости от пола и окраса составляет 6,57 лет (<a   target=”_blank” href="https://greatdanes.dog/post.php?postid=19&ysclid=lw5ygd3jbt345532096">подсчитаны</a> данные о смерти 7409 догов).
 <br>
 Самые частые причины смерти догов это рак, заболевание сердца и заворот желудка в 629, 554 и 444 случаях соответственно.  При этом проблемы с сердцем и заворот приводят к смерти у собак в возрасте 5,5 лет, а онкологические заболевания приводят к смерти в 6,5 лет, так как болезнь наступает в более позднем возрасте.
 <br>
@@ -831,7 +847,7 @@ https://gretdain.com?id=slides_8#books
 						<br><b>СТАНДАРТ</b>
 						</p>
 						<div class="css-modal-target-container">
-							<a class="css-modal-open" href="#css-modal-target">
+							<a class="css-modal-open custom" style="" href="#css-modal-target">
 							<img style="border: 0px solid ; width: 201px; height: 228px;" alt="title" src="img/blank.png"/></a>
 						</div>
 						</li><li>  <big>Complete Antology</big>
@@ -981,7 +997,7 @@ https://gretdain.com?id=slides_8#books
 						</li><li> <big></big>
 						<p><br><br><br></p>
 						<div class="css-modal-target-container1">
-							<a class="css-modal-open" href="#css-modal-target1">
+							<a class="css-modal-open custom" href="#css-modal-target1">
 							<img style="border: 0px solid ; width: 170px; height: 170px;" alt="title" src="covers/yearbook.jpg"/></a>
 						</div>
 						</li><li> <big>Almost Human</big>
