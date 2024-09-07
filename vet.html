@@ -7,9 +7,6 @@
 	<title>Немецкий дог заболевания by gret dain</title>
 	<link rel="stylesheet" href="css/style.css">
 
-<!--<link rel="stylesheet" href="css/swiper-bundle.min.css">	
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>-->
-
 <style>
 @media (min-width: 768px) {
 	.title-b {
@@ -20,6 +17,7 @@
   	}
 	table td {
 	width: 100%;
+	padding-left: 10px;
 	}
 	table {
 	/*border-collapse: collapse;*/
@@ -32,8 +30,10 @@
 	padding-left: 10%;
 	padding-right: 10%;
 	}
-	.color_table {
+	.grey-cell {
 	width: 20%;
+	background-color: var(--cell-grey);
+	text-align:center;
 	}
 	figure {
 	  float: left;
@@ -42,23 +42,11 @@
 	  font-style: italic;
 	  font-size: smaller;
 	  text-indent: 0;
-	  /*border: thin silver solid;*/
 	  padding-right: 1em;
 	margin: 0 0 0 0;
 	}
 	figcaption {
-	/*  position: absolute;
-	  bottom: 0;
-	  padding:  15px;*/
 	  color: 3A3A3A;
-	/*  background-color: rgba( 29, 20, 17, .6);
-	  text-align: right;
-	  text-transform: uppercase;
-	  font-size: 1rem;
-	  width: 100%;*/
-	}
-	video {
-	width: 50%;
 	}
     .article img {
     object-fit: contain;
@@ -69,27 +57,18 @@
 	img.scaled {
 	width: 100%;
 	}	
-	/*	figcaption {
-    font-size:0.8em;
-	}*/
-	.sample-slider{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40%;
-	height: auto;
-	border: 1px solid var(--amethyst);
-	float: left;
-	margin-right: 1em;
+	.dropdown-content {
+	font-size: 18px;
+	line-height: 35px;
 	}
-		.dropdown-content {
-    font-size: 18px;
-    line-height: 35px;
+	.css-modal-details summary {
+	width:80%;
 	}
-
-<!--	.swiper-zoom-container {
-	justify-content: left;
-	}-->
+	.css-modal-details details .cmt {
+	font-size: 14px;
+	padding: 20px;
+	width:80%;
+	}
     	}
 
   @media (max-width: 767px) {
@@ -100,13 +79,17 @@
     	display: inline-block;
   	}
   	table td {
-	display: inline-table;
+	display: inline-table;	
 	width: 100%;
 	}
 	tr {
 	border: 1px solid grey; 
 	}
 	td {
+	}
+	.grey-cell {
+	background-color: var(--cell-grey);
+	text-align:center;
 	}
 	.container {
 	padding-left: 5%;
@@ -147,23 +130,23 @@
 	img.scaled {
 	width: 100%;
 	}	
-	.sample-slider{
-	display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  width: 100%;
-	height: auto;
-	  border: 1px solid var(--amethyst);
-	  float: left;
-	  margin-right: 15px;
-	  margin-bottom: 15px;
-	  margin-top: 15px;
-    }
-		.dropdown-content {
-    font-size: 20px;
-    line-height: 30px;
+	.dropdown-content {
+	font-size: 20px;
+	line-height: 30px;
 	}
-
+	.css-modal-details summary {
+	width:80%;
+	}
+	.cmt-table td {
+	display: table-cell;
+	width:100% ;
+	font-size:12px;
+	}
+	.css-modal-details details .cmt {
+	/*    font-size: 12px;*/
+	padding: 5px;
+	width:90%;
+	}
 	}  
 
 /* common part */	
@@ -177,106 +160,59 @@
 	padding: 0;
 	position: relative;
 	height: 100%;
+	color:var(--font-grey);
 	}
 	.container {
 	margin-right: auto;
 	margin-left: auto;
 	/*padding: 0 160px;*/
 	max-width: 100%;
-	/*	  text-align: center;*/
 	}
 	.container article{
 	padding-left: 10%;
 	padding-right: 10%;
 	}
-	.table-wrap {
-	display: inline-block;
-	}	
-	/*table {
-	border: 1px solid grey;
-	  border-collapse: collapse;
-	  width: 100%;
-	  margin:0;
-	  padding:0;
-	  border-spacing: 0;
-	}*/
-
 	.container-table {
 	margin-right: auto;
 	margin-left: auto;
-	/*padding: 0 160px;*/
-	/*	  text-align: center;*/
-	/*padding-left: 0;*/
-	/*padding-right: 0;*/
 	max-width: 1000px;
 	}
 	.article img {
         object-fit: contain;
         max-width: 100%;
-		max-height: 100%;
-		color: 3A3A3A;
-		}
-	  
-	  .article p {
-		text-align: left;
-		line-height: 1.5em;
-		color: #3A3A3A;
-	  }
-
-    .sample-slider img{
-	align-items: center; /* it works */
-    }
-		hr {
+	max-height: 100%;
+	color: 3A3A3A;
+	}
+	.article p {
+	text-align: left;
+	line-height: 1.5em;
+	}
+	hr {
 	width:100%;
 	text-align:left;
 	margin-left:0
 	}
-<!--	.slideshow-container {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  width: 300px;
-	  height: 300px;
-	  border: 1px solid var(--amethyst);
-	  float: left;
-	  margin-right: 15px;
-	  margin-bottom: 15px;
-	  margin-top: 15px;
-	}
 
-	.swiper-wrapper {
-	align-items: center; /* it works */
-	}
-	.swiper-slide {
-	  /*display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;*/
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-	}
--->
+
+/* Modal window */
+
 /* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
 .css-modal-details {
     height: 70px;
-    display:flex;
+    display:contents;
     align-items:center;
     justify-content:center;
+	text-align: center;
 }
 
 /*                 banner                   */ 
 /* Кнопка для открытия баннера */
 .css-modal-details summary {
     display: inline-flex;
-    margin: 10px;
+    margin: 5px;
     text-decoration: none;
     position: relative;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     padding: 12px 20px;
     color: #FFF;
@@ -285,9 +221,11 @@
     font-family: 'OpenSans', sans-serif;
     background:  #BFBFBF;
     cursor: pointer;
-    border: 2px solid #FFF;
+    border: 2px solid #AAA;
+	border-radius: 5px;
     overflow: hidden;
-/*    z-index: 1;    */
+/*    z-index: 1;
+	width:40%; */
 }
 .css-modal-details summary:hover,
 .css-modal-details summary:active,
@@ -346,9 +284,6 @@
 /* Модальное окно */
 .css-modal-details details .cmt {
     font-family: 'OpenSans', sans-serif;  
-    font-size: 14px;
-    padding: 20px;
-    width:80%;
     max-width: 600px;
     max-height: 70%;
     transition: 0.5s;
@@ -409,8 +344,6 @@
     }
 }
 
-/* references */
-
 /* links */	    
 
 	a {
@@ -424,7 +357,6 @@
 	}
 
 	a:visited {
-	/*color: purple;*/
 	}
 
 	a:focus,
@@ -444,12 +376,15 @@
 	padding-right: 19px;
 	}
 
+
+/*    Menu    */
+
 	.header-top__container {
 	position: fixed;
 	z-index: 99;
 	background-color: var(--e5-bg);
 	}
-.dropdown-content {
+	.dropdown-content {
     display: none;
     position: absolute;
     max-width: 300px;
@@ -464,10 +399,10 @@
     color: var(--white-inversion);
     z-index: 99;
     top: 98%;
-}
+	}
 
 </style>
-<!--	<link rel="stylesheet" href="css/style.css">-->
+
 </head>
 
 <body>
@@ -521,19 +456,19 @@
 <p  align=center style='text-align:center'><big><b>Пироплазмоз (бабезиоз)</b></big></p>
 <table cellspacing=7 >
 <tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Симптомы</td>
+<td class="grey-cell" >Симптомы</td>
 <td align="left">На первой стадии (от одного до пяти дней после укуса зараженного клеща) наблюдается слабость, вялость. Собака стремится лежать, больше пьет или совсем отказывается от воды. На фоне потери аппетита не доедается обычная норма пищи, или даже происходит отказ от вкусной пищи.
 На второй стадии происходит резкое повышение температуры (39 и более), появляется одышка, нередко позывы к мочеиспусканию, неуверенная походка, полный отказ от пищи, возможно изменение цвета мочи.
 На третьей стадии моча становится коричневой, оболочки глаза приобретают желтушный оттенок, собака встает только в туалет, может появиться понос.
 На четвертой стадии животное перестает вставать, а затем умирает.</td>
 </tr>
-<td class="color_table" bgcolor="#C6C6C6"  align="center">Причина и описание заболевания</td>
+<td class="grey-cell">Причина и описание заболевания</td>
 <td align="left">Возбудители бабезиоза собак одноклеточные Babesia canis, Babesia gibsoni и Babesia сonradae, использующие в качестве переносчиков иксодовых клещей, способны заразить домашнюю собаку любой породы. Заражение собаки происходит при укусе клеща. После прокусывания клещом кожи собаки наступает стадия цементации, на которой клещ закрепляется в коже. Это стадия длится до 24-36 часов, риск заражения на этой стадии минимален. Затем начинается стадия лизиса, при которой клещ через прокушенную кожу выделяет вещества, растворяющие ткань под кожей, риск заражения возрастает. На стадиии осморегуляции клещ активно всасывает кровь, раздувается, и избыток воды вводит обратно в кровоток собаки через слюнные железы. Происходит выброс в кровь огромного количества спорозоитов бабезий и, собственно, заражение. Попавшие в кровь спорозоиты бабезий проникают в эритроциты животного, размножаются путём деления, начинают питаться гемоглобином, разрушают эритроцит. Из разрушенного эритроцита в плазму крови попадает гемоглобин, в нормальном состоянии там отсутствующий, затем происходит фильтрация его через почки в мочу, начинается гемоглобиновый нефроз, почечная недостаточность.</td>
 </tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Действия хозяина</td>
+<td class="grey-cell">Действия хозяина</td>
 <td align="left">Любой клещ на кожном покрове или шерсти должен быть снят и уничтожен. Место укуса следует обработать спиртом. Считается разумным чистить покровы собаки щеткой и проводить визуальный осмотр поверхности собаки после каждого выхода на улицу. При появлении симптомов заболевания следует срочно провести в лаборатории ПЦР анализ с получением письменного результата уровня IgM (или провести  микроскопическое исследование окрашенного мазка периферической крови с письменным результатом количества пораженных эритроцитов в поле зрения). В исследование ПЦР разумно включить также пробу на боррелиоз и анаплазмоз. Вакцинацию собак от бешенства и других инфекционных заболеваний следует проводить в зимнее время, чтобы избежать риска наложения нестабильного иммунного статуса после вакцины и паразитарного заболевания.</td>
 </tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Лечение</td>
+<td class="grey-cell">Лечение</td>
 <td align="left">После установления диагноза вводится подкожно/внутримышечно препарат Пиростоп (раствор имидокарба 12%) из расчета 0,5мл на 10 кг массы животного. Для снижения температуры и исключения аллергических реакций вводятся отдельно анальгин и антигистаминные средства. Необходимость во внутривенных капельницах для нестарых, не больных хронически собак отсутствует.</td>
 </tr>
 </table> 		
@@ -548,22 +483,22 @@
 <p  align=center style='text-align:center'><big><b>Эпилепсия</b></big></p>
 <table cellspacing=7 >
 <tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Симптомы</td>
+<td class="grey-cell">Симптомы</td>
 <td align="left">Собака замирает, выглядит испуганной, глаза выпучиваются, вскоре начинается жевание челюстями, затем - припадок, заваливание набок, потеря сознания, мышцы собаки напрягаются, глаза закатываются, дыхание становится тяжелым и громким. Происходит непрерывное жевание, конечности в постоянном движении. Возможна розовая пена изо рта как результат прикусывания губ. Возможно мочеиспускание и/или дефекация. Скулеж и визг. Длительность стадии составляет несколько минут, затем - <br>
 замедление и в полное прекращение судорог, возбуждение либо угнетение. Жажда. Голод</td>
 </tr>
-<td class="color_table" bgcolor="#C6C6C6"  align="center">Возможная причина и описание заболевания</td>
+<td class="grey-cell">Возможная причина и описание заболевания</td>
 <td align="left"><b>Идиопатическая эпилепсия</b> с предполагаемым генетическим происхождением. Повторные припадки у собак 1-5 лет. Точная причина припадков неизвестна. Описанная картина говорит об идиопатической  эпилепсии в 80% случаев для молодых (до года) собак. <b>Структурная эпилепсия</b> - припадки, которые происходят из-за наблюдаемого повреждения или пороков развития головного мозга (например, после воспалительного заболевания головного мозга, роста внутричерепной опухоли или после травмы головы). <b>Эпилепсия c неизвестной причиной</b> подразумевает отсутствие диагностированной структурной эпилепсии. Только в 10% случаев для взрослых (после 5 лет) картина говорит об идиопатической эпилепсии. Эпилепсия не смертельна и не является причиной эвтаназии.<br>
 Реактивные припадки возникают в ответ на определенные стимулы (такие как нарушение обмена веществ или токсин), не считаются формой эпилепсии, поскольку они не вызваны аномалиями мозга.</td>
 </tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Действия хозяина</td>
+<td class="grey-cell">Действия хозяина</td>
 <td align="left">Убрать все предметы вокруг собаки. Перевернуть собаку набок для избегания попадания слюны или рвотных масс в горло. Не делать попыток разжать зубы руками или предметами. Вывести из помещения собак и людей. Не прижимать собаку к полу. Можно накрыть собаку плотным одеялом. Если у собаки поставлен диагноз эпилепсия – быстро ввести препараты ректально или инъекционно. После припадка возможен прием небольшого количества пищи и воды. Возможна короткая прогулка без нагрузки.</td>
 </tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Аптечка</td>
+<td class="grey-cell">Аптечка</td>
 <td align="left">Реланиум (ректально, микроклизма) на заключительном этапе припадка. Фенобарбитал (паглюферал) сразу после припадка.</td>
 </tr>
 </tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Уточнение диагноза после осмотра врача</td>
+<td class="grey-cell">Уточнение диагноза после осмотра врача</td>
 <td align="left">Если идиопатическая эпилепсия не была диагностирована ранее:<br>
 • Развернутая биохимия крови и общий анализ без кормления накануне в течение 12 часов<br>
 • 076 Комплексная диагностика токсоплазмоза (ИФА, ПЦР)<br>
@@ -586,19 +521,19 @@
 
 <table cellspacing=7 >
 <tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Заболевание</td>
+<td class="grey-cell">Заболевание</td>
 <td align="left">Дисплазия тазобедренных суставов у собак (CHD - Canine hip displasia) - это порок развития тазобедренных суставов, приводящий к вторичному заболеванию суставов (артрозу, артриту), изменению походки и соответствующим клиническим симптомам, таким как боль и хромота. Основной причиной CHD является чрезмерная слабость тазобедренного сустава, характеризующаяся подвывихом головки бедренной кости из вертлужной впадины. Этиология CHD до конца не изучена. Решающую роль может играть низкое качество соединительной ткани капсулы сустава. Заболевание носит наследственный характер.</td>
 </tr>
 <tr>
-<td class="color_table" bgcolor="#C6C6C6"  align="center">Диагностика</td>
+<td class="grey-cell">Диагностика</td>
 <td align="left">Диагностика CHD, обычно, основывается на результатах рентгенографического исследования. Техника рентгенографии стандартизирована во всем мире. Собаке вводят наркоз, чтобы гарантировать адекватное расслабление мышц. Затем собаку укладывают в положение на спину с задними конечностями, вытянутыми каудально, и бедрами, расположенными параллельно позвоночнику, столу и друг другу. Колленные чашки располагаются по центру бедренных костей. Степень тяжести CHD оценивается по степени подвывиха и, в меньшей степени, по наличию и тяжести вторичных заболеваний суставов.  На международном уровне используются, в основном, две несколько различающихся методики оценки: FCI (Международная кинологическая федерация), OFA (Ортопедический фонд животных). Методика, принятая в Великобритании (BVA/KC), не так распростанена.</td>
 </tr>
 <tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Оценка</td>
+<td class="grey-cell">Оценка</td>
 <td align="left">
 <div class="css-modal-details">    
     <details>
-        <summary>Методика оценки FCI</summary>
+        <summary>&#11208 Методика оценки FCI</summary>
         <div class="cmc">
             <div class="cmt">
 
@@ -616,7 +551,7 @@ FCI - головная организация, объединяющая боле
 	
 <div class="css-modal-details">    
     <details>
-        <summary>Методика оценки OFA</summary>
+        <summary>&#11208 Методика оценки OFA</summary>
         <div class="cmc">
             <div class="cmt">	
 
@@ -661,10 +596,10 @@ NA не измеряется, и в течение долгого времени
 
 <div class="css-modal-details">    
     <details>
-        <summary>Соответствие оценок степени CHD</summary>
+        <summary>&#11208 Соответствие оценок степени CHD</summary>
         <div class="cmc">
             <div class="cmt">
-<table border="2"bordercolor="#4682B4"cellspacing="0"cellpadding="5">
+<table class="cmt-table" border="2" bordercolor="#4682B4" cellspacing="0" cellpadding="5">
 <tr align=center><th colspan=3>Соответствие оценок CHD</th></tr>
 <tr align=center><td><b>FCI</b></td><td><b>Germany</b></td><td><b>USA (OFA)</b></td></tr>
 <tr align=center><td rowspan=2><b>A,<br></b>нормальная</td><td>A1</td><td>отличная</td></tr>
@@ -686,12 +621,12 @@ NA не измеряется, и в течение долгого времени
 </td>
 </tr>
 <tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Сравнение методик</td>
+<td class="grey-cell">Сравнение методик оценки</td>
 <td align="left">FCI принимает оценки, сделанные любым человеком, считающим себя экспертом в области рентгенографической оценки тазобедренного сустава собак. Каждый клуб породы выбирает ветеринара по своим критериям в качестве эксперта. Подготовка и компетентность экспертов сильно варьируется от самоучек, а в некоторых случаях даже непрофессионалов, до высококвалифицированных сертифицированных ветеринарных радиологов или хирургов. Соответственно, варьируется и качество оценки. Сравнение итоговых оценок между странами может оказаться крайне затруднительным или просто невозможным. Более того, одна порода в одной стране может быть разделена на различные клубы, и эти клубы могут работать с разными экспертами, что затрудняет сравнение результатов даже в пределах одной страны. Наблюдаемая наследуемость - в среднем 30% (достигающая 50% для хорошо спланированных исследований) - дает достаточно информации для селекции племенного поголовья на предмет CHD. <a target=”_blank” href="http://www.fci.be">Страничка FCI</a> не оказывает большой помощи заводчику, так как FCI считает своими главными обязанностями отслеживание стандартов для каждой из 338 (на 2007 год) признанных пород, а также предоставление международно признанной формы родословной (при этом не выдавая никаких родословных), обучение судей и сбор и регистрирацию результатов собак на выставках и испытаниях. Наиболее полную информацию о процедуре можно найти на страничке <a target=”_blank” href="https://www.fondazionesaluteanimale.it/displasia-precoce.html">итальянского Фонда спасения животных</a> (Fondazione salute animale).<br>
 Эксперты OFA являются экспертами в своей области и проводят оценку совместно, расхождения диагноза крайне маловероятны. OFA предлагает обширные рекомендации заводчикам по выбору собаки для разведения. Подробная информация о каждой сертифицированной собаке, а также о ее зарегистрированных братьях, сестрах и родственниках представлена на страничке OFA, что делает ее хорошим инструментом для заводчиков.
 </tr>
 <tr>
-<td class="color_table" bgcolor="#C6C6C6" align="center">Допуск к разведению</td>
+<td class="grey-cell">Допуск к разведению</td>
 <td align="left">
 Каждая из схем оценки  может быть использована для отбора породных собак по критерию степени выраженности CHD. Надежность, достоверность итоговой оценки в значительной степени зависит от квалификации экспертов. Экспертиза OFA и BVA/KC не вызывает сомнений. То же самое можно сказать и об экспертах из многих западных и северных стран Европы, в то время как в других странах оценки собак могут значительно отличаться и часто оказываются лучше, чем можно было бы ожидать. Влияние полученных результатов на качество тазобедренных суставов потомства в основном зависит от заводчиков, от их способности понять и принять результаты и следовать рекомендациям генетиков. Они (генетики) рекомендуют не использовать диспластичных собак для разведения. Это означает, что даже собаки с баллом по тазобедренному суставу C или легкой степенью CHD не должны использоваться в разведении.</td>
 </tr>
