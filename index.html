@@ -246,6 +246,13 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	align-items:center;
 	justify-content:center;
 	}
+	.css-modal-target-container2 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	}
+
 .css-modal-open {
 	display: inline-flex;
 	margin: 15px;
@@ -295,6 +302,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 .css-modal-target1 {
 	display: none;
 	}
+.css-modal-target2 {
+	display: none;
+	}
 
 .css-modal-target:target {
 	display:flex;
@@ -310,6 +320,19 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	background: rgba(159, 159, 159, 0.7);
 	}
 .css-modal-target1:target {
+	display:flex;
+	align-items:center;
+	justify-content:center; 
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(159, 159, 159, 0.7);
+	}
+.css-modal-target2:target {
 	display:flex;
 	align-items:center;
 	justify-content:center; 
@@ -348,6 +371,30 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 /*	height: auto; 	width: 80%;*/
 	}
 .css-modal-target1 .cmt {
+	font-family: 'OpenSans', sans-serif;
+/*	font-size: 16px; */
+	padding: 5px;
+/*	width: 80%; 	z-index: 8; */
+	max-width: 80%;
+	max-height: 60%;
+	transition: 0.5s;
+	border: 1px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+	width:600px;
+ 	height:320px; 
+	display: flex;
+	margin: 10%;
+	min-width: 50%;
+	min-height: 50%;
+/*	height: auto; 	width: 80%;*/
+	}
+
+.css-modal-target2 .cmt {
 	font-family: 'OpenSans', sans-serif;
 /*	font-size: 16px; */
 	padding: 5px;
@@ -881,16 +928,18 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<a  href="https://disk.yandex.ru/i/daZfDBo7q90wMQ"  target="_blank">
 						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="covers/denlinger-1950.jpg" loading="lazy"/></a> 
 						</li>
-						</li><li> <big>Great Dane reporter</big>
-						<p>Jan/Feb 1993<br>
+						</li><li><p><br>
+						<br><b>Great Dane Reporter</b>
 						</p>
-						<a href="https://disk.yandex.ru/i/8m1rq6RkjSa-ng" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdrep_jf_1993.jpg"/></a>
-						</li><li> <big>Great Dane Reporter</big>
-						<p>Sep/Oct 1992<br>
+						<div class="css-modal-target-container2">
+							<a class="css-modal-open custom" style="" href="#css-modal-target2">
+							<img style="border: 0px solid ; width: 201px; height: 228px;" alt="title" src="img/blank.png"/></a>
+						</div>
+						</li><li> <big>Dane Data</big>
+						<p>by A.Gardner<br>
 						</p>
-						<a href="https://disk.yandex.ru/i/aaxk8yg2IOiXPg" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdrep_so_1992.jpg" loading="lazy"/></a>
+						<a href="https://disk.yandex.ru/i/JM_OUFLWO3Nr8Q" target="_blank">
+						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gardner.jpg" loading="lazy"/></a>
 						</li><li><big>Немецкий дог</big>
 						<p>В.В. Уваров
 						<br>
@@ -949,12 +998,12 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<a href="https://yadi.sk/d/ZnhSjjJNLBuhgA" target="_blank">
 						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/mwe_2018.jpg" loading="lazy"/>
 						</a>  
-						</li><li> <big>Great Dane reporter</big>
-						<p>Jan/Feb 1991
+						</li><li> <big>Заходите позже</big>
+						<p>
 						<br>
 						</p>
-						<a href="https://yadi.sk/d/LJf1-1NQ2nYadQ" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdrep_jan_1991.jpg" loading="lazy"/></a> 
+						<a href="" target="_blank">
+						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="" loading="lazy"/></a> 
 						</li><li> <big>Dane World</big>
 						<p>May/June 2003
 						<br>
@@ -962,12 +1011,12 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<a href="https://yadi.sk/i/j1d4tcx4w9YEDw" target="_blank">
 						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/dw_may_2003.jpg" loading="lazy"/>
 						</a> 
-						</li><li> <big>Great Dane reporter</big>
-						<p>Jul/Aug 1990
+						</li><li> <big>Заходите позже</big>
+						<p>
 						<br>
 						</p>
-						<a href="https://yadi.sk/i/4QOTyWTJ7ntGFQ" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdrep_jul_1990.jpg" loading="lazy"/></a> 
+						<a href="" target="_blank">
+						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="" loading="lazy"/></a> 
 						</li><li>  <big>Dane World</big>
 						<p>Nov/Dec 2002
 						<br>
@@ -975,18 +1024,18 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<a href="https://yadi.sk/i/4U2rKmsK2V4Lkw" target="_blank">
 						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/dw_nov_2002.jpg" loading="lazy"/>
 						</a>  
-						</li><li> <big>Great Dane reporter</big>
-						<p>May/Jun 1990
+						</li><li> <big>Заходите позже</big>
+						<p>
 						<br>
 						</p>
-						<a href="https://yadi.sk/i/XhlwpodBrZ56XA" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdrep_may_1990.jpg" loading="lazy"/></a>  
-						</li><li> <big>Great Dane reporter</big>
-						<p>Sep/Oct 1990
+						<a href="" target="_blank">
+						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="c" loading="lazy"/></a>  
+						</li><li> <big>Заходите позже</big>
+						<p>
 						<br>
 						</p>
-						<a href="https://yadi.sk/i/_TxqVZX0MlAR1Q" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdrep_sep_1990.jpg" loading="lazy"/></a>   
+						<a href="" target="_blank">
+						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="" loading="lazy"/></a>   
 						</li><li>  <big>Dane World</big>
 						<p>Sep/Oct 2003
 						<br>
@@ -1020,18 +1069,16 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<a href="https://disk.yandex.ru/d/pKsKaEHsUHMF9w" target="_blank">
 						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/gdr_jul_2016.jpg" loading="lazy"/>
 						</a> 
-						</li><li><big>Great Dane</big>
-						<p>reporter<br>
-						Jul/Aug 1991
+						</li><li><big>Заходите позже</big>
+						<p><br>
 						</p>
-						<a href="https://disk.yandex.ru/i/MocWuXVH7fjXLQ" target="_blank">
-						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="covers/gdrep_ja_1991.jpg" loading="lazy"/></a> 
-						</li><li><big>Great Dane</big>
-						<p>reporter<br>
-						Mar/Apr 1990
+						<a href="" target="_blank">
+						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="c" loading="lazy"/></a> 
+						</li><li><big>Заходите позже</big>
+						<p><br>
 						</p>
-						<a href="https://disk.yandex.ru/i/6mJeZU4v3fpFvw" target="_blank">
-						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="covers/gdrep_ma_1990.jpg" loading="lazy"/></a> 
+						<a href="" target="_blank">
+						<img style="border: 0px solid ; width: 160px; height: 220px;" alt="title" src="" loading="lazy"/></a> 
 						</li><li><big>Great Dane</big>
 						<p>review<br>
 						Apr 2015
@@ -1293,6 +1340,52 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	</div>
 	<a href="#close" class="css-modal-close"></a> 
 </div>
+
+<div class="css-modal-target2" id="css-modal-target2">
+	<div class="cmt">
+			<div class="swiper sample-slider-lib" style="padding:40;">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/8m1rq6RkjSa-ng" id="slide2">
+						<figure style="width:80%;"><img src="covers/gdrep_jf_1993.jpg" alt="">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Jan/Feb 1993</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/aaxk8yg2IOiXPg" id="slide3">
+						<figure style="width:80%;"><img src="covers/gdrep_so_1992.jpg" alt="">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Sep/Oct 1992</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://yadi.sk/d/LJf1-1NQ2nYadQ" id="slide1">
+						<figure style="width:80%;"><img src="covers/gdrep_jan_1991.jpg" alt="">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Jan/Feb 1991</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://yadi.sk/i/4QOTyWTJ7ntGFQ" id="slide1">
+						<figure style="width:80%;"><img src="covers/gdrep_jul_1990.jpg" alt="GDCA illustrated">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Jul/Aug 1990</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/6mJeZU4v3fpFvw" id="slide1">
+						<figure style="width:80%;"><img src="covers/gdrep_ma_1990.jpg" alt="GDCA illustrated">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Mar/Apr 1990</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/MocWuXVH7fjXLQ" id="slide1">
+						<figure style="width:80%;"><img src="covers/gdrep_ja_1991.jpg" alt="GDCA illustrated">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Jul/Aug 1991</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://yadi.sk/i/_TxqVZX0MlAR1Q" id="slide1">
+						<figure style="width:80%;"><img src="covers/gdrep_sep_1990.jpg" alt="GDCA illustrated">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Sep/Oct 1990</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://yadi.sk/i/XhlwpodBrZ56XA" id="slide1">
+						<figure style="width:80%;"><img src="covers/gdrep_may_1990.jpg" alt="GDCA illustrated">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter May/Jun 1990</figcaption>
+						</figure></a>
+																	
+				</div>
+		       <div class="swiper-button-prev"></div>
+		       <div class="swiper-button-next"></div>
+			</div>			
+	</div>
+	<a href="#close" class="css-modal-close"></a> 
+</div>
+
 
 
 	</section>
