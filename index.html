@@ -234,19 +234,26 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
     }
 }
 /* Контейнер для кнопки */
-.css-modal-target-container {
+	.css-modal-target-container {
 	height: 60px;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	}
-.css-modal-target-container1 {
+	.css-modal-target-container1 {
 	height: 60px;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	}
 	.css-modal-target-container2 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	}
+
+	.css-modal-target-container3 {
 	height: 60px;
 	display:flex;
 	align-items:center;
@@ -305,6 +312,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 .css-modal-target2 {
 	display: none;
 	}
+.css-modal-target3 {
+	display: none;
+	}
 
 .css-modal-target:target {
 	display:flex;
@@ -333,6 +343,20 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	background: rgba(159, 159, 159, 0.7);
 	}
 .css-modal-target2:target {
+	display:flex;
+	align-items:center;
+	justify-content:center; 
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(159, 159, 159, 0.7);
+	}
+
+.css-modal-target3:target {
 	display:flex;
 	align-items:center;
 	justify-content:center; 
@@ -417,6 +441,32 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	min-height: 50%;
 /*	height: auto; 	width: 80%;*/
 	}
+	
+.css-modal-target3 .cmt {
+	font-family: 'OpenSans', sans-serif;
+/*	font-size: 16px; */
+	padding: 5px;
+/*	width: 80%; 	z-index: 8; */
+	max-width: 80%;
+	max-height: 60%;
+	transition: 0.5s;
+	border: 1px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+	width:600px;
+ 	height:320px; 
+	display: flex;
+	margin: 10%;
+	min-width: 50%;
+	min-height: 50%;
+/*	height: auto; 	width: 80%;*/
+	}
+	
+	
 
 /* Кнопка с крестиком закрывающая окно */
 .css-modal-close {
@@ -533,6 +583,7 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея Eu Ch 1900-1980</a>
 						<a rel="noopener" target="_blank" href="https://gretdain.com/gd-foundation.html">Time traveller photos</a>
 						</div>
+<!--https://dogs.pedigreeonline.com/search?query=ranch&match=wildcard&breed=Great%20Dane&sex=&page=3-->
 					</button>	
 					</div>
 				</div>
@@ -622,6 +673,10 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 							</div>
 							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-28sw.jpg" loading="lazy">
 								<div class="sw__img" data-title="Am CH Miss Erikke Von Riesenhof dob 09/08/1954 W556995"><img src="./img/1-28sw.jpg" loading="lazy"/></div>
+							</div>
+							<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-29sw.jpg" loading="lazy">
+								<div class="sw__img" data-title="Am. Ch. Kolyer's Zeus Nukid Town. b. 1981-12-15, male	WF097384. Owned by Jim and Marie Maninon.
+"><img src="./img/1-29sw.jpg" loading="lazy"/></div>
 							</div>
 						</div>
 					</div>
@@ -713,7 +768,7 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<div class="sw__right-row">
 							<div class="f-carousel" id="Carousel-3">
 								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-1sw.jpg">
-									<div class="sw__img"  data-title=" GAZELLE VON LOHELAND (OF OUBOROUGH)&#10 VDH/DDC17937 b.27.05.1929 VDH/DDC17937 &#10 "><img src="./img/3-1sw.jpg" loading="lazy"/></div>
+									<div class="sw__img"  data-title=" GAZELLE VON LOHELAND (OF OUBOROUGH)&#10 VDH/DDC17937 b.27.05.1929 VDH/DDC17937 &#10 owner: J.V.Rank sire:Elch Eddler v.d.Saalburg"><img src="./img/3-1sw.jpg" loading="lazy"/></div>
 								</div>
 								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-2sw.jpg">
 									<div class="sw__img" data-title="Am Ch Schwarz Schonheit {F} W188231"><img src="./img/3-2sw.jpg" loading="lazy" style="height:100%"/></div>
@@ -768,6 +823,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 								</div>
 								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-20sw.jpg">
 									<div class="sw__img" data-title="Multiple-BISS Silver GCh. Daynakin-Knudtsen Writ'n N the Stars - Sky, 119081"><img src="./img/3-20sw.jpg" loading="lazy" style="height:100"/></div>
+								</div>
+								<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-21sw.jpg">
+									<div class="sw__img" data-title="Am. Ch. Cherokee of Dane Oaks  &#010; 50 BOB and 8 Group placement in 1970s"><img src="./img/3-21sw.jpg" loading="lazy" style="height:100"/></div>
 								</div>
 							</div>
 						</div>
@@ -1038,12 +1096,17 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<a href="https://yadi.sk/d/ZnhSjjJNLBuhgA" target="_blank">
 						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="covers/mwe_2018.jpg" loading="lazy"/>
 						</a>  
-						</li><li> <big>Заходите позже</big>
+						</li><li> <big>Unsere </big>
+						<br>Deutsche Dogge
 						<p>
-						<br>
+						<br><br><br>
 						</p>
-						<a href="" target="_blank">
-						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="" loading="lazy"/></a> 
+						<!--<a href="" target="_blank">
+						<img style="border: 0px solid ; width: 180px; height: 240px;" alt="title" src="" loading="lazy"/></a> -->
+						<div class="css-modal-target-container3">
+							<a class="css-modal-open custom" style="" href="#css-modal-target3">
+							<img style="border: 0px solid ; width: 201px; height: 228px;" alt="title" src="img/unseredd.jpg"/></a>
+						</div>
 						</li><li> <big>Dane World</big>
 						<p>May/June 2003
 						<br>
@@ -1426,6 +1489,28 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	<a href="#close" class="css-modal-close"></a> 
 </div>
 
+<div class="css-modal-target3" id="css-modal-target3">
+	<div class="cmt">
+			<div class="swiper sample-slider-lib" style="padding:40;">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/KwK5xtuTfS_bKQ" id="slide2">
+						<figure style="width:80%;"><img src="covers/unseredd_feb1990.jpg" alt="">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Feb 1990</figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/sH_TwGXQRjSu0w
+						" id="slide2">
+						<figure style="width:80%;"><img src="covers/unseredd_mar1990.jpg" alt="">
+						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Mar 1990</figcaption>
+						</figure></a>
+
+																	
+				</div>
+		       <div class="swiper-button-prev"></div>
+		       <div class="swiper-button-next"></div>
+			</div>			
+	</div>
+	<a href="#close" class="css-modal-close"></a> 
+</div>
 
 
 	</section>
