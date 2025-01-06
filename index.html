@@ -186,7 +186,8 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
   height: 45px;
   transform: translateY(-50%);
   outline: 0;
-	font-weight:bold;
+/*	font-weight:bold;*/
+	color: var(--grey-black);
 }
 .swiper-button-prev {
   position: absolute;
@@ -196,7 +197,8 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
   height: 45px;
   transform: translateY(-50%);
   margin-top: 0px;
-	font-weight:bold;
+/*	font-weight:bold;*/
+	color: var(--grey-black);
 }
     .sample-slider-lib {
 	display: flex;
@@ -425,9 +427,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	max-width: 80%;
 	max-height: 60%;
 	transition: 0.5s;
-	border: 1px solid #BFE2FF;
+	border: 1px solid #3A3A3A;
 	border-radius: 12px;
-	background: #FFF;
+	background: rgba(210, 210, 210, 0.8);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 	text-align: center;
 	overflow: auto;
@@ -448,9 +450,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	max-width: 80%;
 	max-height: 60%;
 	transition: 0.5s;
-	border: 1px solid #BFE2FF;
+	border: 1px solid #3A3A3A;
 	border-radius: 12px;
-	background: #FFF;
+	background: rgba(210, 210, 210, 0.8);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 	text-align: center;
 	overflow: auto;
@@ -472,9 +474,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	max-width: 80%;
 	max-height: 60%;
 	transition: 0.5s;
-	border: 1px solid #BFE2FF;
+	border: 1px solid #3A3A3A;
 	border-radius: 12px;
-	background: #FFF;
+	background: rgba(210, 210, 210, 0.8);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 	text-align: center;
 	overflow: auto;
@@ -496,9 +498,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	max-width: 80%;
 	max-height: 60%;
 	transition: 0.5s;
-	border: 1px solid #BFE2FF;
+	border: 1px solid #3A3A3A;
 	border-radius: 12px;
-	background: #FFF;
+	background: rgba(210, 210, 210, 0.8);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 	text-align: center;
 	overflow: auto;
@@ -520,9 +522,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	max-width: 80%;
 	max-height: 60%;
 	transition: 0.5s;
-	border: 1px solid #BFE2FF;
+	border: 1px solid #3A3A3A;
 	border-radius: 12px;
-	background: #FFF;
+	background: rgba(210, 210, 210, 0.8);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 	text-align: center;
 	overflow: auto;
@@ -544,9 +546,9 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	max-width: 80%;
 	max-height: 60%;
 	transition: 0.5s;
-	border: 1px solid #BFE2FF;
+	border: 1px solid #3A3A3A;
 	border-radius: 12px;
-	background: #FFF;
+	background: rgba(210, 210, 210, 0.8);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 	text-align: center;
 	overflow: auto;
@@ -570,15 +572,16 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	content: "";
 	width: 30px;
 	height: 30px;
-	border: 1px solid #BFE2FF;
+	border: 1px solid #3A3A3A;
 	border-radius: 6px;
 	position: fixed;
 	z-index: 10;
 	top: 60px;
 	right: 20px;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
-	background-color: #FFF;
+	background-image: url("img/cross.svg");
+	/*("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");*/
+	background-color: rgba(210,210,210,0.8);
 	background-size: cover;
 	animation: move 0.5s ease;
 	}
@@ -612,6 +615,11 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 	width:80%;
 	text-align:center;
 	}
+	
+	.swiper-slide figcaption {
+	background-color: rgba(210, 210, 210, 0.65);
+	}
+	
 	figure {
 	border:0;
 	padding:0;
@@ -1122,7 +1130,7 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						</p>
 						<div class="css-modal-target-container2">
 							<a class="css-modal-open custom" style="" href="#css-modal-target2">
-							<img style="border: 0px solid ; width: 201px; height: 228px;" alt="title" src="covers/gdrep_covers.jpg"/></a>
+							<img style="border: 0px solid ; width: 180px; height: 228px;" alt="title" src="covers/gdreporter.jpg"/></a>
 						</div>
 						</li><li>
 						<p><br>
@@ -1177,7 +1185,7 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 						<p><br><br><br></p>
 						<div class="css-modal-target-container4">
 							<a class="css-modal-open custom" href="#css-modal-target4">
-							<img style="border: 0px solid ; width: 190px; height: 230px;" alt="title" src="covers/gdr.jpg"/></a>
+							<img style="border: 0px solid ; width: 180px; height: 230px;" alt="title" src="covers/gdr.png"/></a>
 						</div>
 						</li>
 
@@ -1489,23 +1497,23 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 				<div class="swiper-wrapper">
 					<a class="swiper-slide" href="titles/235g02-en.pdf" id="slide2">
 						<figure style="width:80%;"><img src="covers/fci-logo-png-transparent.png" alt="FCI-St.N° 235 / 20.12.2012 Eng">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">FCI-St.N° 235 / 20.12.2012 Eng</figcaption>
+						<figcaption>FCI-St.N° 235 / 20.12.2012 Eng</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="titles/FCI-235-2012RU.pdf" id="slide3">
 						<figure style="width:80%;"><img src="covers/nkp.png" alt="FCI No235 / 08.10.12 / D - перевод">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">FCI No235 / 08.10.12 / D - перевод</figcaption>
+						<figcaption>FCI No235 / 08.10.12 / D - перевод</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="titles/GDCA_standard_1995.pdf" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdca_logo.png" alt="GDCA 2012 Перевод">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA 2012 Перевод</figcaption>
+						<figcaption>GDCA 2012 Перевод</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/3Tub1n3TI9ngEw" id="slide1">
 						<figure style="width:80%;"><img src="covers/gauthier1976.png" alt="GDCA 1976 Illustrated">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA 1976 Illustrated</figcaption>
+						<figcaption>GDCA 1976 Illustrated</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="titles/An-Illustrated-Standard-and-Guide-for-the-Evaluation-of-the-Great-Dane.pdf" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdca_logo.png" alt="GDCA 2018 Illustrated">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA 2018 Illustrated</figcaption>
+						<figcaption>GDCA 2018 Illustrated</figcaption>
 						</figure></a>
 												
 				</div>
@@ -1523,19 +1531,19 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 				<div class="swiper-wrapper">
 					<a class="swiper-slide" href="https://yadi.sk/d/XypWjzXyfgd21g" id="slide2">
 						<figure style="width:80%;"><img src="covers/gdca_yb_1957.jpg" alt="GDCA Yearbook 1957-1958">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA Yearbook 1957-1958</figcaption>
+						<figcaption>GDCA Yearbook 1957-1958</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/gG5QWF1cQgvncg" id="slide3">
 						<figure style="width:80%;"><img src="covers/gdca_yb_1959.jpg" alt="GDCA Yearbook 1959-1960">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA Yearbook 1959-1960</figcaption>
+						<figcaption>GDCA Yearbook 1959-1960</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/JUoKB2y-OTABSA" id="slide1">
 						<figure style="width:80%;"><img src="covers/GDCA1964jubilee.jpg" alt="GDCA Yearbook 1964">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA Yearbook 1964</figcaption>
+						<figcaption>GDCA Yearbook 1964</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/VCPswD9-EgPxRg" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdca_1976-78.jpg" alt="GDCA Yearbook 1976-1978">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GDCA Yearbook 1976-1978</figcaption>
+						<figcaption>GDCA Yearbook 1976-1978</figcaption>
 						</figure></a>
 																	
 				</div>
@@ -1553,35 +1561,35 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 				<div class="swiper-wrapper">
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/8m1rq6RkjSa-ng" id="slide2">
 						<figure style="width:80%;"><img src="covers/gdrep_jf_1993.jpg" alt="GD Reporter Jan/Feb 1993">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Jan/Feb 1993</figcaption>
+						<figcaption >GD Reporter Jan/Feb 1993</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/aaxk8yg2IOiXPg" id="slide3">
 						<figure style="width:80%;"><img src="covers/gdrep_so_1992.jpg" alt="GD Reporter Sep/Oct 1992">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Sep/Oct 1992</figcaption>
+						<figcaption>GD Reporter Sep/Oct 1992</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/d/LJf1-1NQ2nYadQ" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdrep_jan_1991.jpg" alt="GD Reporter Jan/Feb 1991">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Jan/Feb 1991</figcaption>
+						<figcaption>GD Reporter Jan/Feb 1991</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/4QOTyWTJ7ntGFQ" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdrep_jul_1990.jpg" alt="GD Reporter Jul/Aug 1990">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Jul/Aug 1990</figcaption>
+						<figcaption>GD Reporter Jul/Aug 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/6mJeZU4v3fpFvw" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdrep_ma_1990.jpg" alt="GD Reporter Mar/Apr 1990">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Mar/Apr 1990</figcaption>
+						<figcaption>GD Reporter Mar/Apr 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/MocWuXVH7fjXLQ" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdrep_ja_1991.jpg" alt="GD Reporter Jul/Aug 1991">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Jul/Aug 1991</figcaption>
+						<figcaption>GD Reporter Jul/Aug 1991</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/_TxqVZX0MlAR1Q" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdrep_sep_1990.jpg" alt="GD Reporter Sep/Oct 1990">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter Sep/Oct 1990</figcaption>
+						<figcaption>GD Reporter Sep/Oct 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/XhlwpodBrZ56XA" id="slide1">
 						<figure style="width:80%;"><img src="covers/gdrep_may_1990.jpg" alt="GD Reporter May/Jun 1990">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">GD Reporter May/Jun 1990</figcaption>
+						<figcaption>GD Reporter May/Jun 1990</figcaption>
 						</figure></a>
 																	
 				</div>
@@ -1598,43 +1606,43 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 				<div class="swiper-wrapper">
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/KwK5xtuTfS_bKQ" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_feb1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Feb 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge Feb 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/sH_TwGXQRjSu0w
 						" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_mar1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Mar 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge Mar 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/4M73kZXGw2hJhA
 						" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_jan1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Jan 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge Jan 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/d/bS2GRx3SGm8OOQ
 						" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_apr1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Apr 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge Apr 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/Z7cRQPJSXeYK_Q
 						" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_may1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge May 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge May 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/xnKjSQ0LjBBbcA" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_jun1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Jun 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge Jun 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/kENYb54Gnz4ABg" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_jul1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge July 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge July 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/Aw8-O7i5UoY-7g" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_aug1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Aug 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge Aug 1990</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/RTZSHjlbCevZYA" id="slide2">
 						<figure style="width:80%;"><img src="covers/unseredd_sep1990.jpg" alt="">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Unsere Deutsche Dogge Sep 1990</figcaption>
+						<figcaption>Unsere Deutsche Dogge Sep 1990</figcaption>
 						</figure></a>
 				</div>
 		       <div class="swiper-button-prev"></div>
@@ -1650,27 +1658,27 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 				<div class="swiper-wrapper">
 					<a class="swiper-slide" href="https://yadi.sk/d/na9xTkdmZjDyjA" id="slide2">
 						<figure style="width:80%;"><img src="covers/gdr_jan_2014.jpg" alt="Great Dane review Jan 2014">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane review Jan 2014</figcaption>
+						<figcaption>Great Dane review Jan 2014</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/4U2rKmsK2V4Lkw" id="slide2">
 						<figure style="width:80%;"><img src="covers/gdr_jul_2016.jpg" alt="Great Dane review Jul 2016">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane review Jul 2016</figcaption>
+						<figcaption>Great Dane review Jul 2016</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/_juhVUpz20-b9A" id="slide2">
 						<figure style="width:80%;"><img src="covers/gdr_apr_2015.jpg" alt="Great Dane review Apr 2015">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane review Apr 2015</figcaption>
+						<figcaption>Great Dane review Apr 2015</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/zvuKtaa44PcRyw" id="slide2">
 						<figure style="width:80%;"><img src="covers/gdr_jan_2019.jpg" alt="Great Dane review Jan 2019">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane review Jan 2019</figcaption>
+						<figcaption>Great Dane review Jan 2019</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/GVrqv9SJCeTZXw" id="slide2">
 						<figure style="width:80%;"><img src="covers/gdr_jan_2017.jpg" alt="Great Dane review Jan 2017">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane review Jan 2017</figcaption>
+						<figcaption>Great Dane review Jan 2017</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/i/V9L2HrJXx7VNZg" id="slide2">
 						<figure style="width:80%;"><img src="covers/gdr_jul_2015.jpg" alt="Great Dane review Jul 2015">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane review Jul 2015</figcaption>
+						<figcaption>Great Dane review Jul 2015</figcaption>
 						</figure></a>
 																	
 				</div>
@@ -1687,19 +1695,19 @@ https://www.dev-notes.ru/articles/css/responsive-typography-with-clamp/
 				<div class="swiper-wrapper">
 					<a class="swiper-slide" href="https://yadi.sk/i/j1d4tcx4w9YEDw" id="slide2">
 						<figure style="width:80%;"><img src="covers/dw_may_2003.jpg" alt="Great Dane World May/Jun 2003">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane World May/Jun 2003</figcaption>
+						<figcaption>Great Dane World May/Jun 2003</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://disk.yandex.ru/d/pKsKaEHsUHMF9w" id="slide2">
 						<figure style="width:80%;"><img src="covers/dw_nov_2002.jpg" alt="Great Dane World Nov/Dec 2002">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane World Nov/Dec 2002</figcaption>
+						<figcaption>Great Dane World Nov/Dec 2002</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/yyEYSsz9PKIJJQ" id="slide2">
 						<figure style="width:80%;"><img src="covers/dw_sep_2003.jpg" alt="Great Dane World Sep/Oct 2003">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane World Sep/Oct 2003</figcaption>
+						<figcaption>Great Dane World Sep/Oct 2003</figcaption>
 						</figure></a>
 					<a class="swiper-slide" href="https://yadi.sk/i/Ypb2-ixgPcA-Ag" id="slide2">
 						<figure style="width:80%;"><img src="covers/dw_may_2002.jpg" alt="Great Dane World May/Jun 2002">
-						<figcaption style="background-color: rgba(255, 255, 255, 0.95);">Great Dane World May/Jun 2002</figcaption>
+						<figcaption>Great Dane World May/Jun 2002</figcaption>
 						</figure></a>
 
 				</div>
