@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Создано Microsoft Visio, экспорт SVG cross.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="1in" height="1in" viewBox="0 0 72 72"
+		xml:space="preserve" color-interpolation-filters="sRGB" class="st5">
+	<v:documentProperties v:langID="1033"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:none;stroke-width:1}
+		.st2 {fill:none;stroke:none;stroke-width:1.5}
+		.st3 {fill:none}
+		.st4 {stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st5 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Page-1</title>
+		<v:pageProperties v:drawingScale="0.0138889" v:pageScale="0.0138889" v:drawingUnits="29" v:shadowOffsetX="9"
+				v:shadowOffsetY="-9" v:shadowType="1"/>
+		<g id="group1-1" transform="translate(59.9117,-41.9117) rotate(45)" v:mID="1" v:groupContext="group">
+			<title>Лист.1</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape">
+				<title>Лист.2</title>
+				<path d="M0 72 L76.37 72 L0 72 Z" class="st1"/>
+			</g>
+			<g id="group3-4" v:mID="3" v:groupContext="group">
+				<title>Лист.3</title>
+				<g id="shape4-5" v:mID="4" v:groupContext="shape">
+					<title>Лист.4</title>
+					<path d="M0 72 L76.37 72 L0 72 Z" class="st2"/>
+				</g>
+				<g id="shape5-7" v:mID="5" v:groupContext="shape">
+					<title>Лист.5</title>
+					<path d="M0 72 L76.37 72 L0 72 Z" class="st3"/>
+					<path d="M0 72 L76.37 72" class="st4"/>
+				</g>
+			</g>
+		</g>
+		<g id="group6-10" transform="translate(-41.9117,12.0883) rotate(-45)" v:mID="6" v:groupContext="group">
+			<title>Лист.6</title>
+			<g id="shape7-11" v:mID="7" v:groupContext="shape">
+				<title>Лист.7</title>
+				<path d="M0 72 L76.37 72 L0 72 Z" class="st2"/>
+			</g>
+			<g id="group8-13" v:mID="8" v:groupContext="group">
+				<title>Лист.8</title>
+				<g id="shape9-14" v:mID="9" v:groupContext="shape">
+					<title>Лист.9</title>
+					<path d="M0 72 L76.37 72 L0 72 Z" class="st2"/>
+				</g>
+				<g id="shape10-16" v:mID="10" v:groupContext="shape">
+					<title>Лист.10</title>
+					<path d="M0 72 L76.37 72 L0 72 Z" class="st3"/>
+					<path d="M0 72 L76.37 72" class="st4"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
