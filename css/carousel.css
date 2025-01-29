@@ -2040,6 +2040,10 @@ html.with-fancybox body.compensate-for-scrollbar {
     		width: 80%;
 	   }
 
+.sw__right-row .sw__img:hover::after {
+		font-size: clamp(8px,0.4vw + 0.1rem,12px);
+	   }
+
 .sw__img img {
   width: 100%;
   height: 100%;
