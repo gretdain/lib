@@ -2025,7 +2025,7 @@ html.with-fancybox body.compensate-for-scrollbar {
 
 .sw__img:hover::after {
 	    font-family: 'OpenSans'; /* Гарнитура шрифта */
-		font-size: clamp(12px,0.5vw + 0.1rem,16px);
+		font-size: clamp(10px,0.375vw + 0.5rem,16px);
 /*		font-size: 1vw;  Размер текста подсказки */
     		background: #333;
     		background: rgba(0,0,0,.8);
@@ -2033,6 +2033,7 @@ html.with-fancybox body.compensate-for-scrollbar {
     		bottom: 1px;
     		color: #fff;
     		content: attr(data-title);
+		text-align: center;
     		left: 10%;
     		padding: 5px 5px;
     		position: absolute;
@@ -2041,7 +2042,10 @@ html.with-fancybox body.compensate-for-scrollbar {
 	   }
 
 .sw__right-row .sw__img:hover::after {
-		font-size: clamp(8px,0.4vw + 0.1rem,12px);
+		font-size: clamp(8px,0.375vw + 0.3rem,12px);
+    		left: 5%;
+		width:90%;
+		text-align: center;
 	   }
 
 .sw__img img {
