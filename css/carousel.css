@@ -1917,19 +1917,19 @@ html.with-fancybox body.compensate-for-scrollbar {
   display: none
 }
 
-:-webkit-full-screen [data-fancybox-toggle-fullscreen] svg g:first-child {
+/*:-webkit-full-screen [data-fancybox-toggle-fullscreen] svg g:first-child {
   display: none
 }
 
 :-ms-fullscreen [data-fancybox-toggle-fullscreen] svg g:first-child {
   display: none
-}
+}*/
 
 :fullscreen [data-fancybox-toggle-fullscreen] svg g:first-child {
   display: none
 }
 
-:-webkit-full-screen [data-fancybox-toggle-fullscreen] svg g:last-child {
+/*:-webkit-full-screen [data-fancybox-toggle-fullscreen] svg g:last-child {
   display: -webkit-box;
   display: flex
 }
@@ -1937,7 +1937,7 @@ html.with-fancybox body.compensate-for-scrollbar {
 :-ms-fullscreen [data-fancybox-toggle-fullscreen] svg g:last-child {
   display: -ms-flexbox;
   display: flex
-}
+}*/
 
 :fullscreen [data-fancybox-toggle-fullscreen] svg g:last-child {
   display: -webkit-box;

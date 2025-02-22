@@ -702,7 +702,7 @@ width: 100%;
 	  .intro p {
 		text-align: left;
 		line-height: 1.5em;
-		color: var(--font-grey);
+		color: #3A3A3A;
 		}
 
 
@@ -710,13 +710,13 @@ width: 100%;
         object-fit: contain;
         max-width: 100%;
 		max-height: 100%;
-		color: var(--font-grey);
+		color: #3A3A3A;
 		}
 	  
 	  .article p {
 		text-align: left;
 		line-height: 1.5em;
-		color: var(--font-grey);
+		color: #3A3A3A;
 	  }
 
 
@@ -985,14 +985,22 @@ padding-bottom: 16px;
 width: 100%;
 height: 100%;
 background-color: var(--main-bg);
-/* list-style-type:none;
-background: url(/img/footer.jpg) center center no-repeat transparent;
+list-style-type:none;
+/* background: url(/img/footer.jpg) center center no-repeat transparent;
 background-size: cover; */
 }
 
 .footer-container {
-display: block;
-align-items: center;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+				flex-direction: column;
+-webkit-box-align: center;
+		-ms-flex-align: center;
+				align-items: center;
 }
 
 .footer__img {
@@ -1076,9 +1084,8 @@ color: var(--amethyst);
 
 /* media */
 
-@media (max-width: 1300px) {
-}
-/*.gallery__container,
+/*@media (max-width: 1300px) {
+.gallery__container,
 .lib__container {
 	padding-bottom: 0;
 }
@@ -1087,13 +1094,13 @@ color: var(--amethyst);
 	margin-bottom: 20px;
 }
 
-.lib__container .accordion-item {
+/*.lib__container .accordion-item {
 	width: 100%;
 }
 
 .lib__container .lib__slider {
 	width: 100%;
-}
+}*/
 
 .electricity__img,
 .heat__img,
@@ -1137,9 +1144,9 @@ color: var(--amethyst);
 					justify-content: flex-start;
 }
 
-.contacts__left-social-heading {
+/*.contacts__left-social-heading {
 	text-align: center;
-}
+}*/
 
 .contacts__left-list {
 	margin-bottom: 15px;
@@ -1155,9 +1162,9 @@ color: var(--amethyst);
 			justify-content: space-around;
 	width: 100%;
 }
-}*/
+}
 
-@media (max-width: 969px) {}
+@media (max-width: 969px) {
 /* .gallery__img,
 .lib__img,
 .heat__img,
@@ -1169,7 +1176,7 @@ color: var(--amethyst);
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 			-ms-flex-direction: column;
-					flex-direction: column; 
+					flex-direction: column; */
 }
 
 .accordion-item {
@@ -1193,8 +1200,8 @@ color: var(--amethyst);
 
 .electricity__slider {
 	width: 100%;
-}
 }*/
+}
 
 @media (max-width: 911px) {}
 /*.lights--item:nth-child(3) {
@@ -1233,6 +1240,7 @@ color: var(--amethyst);
 .garden__item:not(:nth-child(2n)) {
 	margin-right: 36px;
 }
+*/
 
 .footer__right {
 	-webkit-box-orient: vertical;
@@ -1251,7 +1259,7 @@ color: var(--amethyst);
 .footer__map-img {
 	margin-bottom: 10px;
 }
-}*/
+}
 
 @media (max-width: 768px) {
 .header {
@@ -1346,7 +1354,7 @@ color: var(--amethyst);
 }
 
 .footer {
-	padding: 10px 0;
+	padding: 20px 0;
 }
 
 .contacts__second-heading {
@@ -1367,7 +1375,7 @@ figure {
 }
 
 figcaption {
-  color: var(--font-grey);
+  color: 3A3A3A;
 /*  position: absolute;
   bottom: 0;
   padding:  15px;
