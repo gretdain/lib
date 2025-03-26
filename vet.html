@@ -65,10 +65,15 @@ https://gretdain.com/vet.html#dcm
 	img.scaled {
 	width: 100%;
 	}	
-	.dropdown-content {
+	.link-button {
+	background-color:var(--e5-bg);
+	height:32px;
+	width:32px;
+	}
+/*	.dropdown-content {
 	font-size: 18px;
 	line-height: 35px;
-	}
+	}*/
 	.css-modal-details summary {
 	width:80%;
 	}
@@ -138,10 +143,15 @@ https://gretdain.com/vet.html#dcm
 	img.scaled {
 	width: 100%;
 	}	
+/*	.link-button {
+	background-color:var(--e5-bg);
+	height:50px;
+	width:50px;
+	}
 	.dropdown-content {
 	font-size: 20px;
 	line-height: 30px;
-	}
+	}*/
 	.css-modal-details summary {
 	width:80%;
 	}
@@ -385,11 +395,11 @@ https://gretdain.com/vet.html#dcm
 	color: var(--amethyst);
 	}
 
-	a[href*="http"] {
+<--!	a[href*="http"] {
 	background: url(img/ext_link2.svg) no-repeat 100% 0;
 	background-size: 16px 16px;
 	padding-right: 19px;
-	}
+	}-->
 
 
 /*    Menu    */
@@ -400,7 +410,7 @@ https://gretdain.com/vet.html#dcm
 	background-color: var(--e5-bg);
 	}
 
-	.dropdown-content {
+/*	.dropdown-content {
     display: none;
     position: absolute;
     max-width: 300px;
@@ -415,7 +425,7 @@ https://gretdain.com/vet.html#dcm
     color: var(--white-inversion);
     z-index: 99;
     top: 98%;
-	}
+	}*/
 
 </style>
 
@@ -444,18 +454,17 @@ https://gretdain.com/vet.html#dcm
 					</div>
 
 					<div class="links">
-					<button type="button" style="background-color:var(--e5-bg);height:30px;width:30px;"><img src="img/ext_link.svg" style="padding:5px; width: 32px; height:32px;" alt="Links"> </button>
+					<button type="button"  class="link-button"><img src="img/ext_link.svg" style="padding:5px; width: 32px; height:32px;" alt="Links"> </button>
 						<div class="dropdown-content" style="right:1px">
-						<a rel="noopener" style="background:url() " target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="http://www.verasir.dk/show.php?file=chap24-7.html">History. Denmark version</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="http://greatdanes.dog">Pedigree RU</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="https://www.danesworld.info/pedigree.php?">Pedigree DE</a>	
-						<a rel="noopener" style="background:url() " target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея EU Ch 1900-1980</a>
-						<a rel="noopener" style="background:url() " target="_blank" href="http://daneaffaire.com/aboutjill.html">J.Evans memorial</a>
+						<a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
+						<a rel="noopener" target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
+						<a rel="noopener" target="_blank" href="http://greatdanes.dog">Российский портал</a>
+						<a rel="noopener" target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
+						<a rel="noopener" target="_blank" href="https://www.danesworld.info/pedigree.php?">Pedigree DE</a>	
+						<a rel="noopener" target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
+						<a rel="noopener" target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
+						<a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея Eu Ch 1900-1980</a>
+						<a rel="noopener" target="_blank" href="https://gretdain.com/gd-foundation.html">Time traveller photos</a>
 						</div>
 					</button>	
 					</div>
@@ -683,11 +692,13 @@ NA не измеряется, и в течение долгого времени
         <div class="cmc">
             <div class="cmt">
 	<br clear="all">
-	<figure style="width:100%;">
-		<video style="width:100%" preload="metadata" poster="img/dcm2.jpg" controls>
-        	  <source src="http://www.youtube.com/embed/RcY2EEOSoQU?&autoplay=1&mute=1 " type="video/mp4">
-<!-- http://www.youtube.com/embed/JW5meKfy3fY?&autoplay=1&mute=1 www.youtube.com%2Fwatch%3Fv%3DRcY2EEOSoQU&usg=AOvVaw1vIbvC3psP4k8R1z9iIUSZ&cshid=1742449174312047&opi=89978449	       -->
- </video>
+	<figure style="width:100%; height:auto;">
+		<video preload="metadata" style="width:100%; max-width:200%; height:auto;" poster="img/dcm2.jpg" controls>
+<!--        <source src="img/gordon_stewart.mp4" type="video/mp4">-->
+<!--		<video style="width:100%" preload="metadata" poster="img/dcm2.jpg" controls> -->
+        	  <source src="http://www.youtube.com/embed/RcY2EEOSoQU?&autoplay=1&mute=1 " <!--type="video/mp4"-->>
+		<!-- http://www.youtube.com/embed/JW5meKfy3fY?&autoplay=1&mute=1 www.youtube.com%2Fwatch%3Fv		%3DRcY2EEOSoQU&usg=AOvVaw1vIbvC3psP4k8R1z9iIUSZ&cshid=1742449174312047&opi=89978449	       -->
+		 </video>
 	</figure>
 		</div>
         </div>
