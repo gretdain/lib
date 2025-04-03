@@ -436,7 +436,8 @@ padding: 15px 0;
 .cross-sign {
 width: 16px;
 height: 16px;
-background: url(https://codernote.ru/files/cross.png) no-repeat center center;
+background-image: url("img/cross.svg");
+/*background: url(https://codernote.ru/files/cross.png) no-repeat center center;*/
 background-size: 16px 16px;
 display: block;
 }
@@ -544,6 +545,7 @@ height: 100%;
 		text-align: left;
 		line-height: 1.5em;
 		color: var(--font-grey);
+		hyphens:auto;
 		}
 
 
@@ -749,12 +751,13 @@ color: var(--amethyst);
 @media (min-width: 768px) {
 	.link-button {
 	background-color:var(--e5-bg);
-	height:32px;
-	width:32px;
+	height:50px;
+	width:50px;
 	}
 	.menu-button{
-	height:32px;
-	width:32px;
+	height:50px;
+	width:50px;
+	align-content: center;
 	}
 	.dropdown-content {
 	font-size: 18px;
@@ -811,7 +814,7 @@ color: var(--amethyst);
 	padding:5px;
 	height:32px;
 	width:32px;
-	{
+	}
 
 figcaption {
   color: var(--font-grey);
