@@ -84,6 +84,30 @@ https://gretdain.com/eval.html#breedtype
 	line-height: 1.5em;
 	color: var(--font-grey);
 	  }
+/*	DIV table*/
+
+.div-table {
+  display: table; 
+table-layout:fixed;  
+  width: 100%;         
+/*  background-color: #eee;*/
+  border: 1px solid #666666;         
+/*  border-spacing: 5px; cellspacing:poor IE support for  this */
+}
+.div-table-row {}
+/*  display: table-row;
+	border:none;
+  width: auto;
+  clear: both;*/
+
+.div-table-col {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 50%; 
+	border:none;
+/*  background-color: #ccc;*/
+	padding-left:1em;
+}
 
     .sample-slider img{
 	align-items: center; /* it works */
@@ -211,6 +235,12 @@ https://gretdain.com/eval.html#breedtype
 	width: 100%;
 	text-align: center;
 	}
+.div-table-col {
+/*  float: left;  fix for  buggy browsers 
+  display: table-column;         */
+  width: 100%;         
+/*  background-color: #ccc;  */
+}	
 	.td-3 {
 	width:100%;
 	}
@@ -269,17 +299,9 @@ https://gretdain.com/eval.html#breedtype
 /*	.table-wrap {
     overflow-y: scroll;
 	}*/
-/*	.sample-slider{
-	  justify-content: center;
-	  align-items: center;
-	  width: 100%;
-	height: auto;
-	  border: 1px solid var(--amethyst);
-	  float: left;
-	  margin-right: 15px;
-	  margin-bottom: 15px;
-	  margin-top: 15px;
-    }*/
+	.sample-slider{
+	  border: none;
+    }
 
 	.sample-slider p{
 	margin-left:15px;
@@ -380,17 +402,17 @@ figure img {
 /*	figcaption {
     font-size:0.8em;
 	}*/
-/*	.sample-slider{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	.sample-slider{
+	display: block;
+/*	justify-content: center;
+	align-items: center;*/
 	width: 100%;
 	height: auto;
-	border: 1px solid var(--amethyst);
+	border: none;
 	float: left;
-	margin-right:1em;
-	padding:5px;
-	}*/
+	margin:0;
+/*	padding:5px;*/
+	}
 	.swiper-wrapper {
 	width:50%;
 	}
@@ -617,7 +639,7 @@ figure img {
 
 <table cellspacing="7" cellpadding="5">
 <tr>
-<td> <p>Шея вместе с головой придают догу то, что называется аристократичностью, или благородством. Важнейшие характеристики шеи - ее длина, изгиб и наклон. Все три характеристики имеют значение, если отсутствует "подвес" - излишек кожи под головой на шее.<p></td>
+<td> <p>Шея вместе с головой придают догу то, что называется аристократичностью, или благородством. Важнейшие характеристики шеи - ее длина, изгиб и наклон. Все три характеристики имеют значение, если отсутствует "подвес" - излишек кожи под головой на шее.</p></td>
 </tr>
 </table>
 
@@ -787,24 +809,33 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 "подчеркнутая подтянутость".  Многие определения элегантности включают
 грациозность, которая происходит из плавных непрерывных чистых линий и изгибов.</p>
 
-<p>Основательность, сила и мощь проявляются в хорошей мускулатуре и костях.  Глубина и ширина
-являются характеристиками корпуса и грудной клетки. Кобель
+<p>Основательность, сила и мощь проявляются в хорошей мускулатуре и костях.  Глубина и ширина являются характеристиками корпуса и грудной клетки. Кобель
 "массивнее" чем сука, но оба  массивны.   Массивность должна быть
 уравновешена элегантностью.</p>
 <br>
-<div class="swiper sample-slider">
-    <div class="swiper-wrapper  style="height:auto;">
+
+  <form id="divtable">
+      <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-table-col" style="background-color:var(--l-grey);">
+					<div class="swiper sample-slider">
+						<div class="swiper-wrapper"  style="height:auto;">
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval003.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img loading="lazy" decoding="async" src="img/eval004.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img loading="lazy" decoding="async" src="img/eval005.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img loading="lazy" decoding="async" src="img/eval006.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img loading="lazy" decoding="async" src="img/eval007.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img loading="lazy" decoding="async" src="img/eval008.png"></div></div>
-    </div>
-<p style="font-size:80%;padding:5px;">Суки на этих фото иллюстрируют баланс размера, элегантности и мощи; в них есть
-гармония.<br>Кобели на фото также обладают элегантностью, размером и мощью.</p>
-</div>
-<br>
+						</div>
+					</div>
+				</div>
+                <div class="div-table-col">
+				<p>Суки на этих фото иллюстрируют баланс размера, элегантности и мощи; в них есть гармония.<br>Кобели на фото также обладают элегантностью, размером и мощью.</p>
+				</div>				
+			  </div>
+            </div>
+  </form>
+
 <br>
 <p  align=center style='text-align:center;font-size:120%;'><b>Квадрат</b></p>
 <p>Следует обратить внимание на длину головы, шеи и ног.</p>
@@ -830,15 +861,24 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 и очень угловатый в щенячьем возрасте.  В подростковом возрасте, после скачка
 роста, он становится выше и сглаженнее.</p>
 <br>
-<div class="swiper sample-slider">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval009.png"></div></div>
+
+  <form id="divtable">
+      <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-table-col" style="background-color:var(--l-grey);">
+					<div class="swiper sample-slider">
+						<div class="swiper-wrapper"  style="height:auto;">
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval010.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval011.png"></div></div>
-    </div>
-<p style="font-size:80%;padding-left:8%">Какие из  собак на фото квадратные? Палевый кобель квадратный, тогда как суки, скорее, укороченные.</p>
-</div>
-<br>
+						</div>
+					</div>
+				</div>
+                <div class="div-table-col">
+				<p>Какие из  собак на фото квадратные? Палевый кобель квадратный, тогда как суки, скорее, укороченные.</p>
+				</div>				
+			  </div>
+            </div>
+  </form>
 <br>
 <p  align=center style='text-align:center;font-size:120%;'><b>Кобели и суки</b></p>
 
@@ -851,28 +891,43 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 соответствующей элегантностью, а кобель меньше, то это, скорее, в негативе для
 кобеля, чем к достоинству суки.</p>
 <br>
-<div class="swiper sample-slider">
-    <div class="swiper-wrapper">
+  <form id="divtable">
+      <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-table-col" style="background-color:var(--l-grey);">
+					<div class="swiper sample-slider">
+						<div class="swiper-wrapper"  style="height:auto;">
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval012.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval013.png"></div></div>
-    </div>
-	<p style="font-size:80%;">Кто из собак на фото кобель, а кто сука? Тигровый - это кобель.  Кто
+						</div>
+					</div>
+				</div>
+                <div class="div-table-col">
+	<p>Кто из собак на фото кобель, а кто сука? Тигровый - это кобель.  Кто
 	менее правильно сложен?  Когда бы был категоризированный список недостатков,
 	кобель, выглядящий как сука  - серьезный недостаток, а сука, похожая на кобеля
-	- незначительный.  Поэтому сука более корректна.</p>
-</div>
+	- незначительный.  Поэтому сука более корректна.</p>				</div>			
+			  </div>
+            </div>
+  </form>
 <br>
 <p>В стандарте говорится, что "мужественность кобеля очень ярко выражена в структурном
 оформлении головы.  Голова суки более деликатно сложена".</p>
 <br>
-<figure style="margin-right:1em;"><img src="img/eval014.png"></figure><p>Кто из двух
+<table>
+<tr>
+<td style="padding:5px; background-color:var(--l-grey);"><img src="img/eval014.png"></td>
+<td > <p>Кто из двух
 собак на фото кобель, а кто сука?<br>
 На фото слева голова суки, справа - кобеля. Относительные пропорции у обоих
 примерно одинаковы.  <br>Длина головы кобеля не намного больше длины головы суки.
 Ярко выраженная мужественность проявляется в размерах, глубине и ширине
 головы.  Кобель имеет более глубокий череп, более глубокую морду и более
 выраженныый стоп.  Более деликатно сформированная голова суки заметно менее
-глубокая и широкая.</p>
+глубокая и широкая.</p></td>
+</tr>
+</table> 
+
 <br>
 <br clear="all">
 
@@ -919,17 +974,35 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 </table> 
 <br>
 
-<div class="swiper sample-slider">
+<!--<div class="swiper sample-slider">
     <div class="swiper-wrapper" style="background-color:var(--l-grey);text-align:center;">
+    </div>
+
+</div>-->
+
+  <form id="divtable">
+      <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-table-col" style="background-color:var(--l-grey);">
+					<div class="swiper sample-slider">
+						<div class="swiper-wrapper"  style="height:auto;">
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval016.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval017.png"></div></div>
        <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval018.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval019.png"></div></div>
        <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval020.png"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/eval021.png"></div></div>
-    </div>
-<p style="font-size:80%;padding:5px;">Головы на этих фото также правильно пропорциональны и сбалансированы, как в фас, так и в профиль </p>
-</div>
+						</div>
+					</div>
+				</div>
+                <div class="div-table-col">
+<p style="font-size:80%;padding:5px;">Головы на этих фото также правильно пропорциональны и сбалансированы, как в фас, так и в профиль </p>				
+				</div>			
+			  </div>
+            </div>
+  </form>
+
+
 
 <p  align=center style='text-align:center;font-size:120%;'><b>Шея</b></p>
 
