@@ -133,6 +133,20 @@ table-layout:fixed;
       -webkit-align-items: center;
 	}
 
+	.swiper_text, swiper_text1 {
+	display: flex;
+	}
+
+	.swiper_text .swiper_slide {
+	display:flex;
+	justify-content: center;
+	}
+
+	.swiper_text1 .swiper_slide {
+	display:flex;
+	justify-content: center;
+	}
+
 /* links */	    
 
 	a {
@@ -195,6 +209,8 @@ table-layout:fixed;
   transform: translateY(-50%);
   outline: 0;
 	font-weight:bold;
+	color: var(--grey-black);
+
 }
 .swiper-button-prev {
   position: absolute;
@@ -205,6 +221,8 @@ table-layout:fixed;
   transform: translateY(-50%);
   margin-top: 0px;
 	font-weight:bold;
+	color: var(--grey-black);
+
 }
     .sample-slider-lib {
 	display: flex;
@@ -217,6 +235,218 @@ table-layout:fixed;
 	#evans p {
 	text-align:center;
 	}
+
+	.cmt {
+	font-family: 'OpenSans', sans-serif;
+	padding: 5px;
+	max-width: 80%;
+	max-height: 60%;
+	transition: 0.5s;
+	border: 1px solid #3A3A3A;
+	border-radius: 12px;
+	background: var(--modal-background);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+	width:600px;
+ 	height:320px; 
+	display: flex;
+	margin: 10%;
+	min-width: 50%;
+	min-height: 50%;
+	}
+	
+/* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
+.css-modal-details {
+/*    height: 70px;*/
+    display:contents;
+/*    align-items:center;
+    justify-content:center;
+	text-align: center;*/
+}
+
+/*                 banner                   */ 
+/* Кнопка для открытия баннера */
+.css-modal-details summary {
+    display: inline-flex;
+/*    margin: 5px; 
+    text-decoration: none;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;*/
+    padding: 12px 20px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--target-background);
+    cursor: pointer;
+    border: 2px solid #AAA;
+	border-radius: 5px;
+    overflow: hidden;
+/*    z-index: 1;
+	width:40%; */
+}
+
+/*	.css-modal-details summary:hover,
+	.css-modal-details summary:active,
+	.css-modal-details summary:focus {
+	color: #FFF;
+	}
+
+	.css-modal-details summary:before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    right: -50px;
+	    bottom: 0;
+	    left: 0;
+	    border-right: 50px solid transparent;
+	    border-top: 50px solid #2D6B9F;
+	    transition: transform 0.5s;
+	    transform: translateX(-100%);
+	    z-index: -1;
+	}
+
+	.css-modal-details summary:hover:before,
+	.css-modal-details summary:active:before,
+	.css-modal-details summary:focus:before {
+	transform: translateX(0);
+	} */
+ 
+/* Кнопка при открытом окне переходит на весь экран */
+.css-modal-details details[open] summary {
+    cursor: default;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+ 
+/* Контейнер, который затемняет страницу */
+.css-modal-details details .cmc {
+    display:flex;
+    align-items:center;
+    justify-content:center;    
+}
+.css-modal-details details[open] .cmc {
+    pointer-events: none;
+    z-index: 4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: bg 0.5s ease;
+    background: rgba(107, 107, 107, 0.7);
+}
+ 
+/* Модальное окно */
+.css-modal-details details .cmt {
+    font-family: 'OpenSans', sans-serif;  
+    max-width: 600px;
+    max-height: 70%;
+    transition: 0.5s;
+/*    border: 6px solid #FFF;*/
+    border-radius: 10px;
+/*    background: #FFF;*/
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    text-align: left;
+    overflow: auto;
+}
+.css-modal-details details[open] .cmt {
+    animation: scale 0.5s ease;
+    z-index: 4;
+    pointer-events: auto;
+}
+ 
+/* Декоративная кнопка с крестиком */
+.css-modal-details details[open] .cmc:after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	border: 1px solid var(--font-grey);
+	border-radius: 6px;
+	position: fixed;
+	z-index: 10;
+	top: 60px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("img/cross.svg");
+	background-color: var(--modal-background);
+	background-size: cover;
+	animation: move 0.5s ease;
+}
+
+
+
+/*        modal lib */
+<!--	.sample-slider #lib{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: auto;
+	border: 1px solid var(--amethyst);
+	float: left;
+	margin-right: 1em;
+	}
+
+    .sample-slider img  #lib {
+	align-items: center; 
+    }
+
+	.swiper   #lib {
+	margin-left:0;
+	padding:0.5em;
+	}
+	
+	.swiper-slide   #lib {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+
+	.swiper-button-next   #lib {
+	margin-top: 0px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 25px;
+	height: 45px;
+	transform: translateY(-50%);
+	outline: 0;
+	color: var(--grey-black);
+	}
+
+	.swiper-button-prev   #lib {
+	  position: absolute;
+	  top: 50%;
+	  left: 0;
+	  width: 25px;
+	  height: 45px;
+	  transform: translateY(-50%);
+	  margin-top: 0px;
+	color: var(--grey-black);
+
+	}
+
+    .sample-slider-lib   #lib {
+	display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+    .sample-slider-lib img  #lib {
+	  justify-content: center;
+	  align-items: center;
+	} -->
+
+
+
+
 
 /* media  */
 @media (max-width: 767px) {
@@ -324,6 +554,34 @@ table-layout:fixed;
     font-size: 20px;
     line-height: 30px;
 	}*/
+		.css-modal-details summary {
+	width:80%;
+	}
+	.cmt-table td {
+	display: table-cell;
+	width:100% ;
+	font-size:12px;
+	}
+	.css-modal-details details .cmt {
+	/*    font-size: 12px;*/
+	padding: 5px;
+	width:90%;
+	}
+	.swiper-slide figure {
+	max-width:100%;
+	width:80%;
+	border:none;
+	}
+	.swiper-slide figcaption {
+	width:100%;
+	background-color: var(--modal-background);
+	}
+	.cmt img {
+        object-fit: contain;
+	color: var(--font-grey);
+	width:100%;
+	height:280px;
+	}
 	}  
 
 @media (min-width: 768px) {
@@ -390,10 +648,11 @@ figure img {
   width: 40em;
 	}
 	.width-80 {
-	width: 80%
+	max-width:1602px;
+	width: 80%;
 	}
 	.width-50 {
-	width: 50%
+	width: 50%;
 	}
 	video {
 	width: 50%;
@@ -439,6 +698,30 @@ figure img {
 	height:50px;
 	width:50px;
 	}*/
+		.css-modal-details summary {
+	width:80%;
+	}
+	.css-modal-details details .cmt {
+	font-size: 14px;
+	padding: 20px;
+	width:80%;
+	}
+	.swiper-slide figure {
+	max-width:100%;
+	width:80%;
+	border:none;
+	}
+	.swiper-slide figcaption {
+	width:100%;
+	background-color: var(--modal-background);
+	}
+	.cmt img {
+        object-fit: contain;
+	color: var(--font-grey);
+	width:100%;
+	height:280px;
+	}
+
     	}
 
 
@@ -1329,7 +1612,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <tr>
 <td class="cell-picture"> 
 <p>Некоторые вещи,  на которые следует обратить особенное внимание, являются частью баланса:</p>
-<p>
+<p style="text-align:left !important;">
 1. Общий размер, мощь и элегантность<br>
 2. Рост и длина собаки<br>
 3. Длина головы, длина шеи, длина ног<br>
@@ -1355,7 +1638,8 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <tr>
 <td class="cell-picture"> 
 <p>
-Оцените каждого представителя породы на фото ниже на сбалансированность:<br>
+Оцените каждого представителя породы на фото ниже на сбалансированность:</p>
+<p style="text-align:left !important;">
 - Размер, мощь, элегантность,<br>
 - Форма и длина головы, соотношение размеров морды и черепа,<br>
 - Длина шеи, постановка шеи,<br>
@@ -1435,48 +1719,108 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 
 <p>Из стандарта породы немецкий дог: "...должен двигаться с большим захватом пространства, слегка пружинясь".</p>
 <p>"Походка с длинными, легкими шагами демонстрирует силу и мощь, не приводит к подбрасыванию тела, перекатыванию или колебанию линии спины или всего корпуса. Верхняя линия контура тела должна выглядеть ровной и параллельной земле. Вынос передней ноги должен быть точно ниже носа, в то время как голова при этом должна смотреть вперед. Мощный зад должен быть сбалансирован с тянущей силой. С увеличением скорости возникает естественная тенденция к тому, чтобы ноги сходились к центральной линии равновесия под корпусом. Не должно быть скручивания в локтевом или тазобедренном суставах". Стандарт четко определяет правильное движение. Но многие доги двигаются не совсем так, как как положено.</p>
-<p>В стандарте много слов уделено описанию походки сбоку, или, по крайней мере, характеристикам, которые можно увидеть, рассматривая движущуюся собаку в профиль. Некоторое время назад судьи и заводчики за океаном провели опрос о важности компонентов движения для выставочных собак. Те, кто занимаются более тридцати семи лет разведением догов и десять лет судят их на ринге, оценили компоненты движения по степени важности:</p>
-<p>   &#10148; Сбалансированный мах передних и задних ног</p>
-<p>   &#10148; Сбалансированное вытяжение передних ног </p>
-<figure><img src="img/eval147.jpg"></figure>
+<p style="margin-bottom:6pt;">В стандарте много слов уделено описанию походки сбоку, или, по крайней мере, характеристикам, которые можно увидеть, рассматривая движущуюся собаку в профиль. Некоторое время назад судьи и заводчики за океаном провели опрос о важности компонентов движения для выставочных собак. Те, кто занимаются более тридцати семи лет разведением догов и десять лет судят их на ринге, оценили компоненты движения по степени важности:</p>
+
+  <form id="divtable">
+      <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-table-col" style="background-color:var(--l-grey);">
+					<div class="swiper swiper_main">
+						<div class="swiper-wrapper"  style="height:auto;">
+        <div class="swiper-slide"><div class="swiper-zoom-container">
+		<img src="img/blank.png"></div></div>
+        <div class="swiper-slide"><div class="swiper-zoom-container">
+		<img src="img/eval147.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/eval148.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/blank.png"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/blank.png"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/eval149.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/blank.png"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/blank.png"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/blank.png"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/eval150.jpg"></div></div>
+						</div>
+					</div>
+				</div>
+                <div class="div-table-col" style="margin-top:3em;">
+					<div class="swiper swiper_text">
+						<div class="swiper-wrapper"  style="height:auto;">
+        <div class="swiper-slide"><p> 1. Сбалансированный мах передних и задних ног</p></div>
+        <div class="swiper-slide"><p> 2. Сбалансированное вытяжение передних ног</p></div>
+       <div class="swiper-slide"><p> 3. Ровная, горизонтальная, стабильная верхняя линия контура при движении</p></div>
+        <div class="swiper-slide"><p> 4. Сбалансированное вытяжение задних ног</p></div>
+        <div class="swiper-slide"><p> 5. Ровная походка на вас</p></div>
+        <div class="swiper-slide"><p> 6. Ровная походка от вас</p></div>
+        <div class="swiper-slide"><p> 7. Ноги сходятся к центральной линии под корпусом по мере увеличения скорости</p></div>
+        <div class="swiper-slide"><p> 8. Чистое ударное соприкосновение ноги с поверхностью, видимое как сбоку, так и спереди</p></div>
+        <div class="swiper-slide"><p> 9. Правильная постановка лапы</p></div>
+        <div class="swiper-slide"><p> 10. Правильная постановка ног</p></div>
+						</div>
+					</div>
+		  </div>
+            </div>
+	</div>
+  </form>
+
 <br clear="all">
-<p>  &#10148; Ровная, горизонтальная, стабильная верхняя линия контура при движении</p>
-<figure><img src="img/eval148.jpg"></figure>
-<br clear="all">
-<p>  &#10148; Сбалансированное вытяжение задних ног</p>
-<p>  &#10148; Ровная походка на вас</p>
-<p>  &#10148; Ровная походка от вас</p>
-<p>  &#10148; Ноги сходятся к центральной линии под корпусом по мере увеличения скорости</p>
-<figure><img src="img/eval149.jpg"></figure>
-<br clear="all">
-<p>  &#10148; Чистое ударное соприкосновение ноги с поверхностью, видимое как сбоку, так и спереди</p>
-<p>  &#10148; Правильная постановка лапы</p>
-<p>  &#10148; Правильная постановка ног</p>
-<figure><img src="img/eval150.jpg"></figure>
-<br clear="all">
-<p>Эксперты по догам также ранжировали список недостатков движений, от наиболее серьезных до наименее серьезных:</p>
-<p>  &#10148; Короткий мах ноги</p>
-<p>  &#10148; Наклон верхней линии контура при движении</p>
-<figure><img src="img/eval151.jpg"></figure>
-<br clear="all">
-<p>  &#10148; Коровья походка (ноги всегда параллельны в фас)</p>
-<p>  &#10148; Паддлинг (согнутые запястья)</p>
-<figure><img src="img/eval152.jpg"></figure>
-<br clear="all">
-<p>  &#10148; Выброс локтей при движении</p>
-<figure><img src="img/eval153.jpg"></figure>
-<br clear="all">
-<p>  &#10148; Подбрасывание или перекатывание частей тела</p>
-<p>  &#10148; Задние ноги наезжают на передние</p>
-<figure><img src="img/eval154.jpg"></figure>
-<br clear="all">
-<p>  &#10148; Сближение передних ног при приближении</p>
-<figure><img src="img/eval155.jpg"></figure>
-<br clear="all">
-<p>  &#10148; Разброс задних ног при удалении</p>
-<figure><img src="img/eval156.jpg"></figure>
-<br clear="all">
-<p>  &#10148; Разброс передних ног при приближении</p>
+<p style="padding-bottom:12pt;">Эксперты по догам также ранжировали список недостатков движений, от наиболее серьезных до наименее серьезных:</p>
+
+ <form id="divtable">
+      <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-table-col" style="background-color:var(--l-grey);">
+					<div class="swiper swiper_main1">
+						<div class="swiper-wrapper"  style="height:auto;">
+        <div class="swiper-slide"><div class="swiper-zoom-container">
+		<img src="img/blank.png"></div></div>
+        <div class="swiper-slide"><div class="swiper-zoom-container">
+		<img src="img/eval151.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/blank.png"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/eval152.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/eval153.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/blank.png"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/eval154.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/eval155.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/eval156.jpg"></div></div>
+       <div class="swiper-slide"><div class="swiper-zoom-container">
+	   <img src="img/blank.png"></div></div>
+						</div>
+					</div>
+				</div>
+                <div class="div-table-col" style="margin-top:3em;">
+					<div class="swiper swiper_text1">
+						<div class="swiper-wrapper"  style="height:auto;">
+        <div class="swiper-slide"><p> 1. Короткий мах ноги</p></div>
+        <div class="swiper-slide"><p> 2. Наклон верхней линии контура при движении</p></div>
+       <div class="swiper-slide"><p> 3. "Коровья поступь" (ноги всегда параллельны в фас)</p></div>
+        <div class="swiper-slide"><p> 4. Паддлинг (согнутые запястья)</p></div>
+        <div class="swiper-slide"><p> 5. Выброс локтей при движении</p></div>
+        <div class="swiper-slide"><p> 6. Подбрасывание или перекатывание частей тела</p></div>
+        <div class="swiper-slide"><p> 7. Задние ноги наезжают на передние</p></div>
+        <div class="swiper-slide"><p> 8. Сближение передних ног при приближении</p></div>
+        <div class="swiper-slide"><p> 9. Разброс задних ног при удалении</p></div>
+        <div class="swiper-slide"><p> 10. Разброс передних ног при приближении</p></div>
+						</div>
+					</div>
+		  </div>
+            </div>
+	</div>
+  </form>
 
 <p>Может ли хендлер повлиять на движения дога или улучшить их? Если да, то что хендлер может сделать и каков будет результат? Значительное большинство опрошенных считает, что хендлер действительно может повлиять на движение дога, чаще негативно. В качестве неправильного поведения называлось слишком быстрое или слишком медленное для собаки движение. Некоторые считают, что это обычно делается для того, чтобы скрыть недостатки движения. Жесткий поводок или натягивание ринговки также могут привести к ошибкам в движениях.</p>
 <p>Еще до выставки заводчики и судьи рекомендуют провести подготовку собаки. Тренированная собака будет двигаться с большей энергией. Занятия  позволят собаке двигаться на свободном поводке, по прямой линии и на хорошей для собаки скорости - все это позволит собаке выглядеть значительно лучше.
@@ -1779,19 +2123,42 @@ figure figcaption {
 			<br>
 </div>
 
-		<div class="container" id="lib">
-		<h2>Библиотека</h2>	
-		<br>
-			<div class="swiper sample-slider-lib" style="padding:30;">
+		<div class="container" style="display:flex; justify-content:center;margin-bottom:320px; margin-top:65px;" id="lib">
+
+<div class="css-modal-details">    
+    <details style="width:50%;">
+        <summary style="justify-content:center; font-size:1em;">Библиотека</summary>
+        <div class="cmc">
+            <div class="cmt">						
+			<div class="swiper sample-slider-lib">
 				<div class="swiper-wrapper">
-					<a class="swiper-slide" href="https://disk.yandex.ru/i/10lS6xQ8ePHCeA" id="slide1"><img src="img/eval158.jpg" alt=""></a>
-					<a class="swiper-slide" href="https://disk.yandex.ru/i/8oznGE2FXxfnxA" id="slide2"><img src="img/eval159.jpg" alt=""></a>
-					<a class="swiper-slide" href="https://disk.yandex.ru/i/ZYjgdggSwqEwHA" id="slide3"><img src="img/eval160.jpg" alt=""></a>
-					<a class="swiper-slide" href="https://disk.yandex.ru/i/Vq0OSs_eCZSXDQ" id="slide4"><img src="img/eval161.jpg" alt=""></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/10lS6xQ8ePHCeA">
+						<figure><img src="img/eval158.jpg" alt="">
+						<figcaption></figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/8oznGE2FXxfnxA">
+						<figure><img src="img/eval159.jpg" alt="">
+						<figcaption></figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/ZYjgdggSwqEwHA">
+						<figure><img src="img/eval160.jpg" alt="">
+						<figcaption></figcaption>
+						</figure></a>
+					<a class="swiper-slide" href="https://disk.yandex.ru/i/Vq0OSs_eCZSXDQ">
+						<figure><img src="img/eval161.jpg" alt="">
+						<figcaption></figcaption>
+						</figure></a>
+												
 				</div>
 		       <div class="swiper-button-prev"></div>
 		       <div class="swiper-button-next"></div>
 			</div>			
+
+	</div>
+	<a href="#close" class="css-modal-close"></a> 
+	</div>
+</div>
+
 		</div>									
 
 
@@ -1830,6 +2197,41 @@ figure figcaption {
         },
 	},
     });
-	</script>
 </script>
+
+<script>
+    const swiper_text = new Swiper('.swiper_text', {
+        loop: true, 
+        slidesPerView: 1,
+        allowTouchMove: false,
+    })
+    const swiper_main = new Swiper('.swiper_main', {
+        loop: true,                         
+        autoplay: {                         
+            delay: 8000,  
+        },
+        thumbs: {                           
+            swiper: swiper_text,            
+        },
+    })
+</script>
+
+<script>
+    const swiper_text1 = new Swiper('.swiper_text1', {
+        loop: true, 
+        slidesPerView: 1,
+        allowTouchMove: false,
+    })
+    const swiper_main1 = new Swiper('.swiper_main1', {
+        loop: true,                         
+        autoplay: {                         
+            delay: 9000,  
+        },
+        thumbs: {                           
+            swiper: swiper_text1,            
+        },
+    })
+</script>
+
+
 </html>
