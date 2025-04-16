@@ -24,14 +24,14 @@ https://gretdain.com/eval.html#breedtype
 
 /* shared */
 	.heading1 {
-	text-align:center;
+	text-align:center !important;
 	padding-top:65px;
 	font-size:150%;
 	}
 
 	.heading2 {
-	text-align:center;
-	padding-top:65px;
+	text-align:center !important;
+/*	padding-top:65px; */
 	font-size:120%;
 	}
 
@@ -398,6 +398,39 @@ https://gretdain.com/eval.html#breedtype
 	animation: move 0.5s ease;
 }
 
+/* Кнопка с крестиком закрывающая окно */
+	.css-modal-close {
+	position: relative;
+	display: block;
+	}
+
+	.css-modal-close:after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	border: 1px solid var(--font-grey);
+	border-radius: 6px;
+	position: fixed;
+	z-index: 10;
+	top: 60px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("img/cross.svg");
+	background-color: var(--modal-background);
+	background-size: cover;
+	animation: move 0.5s ease;
+	}
+
+	.css-modal-close:before {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	content: "";
+	cursor: default;
+	}
+
 
 
 /*        modal lib */
@@ -668,6 +701,8 @@ figure img {
 	.width-80 {
 	max-width:1602px;
 	width: 80%;
+	margin-top:1em;
+	float:none;
 	}
 	.width-50 {
 	width: 50%;
@@ -1048,7 +1083,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 
 	<div class="container"  id="riggsbee">
 
-<p class="heading2"><b>Пропорции и баланс немецкого дога</b></p>
+<p class="heading1"><b>Пропорции и баланс немецкого дога</b></p>
 
 <p style="font-size:80%" >Фрагменты, заключенные в двойные кавычки, взяты из стандарта породы Great Dane,
 принятого 28 апреля 1999 года, ранее доступного на сайте <a target=”_blank” class="ext_link" href="https://www.akc.org"> AKC</a> (American Kennel Club). Изменения стандарта, принятые в 2010 и 2018 годах, не касались баланса или пропорций.</p>
@@ -2051,45 +2086,45 @@ figure figcaption {
 }
 -->
 
-			<figure class="width-50">
+			<figure class="width-80">
 			<img src="img/anatomy003.jpg" alt="stormi">
 			<figcaption>Иллюстрация к <a href="index.html?id=slides_1#books">стандарту GDCA, 1976</a></figcaption>
 			</figure>
 			
-			<figure class="width-50">
+			<figure class="width-80">
 			<img src="img/anatomy004.jpg" alt="devincent">
 			<figcaption>Пропорции немецкого дога, <a target=”_blank” class="ext_link" href="https://davincidanes.wixsite.com/home/the-great-dane-blueprint">DeVincent Easley</a>, 2013</figcaption>
 			</figure>			
 
-			<figure class="width-50" style="margin-top:1em;">
+			<figure class="width-80">
 			<img src="img/anatomy010.png">
 			<figcaption>
 			Пропорции длины и высоты (GDCA, 2021)
 			</figcaption>
 			</figure>
 
-			<figure class="width-50" style="margin-top:1em;">
+			<figure class="width-80">
 			<img src="img/anatomy011.png">
 			<figcaption>
 			Ангуляция задней части дога (GDCA, 2021)
 			</figcaption>
 			</figure>
 		
-			<figure class="width-50" style="margin-top:1em;">
+			<figure class="width-80">
 			<img src="img/anatomy012.png">
 			<figcaption>
 			Пропорции длины и высоты (DDC, 2018)
 			</figcaption>
 			</figure>			
 			
-			<figure class="width-50" style="margin-top:1em;">
+			<figure class="width-80">
 			<img src="img/anatomy013.png">
 			<figcaption>
 			Пропорции головы (DDC, 2018)
 			</figcaption>
 			</figure>				
 
-			<figure class="width-50" style="margin-top:1em;float:none;">
+			<figure class="width-80">
 			<img src="img/anatomy015.png">
 			<figcaption>
 			Баланс и равновесие (DDC, 2018)
@@ -2097,19 +2132,19 @@ figure figcaption {
 			</figure>			
 			<br clear="all">
 
-			<figure class="width-80" style="float:none;margin-top:1em;">
+			<figure class="width-80">
 			<img src="img/eval162.jpg" alt="Broadway Jim">
 			<figcaption>1962. Broadway Jim</figcaption>
 			</figure>
-			<figure class="width-80" style="float:none;margin-top:1em;">
+			<figure class="width-80">
 			<img src="img/eval163.jpg" alt="Stormy Rudio">
 			<figcaption>1956. Stormy Rudio</figcaption>
 			</figure>
-			<figure class="width-80" style="float:none;margin-top:1em;">
+			<figure class="width-80">
 			<img src="img/eval164.jpg" alt="Stormy Rudio">
 			<figcaption>1956. Stormy Rudio</figcaption>
 			</figure>
-			<figure class="width-80" style="float:none;margin-top:1em;">
+			<figure class="width-80">
 			<img src="img/eval165.jpg" alt="Stormy Rudio">
 			<figcaption>2020. Flighty Autumnridge Rhythm And Roots</figcaption>
 			</figure>
