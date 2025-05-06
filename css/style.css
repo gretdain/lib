@@ -141,7 +141,7 @@ outline: none;
 	}*/
 
 	.ext_link {
-	background: url(img/ext_link2.svg) no-repeat 100% 0;
+	background: url(../img/ext_link2.svg) no-repeat 100% 0;
 	background-size: 16px 16px;
 	padding-right: 19px;
 	}
@@ -322,6 +322,7 @@ position: fixed;
   margin-left: auto;
   margin-right: auto;
   background-color:var(--e5-bg);
+	z-index:99;
 }
 
 .header-top {
