@@ -87,7 +87,9 @@ src: local(''),
 
 body, html {
   margin: 0;
-  padding: 0
+  padding: 0;
+	color: var(--font-grey);
+
 }
 
 /* Chrome, Safari, Edge, Opera */
