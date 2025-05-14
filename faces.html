@@ -24,6 +24,148 @@ https://gretdain.com/faces.html#maria
 -->
 
 <style>
+
+/* shared css */
+
+/*	body, html {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;
+	font-weight: 400;
+	} */
+/*	.container {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 100%;
+	}*/
+	
+	.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+	}
+	.container p {
+	margin-top:6.0pt;
+	}
+
+	hr {
+	width:100%;
+	text-align:left;
+	margin-left:0
+	}
+	
+	.article img {
+        object-fit: contain;
+        max-width: 100%;
+		max-height: 100%;
+		color: var(--font-grey);
+		}
+	  
+/*	  .article p {
+		text-align: left;
+		line-height: 1.5em;
+		color: var(--font-grey);
+	  }*/
+
+    .sample-slider img{
+	align-items: center; /* it works */
+    }
+	<!--	.slideshow-container {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 300px;
+	  height: 300px;
+	  border: 1px solid var(--amethyst);
+	  float: left;
+	  margin-right: 15px;
+	  margin-bottom: 15px;
+	  margin-top: 15px;
+	}
+	-->
+	.swiper-wrapper {
+	align-items: center; /* it works */
+	}
+	.swiper-slide {
+	  display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+	}
+
+/* links */	    
+
+/*	a {
+	outline: none;
+	text-decoration: none;
+	padding: 1px;
+	}*/
+
+/*	a:link {
+	color: var(--amethyst);
+	}*/
+
+/*	a:focus,
+	a:hover {
+	border-bottom: 1px solid;
+	font-weight: bold;
+	color: var(--amethyst);
+	}*/
+
+/*	a:active {
+	color: var(--amethyst);
+	}*/
+
+/*	.ext_link {
+	background: url(img/ext_link2.svg) no-repeat 100% 0;
+	background-size: 16px 16px;
+	padding-right: 19px;
+	}*/
+
+
+/*	.header-top__container {
+	position: fixed;
+	z-index: 99;
+	background-color: var(--e5-bg);
+	}*/
+/*.dropdown-content {
+    display: none;
+    position: absolute;
+    max-width: 300px;
+    width: 800%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+    padding: 5px 5px;
+    font-family: inherit;
+    border-radius: 8px;
+    background-color: rgba(210, 210, 210, 0.9);
+    border: 2px solid var(--amethyst);
+    color: var(--white-inversion);
+    z-index: 99;
+    top: 98%;
+}*/
+	.v-spoiler {
+	width: 100%; /* ширина нашего блока */
+	background: var(--e5-bg); /* цвет фона, grey */
+	border: 3px solid #C1C1C1; /* размер и цвет границы блока */
+	/*overflow-x: scroll;  прокрутка по горизонтали */
+	overflow-y: scroll; /* прокрутка по вертикали */
+	scrollbar-width: thin;
+	border-radius: 10px;
+	padding: 5%;
+	}
+
 @media (max-width: 767px) {
 /*	.title-a {
 	display: none;
@@ -73,16 +215,11 @@ https://gretdain.com/faces.html#maria
 	  margin-bottom: 15px;
 	  margin-top: 15px;
 	}*/
+
 	.v-spoiler {
 	height: 500px; /* высота нашего блока */
-	width: 100%; /* ширина нашего блока */
-	background: #D1D0D0; /* цвет фона, белый */
-	border: 3px solid #C1C1C1; /* размер и цвет границы блока */
-	/*overflow-x: scroll;  прокрутка по горизонтали */
-	overflow-y: scroll; /* прокрутка по вертикали */
-	scrollbar-width: thin;
-	border-radius: 10px;
 	}
+
 	}
 
 @media (min-width: 768px) {
@@ -158,147 +295,12 @@ https://gretdain.com/faces.html#maria
 	margin:1em;
 	padding:0.5em;
 	}*/
+
 	.v-spoiler {
 	height: 300px; /* высота нашего блока */
-	width: 100%; /* ширина нашего блока */
-	background: #D1D0D0; /* цвет фона, белый */
-	border: 3px solid #C1C1C1; /* размер и цвет границы блока */
-	/*overflow-x: scroll;  прокрутка по горизонтали */
-	overflow-y: scroll; /* прокрутка по вертикали */
-	scrollbar-width: thin;
-	border-radius: 10px;
-	}
-	}
-/* shared css */
-
-	body, html {
-	margin: 0;
-	padding: 0;
-	position: relative;
-/*	height: 100%;
-	font-weight: 400;*/
-	}
-/*	.container {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 100%;
-	}*/
-	
-	.resp-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-	}
-	.container p {
-	margin-top:6.0pt;
 	}
 
-	hr {
-	width:100%;
-	text-align:left;
-	margin-left:0
 	}
-	
-	.article img {
-        object-fit: contain;
-        max-width: 100%;
-		max-height: 100%;
-		color: var(--font-grey);
-		}
-	  
-	  .article p {
-		text-align: left;
-		line-height: 1.5em;
-		color: var(--font-grey);
-	  }
-
-    .sample-slider img{
-	align-items: center; /* it works */
-    }
-	<!--	.slideshow-container {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  width: 300px;
-	  height: 300px;
-	  border: 1px solid var(--amethyst);
-	  float: left;
-	  margin-right: 15px;
-	  margin-bottom: 15px;
-	  margin-top: 15px;
-	}
-	-->
-	.swiper-wrapper {
-	align-items: center; /* it works */
-	}
-	.swiper-slide {
-	  display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-	}
-
-/* links */	    
-
-	a {
-	outline: none;
-	text-decoration: none;
-	padding: 1px;
-	}
-
-	a:link {
-	color: var(--amethyst);
-	}
-
-	a:focus,
-	a:hover {
-	border-bottom: 1px solid;
-	font-weight: bold;
-	color: var(--amethyst);
-	}
-
-	a:active {
-	color: var(--amethyst);
-	}
-
-	.ext_link {
-	background: url(img/ext_link2.svg) no-repeat 100% 0;
-	background-size: 16px 16px;
-	padding-right: 19px;
-	}
-
-
-	.header-top__container {
-	position: fixed;
-	z-index: 99;
-	background-color: var(--e5-bg);
-	}
-/*.dropdown-content {
-    display: none;
-    position: absolute;
-    max-width: 300px;
-    width: 800%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
-    padding: 5px 5px;
-    font-family: inherit;
-    border-radius: 8px;
-    background-color: rgba(210, 210, 210, 0.9);
-    border: 2px solid var(--amethyst);
-    color: var(--white-inversion);
-    z-index: 99;
-    top: 98%;
-}*/
 
 </style>
 
