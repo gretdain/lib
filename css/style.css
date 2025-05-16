@@ -752,6 +752,8 @@ color: var(--amethyst);
   	}
   	.title-b {
     	display: inline-block;
+		font-size: clamp(0.6rem, 4vw, 3rem);
+		margin-top:0
   	}
 	}	
 
@@ -805,6 +807,8 @@ color: var(--amethyst);
   	}
   	.title-a {
     	display: inline-block;
+		font-size: clamp(0.6rem, 2vw, 1.5rem);
+		margin-top:0
   	}
 }
 
