@@ -648,6 +648,31 @@ color: inherit;
 color: var(--amethyst);
 }*/
 
+	.top-bottom-overflow-fade {
+	mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
+	-webkit-mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
+	}
+
+	.fade {
+	  -webkit-mask:
+	    linear-gradient(to top   ,#fff,var(--t,#fff)) top    / 100% 30%,
+	    linear-gradient(#fff,#fff)                    center / 100% 40%,
+	    linear-gradient(to bottom,#fff,var(--b,#000)) bottom / 100% 30%;
+	  -webkit-mask-repeat:no-repeat;
+	  mask:
+	    linear-gradient(to top   ,#fff,var(--t,#fff)) top    / 100% 30%,
+	    linear-gradient(#fff,#fff)                    center / 100% 40%,
+	    linear-gradient(to bottom,#fff,var(--b,#000)) bottom / 100% 30%;
+	  mask-repeat:no-repeat;
+	}
+
+	.top {
+	  --t:transparent;
+	}
+
+	.bottom {
+	  --b:transparent;
+	}
 
 /* media */
 
