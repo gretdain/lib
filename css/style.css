@@ -343,6 +343,10 @@ position: fixed;
   position: relative;
 }
 
+	.title p {
+	margin-top:0 !important;
+	}
+
 .dropdown-content {
 	display: none;
 	position: absolute;
@@ -777,7 +781,8 @@ color: var(--amethyst);
   	}
   	.title-b {
     	display: inline-block;
-		font-size: clamp(0.6rem, 4vw, 3rem);
+		font-size: 1rem;
+		/* font-size: clamp(0.6rem, 4vw, 3rem); */
 		margin-top:0
   	}
 	}	
@@ -789,8 +794,8 @@ color: var(--amethyst);
 	width:50px;
 	}
 	.menu-button {
-	height:50px;
-	width:50px;
+/*	height:50px;
+	width:50px; */
 	align-content: center;
 	background-color:var(--e5-bg);
 	}
@@ -833,7 +838,7 @@ color: var(--amethyst);
   	.title-a {
     	display: inline-block;
 		font-size: clamp(0.6rem, 2vw, 1.5rem);
-		margin-top:0
+		margin-top:0;
   	}
 }
 
