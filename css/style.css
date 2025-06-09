@@ -678,6 +678,63 @@ color: var(--amethyst);
 	  --b:transparent;
 	}
 
+/* Vertical Auto-Scrolling */
+.vertical-marquee {
+    display: flex;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+    height: 300px; /* Adjust based on your needs */
+    overflow: hidden;
+    position: relative;
+    border: thin silver solid;
+/*    background-color: rgb(198, 236, 198);*/
+    box-sizing: border-box;
+}
+
+.vertical-marquee::-webkit-scrollbar {  /* хром, сафари */
+    height: 0px;
+}
+
+.marquee-content {
+    position: absolute;
+    top: 100%;
+    animation: vertical-marquee 96s linear infinite;
+/*	animation-delay: 2s; */
+}
+
+.vertical-marquee p {
+    margin: 0;
+    height: 100px; /* Same as the container height */
+/*    line-height: 100px;  Center the text vertically */
+}
+
+@keyframes vertical-marquee {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -2300%; /* Adjust based on the number of lines */
+    }
+}
+
+/* Pause on Hover */
+.marquee:hover p, 
+.vertical-marquee:hover 
+.marquee-content {
+    animation-play-state: paused;
+}
+
+.marquee-content p{
+    margin:1em;
+	line-height: 1.5em;
+}
+
+
+
+
+
+
 /* media */
 
 @media (max-width: 1300px) {}
@@ -785,6 +842,12 @@ color: var(--amethyst);
 		/* font-size: clamp(0.6rem, 4vw, 3rem); */
 		margin-top:0
   	}
+
+	.vertical-marquee {
+	margin-top:1em;
+	margin-botom:1em;
+	}
+
 	}	
 
 @media (min-width: 768px) {
@@ -840,6 +903,14 @@ color: var(--amethyst);
 		font-size: clamp(0.6rem, 2vw, 1.5rem);
 		margin-top:0;
   	}
+	.vertical-marquee {
+	float:right;
+	width:40%;
+	margin-top:1em;
+	margin-bottom:1em;
+	margin-left:1em;
+	}
+
 }
 
 /*	shared	*/
