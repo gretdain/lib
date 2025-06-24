@@ -18,6 +18,7 @@ https://gretdain.com/eval.html#move
 https://gretdain.com/eval.html#colors
 https://gretdain.com/eval.html#lib
 https://gretdain.com/eval.html#breedtype
+https://gretdain.com/eval.html#westminster
 -->
 
 <style>
@@ -273,6 +274,48 @@ https://gretdain.com/eval.html#breedtype
 	min-width: 50%;
 	min-height: 50%;
 	}
+
+.cmt-west {
+	display:flex;
+    padding: 2px;
+    max-width: 690px;
+    max-height: 460px;
+	width:90%;
+	height:90%;
+    transition: 0.5s;
+    border: 6px solid #FFF;
+    border-radius: 10px;
+    background: #EEE;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    overflow: auto;
+}
+
+	.cmt-west .swiper-slide {
+	display:flex;
+	justify-content:center;
+	align items:center;
+	align-content:center;
+	}
+
+	.cmt-west figure {
+	max-width:100%;
+	width:90% !important;
+	margin:25px;
+	overflow:hidden;
+	border: none;
+	}
+
+	.cmt-west iframe {
+	max-width:100%;	
+	display: block; 
+	width: 100%; 
+	height: 360px; 
+	border: none;
+	flex-grow: 1; 
+	margin: 0; 
+	padding: 0;
+	border:none;
+	}
 	
 /* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
 .css-modal-details {
@@ -494,8 +537,11 @@ https://gretdain.com/eval.html#breedtype
 	  align-items: center;
 	} -->
 
-
-
+    .sample-slider-west {
+	display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
 
 
 /* media  */
@@ -1875,6 +1921,53 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 			<p style="text-align:center">***</p>			
 	</div>
 
+<div class="container"  style="text-align:-webkit-center;" id="westminster">
+<p class="heading2"><b>Great Dane. Westminster AKC show.</b></p>
+
+        <div class="cmt-west">						
+			<div class="swiper sample-slider-west">
+				<div class="swiper-wrapper" style="width:100%;">
+					<div class="swiper-slide" id="2025">
+					        <figure ><iframe src="https://www.dropbox.com/scl/fi/3ehs49162ok529s52hznp/Great-Danes-_-Breed-Judging-2025.mp4?rlkey=hn5qyiyks9gap375676r8pd0w&st=mhyhye2g&raw=1" allow="autoplay;" allowfullscreen></iframe>
+						<figcaption>Breed Judging 2025</figcaption>
+						</figure>
+					</div>
+					<div class="swiper-slide" id="2024">
+						<figure><iframe src="https://www.dropbox.com/scl/fi/9rh8d2eqpouycfuf2fm1x/Great-Danes-_-Breed-Judging-2024.mp4?rlkey=n9i8nzgdmnlgqoj3jbc55nf47&st=zd2fg7sc&raw=1" allow="autoplay;" allowfullscreen></iframe>
+						<figcaption>Breed Judging 2024</figcaption>
+						</figure>
+					</div>
+					<div class="swiper-slide"  id="2023">
+						<figure><iframe src="https://www.dropbox.com/scl/fi/ygvrg565zbercbxw2wv1z/Great-Danes-_-Breed-Judging-2023.mp4?rlkey=srqaju3jxor98od8yzond4sb3&st=qgvejzb4&raw=1" allow="autoplay;" allowfullscreen></iframe>
+						<figcaption>Breed Judging 2023</figcaption>
+						</figure>
+					</div>
+					<div class="swiper-slide"  id="2022">
+						<figure><iframe src="https://www.dropbox.com/scl/fi/p0sbgnmxtlx8b56kawdnu/Great-Danes-_-Breed-Judging-2022.mp4?rlkey=dssh5ga86z13zmngup6sl78bp&st=9lt90a7z&raw=1" allow="autoplay;" allowfullscreen></iframe>
+						<figcaption>Breed Judging 2022</figcaption>
+						</figure>
+					</div>
+<!--					<div class="swiper-slide" id="2021">
+						<figure><iframe src="img\Great_Danes_Breed_Judging_2025.mp4" allow="autoplay;" allowfullscreen></iframe>
+						<figcaption>Breed Judging 2021</figcaption>
+						</figure>
+					</div> -->
+					<div class="swiper-slide" id="2020">
+						<figure><iframe src="https://www.dropbox.com/scl/fi/3ro6sqmb4hqdag92anoz4/Great-Danes-_-Breed-Judging-2020.mp4?rlkey=xkwt7gha49aa7l6eyr17ghwj5&st=rrjr497c&raw=1" allow="autoplay;" allowfullscreen></iframe>
+						<figcaption>Breed Judging 2020</figcaption>
+						</figure>
+					</div>
+				</div>
+		       <div class="swiper-button-prev"></div>
+		       <div class="swiper-button-next"></div>
+			</div>			
+		</div>
+			<br>
+			<hr>	
+			<p style="text-align:center">***</p>			
+</div>
+
+
 	<div class="container"  id="colors">
 <p class="heading2"><b>Окрас</b></p>
 
@@ -2231,6 +2324,17 @@ figure figcaption {
         spaceBetween: 30,
         },
 	},
+    });
+
+	    var swiper3 = new Swiper('.sample-slider-west', {
+        loop: true,                         // loop
+        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {                       // navigation(arrows)
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 </script>
 
