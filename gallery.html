@@ -41,7 +41,7 @@
 	</div>
 </div>  <!--swipe  -->
 
-<!-- Удалена ссылка на локальный файл и добавлена ссылка на Fancybox CDN -->
+<!-- Добавлена ссылка на Fancybox CDN. Она инициализирует Fancybox автоматически. -->
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
@@ -89,17 +89,8 @@
 			const galleryData = await response.json();
 			createGalleryFromJSON(galleryData);
 
-			// Добавлен вызов `new Fancybox.Carousel(...)` снова, так как Fancybox теперь
-			// загружается с CDN и объект Fancybox доступен.
-			const container = document.getElementById("Carousel-1");
-			if (container) {
-				new Fancybox.Carousel(container, {
-					autoplay: 3000,
-					infinite: true,
-				});
-			} else {
-				console.error('Контейнер для карусели не найден после создания слайдов.');
-			}
+			// Удален вызов `new Fancybox.Carousel()`, так как Fancybox инициализирует
+			// элементы с классом `.f-carousel` автоматически.
 		} catch (error) {
 			console.error('Ошибка при загрузке JSON:', error);
 			const carouselContainer = document.getElementById('Carousel-1');
