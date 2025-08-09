@@ -5,29 +5,29 @@
 	<meta content="width=device-width,initial-scale=1" name="viewport">
 	<title>European Great Dane Champions 1900-1980</title>
 	<meta content="description" name="description">
-<!--	<link href="static/favicon.ico" rel="shortcut icon" type="image/x-icon">
-	https://atuin.ru/blog/fancybox-3-s-temoj-oformleniya/
--->
+	<!--  <link href="static/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    https://atuin.ru/blog/fancybox-3-s-temoj-oformleniya/
+  -->
 	<link href="./css/eu-gallery.css" rel="stylesheet">
-<style>
-p {
-	font-family: 'OpenSans', sans-serif;
-	font-size: 16px;
-	margin: 0;
-	text-align: center;
-    color: white;
-}
-@media (max-width: 767px) {
-	.sw__left {
-		padding-top:100%;
+	<style>
+		p {
+			font-family: 'OpenSans', sans-serif;
+			font-size: 16px;
+			margin: 0;
+			text-align: center;
+			color: white;
 		}
-}
-@media (min-width: 768px) {
-	.sw__left {
-		padding-top:50%;
-	}
-}
-</style>
+		@media (max-width: 767px) {
+			.sw__left {
+				padding-top:100%;
+			}
+		}
+		@media (min-width: 768px) {
+			.sw__left {
+				padding-top:50%;
+			}
+		}
+	</style>
 </head>
 <body> <p>Click/tap to enlarge - нажмите для увеличения</br></br></p>
 <div class="swipe" id="app">
@@ -37,7 +37,7 @@ p {
 			<!-- Здесь будут вставлены слайды -->
 		</div>
 	</div>
-</div>	<!--swipe	-->
+</div>  <!--swipe  -->
 
 <script src="./js/carousel.js"></script>
 
@@ -53,7 +53,7 @@ p {
 		carouselContainer.innerHTML = '';
 
 		jsonList.forEach(imageFileName => {
-			// Изменен путь на относительный, чтобы избежать проблем с 'Failed to parse URL'
+			// Используем относительный путь для изображений
 			const fullImagePath = `./collection/${imageFileName}`;
 
 			const slideDiv = document.createElement('div');
@@ -78,7 +78,7 @@ p {
 	// Загружаем данные для галереи из JSON-файла
 	document.addEventListener('DOMContentLoaded', async () => {
 		try {
-			// Изменен путь на относительный
+			// Используем относительный путь для файла JSON
 			const response = await fetch('./collection/images.json');
 			if (!response.ok) {
 				throw new Error(`Ошибка сети: ${response.status} ${response.statusText}`);
@@ -86,16 +86,12 @@ p {
 			const galleryData = await response.json();
 			createGalleryFromJSON(galleryData);
 
-			// Явно инициализируем Fancybox Carousel после создания слайдов
+			// Удален вызов `new Fancybox.Carousel(...)`, так как он вызывает
+			// ошибку `ReferenceError`. Инициализация Fancybox,
+			// вероятно, происходит автоматически в файле `./js/carousel.js`.
 			const container = document.getElementById("Carousel-1");
 			if (container) {
-				new Fancybox.Carousel(container, {
-					// is-ltr and is-horizontal are added automatically
-					// based on the direction (ltr) and writing-mode
-					// We enable autoplay here as per the user's request.
-					autoplay: 3000,
-					infinite: true,
-				});
+				console.log('Слайды созданы. Ожидается, что carousel.js инициализирует карусель.');
 			} else {
 				console.error('Контейнер для карусели не найден после создания слайдов.');
 			}
