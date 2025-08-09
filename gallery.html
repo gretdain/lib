@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>European Great Dane Champions 1900-1980</title>
+	<meta content="description" name="description">
+<!--	<link href="static/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	https://atuin.ru/blog/fancybox-3-s-temoj-oformleniya/
+-->
+	<link href="./css/eu-gallery.css" rel="stylesheet">
+<style>
+p {
+	font-family: 'OpenSans', sans-serif;
+	font-size: 16px;
+	margin: 0;
+	text-align: center;
+    color: white;
+}
+@media (max-width: 767px) {
+	.sw__left {
+		padding-top:100%;
+		}
+}
+@media (min-width: 768px) {
+	.sw__left {
+		padding-top:50%;
+	}
+}
+</style>
+</head>
+<body> <p>Click/tap to enlarge - нажмите для увеличения</br></br></p>
+<div class="swipe" id="app">
+	<div class="sw__left">
+		<!-- Карусель. Слайды будут сгенерированы сюда скриптом. -->
+		<div class="f-carousel" id="Carousel-1">
+			<!-- Здесь будут вставлены слайды -->
+		</div>
+	</div>
+</div>	<!--swipe	-->
+
+<script src="./js/carousel.js"></script>
+
+<script>
+	// Функция для динамического создания галереи из JSON
+	function createGalleryFromJSON(jsonList) {
+		// Получаем контейнер, куда будем добавлять слайды
+		const carouselContainer = document.getElementById('Carousel-1');
+		if (!carouselContainer) {
+			console.error('Не найден элемент с id "Carousel-1"');
+			return;
+		}
+
+		// Очищаем контейнер на случай, если там уже что-то есть
+		carouselContainer.innerHTML = '';
+
+		// Перебираем массив JSON и создаем HTML-элементы для каждого изображения
+		jsonList.forEach(image => {
+			// Создаем главный div для слайда
+			const slideDiv = document.createElement('div');
+			slideDiv.className = 'f-carousel__slide';
+			slideDiv.setAttribute('data-fancybox', 'gallery');
+			slideDiv.setAttribute('data-src', image.src);
+
+			// Создаем внутренний div для изображения
+			const imgContainer = document.createElement('div');
+			imgContainer.className = 'sw__img';
+
+			// Создаем тег img
+			const imgElement = document.createElement('img');
+			imgElement.src = image.src;
+			imgElement.alt = image.alt || '';
+			imgElement.className = 'w-full h-full object-contain';
+
+			// Собираем элементы вместе
+			imgContainer.appendChild(imgElement);
+			slideDiv.appendChild(imgContainer);
+
+			// Добавляем созданный слайд в карусель
+			carouselContainer.appendChild(slideDiv);
+		});
+
+		// После добавления всех элементов библиотека carousel.js (Fancybox)
+		// автоматически найдет их и инициализирует функциональность галереи,
+		// так как мы используем классы и атрибуты, которые она ожидает.
+		// Никаких дополнительных вызовов init() или new Carousel() не требуется
+		// в большинстве случаев, если скрипт Fancybox настроен на автоинициализацию.
+	}
+
+	// Пример JSON-данных для галереи
+	// Вы можете заменить это на свои данные
+	const galleryData = [
+		{ "src": "https://placehold.co/1200x800/2980b9/ffffff?text=BELLIS+VON+BIRKENHOF.jpg" },
+		{ "src": "https://placehold.co/1200x800/c0392b/ffffff?text=CERES+VOM+FREIGERICHT.jpg" },
+		{ "src": "https://placehold.co/1200x800/16a085/ffffff?text=CH+ACHMED+AKBAR.jpg" },
+		{ "src": "https://placehold.co/1200x800/8e44ad/ffffff?text=ANOTHER+IMAGE.jpg" },
+		{ "src": "https://placehold.co/1200x800/d35400/ffffff?text=ONE+MORE+IMAGE.jpg" }
+	];
+
+	// Вызываем функцию для создания галереи
+	document.addEventListener('DOMContentLoaded', () => {
+		createGalleryFromJSON(galleryData);
+	});
+</script>
+
+</body>
+</html>
