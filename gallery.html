@@ -56,11 +56,14 @@ p {
 
 		// Перебираем массив JSON и создаем HTML-элементы для каждого изображения
 		jsonList.forEach(image => {
+			// Создаем полный путь к изображению, предполагая, что оно в папке /collection/
+			const fullImagePath = `/collection/${image.src}`;
+
 			// Создаем главный div для слайда
 			const slideDiv = document.createElement('div');
 			slideDiv.className = 'f-carousel__slide';
 			slideDiv.setAttribute('data-fancybox', 'gallery');
-			slideDiv.setAttribute('data-src', image.src);
+			slideDiv.setAttribute('data-src', fullImagePath);
 
 			// Создаем внутренний div для изображения
 			const imgContainer = document.createElement('div');
@@ -68,7 +71,7 @@ p {
 
 			// Создаем тег img
 			const imgElement = document.createElement('img');
-			imgElement.src = image.src;
+			imgElement.src = fullImagePath;
 			imgElement.alt = image.alt || '';
 			imgElement.className = 'w-full h-full object-contain';
 
@@ -79,27 +82,25 @@ p {
 			// Добавляем созданный слайд в карусель
 			carouselContainer.appendChild(slideDiv);
 		});
-
-		// После добавления всех элементов библиотека carousel.js (Fancybox)
-		// автоматически найдет их и инициализирует функциональность галереи,
-		// так как мы используем классы и атрибуты, которые она ожидает.
-		// Никаких дополнительных вызовов init() или new Carousel() не требуется
-		// в большинстве случаев, если скрипт Fancybox настроен на автоинициализацию.
 	}
 
-	// Пример JSON-данных для галереи
-	// Вы можете заменить это на свои данные
-	const galleryData = [
-		{ "src": "https://placehold.co/1200x800/2980b9/ffffff?text=BELLIS+VON+BIRKENHOF.jpg" },
-		{ "src": "https://placehold.co/1200x800/c0392b/ffffff?text=CERES+VOM+FREIGERICHT.jpg" },
-		{ "src": "https://placehold.co/1200x800/16a085/ffffff?text=CH+ACHMED+AKBAR.jpg" },
-		{ "src": "https://placehold.co/1200x800/8e44ad/ffffff?text=ANOTHER+IMAGE.jpg" },
-		{ "src": "https://placehold.co/1200x800/d35400/ffffff?text=ONE+MORE+IMAGE.jpg" }
-	];
-
-	// Вызываем функцию для создания галереи
-	document.addEventListener('DOMContentLoaded', () => {
-		createGalleryFromJSON(galleryData);
+	// Загружаем данные для галереи из JSON-файла
+	document.addEventListener('DOMContentLoaded', async () => {
+		try {
+			const response = await fetch('/collection/images.json');
+			if (!response.ok) {
+				throw new Error(`Ошибка сети: ${response.status} ${response.statusText}`);
+			}
+			const galleryData = await response.json();
+			createGalleryFromJSON(galleryData);
+		} catch (error) {
+			console.error('Ошибка при загрузке JSON:', error);
+			// Можно добавить сообщение об ошибке для пользователя
+			const carouselContainer = document.getElementById('Carousel-1');
+			if (carouselContainer) {
+				carouselContainer.innerHTML = '<p class="text-center text-red-500">Не удалось загрузить данные галереи. Пожалуйста, проверьте файл `collection/images.json`.</p>';
+			}
+		}
 	});
 </script>
 
