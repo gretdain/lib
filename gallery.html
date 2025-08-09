@@ -44,43 +44,33 @@ p {
 <script>
 	// Функция для динамического создания галереи из JSON
 	function createGalleryFromJSON(jsonList) {
-		// Получаем контейнер, куда будем добавлять слайды
 		const carouselContainer = document.getElementById('Carousel-1');
 		if (!carouselContainer) {
 			console.error('Не найден элемент с id "Carousel-1"');
 			return;
 		}
 
-		// Очищаем контейнер на случай, если там уже что-то есть
 		carouselContainer.innerHTML = '';
 
-		// Перебираем массив JSON и создаем HTML-элементы для каждого изображения
-		// imageFileName - это строка, например, "319650411_..._n.jpg"
 		jsonList.forEach(imageFileName => {
-			// Создаем полный путь к изображению
-			const fullImagePath = `/collection/${imageFileName}`;
+			// Изменен путь на относительный
+			const fullImagePath = `./collection/${imageFileName}`;
 
-			// Создаем главный div для слайда
 			const slideDiv = document.createElement('div');
 			slideDiv.className = 'f-carousel__slide';
 			slideDiv.setAttribute('data-fancybox', 'gallery');
 			slideDiv.setAttribute('data-src', fullImagePath);
 
-			// Создаем внутренний div для изображения
 			const imgContainer = document.createElement('div');
 			imgContainer.className = 'sw__img';
 
-			// Создаем тег img
 			const imgElement = document.createElement('img');
 			imgElement.src = fullImagePath;
-			imgElement.alt = imageFileName || ''; // Используем имя файла как alt-текст
+			imgElement.alt = imageFileName || '';
 			imgElement.className = 'w-full h-full object-contain';
 
-			// Собираем элементы вместе
 			imgContainer.appendChild(imgElement);
 			slideDiv.appendChild(imgContainer);
-
-			// Добавляем созданный слайд в карусель
 			carouselContainer.appendChild(slideDiv);
 		});
 	}
@@ -88,15 +78,29 @@ p {
 	// Загружаем данные для галереи из JSON-файла
 	document.addEventListener('DOMContentLoaded', async () => {
 		try {
-			const response = await fetch('/collection/images.json');
+			// Изменен путь на относительный
+			const response = await fetch('./collection/images.json');
 			if (!response.ok) {
 				throw new Error(`Ошибка сети: ${response.status} ${response.statusText}`);
 			}
 			const galleryData = await response.json();
 			createGalleryFromJSON(galleryData);
+
+			// Явно инициализируем Fancybox Carousel после создания слайдов
+			const container = document.getElementById("Carousel-1");
+			if (container) {
+				new Fancybox.Carousel(container, {
+					// is-ltr and is-horizontal are added automatically
+					// based on the direction (ltr) and writing-mode
+					// We enable autoplay here as per the user's request.
+					autoplay: 3000,
+					infinite: true,
+				});
+			} else {
+				console.error('Контейнер для карусели не найден после создания слайдов.');
+			}
 		} catch (error) {
 			console.error('Ошибка при загрузке JSON:', error);
-			// Можно добавить сообщение об ошибке для пользователя
 			const carouselContainer = document.getElementById('Carousel-1');
 			if (carouselContainer) {
 				carouselContainer.innerHTML = '<p class="text-center text-red-500">Не удалось загрузить данные галереи. Пожалуйста, убедитесь, что файл `images.json` находится в папке `collection` и вы открываете `gallery.html` через локальный сервер.</p>';
