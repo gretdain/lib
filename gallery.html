@@ -9,6 +9,8 @@
     https://atuin.ru/blog/fancybox-3-s-temoj-oformleniya/
   -->
 	<link href="./css/eu-gallery.css" rel="stylesheet">
+	<!-- Добавлены официальные стили Fancybox CDN -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 	<style>
 		p {
 			font-family: 'OpenSans', sans-serif;
@@ -39,7 +41,8 @@
 	</div>
 </div>  <!--swipe  -->
 
-<script src="./js/carousel.js"></script>
+<!-- Удалена ссылка на локальный файл и добавлена ссылка на Fancybox CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
 	// Функция для динамического создания галереи из JSON
@@ -86,12 +89,14 @@
 			const galleryData = await response.json();
 			createGalleryFromJSON(galleryData);
 
-			// Удален вызов `new Fancybox.Carousel(...)`, так как он вызывает
-			// ошибку `ReferenceError`. Инициализация Fancybox,
-			// вероятно, происходит автоматически в файле `./js/carousel.js`.
+			// Добавлен вызов `new Fancybox.Carousel(...)` снова, так как Fancybox теперь
+			// загружается с CDN и объект Fancybox доступен.
 			const container = document.getElementById("Carousel-1");
 			if (container) {
-				console.log('Слайды созданы. Ожидается, что carousel.js инициализирует карусель.');
+				new Fancybox.Carousel(container, {
+					autoplay: 3000,
+					infinite: true,
+				});
 			} else {
 				console.error('Контейнер для карусели не найден после создания слайдов.');
 			}
