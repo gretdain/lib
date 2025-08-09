@@ -55,9 +55,10 @@ p {
 		carouselContainer.innerHTML = '';
 
 		// Перебираем массив JSON и создаем HTML-элементы для каждого изображения
-		jsonList.forEach(image => {
-			// Создаем полный путь к изображению, предполагая, что оно в папке /collection/
-			const fullImagePath = `/collection/${image.src}`;
+		// imageFileName - это строка, например, "319650411_..._n.jpg"
+		jsonList.forEach(imageFileName => {
+			// Создаем полный путь к изображению
+			const fullImagePath = `/collection/${imageFileName}`;
 
 			// Создаем главный div для слайда
 			const slideDiv = document.createElement('div');
@@ -72,7 +73,7 @@ p {
 			// Создаем тег img
 			const imgElement = document.createElement('img');
 			imgElement.src = fullImagePath;
-			imgElement.alt = image.alt || '';
+			imgElement.alt = imageFileName || ''; // Используем имя файла как alt-текст
 			imgElement.className = 'w-full h-full object-contain';
 
 			// Собираем элементы вместе
@@ -98,7 +99,7 @@ p {
 			// Можно добавить сообщение об ошибке для пользователя
 			const carouselContainer = document.getElementById('Carousel-1');
 			if (carouselContainer) {
-				carouselContainer.innerHTML = '<p class="text-center text-red-500">Не удалось загрузить данные галереи. Пожалуйста, проверьте файл `collection/images.json`.</p>';
+				carouselContainer.innerHTML = '<p class="text-center text-red-500">Не удалось загрузить данные галереи. Пожалуйста, убедитесь, что файл `images.json` находится в папке `collection` и вы открываете `gallery.html` через локальный сервер.</p>';
 			}
 		}
 	});
