@@ -6,9 +6,8 @@
 	<title>European Great Dane Champions 1900-1980</title>
 
 	<link rel="stylesheet" href="./css/eu-gallery.css">
-	<!-- Fancybox -->
+	<!-- CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-	<!-- Carousel -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
 
 	<style>
@@ -37,46 +36,63 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
 
 <script>
-	function createGalleryFromJSON(jsonList) {
+	async function createGalleryFromJSON(jsonList) {
 		const carouselContainer = document.getElementById('Carousel-1');
 		if (!carouselContainer) return;
-
 		carouselContainer.innerHTML = '';
 
-		jsonList.forEach(imageFileName => {
+		jsonList.forEach((imageFileName) => {
 			const fullImagePath = `./collection/${imageFileName}`;
+
+			// Структура: <div class="f-carousel__slide"><a href="full" data-fancybox="gallery" data-caption="..."><img/></a></div>
 			const slideDiv = document.createElement('div');
 			slideDiv.className = 'f-carousel__slide';
-			slideDiv.setAttribute('data-fancybox', 'gallery');
-			slideDiv.setAttribute('data-src', fullImagePath);
 
-			const imgElement = document.createElement('img');
-			imgElement.src = fullImagePath;
-			imgElement.alt = imageFileName || '';
-			imgElement.className = 'w-full h-full object-contain';
+			const link = document.createElement('a');
+			link.href = fullImagePath;
+			link.setAttribute('data-fancybox', 'gallery');
+			link.setAttribute('data-caption', imageFileName);
 
-			slideDiv.appendChild(imgElement);
+			const img = document.createElement('img');
+			img.src = fullImagePath;    // миниатюра — у тебя это тот же файл, можно добавить thumb если нужно
+			img.alt = imageFileName;
+			img.style.maxWidth = '100%';
+			img.style.display = 'block';
+
+			link.appendChild(img);
+			slideDiv.appendChild(link);
 			carouselContainer.appendChild(slideDiv);
 		});
 
-		// Запуск карусели
+		// Привязываем Fancybox делегированно к элементам внутри контейнера.
+		// Это важно для динамически созданных элементов.
+		Fancybox.bind(carouselContainer, '[data-fancybox="gallery"]', {
+			// опции Fancybox (по желанию)
+			dragToClose: false,
+			doubleClick: "zoom",
+			Thumbs: false,
+			// Toolbar и прочие опции можно настроить здесь
+		});
+
+		// Инициализируем Carousel (если нужна карусельная навигация)
+		// (Carousel берёт уже вставленные .f-carousel__slide элементы)
 		new Carousel(carouselContainer, {
-			infinite: false,
-			Dots: true,
 			Navigation: true,
+			Dots: true,
 			center: true,
-			slidesPerPage: 1
+			slidesPerPage: 1,
+			// другие опции Carousel по вкусу
 		});
 	}
 
 	document.addEventListener('DOMContentLoaded', async () => {
 		try {
-			const response = await fetch('./collection/images.json');
-			if (!response.ok) throw new Error(`Ошибка сети: ${response.status}`);
-			const galleryData = await response.json();
-			createGalleryFromJSON(galleryData);
-		} catch (error) {
-			console.error('Ошибка при загрузке JSON:', error);
+			const res = await fetch('./collection/images.json');
+			if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+			const data = await res.json();
+			createGalleryFromJSON(data);
+		} catch (err) {
+			console.error('Ошибка при загрузке JSON:', err);
 		}
 	});
 </script>
