@@ -56,7 +56,6 @@
 		carouselContainer.innerHTML = '';
 
 		jsonList.forEach(imageFileName => {
-			// Используем относительный путь для изображений
 			const fullImagePath = `./collection/${imageFileName}`;
 
 			const slideDiv = document.createElement('div');
@@ -76,26 +75,31 @@
 			slideDiv.appendChild(imgContainer);
 			carouselContainer.appendChild(slideDiv);
 		});
+
+		// Запускаем карусель после вставки слайдов
+		new Carousel(carouselContainer, {
+			infinite: false,       // можно true для бесконечного листания
+			Dots: true,            // точки навигации
+			Navigation: true,      // стрелки
+			center: true,          // центрировать картинку
+			slidesPerPage: 1
+		}, { Thumbs: false });
 	}
 
 	// Загружаем данные для галереи из JSON-файла
 	document.addEventListener('DOMContentLoaded', async () => {
 		try {
-			// Используем относительный путь для файла JSON
 			const response = await fetch('./collection/images.json');
 			if (!response.ok) {
 				throw new Error(`Ошибка сети: ${response.status} ${response.statusText}`);
 			}
 			const galleryData = await response.json();
 			createGalleryFromJSON(galleryData);
-
-			// Удален вызов `new Fancybox.Carousel()`, так как Fancybox инициализирует
-			// элементы с классом `.f-carousel` автоматически.
 		} catch (error) {
 			console.error('Ошибка при загрузке JSON:', error);
 			const carouselContainer = document.getElementById('Carousel-1');
 			if (carouselContainer) {
-				carouselContainer.innerHTML = '<p class="text-center text-red-500">Не удалось загрузить данные галереи. Пожалуйста, убедитесь, что файл `images.json` находится в папке `collection` и вы открываете `gallery.html` через локальный сервер.</p>';
+				carouselContainer.innerHTML = '<p style="color:red;text-align:center">Не удалось загрузить данные галереи.</p>';
 			}
 		}
 	});
