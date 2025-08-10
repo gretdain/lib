@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width,initial-scale=1" name="viewport">
 	<title>European Great Dane Champions 1900-1980</title>
-	<meta content="description" name="description">
-	<!--  <link href="static/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    https://atuin.ru/blog/fancybox-3-s-temoj-oformleniya/
-  -->
-	<link href="./css/eu-gallery.css" rel="stylesheet">
-	<!-- Добавлены официальные стили Fancybox CDN -->
+
+	<link rel="stylesheet" href="./css/eu-gallery.css">
+	<!-- Fancybox -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+	<!-- Carousel -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
+
 	<style>
 		p {
 			font-family: 'OpenSans', sans-serif;
@@ -19,30 +19,22 @@
 			text-align: center;
 			color: white;
 		}
-		@media (max-width: 767px) {
-			.sw__left {
-				padding-top:100%;
-			}
-		}
-		@media (min-width: 768px) {
-			.sw__left {
-				padding-top:50%;
-			}
-		}
+		@media (max-width: 767px) { .sw__left { padding-top:100%; } }
+		@media (min-width: 768px) { .sw__left { padding-top:50%; } }
 	</style>
 </head>
-<body> <p>Click/tap to enlarge - нажмите для увеличения</br></br></p>
+<body>
+<p>Click/tap to enlarge - нажмите для увеличения</p>
+
 <div class="swipe" id="app">
 	<div class="sw__left">
-		<!-- Карусель. Слайды будут сгенерированы сюда скриптом. -->
-		<div class="f-carousel" id="Carousel-1">
-			<!-- Здесь будут вставлены слайды -->
-		</div>
+		<div class="f-carousel" id="Carousel-1"></div>
 	</div>
-</div>  <!--swipe  -->
+</div>
 
-<!-- Добавлена ссылка на Fancybox CDN. Она инициализирует Fancybox автоматически. -->
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
 
 <script>
 	function createGalleryFromJSON(jsonList) {
@@ -67,8 +59,8 @@
 			carouselContainer.appendChild(slideDiv);
 		});
 
-		// Запуск слайдера
-		new Fancybox.Carousel(carouselContainer, {
+		// Запуск карусели
+		new Carousel(carouselContainer, {
 			infinite: false,
 			Dots: true,
 			Navigation: true,
