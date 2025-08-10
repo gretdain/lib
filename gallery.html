@@ -45,62 +45,46 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
-	// Функция для динамического создания галереи из JSON
 	function createGalleryFromJSON(jsonList) {
 		const carouselContainer = document.getElementById('Carousel-1');
-		if (!carouselContainer) {
-			console.error('Не найден элемент с id "Carousel-1"');
-			return;
-		}
+		if (!carouselContainer) return;
 
 		carouselContainer.innerHTML = '';
 
 		jsonList.forEach(imageFileName => {
 			const fullImagePath = `./collection/${imageFileName}`;
-
 			const slideDiv = document.createElement('div');
 			slideDiv.className = 'f-carousel__slide';
 			slideDiv.setAttribute('data-fancybox', 'gallery');
 			slideDiv.setAttribute('data-src', fullImagePath);
-
-			const imgContainer = document.createElement('div');
-			imgContainer.className = 'sw__img';
 
 			const imgElement = document.createElement('img');
 			imgElement.src = fullImagePath;
 			imgElement.alt = imageFileName || '';
 			imgElement.className = 'w-full h-full object-contain';
 
-			imgContainer.appendChild(imgElement);
-			slideDiv.appendChild(imgContainer);
+			slideDiv.appendChild(imgElement);
 			carouselContainer.appendChild(slideDiv);
 		});
 
-		// Запускаем карусель после вставки слайдов
-		new Carousel(carouselContainer, {
-			infinite: false,       // можно true для бесконечного листания
-			Dots: true,            // точки навигации
-			Navigation: true,      // стрелки
-			center: true,          // центрировать картинку
+		// Запуск слайдера
+		new Fancybox.Carousel(carouselContainer, {
+			infinite: false,
+			Dots: true,
+			Navigation: true,
+			center: true,
 			slidesPerPage: 1
-		}, { Thumbs: false });
+		});
 	}
 
-	// Загружаем данные для галереи из JSON-файла
 	document.addEventListener('DOMContentLoaded', async () => {
 		try {
 			const response = await fetch('./collection/images.json');
-			if (!response.ok) {
-				throw new Error(`Ошибка сети: ${response.status} ${response.statusText}`);
-			}
+			if (!response.ok) throw new Error(`Ошибка сети: ${response.status}`);
 			const galleryData = await response.json();
 			createGalleryFromJSON(galleryData);
 		} catch (error) {
 			console.error('Ошибка при загрузке JSON:', error);
-			const carouselContainer = document.getElementById('Carousel-1');
-			if (carouselContainer) {
-				carouselContainer.innerHTML = '<p style="color:red;text-align:center">Не удалось загрузить данные галереи.</p>';
-			}
 		}
 	});
 </script>
