@@ -4,12 +4,13 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width,initial-scale=1" name="viewport">
 	<title>European Great Dane Champions 1900-1980</title>
-
-	<link rel="stylesheet" href="./css/eu-gallery.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
+	<link rel="stylesheet" href="./css/eu-gallery.css">
 
+
+	<link href="./css/eu-gallery.css" rel="stylesheet">
 	<style>
 		p {
 			font-family: 'OpenSans', sans-serif;
@@ -18,8 +19,15 @@
 			text-align: center;
 			color: white;
 		}
-		@media (max-width: 767px) { .sw__left { padding-top:100%; } }
-		@media (min-width: 768px) { .sw__left { padding-top:50%; } }
+		@media (max-width: 767px) {
+			.sw__left {
+				padding-top:100%;
+			}
+		}
+		@media (min-width: 768px) {
+			.sw__left {
+				padding-top:50%;
+			}
 	</style>
 </head>
 <body>
@@ -41,47 +49,45 @@
 		if (!carouselContainer) return;
 		carouselContainer.innerHTML = '';
 
-		jsonList.forEach((imageFileName) => {
+		jsonList.forEach((imageFileName, index) => {
 			const fullImagePath = `./collection/${imageFileName}`;
 
-			// Структура: <div class="f-carousel__slide"><a href="full" data-fancybox="gallery" data-caption="..."><img/></a></div>
+			// div.f-carousel__slide
 			const slideDiv = document.createElement('div');
 			slideDiv.className = 'f-carousel__slide';
+			slideDiv.setAttribute('data-caption', imageFileName);
+			slideDiv.setAttribute('data-fancybox', 'gallery');
+			slideDiv.setAttribute('data-src', fullImagePath);
+			slideDiv.setAttribute('data-index', index);
 
-			const link = document.createElement('a');
-			link.href = fullImagePath;
-			link.setAttribute('data-fancybox', 'gallery');
-			link.setAttribute('data-caption', imageFileName);
+			// div.sw__img
+			const imgWrapper = document.createElement('div');
+			imgWrapper.className = 'sw__img';
 
+			// <img>
 			const img = document.createElement('img');
-			img.src = fullImagePath;    // миниатюра — у тебя это тот же файл, можно добавить thumb если нужно
+			img.src = fullImagePath;
 			img.alt = imageFileName;
-			img.style.maxWidth = '100%';
-			img.style.display = 'block';
 
-			link.appendChild(img);
-			slideDiv.appendChild(link);
+			// собираем структуру
+			imgWrapper.appendChild(img);
+			slideDiv.appendChild(imgWrapper);
 			carouselContainer.appendChild(slideDiv);
 		});
 
-		// Привязываем Fancybox делегированно к элементам внутри контейнера.
-		// Это важно для динамически созданных элементов.
-		Fancybox.bind(carouselContainer, '[data-fancybox="gallery"]', {
-			// опции Fancybox (по желанию)
+		// Привязка Fancybox
+		Fancybox.bind('[data-fancybox="gallery"]', {
 			dragToClose: false,
 			doubleClick: "zoom",
-			Thumbs: false,
-			// Toolbar и прочие опции можно настроить здесь
+			Thumbs: false
 		});
 
-		// Инициализируем Carousel (если нужна карусельная навигация)
-		// (Carousel берёт уже вставленные .f-carousel__slide элементы)
+		// Инициализация карусели
 		new Carousel(carouselContainer, {
-			Navigation: true,
-			Dots: true,
+			Navigation: false,
+			Dots: false,
 			center: true,
-			slidesPerPage: 1,
-			// другие опции Carousel по вкусу
+			slidesPerPage: 1
 		});
 	}
 
