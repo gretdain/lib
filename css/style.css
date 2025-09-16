@@ -516,8 +516,8 @@ max-width: 1080px;
 .gallery,
 .lib,
 .intro {
-		padding-top: 65px;
-		padding-bottom: 10px;
+		padding-top: 45px;
+		padding-bottom: 2px;
 	border-bottom: 1px solid var(--amethyst);
 }
 
@@ -775,7 +775,7 @@ color: var(--amethyst);
 	.gallery,
 	.lib 	{
 		/*70*/
-		padding-top: 70px;
+		padding-top: 45px;
 	}
 	.header-top__img {
 		/*width: 50px;
