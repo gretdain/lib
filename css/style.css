@@ -203,9 +203,9 @@ color: var(--white-inversion);
 button:active, button:focus {
 outline: none;
 }
-button::-moz-focus-inner {
+/* button::-moz-focus-inner {
 border: 0;
-}
+} */
 
 .cursor {
 cursor: pointer;
@@ -439,7 +439,7 @@ padding: 15px 0;
 .cross-sign {
 width: 16px;
 height: 16px;
-background-image: url("img/cross.svg");
+background-image: url("../img/cross.svg");
 /*background: url(https://codernote.ru/files/cross.png) no-repeat center center;*/
 background-size: 16px 16px;
 display: block;
