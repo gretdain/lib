@@ -516,9 +516,15 @@ max-width: 1080px;
 .gallery,
 .lib,
 .intro {
-		padding-top: 45px;
+		scroll-margin-top: 2em;
+		scroll-behavior: smooth;
+		padding-top: 50px;
 		padding-bottom: 2px;
 	border-bottom: 1px solid var(--amethyst);
+}
+
+.lib {
+		scroll-margin-bottom: 20em;
 }
 
 .gallery__heading {
@@ -543,7 +549,7 @@ height: 100%;
       }
 	  
 	  .intro p {
-		text-align: left;
+	  	text-align: left;
 		line-height: 1.5em;
 		color: var(--font-grey);
 		hyphens:auto;
