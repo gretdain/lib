@@ -2174,6 +2174,17 @@
     return params;
   }
 
+  // Функция для получения значения параметра из адресной строки (из старого скрипта)
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
   // Функция для открытия модального окна и перехода к слайду
   function openModalWithSlide(modalId, slideId) {
     console.log('Opening modal:', modalId, 'with slide:', slideId);
@@ -2302,7 +2313,7 @@
     }
   }
 
-  // Основная функция инициализации
+  // Основная функция инициализации из URL
   function initModalFromUrl() {
     const params = getUrlParams();
     console.log('URL params:', params);
@@ -2337,9 +2348,118 @@
     check();
   }
 
-  // Ждем загрузки DOM
-  document.addEventListener('DOMContentLoaded', function() {
-    // Ждем инициализации всех Swiper
+  // Функция для обработки радио-кнопок из старого скрипта
+  function initRadioButtonsFromUrl() {
+    // Получаем значение параметра id из адресной строки
+    var idFromUrl = getParameterByName('id');
+
+    // Если id присутствует в адресной строке
+    if (idFromUrl) {
+      // Устанавливаем радио-инпут в состояние "checked" по id
+      var radioInput = document.getElementById(idFromUrl);
+      if (radioInput) {
+        radioInput.checked = true;
+
+        // Прокручиваем страницу до радио-инпута
+        radioInput.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  }
+
+  // Функция для инициализации Swiper слайдеров из старого скрипта
+  function initSwipers() {
+    // Инициализация первого слайдера (sample-slider)
+    const sampleSlider = document.querySelector('.sample-slider');
+    if (sampleSlider && !sampleSlider.swiper) {
+      var swiper1 = new Swiper('.sample-slider', {
+        loop: true,                         // loop
+        speed: 3000,
+        effect: 'fade',
+        fadeEffect: {           // added
+          crossFade: true     // added(resolve the overlapping of the slides)
+        },                      // added
+        autoplay: {                         // auto play
+          delay: 3000,
+        },
+      });
+    }
+
+    // Инициализация второго слайдера (sample-slider-lib)
+    const sampleSliderLib = document.querySelector('.sample-slider-lib');
+    if (sampleSliderLib && !sampleSliderLib.swiper) {
+      var swiper2 = new Swiper('.sample-slider-lib', {
+        loop: true,                         // loop
+        centeredSlides: true,
+        slidesPerView: 1,
+        navigation: {                       // navigation(arrows)
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            centeredSlides: true,
+          },
+        },
+      });
+    }
+  }
+
+  // Функция для инициализации меню из старого скрипта
+  function initMenu() {
+    // Проверяем наличие jQuery
+    if (typeof jQuery === 'undefined') {
+      console.error('jQuery не загружен');
+      return;
+    }
+
+    $(document).ready(function() {
+      var timer;
+
+      $('.menu-button').hover(function() {
+        clearTimeout(timer);
+        $(this).siblings('.j-dropdown-content').stop(true, true).slideDown(200);
+      }, function() {
+        timer = setTimeout(function() {
+          $('.j-dropdown-content').slideUp(200);
+        }, 200);
+      });
+
+      $('.j-dropdown-content').hover(function() {
+        clearTimeout(timer);
+        $(this).stop(true, true).slideDown(200);
+      }, function() {
+        timer = setTimeout(function() {
+          $('.j-dropdown-content').slideUp(200);
+        }, 200);
+      });
+
+      $('.j-dropdown-content a').click(function(event) {
+        event.preventDefault();
+        var targetId = $(this).attr('href');
+        $('html, body').animate({
+          scrollTop: $(targetId).offset().top
+        }, 500);
+        $('.j-dropdown-content').slideUp(200);
+      });
+    });
+  }
+
+  // Основная функция инициализации
+  function initAll() {
+    // Инициализация радио-кнопок из URL
+    initRadioButtonsFromUrl();
+
+    // Инициализация Swiper слайдеров
+    initSwipers();
+
+    // Инициализация меню
+    initMenu();
+
+    // Инициализация модальных окон из URL
     setTimeout(() => {
       // Проверяем все swiper контейнеры в модальных окнах
       const modalSwipers = document.querySelectorAll('.cmt .swiper');
@@ -2353,6 +2473,11 @@
         setTimeout(initModalFromUrl, 500);
       }
     }, 500);
+  }
+
+  // Ждем загрузки DOM
+  document.addEventListener('DOMContentLoaded', function() {
+    initAll();
   });
 
   // Также обрабатываем изменения hash (если пользователь закрывает модалку)
