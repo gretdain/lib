@@ -8,6 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Great Dane Magazine</title>
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+<!--  <link href="css/jquery.touchPDF.css" rel="stylesheet" media="screen" />
+  <link href="css/style-modal-pdf.css" rel="stylesheet" media="screen" /> -->
+
 <!-- <link rel="stylesheet" href="css/style.css"> -->
 	
 
@@ -94,7 +98,18 @@ src: local(''),
 	.container {
 	display:flex;
 	justify-content:center;
+	padding-top: 0;
+	padding-bottom: 0;
 	}
+	
+	p {
+		padding-top: 0.5vw;
+		margin-top: 0;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+
 
 	.article img {
         object-fit: contain;
@@ -169,7 +184,7 @@ src: local(''),
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 60%;
     height: auto;
 /*    border: 1px solid var(--amethyst); 
     float: left;
@@ -184,17 +199,14 @@ src: local(''),
 
 <body class="body">
 
-	<div class="container" style="padding-top:1vw;">
+	<div class="container" >
 
-<p style="padding-top:1vw;text-align:center;">In memoriam<br>
+<p>In memoriam<br>
 Ewa Larsson<br>
-<br>
-1966 - 2025
-</p>
-<p></p>
+1966 - 2025</p>
 	</div>
 
-	<div class="container" style="padding-top:1vw;" id="ewa">
+	<div class="container" style="padding-top:1vw; max-height: calc(90vh - 120px);" id="ewa">
 	
 <div class="swiper sample-slider">
     <div class="swiper-wrapper">
@@ -335,7 +347,7 @@ Ewa Larsson<br>
 <footer > 
 		<div >
 					<p >
-					<ul style="list-style-type:none;">
+					<ul style="list-style-type:none; padding:0;">
 						<li>
 							<a href="https://www.facebook.com/gretdane" target="_blank"  aria-label="facebook">
 								
@@ -370,13 +382,12 @@ Ewa Larsson<br>
 </footer>
 </div>
 
-
 <script src="js/swiper-bundle.min.js"></script>
 
 <script>
     const swiper = new Swiper('.sample-slider', {
         loop: true,                         // loop
-		zoom: true,					//zoom
+		zoom: false,					//zoom
         speed: 1500,
 		effect: 'fade',
 		fadeEffect: {           // added
