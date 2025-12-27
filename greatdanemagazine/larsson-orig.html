@@ -8,8 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Great Dane Magazine</title>
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link href="libpdf/css/lib-pdf/jquery.touchPDF.css" rel="stylesheet" media="screen" />
-	<link href="libpdf/css/style-modal-pdf.css" rel="stylesheet" media="screen" />
+
+<!--  <link href="css/jquery.touchPDF.css" rel="stylesheet" media="screen" />
+  <link href="css/style-modal-pdf.css" rel="stylesheet" media="screen" /> -->
 
 <!-- <link rel="stylesheet" href="css/style.css"> -->
 	
@@ -97,7 +98,18 @@ src: local(''),
 	.container {
 	display:flex;
 	justify-content:center;
+	padding-top: 0;
+	padding-bottom: 0;
 	}
+	
+	p {
+		padding-top: 0.5vw;
+		margin-top: 0;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+
 
 	.article img {
         object-fit: contain;
@@ -126,8 +138,6 @@ src: local(''),
       -webkit-box-align: center;
       -ms-flex-align: center;
       -webkit-align-items: center;
-	  flex-direction:column;
-	  position:relative;
 	}
 
 @media (max-width: 767px) {
@@ -182,7 +192,6 @@ src: local(''),
     padding: 0.5em; */
   }
   }
-  
 
 </style>
 
@@ -190,9 +199,9 @@ src: local(''),
 
 <body class="body">
 
-	<div class="container" style="padding-top:1vw;">
+	<div class="container" >
 
-<p style="padding-top:0.5vw;"padding-bottom:0.5vw;text-align:center;">In memoriam<br>
+<p>In memoriam<br>
 Ewa Larsson<br>
 1966 - 2025</p>
 	</div>
@@ -201,13 +210,8 @@ Ewa Larsson<br>
 	
 <div class="swiper sample-slider">
     <div class="swiper-wrapper">
-
-        <div class="swiper-slide modal-target" data-modal="demo-modal" data-title="война и мир" datasrc="./libpdf/pdfs/demo.pdf">
-			<div class="swiper-zoom-container"><img src="img/no1_1.jpg">demo.pdf</div>
-		</div>
-        <div class="swiper-slide modal-target" data-modal="demo-modal" data-title="война и мир" datasrc="./libpdf/pdfs/1.pdf">
-			<div class="swiper-zoom-container"><img src="img/no1_2.jpg">1.pdf</div>
-		</div>
+        <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/no1_1.jpg"></div></div>
+        <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/no1_2.jpg"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/no1_3.jpg"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/no1_4.jpg"></div></div>
         <div class="swiper-slide"><div class="swiper-zoom-container"><img src="img/no1_5.jpg"></div></div>
@@ -339,23 +343,11 @@ Ewa Larsson<br>
 	</div>
 
 	<div class="container" style="padding-top:1vw;">
-<!-- Модальное окно -->
-<div class="modal" id="demo-modal">
-  <div class="modal-content">
-    <button class="modal-close" aria-label="Закрыть окно"></button>
-    <h2 class="modal-title">Это модальное окно</h2>
-    <div class="modal-body">
-      <div class="my-pdf" style=""></div>
-    </div>
-    <div class="modal-footer">
 
-    </div>
-  </div>
-</div>
 <footer > 
 		<div >
 					<p >
-					<ul style="list-style-type:none;">
+					<ul style="list-style-type:none; padding:0;">
 						<li>
 							<a href="https://www.facebook.com/gretdane" target="_blank"  aria-label="facebook">
 								
@@ -390,16 +382,7 @@ Ewa Larsson<br>
 </footer>
 </div>
 
-<script type="text/javascript" src="libpdf/js/lib-pdf/pdf.compatibility.js"></script>
-<script type="text/javascript" src="libpdf/js/lib-pdf/pdf.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="libpdf/js/lib-pdf/jquery.touchSwipe.js"></script>
-<script type="text/javascript" src="libpdf/js/lib-pdf/jquery.touchPDF.js"></script>
-<script type="text/javascript" src="libpdf/js/lib-pdf/jquery.panzoom.js"></script>
-<script type="text/javascript" src="libpdf/js/lib-pdf/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="libpdf/js/script-modal-pdf.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
-
 
 <script>
     const swiper = new Swiper('.sample-slider', {
@@ -410,9 +393,9 @@ Ewa Larsson<br>
 		fadeEffect: {           // added
         crossFade: true     // added(resolve the overlapping of the slides)
 		},                      // added
-		/*autoplay: {                         // auto play
+		autoplay: {                         // auto play
             delay: 2000,
-        },*/
+        },
     })
 </script>
 
