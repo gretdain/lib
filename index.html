@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW5C44BVJV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,7 +14,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-MW5C44BVJV');
-  </script>
+  </script>	-->
 
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -287,6 +287,8 @@
     .lib a:hover {
       border-bottom: 0px;
     }
+	.open-pdf-external {
+	}
 
     @media (max-width: 767px) {
 
@@ -982,6 +984,23 @@
             <p style=""></p>
               <a style="" href="https://greatdanemagazine.com">
                 <img style="border: 0px solid ; width: 190px; height: 290px;" alt="title" src="covers/gdm.jpg"/></a>
+          </li>
+
+          <li>
+            <p style="margin-top:10px;"></p>
+            <span 
+            class="open-pdf-external" 
+            data-viewer="https://greatdaneworld.dog"
+            data-doc="dd_may_1966" 
+            data-page="1" 
+            style="cursor:pointer; display:inline-block;">
+			<img src="covers/dd_may_1966.jpg" 
+				alt="Dane Dispatch may 1966" 
+				style="display:block; max-width:100%; width: 185px; height: 280px;">
+			</span>
+<!--            <a href="">
+              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="Dane Dispatch" src="covers/dd_may_1966.jpg" loading="lazy"/>
+            </a> -->
           </li>
 
 
@@ -2408,6 +2427,22 @@
       }, 300);
     }
   });
+  
+  // обработка нажатия на img в span
+  document.addEventListener("click", function (e) {
+const el = e.target.closest(".open-pdf-external");
+if (!el) return;
+
+e.preventDefault();
+e.stopPropagation();
+
+const viewer = el.dataset.viewer;
+const docId = el.dataset.doc;
+const page = Math.max(1, parseInt(el.dataset.page, 10) || 1);
+
+const url = `${viewer}?doc=${encodeURIComponent(docId)}&page=${page}`;
+window.location.href = url;
+});
 </script>
 </body>
 </html>

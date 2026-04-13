@@ -60,10 +60,10 @@
   margin-left: -3100%;
 }
 .csslider > input:nth-of-type( 31):checked ~ ul li:first-of-type {
-  margin-left: -3000%;
+  margin-left: -3020%;
 }
 .csslider > input:nth-of-type( 30):checked ~ ul li:first-of-type {
-  margin-left: -2900%;
+  margin-left: -2927%;
 }
 .csslider > input:nth-of-type( 29):checked ~ ul li:first-of-type {
   margin-left: -2824%;
