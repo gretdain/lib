@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 
-  <!-- Google tag (gtag.js) 
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW5C44BVJV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,7 +14,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-MW5C44BVJV');
-  </script>	-->
+  </script>
 
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -936,7 +936,8 @@
             class="open-pdf-external" 
             data-viewer="https://greatdaneworld.dog/indexgdca.html"
             data-doc="" 
-            data-page="" 
+            data-page=""
+            data-back="" 
             style="cursor:pointer; display:inline-block;">
 			<img src="covers/yearbook.png" 
 				alt="GDCA yearbook" 
@@ -984,9 +985,20 @@
 
           <li>
             <p style="margin-top:10px;"></p>
-            <a href="">
+            <span 
+            class="open-pdf-external" 
+            data-viewer="https://greatdaneworld.dog/indexdd.html"
+            data-doc="stammbuch_1913" 
+            data-page="1" 
+            data-back="https://gretdain.com#books"
+            style="cursor:pointer; display:inline-block;">
+			<img src="covers/stammbuch_1913.png" 
+				alt="Stammbuch1913" 
+				style="display:block; max-width:100%; width: 185px; height: 280px;">
+			</span>
+<!--            <a href="">
               <img style="border: 0px solid ; width: 185px; height: 280px;" alt="stammbuch 1913" src="covers/stammbuch_1913.png" loading="lazy"/>
-            </a>
+            </a> -->
           </li>
 		  
           <li>Great Dane Magazine
@@ -1001,7 +1013,8 @@
             class="open-pdf-external" 
             data-viewer="https://greatdaneworld.dog/indexdd.html"
             data-doc="" 
-            data-page="1" 
+            data-page="" 
+            data-back=""
             style="cursor:pointer; display:inline-block;">
 			<img src="covers/dd_may_1966.jpg" 
 				alt="Dane Dispatch" 
@@ -2334,8 +2347,8 @@ e.stopPropagation();
 const viewer = el.dataset.viewer;
 const docId = el.dataset.doc;
 const page = Math.max(1, parseInt(el.dataset.page, 10) || 1);
-
-const url = `${viewer}?doc=${encodeURIComponent(docId)}&page=${page}`;
+const back = el.dataset.back || (window.location.pathname + window.location.search + window.location.hash);
+const url = `${viewer}?doc=${encodeURIComponent(docId)}&page=${page}&back=${encodeURIComponent(back)}`;
 window.location.href = url;
 });
 </script>
