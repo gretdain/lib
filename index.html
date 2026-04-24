@@ -2,39 +2,15 @@
 <html lang="ru">
 <head>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW5C44BVJV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-MW5C44BVJV');
-  </script>
 
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Немецкий дог Great Dane Deutsche Dogge</title>
+  <title></title>
   <link rel="shortcut icon" href="/static/favicon.ico"/>
 
-  <!-- references
-  https://gretdain.com#eval
-  https://gretdain.com#anatomy
-  https://gretdain.com#history
-  https://gretdain.com#faces
-  https://gretdain.com#breeding
-  https://gretdain.com#books
-  https://gretdain.com#woodhouse
-  https://gretdain.com#vet
-
- 
-  https://gretdain.com#gallery-1	**Stormi Rudio**
-  -->
+  
 
   <link rel="stylesheet" href="css/card.css">
   <link rel="stylesheet" href="css/style.css">
@@ -66,25 +42,8 @@
       justify-content: center;
     }
 
-    .menu:hover .dropdown-content {
-      display: none;
-    }
 
     /*        modal lib */
-    .sample-slider {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40%;
-      height: auto;
-      border: 1px solid var(--amethyst);
-      float: left;
-      margin-right: 1em;
-    }
-
-    .sample-slider img {
-      align-items: center;
-    }
 
     .swiper {
       margin-left: 0;
@@ -120,17 +79,6 @@
       color: var(--grey-black);
     }
 
-    .sample-slider-lib {
-      /* POSITION:RELATIVE; ??? */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .sample-slider-lib img {
-      justify-content: center;
-      align-items: center;
-    }
 
     /* Анимации */
     @keyframes scale {
@@ -289,6 +237,197 @@
     }
 	.open-pdf-external {
 	}
+	
+	/* by ChatGPT */
+/* ===== libx slider: isolated drop-in block ===== */
+
+.libx-wrap {
+width: 100%;
+}
+
+.libx-wrap,
+.libx-wrap * {
+box-sizing: border-box;
+}
+
+.libx-wrap .libx-shell {
+position: relative;
+width: 100%;
+}
+
+.libx-wrap .libx-slider.swiper {
+width: 100%;
+overflow: hidden;
+margin: 0;
+padding: 0;
+border: 0;
+background: transparent;
+float: none;
+}
+
+.libx-wrap .libx-slider .swiper-wrapper {
+align-items: stretch;
+}
+
+.libx-wrap .libx-slide {
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+user-select: none;
+}
+
+.libx-wrap .libx-card {
+position: relative;
+width: 100%;
+height: 100%;
+box-shadow: 0 10px 28px rgba(0,0,0,0.32);
+}
+
+.libx-wrap .libx-image-wrap {
+position: relative;
+width: 100%;
+aspect-ratio: 3 / 4;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+
+.libx-wrap .libx-image-wrap img {
+display: block;
+width: auto;
+height: auto;
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+border: 0;
+}
+
+.libx-wrap .libx-caption {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 0.9em 1em 1em;
+background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.36), rgba(0,0,0,0));
+color: #fff;
+font-size: 0.95rem;
+line-height: 1.35;
+opacity: 0;
+transform: translateY(12px);
+transition: opacity 0.28s ease, transform 0.28s ease;
+pointer-events: none;
+text-align:center;
+}
+
+.libx-wrap .libx-slide.libx-caption-visible .libx-caption {
+opacity: 1;
+transform: translateY(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+.libx-wrap .libx-slide:hover .libx-caption {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.libx-wrap .libx-nav {
+position: absolute;
+inset: 0;
+pointer-events: none;
+z-index: 20;
+}
+
+.libx-wrap .libx-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 52px;
+height: 52px;
+border: 0;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+pointer-events: auto;
+cursor: pointer;
+transition: background 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+-webkit-tap-highlight-color: transparent;
+}
+
+.libx-wrap .libx-btn svg {
+width: 22px;
+height: 22px;
+display: block;
+}
+
+.libx-wrap .libx-btn:disabled {
+opacity: 0.45;
+cursor: default;
+}
+
+.libx-wrap .libx-pagination-row {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.45em;
+margin-top: 0.8em;
+}
+
+.libx-wrap .libx-fraction {
+font-size: 0.95rem;
+line-height: 1;
+color: var(--font-grey);
+}
+
+.libx-wrap .libx-bullets.swiper-pagination-bullets.swiper-pagination-horizontal {
+position: static;
+width: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+}
+
+.libx-wrap .libx-bullets .swiper-pagination-bullet {
+width: 8px;
+height: 8px;
+margin: 0 !important;
+opacity: 1;
+background: rgba(120, 120, 120, 0.45);
+}
+
+.libx-wrap .libx-bullets .swiper-pagination-bullet-active {
+background: rgba(60, 60, 60, 0.95);
+}
+
+.lib {
+clear: both;
+overflow: hidden;
+padding-bottom: 2rem;
+}
+
+.libx-wrap {
+width: 100%;
+overflow: hidden;
+}
+
+.libx-wrap .libx-shell {
+position: relative;
+width: 100%;
+overflow: hidden;
+}
+
+.libx-wrap .libx-pagination-row {
+position: relative;
+z-index: 2;
+margin-top: 1rem;
+padding-bottom: 0.5rem;
+}
+
+	/* by ChatGPT */
 
     @media (max-width: 767px) {
 
@@ -325,6 +464,55 @@
       .footer {
         padding: 10px 0;
       }
+      
+      /* by ChatGPT */
+      
+.libx-wrap {
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.libx-wrap .libx-slider .swiper {
+width: 75%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.libx-wrap .libx-card {
+width: 75%;
+}
+
+
+.libx-wrap .libx-btn {
+width: 64px;
+height: 64px;
+background: transparent;
+color: #fff;
+box-shadow: none;
+border-radius: 0;
+color: #8a8a8a;
+}
+
+.libx-wrap .libx-btn svg{
+width: 42px;
+height: 42px;
+}
+
+.libx-wrap .libx-btn:hover,
+.libx-wrap .libx-btn:focus-visible {
+background: transparent;
+box-shadow: none;
+color: #5f5f5f;
+}
+
+.libx-wrap .libx-btn-prev {
+left: calc(12.5% - 58px);
+}
+
+.libx-wrap .libx-btn-next {
+right: calc(12.5% - 58px);
+}   
+/* by ChatGPT */
     }
 
     @media (min-width: 768px) {
@@ -345,6 +533,104 @@
         width: 100%;
         height: 220px;
       }
+      
+      /* by ChatGPT */
+.libx-wrap {
+padding-left: 10%;
+padding-right: 10%;
+max-width: 1602px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.libx-wrap .libx-slider.swiper {
+width: min(42vw, 420px);
+margin-left: auto;
+margin-right: auto;
+}
+
+.libx-wrap .libx-slide {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.libx-wrap .libx-card {
+position: relative;
+display: inline-block;
+width: 100%;
+}
+
+.libx-wrap .libx-image-wrap {
+position: relative;
+width: 100%;
+aspect-ratio: 3 / 4;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+
+.libx-wrap .libx-image-wrap img {
+display: block;
+object-fit: contain;
+}
+
+.libx-wrap .libx-caption {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+width: 100%;
+max-width: 100%;
+margin: 0;
+padding: 1.05em 1.15em 1.1em;
+font-size: 1rem;
+line-height: 1.35;
+box-sizing: border-box;
+background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.36), rgba(0,0,0,0));
+color: #fff;
+opacity: 0;
+transform: translateY(12px);
+transition: opacity 0.28s ease, transform 0.28s ease;
+pointer-events: none;
+}
+
+.libx-wrap .libx-slide:hover .libx-caption,
+.libx-wrap .libx-slide.libx-caption-visible .libx-caption {
+opacity: 1;
+transform: translateY(0);
+}
+
+.libx-wrap .libx-btn {
+width: 96px;
+height: 96px;
+background: transparent;
+box-shadow: none;
+border-radius: 0;
+color: #8a8a8a;
+}
+
+.libx-wrap .libx-btn svg {
+width: 52px;
+height: 52px;
+}
+
+.libx-wrap .libx-btn:hover,
+.libx-wrap .libx-btn:focus-visible {
+background: transparent;
+box-shadow: none;
+color: #5f5f5f;
+}
+
+.libx-wrap .libx-btn-prev {
+left: calc(50% - min(21vw, 210px) - 78px);
+}
+
+.libx-wrap .libx-btn-next {
+right: calc(50% - min(21vw, 210px) - 78px);
+}
+/* by ChatGPT */
     }
 
   </style>
@@ -379,19 +665,17 @@
         <div class="links">
           <button type="button" class="link-button"><img src="img/ext_link.svg" alt="Links"></button>
           <div class="dropdown-content" style="right:1px">
-            <a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
-            <a rel="noopener" target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
-            <a rel="noopener" target="_blank" href="https://greatdanes.dog">Российский портал</a>
-            <a rel="noopener" target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
-            <a rel="noopener" target="_blank" href="https://www.danesworld.info/pedigree.php?">Danesworld Pedigrees</a>
-            <a rel="noopener" target="_blank" href="https://breedpedigrees.com/pedpoint/pp_search.php">River Rock Pedigrees</a>
-            <a rel="noopener" target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
-            <a rel="noopener" target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
-            <a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея Eu Ch 1900-1980</a>
-            <a rel="noopener" target="_blank" href="https://gretdain.com/gd-foundation.html">Time traveller photos</a>
+            <a rel="noopener" target="_blank" >Great Dane Gnosis</a>
+            <a rel="noopener" target="_blank" >Российский клуб</a>
+            <a rel="noopener" target="_blank" >Российский портал</a>
+            <a rel="noopener" target="_blank" >Quintessa</a>
+            <a rel="noopener" target="_blank" >Danesworld Pedigrees</a>
+            <a rel="noopener" target="_blank" >River Rock Pedigrees</a>
+            <a rel="noopener" target="_blank" >Ginnie's page</a>
+            <a rel="noopener" target="_blank" >Gesunde-dogge Deutschland</a>
+            <a rel="noopener" target="_blank" >Галлерея Eu Ch 1900-1980</a>
+            <a rel="noopener" target="_blank" >Time traveller photos</a>
           </div>
-          <!--https://dogs.pedigreeonline.com/search?query=ranch&match=wildcard&breed=Great%20Dane&sex=&page=3-->
-          </button>
         </div>
       </div>
     </div>
@@ -707,7 +991,7 @@
     <div class="container">
       <p><img align="left" src="img/vet01.png">
         Средняя продолжительность жизни дога вне зависимости от пола и окраса составляет 6,57 лет (проанализированы данные о смерти 7409 догов).
-        <!-- <a class="ext_link" target=”_blank” href="https://greatdanes.dog/post.php?postid=19&ysclid=lw5ygd3jbt345532096"></a> -->
+        <!-- <a class="ext_link" target=”_blank” ></a> -->
         <br>
         Самые частые причины смерти догов - это рак, заболевание сердца и заворот желудка в 629, 554 и 444 случаях соответственно. При этом проблемы с сердцем и заворот приводят к
         максимальной частоте смерти у собак в возрасте 5,5 лет, а онкологические заболевания - в 6,5 лет, так как болезнь наступает в более позднем возрасте.
@@ -728,1231 +1012,123 @@
   </section>
 
   <section class="lib" id="books">
-    <div class="container" style="text-align: center">
-      <h1>немецкий дог порода книги стандарт</h1>
-      <h2> Библиотека</h2>
-      <div id="slider1" class="csslider infinity">
-        <input name="slides" id="slides_1" type="radio" checked="checked">
-        <input name="slides" id="slides_2" type="radio">
-        <input name="slides" id="slides_3" type="radio">
-        <input name="slides" id="slides_4" type="radio">
-        <input name="slides" id="slides_5" type="radio">
-        <input name="slides" id="slides_6" type="radio">
-        <input name="slides" id="slides_7" type="radio">
-        <input name="slides" id="slides_8" type="radio">
-        <input name="slides" id="slides_9" type="radio">
-        <input name="slides" id="slides_10" type="radio">
-        <input name="slides" id="slides_11" type="radio">
-        <input name="slides" id="slides_12" type="radio">
-        <input name="slides" id="slides_13" type="radio">
-        <input name="slides" id="slides_14" type="radio">
-        <input name="slides" id="slides_15" type="radio">
-        <input name="slides" id="slides_16" type="radio">
-        <input name="slides" id="slides_17" type="radio">
-        <input name="slides" id="slides_18" type="radio">
-        <input name="slides" id="slides_19" type="radio">
-        <input name="slides" id="slides_20" type="radio">
-        <input name="slides" id="slides_21" type="radio">
-        <input name="slides" id="slides_22" type="radio">
-        <input name="slides" id="slides_23" type="radio">
-        <input name="slides" id="slides_24" type="radio">
-        <input name="slides" id="slides_25" type="radio">
-        <input name="slides" id="slides_26" type="radio">
-        <input name="slides" id="slides_27" type="radio">
-        <input name="slides" id="slides_28" type="radio">
-        <input name="slides" id="slides_29" type="radio">
-        <input name="slides" id="slides_30" type="radio">
-        <input name="slides" id="slides_31" type="radio">
-        <input name="slides" id="slides_32" type="radio">
-        <input name="slides" id="slides_33" type="radio">
-        <input name="slides" id="slides_34" type="radio">
-        <input name="slides" id="slides_35" type="radio">
-        <input name="slides" id="slides_36" type="radio">
-        <input name="slides" id="slides_37" type="radio">
-        <input name="slides" id="slides_38" type="radio">
-        <input name="slides" id="slides_39" type="radio">
-        <input name="slides" id="slides_40" type="radio">
-        <input name="slides" id="slides_41" type="radio">
-        <input name="slides" id="slides_42" type="radio">
-        <input name="slides" id="slides_43" type="radio">
-        <input name="slides" id="slides_44" type="radio">
-        <input name="slides" id="slides_45" type="radio">
-        <input name="slides" id="slides_46" type="radio">
-        <input name="slides" id="slides_47" type="radio">
-        <input name="slides" id="slides_48" type="radio">
-        <ul style="font-size: 10px; line-height: 10px; margin-left: 0px; margin-top:10px; margin-bottom:15px;">
+<div class="container" style="padding-top:1vw;">
+<p style="text-align:center;">Библиотека</p>
+</div>
 
-          <li>
-            <p><br><br><b>СТАНДАРТ</b></p>
-            <div class="css-modal-target-container">
-              <a class="css-modal-open custom" style="" href="#css-modal-target">
-                <img style="border: 0px solid ; width: 180px; height: 228px;" alt="1st standard Ger" src="covers/st.png"/></a>
-            </div>
-          </li>
+<div class="libx-wrap" style="padding-top:1vw;" id="lib">
+<div class="libx-shell">
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 240px; height: 290px;" alt="Complete Antology" src="covers/gd_compl_ant.png" loading="lazy"/></a>
-          </li>
+<div class="libx-slider swiper" id="librarySlider">
+<div class="swiper-wrapper">
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 210px; height: 280px;" alt="M.Mackenzie GD: Past and Present" src="covers/past_and_present.png" loading="lazy"/></a>
-          </li>
+<div class="swiper-slide libx-slide"
+data-slide-id="std"
+data-action="link"
+data-target="https://greatdaneworld.dog/indexstd.html">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img src="covers/st.png" alt="standards">
+</div>
+<div class="libx-caption">DDC, FCI, GDCA, RKF Standards</div>
+</div>
+</div>
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 210px; height: 280px;" alt="Ф.Краутвюрст Немецкий дог" src="covers/krau_rus.png" loading="lazy"/></a>
-          </li>
+<div class="swiper-slide libx-slide"
+data-slide-id="gdca"
+data-action="link"
+data-target="https://greatdaneworld.dog/indexgdca.html">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img src="covers/yearbook.png" alt="great dane club of America">
+</div>
+<div class="libx-caption">Great Dane Club of America Annual</div>
+</div>
+</div>
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="Л.Ружич От щенка до чемпиона" src="covers/ruzhich.png" loading="lazy"/></a>
-          </li>
+<div class="swiper-slide libx-slide"
+data-slide-id="hale"
+data-action="pdf"
+data-target="https://greatdaneworld.dog/indexdd.html?doc=hale&back=https://gretdain.com">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img src="covers/hale.png" alt="hale">
+</div>
+<div class="libx-caption">D.E.Hale 1932</div>
+</div>
+</div>
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 200px; height: 280px;" alt="M.Denlinger Complete Great Dane" src="covers/denlinger-1950.png" loading="lazy"/></a>
-          </li>
+<div class="swiper-slide libx-slide"
+data-slide-id="stammbuch_1913"
+data-action="pdf"
+data-target="https://greatdaneworld.dog/indexdd.html?doc=stammbuch_1913&back=https://gretdain.com">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img src="covers/stammbuch_1913.png" alt="stammbuch_1913">
+</div>
+<div class="libx-caption">Stammbuch band IV-V. 1913</div>
+</div>
+</div>
 
-          <li>
-            <p><br><br><br></p>
-            <div class="css-modal-target-container2">
-              <a class="css-modal-open custom" style="" href="#css-modal-target2">
-                <img style="border: 0px solid ; width: 180px; height: 228px;" alt="GD Reporter magazine" src="covers/gdreporter.png"/></a>
-            </div>
-          </li>
+<div class="swiper-slide libx-slide"
+data-slide-id="gdm"
+data-action="link"
+data-target="https://greatdanemagazine.com/index.html">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img src="covers/gdm.jpg" alt="great dane magazine">
+</div>
+<div class="libx-caption">Great Dane Magazine v.1 v.7</div>
+</div>
+</div>
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 210px; height: 280px;" alt="Dane Data by A.Gardner" src="covers/gardner.png" loading="lazy"/></a>
-          </li>
+<div class="swiper-slide libx-slide"
+data-slide-id="gdw"
+data-action="link"
+data-target="https://greatdaneworld.dog/index.html">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img src="covers/dw_logo.png" alt="great dane world">
+</div>
+<div class="libx-caption">Great Dane World</div>
+</div>
+</div>
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 200px; height: 280px;" alt="Немецкий дог В.В. Уваров" src="covers/uvarov.png" loading="lazy"/></a>
-          </li>
+<div class="swiper-slide libx-slide"
+data-slide-id="dd"
+data-action="link"
+data-target="https://greatdaneworld.dog/indexdd.html">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img src="covers/dd_may_1966.jpg" alt="dane dispatch">
+</div>
+<div class="libx-caption">Dane Dispatch 1966 - 1970</div>
+</div>
+</div>
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 220px; height: 290px;" alt="How to raise and train by L.Basquette" src="covers/raise_and_train.png" loading="lazy"/></a>
-          </li>
+</div>
+</div>
 
-          <li>
-            <p><br></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 190px; height: 260px;" alt="О самой большой и красивой собаке Т.Озерова" src="covers/ozerova.png" loading="lazy"/></a>
-          </li>
+<div class="libx-nav" aria-hidden="false">
+<button class="libx-btn libx-btn-prev" id="librarySliderPrev" type="button" aria-label="Previous slide">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M15.5 4.5L8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 200px; height: 280px;" alt="The Danes of Send Manor by R.Heal" src="covers/send_manor.png" loading="lazy"/></a>
-          </li>
+<button class="libx-btn libx-btn-next" id="librarySliderNext" type="button" aria-label="Next slide">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8.5 4.5L16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
 
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 250px; height: 290px;" alt="Your Great Dane by L.Basquette" src="covers/your_great_dane.png" loading="lazy"/></a>
-          </li>
+<div class="libx-pagination-row">
+<div class="libx-bullets swiper-pagination" id="librarySliderPagination"></div>
+</div>
 
-          <li> Dane quarterly
-            <p style="margin-top:70px;"></p>
-            <div class="css-modal-target-container6">
-              <a class="css-modal-open custom" href="#css-modal-target6">
-                <img style="border: 0px solid ; width: 150px; height: 200px;" alt="GD Quarterly magazine" src="covers/dq_logo.png" loading="lazy"/></a>
-            </div>
-          </li>
-
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 190px; height: 280px;" alt="Deutsche Dogge by F.Krautwurst" src="covers/krau_deu.png" loading="lazy"/>
-            </a>
-          </li>
-
-          <li>Great Dane review
-            <p><br><br><br></p>
-            <div class="css-modal-target-container4">
-              <a class="css-modal-open custom" href="#css-modal-target4">
-                <img style="border: 0px solid ; width: 180px; height: 230px;" alt="Great Dane review magazine" src="covers/gdr.png"/></a>
-            </div>
-          </li>
-
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 190px; height: 280px;" alt="Midwest England great dane club
-2018" src="covers/mwe_2018.png" loading="lazy"/>
-            </a>
-          </li>
-
-          <li>&nbsp Unsere Deutsche Dogge
-            <p style="margin-top:65px;"></p>
-            <div class="css-modal-target-container3">
-              <a class="css-modal-open custom" style="" href="#css-modal-target3">
-                <img style="border: 0px solid ; width: 190px; height: 280px;" alt="title" src="covers/unseredd_covers.webp"/></a>
-            </div>
-          </li>
-
-          <li>Dane World
-            <p style=""></p>
-              <a style="" href="https://greatdaneworld.dog">
-                <img style="border: 0px solid ; width: 190px; height: 290px;" alt="title" src="covers/dw_logo.png"/></a>
-          </li>
-
-          <li>
-            <p style="margin-top:15px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 190px; height: 280px;" alt="Bill Siggers" src="covers/bill_siggers.jpg" loading="lazy"/></a>
-          </li>
-
-          <li>
-            <p style="margin-top:15px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 210px; height: 280px;" alt="Almost Human by B.Woodhouse" src="img/bw01.webp" loading="lazy"/>
-            </a>
-          </li>
-
-          <li>DDC Almanach
-            <p style="margin-top:70px;"></p>
-            <div class="css-modal-target-container7">
-              <a class="css-modal-open custom" style="" href="#css-modal-target7">
-                <img style="border: 0px solid ; width: 190px; height: 190px;" alt="DDC Almanach" src="covers/DDC_almanach_1988.webp"/></a>
-            </div>
-          </li>
-
-          <li> GDCA Yearbook
-            <p></p>
-            <span 
-            class="open-pdf-external" 
-            data-viewer="https://greatdaneworld.dog/indexgdca.html"
-            data-doc="" 
-            data-page=""
-            data-back="" 
-            style="cursor:pointer; display:inline-block;">
-			<img src="covers/yearbook.png" 
-				alt="GDCA yearbook" 
-				style="display:block; max-width:100%; width: 185px; height: 280px;">
-			</span>
-<!--              <a class="css-modal-open custom" href="#css-modal-target1">
-                <img style="border: 0px solid ; width: 200px; height: 200px;" alt="GDCA Yearbook" src="covers/yearbook.png"/></a> -->
-            
-          </li>
-
-          <!--						<li><big>Jahre 100</big>
-                      <p>DDC<br></p>
-                      <a  href="">
-                      <img style="border: 0px solid ; width: 160px; height: 160px;" alt="DDC Almanach 1988" src="covers/DDC_Jahre_100.jpg" loading="lazy" /></a>
-                      </li>-->
-
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="Midwest England great dane club
-2000" src="covers/mwegdc2000.png" loading="lazy"/>
-            </a>
-          </li>
-
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="Great Dane Reporter Best " src="covers/gdr_best.png" loading="lazy"/>
-            </a>
-          </li>
-
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="Great Dane International" src="covers/gdi_1973_stud.webp" loading="lazy"/>
-            </a>
-          </li>
-
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="">
-              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="The Great Dane by D.E.Hale" src="covers/hale.png" loading="lazy"/>
-            </a>
-          </li>
-
-          <li>
-            <p style="margin-top:10px;"></p>
-            <span 
-            class="open-pdf-external" 
-            data-viewer="https://greatdaneworld.dog/indexdd.html"
-            data-doc="stammbuch_1913" 
-            data-page="1" 
-            data-back="https://gretdain.com?id=slides_28#books"
-            style="cursor:pointer; display:inline-block;">
-			<img src="covers/stammbuch_1913.png" 
-				alt="Stammbuch1913" 
-				style="display:block; max-width:100%; width: 185px; height: 280px;">
-			</span>
-<!--            <a href="">
-              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="stammbuch 1913" src="covers/stammbuch_1913.png" loading="lazy"/>
-            </a> -->
-          </li>
-		  
-          <li>Great Dane Magazine
-            <p style=""></p>
-              <a style="" href="https://greatdanemagazine.com">
-                <img style="border: 0px solid ; width: 190px; height: 290px;" alt="title" src="covers/gdm.jpg"/></a>
-          </li>
-
-          <li>Dane Dispatch
-            <p style="margin-top:10px;"></p>
-            <span 
-            class="open-pdf-external" 
-            data-viewer="https://greatdaneworld.dog/indexdd.html"
-            data-doc="" 
-            data-page="" 
-            data-back=""
-            style="cursor:pointer; display:inline-block;">
-			<img src="covers/dd_may_1966.jpg" 
-				alt="Dane Dispatch" 
-				style="display:block; max-width:100%; width: 185px; height: 280px;">
-			</span>
-<!--            <a href="">
-              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="Dane Dispatch" src="covers/dd_may_1966.jpg" loading="lazy"/>
-            </a> -->
-          </li>
-
-
-          <li>
-            <p style="margin-top:10px;"></p>
-            <a href="index.html?id=slides_29#books">
-              <img style="border: 0px solid ; width: 185px; height: 280px;" alt="title" src="img/blank.png" loading="lazy"/>
-            </a>
-          </li>
-
-
-        </ul>
-
-        <div class="arrows" style="left: -20px; width: 240px; top: 199px; height: 37px;">
-          <label for="slides_1"></label>
-          <label for="slides_2"></label>
-          <label for="slides_3"></label>
-          <label for="slides_4"></label>
-          <label for="slides_5"></label>
-          <label for="slides_6"></label>
-          <label for="slides_7"></label>
-          <label for="slides_8"></label>
-          <label for="slides_9"></label>
-          <label for="slides_10"></label>
-          <label for="slides_11"></label>
-          <label for="slides_12"></label>
-          <label for="slides_13"></label>
-          <label for="slides_14"></label>
-          <label for="slides_15"></label>
-          <label for="slides_16"></label>
-          <label for="slides_17"></label>
-          <label for="slides_18"></label>
-          <label for="slides_19"></label>
-          <label for="slides_20"></label>
-          <label for="slides_21"></label>
-          <label for="slides_22"></label>
-          <label for="slides_23"></label>
-          <label for="slides_24"></label>
-          <label for="slides_25"></label>
-          <label for="slides_26"></label>
-          <label for="slides_27"></label>
-          <label for="slides_28"></label>
-          <label for="slides_29"></label>
-          <label for="slides_30"></label>
-          <label for="slides_31"></label>
-          <label for="slides_32"></label>
-          <label for="slides_33"></label>
-          <label for="slides_34"></label>
-          <label for="slides_35"></label>
-          <label for="slides_36"></label>
-          <label for="slides_37"></label>
-          <label for="slides_38"></label>
-          <label for="slides_39"></label>
-          <label for="slides_40"></label>
-          <label for="slides_41"></label>
-          <label for="slides_42"></label>
-          <label for="slides_43"></label>
-          <label for="slides_44"></label>
-          <label for="slides_45"></label>
-          <label for="slides_46"></label>
-          <label for="slides_47"></label>
-          <label for="slides_48"></label>
-          <label for="slides_1" class="goto-first"></label>
-          <label for="slides_48" class="goto-last"></label>
-        </div>
-
-        <div class="navigation">
-          <div>
-            <label for="slides_1"></label>
-            <label for="slides_2"></label>
-            <label for="slides_3"></label>
-            <label for="slides_4"></label>
-            <label for="slides_5"></label>
-            <label for="slides_6"></label>
-            <label for="slides_7"></label>
-            <label for="slides_8"></label>
-            <label for="slides_9"></label>
-            <label for="slides_10"></label>
-            <label for="slides_11"></label>
-            <label for="slides_12"></label>
-            <label for="slides_13"></label>
-            <label for="slides_14"></label>
-            <label for="slides_15"></label>
-            <label for="slides_16"></label>
-            <label for="slides_17"></label>
-            <label for="slides_18"></label>
-            <label for="slides_19"></label>
-            <label for="slides_20"></label>
-            <label for="slides_21"></label>
-            <label for="slides_22"></label>
-            <label for="slides_23"></label>
-            <label for="slides_24"></label>
-            <label for="slides_25"></label>
-            <label for="slides_26"></label>
-            <label for="slides_27"></label>
-            <label for="slides_28"></label>
-            <label for="slides_29"></label>
-            <label for="slides_30"></label>
-            <label for="slides_31"></label>
-            <label for="slides_32"></label>
-            <label for="slides_33"></label>
-            <label for="slides_34"></label>
-            <label for="slides_35"></label>
-            <label for="slides_36"></label>
-            <label for="slides_37"></label>
-            <label for="slides_38"></label>
-            <label for="slides_39"></label>
-            <label for="slides_40"></label>
-            <label for="slides_41"></label>
-            <label for="slides_42"></label>
-            <label for="slides_43"></label>
-            <label for="slides_44"></label>
-            <label for="slides_45"></label>
-            <label for="slides_46"></label>
-            <label for="slides_47"></label>
-            <label for="slides_48"></label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="css-modal-target" id="css-modal-target">  <!-- Standard -->
-      <div class="cmt">
-        <div class="swiper sample-slider-lib">
-          <div class="swiper-wrapper">
-            <a class="swiper-slide" href="titles/Deu_st_1880.pdf" id="mt01">
-              <figure><img src="covers/dd_st_1880.png" alt="Deutschen Doggen Club 1888 e. V." loading="lazy"/>
-                <figcaption>Deutschen Doggen Club 1888 e.V.</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="titles/FCI_2024.pdf" id="mt02">
-              <figure><img src="covers/FCI_2024.webp" alt="FCI 2024" loading="lazy"/>
-                <figcaption>FCI-St.N° 235 / 2024</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="titles/235g02-en.pdf" id="mt03">
-              <figure><img src="covers/fci-logo-png-transparent.png" alt="FCI-St.N° 235 / 20.12.2012 Eng" loading="lazy"/>
-                <figcaption>FCI-St.N° 235 / 2012 Eng</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="titles/FCI-235-2012RU.pdf" id="mt04">
-              <figure><img src="covers/nkp.png" alt="FCI No235 / 08.10.12 / D - перевод" loading="lazy"/>
-                <figcaption>FCI No235 / 2012 / D - перевод</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="https://yadi.sk/i/3Tub1n3TI9ngEw" id="mt05">
-              <figure><img src="covers/gauthier1976.png" alt="GDCA 1976 Illustrated" loading="lazy"/>
-                <figcaption>GDCA 1976 Illustrated</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="titles/An-Illustrated-Standard-and-Guide-for-the-Evaluation-of-the-Great-Dane.pdf" id="mt06">
-              <figure><img src="covers/gdca_logo.png" alt="gdca2018" loading="lazy"/>
-                <figcaption>GDCA 2018 Illustrated</figcaption>
-              </figure>
-            </a>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-
-      </div>
-      <a href="#close" class="css-modal-close"></a>
-    </div>
-
-    <div class="css-modal-target2" id="css-modal-target2">  <!-- GD Reporter -->
-      <div class="cmt">
-        <div class="swiper sample-slider-lib" style="">
-          <div class="swiper-wrapper">
-            <a class="swiper-slide" href="" id="mt21">
-              <figure><img src="covers/gdrep_jf_1993.webp" alt="GD Reporter Jan/Feb 1993" loading="lazy"/>
-                <figcaption>GD Reporter Jan/Feb 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt22">
-              <figure><img src="covers/gdrep_so_1992.webp" alt="GD Reporter Sep/Oct 1992" loading="lazy"/>
-                <figcaption>GD Reporter Sep/Oct 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt23">
-              <figure><img src="covers/gdrep_jan_1991.webp" alt="GD Reporter Jan/Feb 1991" loading="lazy"/>
-                <figcaption>GD Reporter Jan/Feb 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt24">
-              <figure><img src="covers/gdrep_jul_1990.webp" alt="GD Reporter Jul/Aug 1990" loading="lazy"/>
-                <figcaption>GD Reporter Jul/Aug 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt25">
-              <figure><img src="covers/gdrep_ma_1990.webp" alt="GD Reporter Mar/Apr 1990" loading="lazy"/>
-                <figcaption>GD Reporter Mar/Apr 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt26">
-              <figure><img src="covers/gdrep_ja_1991.webp" alt="GD Reporter Jul/Aug 1991" loading="lazy"/>
-                <figcaption>GD Reporter Jul/Aug 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt27">
-              <figure><img src="covers/gdrep_sep_1990.webp" alt="GD Reporter Sep/Oct 1990" loading="lazy"/>
-                <figcaption>GD Reporter Sep/Oct 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt28">
-              <figure><img src="covers/gdrep_may_1990.webp" alt="GD Reporter May/Jun 1990" loading="lazy"/>
-                <figcaption>GD Reporter May/Jun 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt29">
-              <figure><img src="covers/gdrep_nd_1994.webp" alt="GD Reporter Nov/Dec 1994" loading="lazy"/>
-                <figcaption>GD Reporter Nov/Dec 1994</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt210">
-              <figure><img src="covers/gdrep_so_1989.webp" alt="GD Reporter Sep/Oct 1989" loading="lazy"/>
-                <figcaption>GD Reporter Sep/Oct 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt211">
-              <figure><img src="covers/gdrep_so_1994.webp" alt="GD Reporter Sep/Oct 1994" loading="lazy"/>
-                <figcaption>GD Reporter Sep/Oct 1994</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt212">
-              <figure><img src="covers/gdrep_ma_1997.webp" alt="GD Reporter Mar/Apr 1997" loading="lazy"/>
-                <figcaption>GD Reporter Mar/Apr 1997</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt213">
-              <figure><img src="covers/gdrep_novdec_1992.webp" alt="GD Reporter Nov/Dec 1992" loading="lazy"/>
-                <figcaption>GD Reporter Nov/Dec 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt214">
-              <figure><img src="covers/gdrep_mayjun_1993.webp" alt="GD Reporter May/Jun 1993" loading="lazy"/>
-                <figcaption>GD Reporter May/Jun 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt215">
-              <figure><img src="covers/gdrep_julaug_1993.webp" alt="GD Reporter Jul/Aug 1993" loading="lazy"/>
-                <figcaption>GD Reporter Jul/Aug 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt216">
-              <figure><img src="covers/gdrep_mayjun_1994.webp" alt="GD Reporter May/Jun 1994" loading="lazy"/>
-                <figcaption>GD Reporter May/Jun 1994</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt217">
-              <figure><img src="covers/gdrep_julaug_1994.webp" alt="GD Reporter Jul/Aug 1994" loading="lazy"/>
-                <figcaption>GD Reporter Jul/Aug 1994</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt218">
-              <figure><img src="covers/gdrep_marapr_1994.webp" alt="GD Reporter Mar/Apr 1994" loading="lazy"/>
-                <figcaption>GD Reporter Mar/Apr 1994</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt219">
-              <figure><img src="covers/gdrep_marapr_1993.webp" alt="GD Reporter Mar/Apr 1993" loading="lazy"/>
-                <figcaption>GD Reporter Mar/Apr 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt220">
-              <figure><img src="covers/gdrep_sepoct_1996.webp" alt="GD Reporter Sep/Oct 1996" loading="lazy"/>
-                <figcaption>GD Reporter Sep/Oct 1996</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt221">
-              <figure><img src="covers/gdrep_marapr_1996.webp" alt="GD Reporter Mar/Apr 1996" loading="lazy"/>
-                <figcaption>GD Reporter Mar/Apr 1996</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt222">
-              <figure><img src="covers/gdrep_janfeb_1997.webp" alt="GD Reporter Jan/Feb 1997" loading="lazy"/>
-                <figcaption>GD Reporter Jan/Feb 1997</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt223">
-              <figure><img src="covers/gdrep_marapr_2000.webp" alt="GD Reporter Mar/Apr 2000" loading="lazy"/>
-                <figcaption>GD Reporter Mar/Apr 2000</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt224">
-              <figure><img src="covers/gdrep_julaug_1997.webp" alt="GD Reporter Jul/Aug 1997" loading="lazy"/>
-                <figcaption>GD Reporter Jul/Aug 1997</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt225">
-              <figure><img src="covers/gdrep_marapr_1991.webp" alt="GD Reporter Mar/Apr 1991" loading="lazy"/>
-                <figcaption>GD Reporter Mar/Apr 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt226">
-              <figure><img src="covers/gdrep_janfeb_1995.webp" alt="GD Reporter Jan/Feb 1995" loading="lazy"/>
-                <figcaption>GD Reporter Jan/Feb 1995</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt227">
-              <figure><img src="covers/gdrep_sepoct_1991.webp" alt="GD Reporter Sep/Oct 1991" loading="lazy"/>
-                <figcaption>GD Reporter Sep/Oct 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt228">
-              <figure><img src="covers/gdrep_novdec_1996.webp" alt="GD Reporter Nov/Dec 1996" loading="lazy"/>
-                <figcaption>GD Reporter Nov/Dec 1996</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt229">
-              <figure><img src="covers/gdrep_sepoct_1995.webp" alt="GD Reporter Sep/Oct 1995" loading="lazy"/>
-                <figcaption>GD Reporter Sep/Oct 1995</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt230">
-              <figure><img src="covers/gdrep_julaug_1995.webp" alt="GD Reporter Jul/Aug 1995" loading="lazy"/>
-                <figcaption>GD Reporter Jul/Aug 1995</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt231">
-              <figure><img src="covers/gdrep_janfeb_1994.webp" alt="GD Reporter Jan/Feb 1994" loading="lazy"/>
-                <figcaption>GD Reporter Jan/Feb 1994</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt232">
-              <figure><img src="covers/gdrep_sepoct_1993.webp" alt="GD Reporter Sep/Oct 1993" loading="lazy"/>
-                <figcaption>GD Reporter Sep/Oct 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt233">
-              <figure><img src="covers/gdrep_novdec_1993.webp" alt="GD Reporter Nov/Dec 1993" loading="lazy"/>
-                <figcaption>GD Reporter Nov/Dec 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt234">
-              <figure><img src="covers/gdrep_novdec_1995.webp" alt="GD Reporter Nov/Dec 1995" loading="lazy"/>
-                <figcaption>GD Reporter Nov/Dec 1995</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt235">
-              <figure><img src="covers/gdrep_janfeb_1996.webp" alt="GD Reporter Jan/Feb 1996" loading="lazy"/>
-                <figcaption>GD Reporter Jan/Feb 1996</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt236">
-              <figure><img src="covers/gdrep_mayjun_1996.webp" alt="GD Reporter May/Jun 1996" loading="lazy"/>
-                <figcaption>GD Reporter May/Jun 1996</figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-      <a href="#close" class="css-modal-close"></a>
-    </div>
-
-    <div class="css-modal-target3" id="css-modal-target3">  <!-- Unsere Deutsche Dogge -->
-      <div class="cmt">
-        <div class="swiper sample-slider-lib" style="">
-          <div class="swiper-wrapper">
-            <a class="swiper-slide" href="" id="mt31">
-              <figure><img src="covers/unsere_jan_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jan 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt32">
-              <figure><img src="covers/unsere_feb_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Feb 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt33">
-              <figure><img src="covers/unsere_mar_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Mar 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt34">
-              <figure><img src="covers/unsere_apr_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Apr 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt35">
-              <figure><img src="covers/unsere_may_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge May 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt36">
-              <figure><img src="covers/unsere_jun_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jun 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt37">
-              <figure><img src="covers/unsere_jul_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jul 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt38">
-              <figure><img src="covers/unsere_aug_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Aug 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt39">
-              <figure><img src="covers/unsere_sep_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Sep 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt310">
-              <figure><img src="covers/unsere_oct_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Oct 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt311">
-              <figure><img src="covers/unsere_nov_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Nov 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt312">
-              <figure><img src="covers/unsere_dec_1989.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Dec 1989</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt313">
-              <figure><img src="covers/unseredd_jan1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jan 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt314">
-              <figure><img src="covers/unseredd_feb1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Feb 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt315">
-              <figure><img src="covers/unseredd_mar1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Mar 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt316">
-              <figure><img src="covers/unseredd_jan1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jan 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt317">
-              <figure><img src="covers/unseredd_apr1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Apr 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt318">
-              <figure><img src="covers/unseredd_may1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge May 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt319">
-              <figure><img src="covers/unseredd_jun1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jun 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt320">
-              <figure><img src="covers/unseredd_jul1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge July 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt321">
-              <figure><img src="covers/unseredd_aug1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Aug 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt322">
-              <figure><img src="covers/unseredd_sep1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Oct 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt323">
-              <figure><img src="covers/unseredd_oct1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Sep 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt324">
-              <figure><img src="covers/unseredd_nov1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Nov 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt325">
-              <figure><img src="covers/unseredd_dec1990.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Dec 1990</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt326">
-              <figure><img src="covers/unsere_jan_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jan 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt327">
-              <figure><img src="covers/unsere_feb_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Feb 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt328">
-              <figure><img src="covers/unsere_mar_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Mar 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt329">
-              <figure><img src="covers/unsere_apr_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Apr 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt330">
-              <figure><img src="covers/unsere_may_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge May 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt331">
-              <figure><img src="covers/unsere_jun_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jun 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt332">
-              <figure><img src="covers/unsere_jul_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jul 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt333">
-              <figure><img src="covers/unsere_aug_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Aug 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt334">
-              <figure><img src="covers/unsere_sep_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Sep 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt335">
-              <figure><img src="covers/unsere_oct_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Oct 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt336">
-              <figure><img src="covers/unsere_nov_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Nov 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt337">
-              <figure><img src="covers/unsere_dec_1991.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Dec 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt338">
-              <figure><img src="covers/unsere_dd_jan_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jan 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt339">
-              <figure><img src="covers/unsere_dd_feb_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Feb 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt340">
-              <figure><img src="covers/unsere_mar_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Mar 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt341">
-              <figure><img src="covers/unsere_apr_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Apr 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt342">
-              <figure><img src="covers/unsere_may_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge May 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt343">
-              <figure><img src="covers/unsere_jun_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jun 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt344">
-              <figure><img src="covers/unsere_jul_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jul 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt345">
-              <figure><img src="covers/unsere_aug_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Aug 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt346">
-              <figure><img src="covers/unsere_sep_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Sep 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt347">
-              <figure><img src="covers/unsere_oct_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Oct 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt348">
-              <figure><img src="covers/unsere_nov_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Nov 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt349">
-              <figure><img src="covers/unsere_dec_1992.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Dec 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt350">
-              <figure><img src="covers/unsere_jan_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jan 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt351">
-              <figure><img src="covers/unsere_feb_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Feb 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt352">
-              <figure><img src="covers/unsere_mar_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Mar 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt353">
-              <figure><img src="covers/unsere_apr_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Apr 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt354">
-              <figure><img src="covers/unsere_may_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge May 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt355">
-              <figure><img src="covers/unsere_dd_jun_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jun 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt356">
-              <figure><img src="covers/unsere_dd_jul_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Jul 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt357">
-              <figure><img src="covers/unsere_dd_aug_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Aug 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt358">
-              <figure><img src="covers/unsere_dd_sep_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Sep 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt359">
-              <figure><img src="covers/unsere_dd_oct_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Oct 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt360">
-              <figure><img src="covers/unsere_dd_nov_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Nov 1993</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt361">
-              <figure><img src="covers/unsere_dd_dec_1993.webp" loading="lazy"/>
-                <figcaption>Unsere Deutsche Dogge Dec 1993</figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-      <a href="#close" class="css-modal-close"></a>
-    </div>
-
-    <div class="css-modal-target4" id="css-modal-target4">  <!-- Great Dane review -->
-      <div class="cmt">
-        <div class="swiper sample-slider-lib" style="">
-          <div class="swiper-wrapper">
-            <a class="swiper-slide" href="" id="mt41">
-              <figure><img src="covers/gdr_jan_2014.webp" alt="Great Dane review Jan 2014" loading="lazy"/>
-                <figcaption>Great Dane review Jan 2014</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt42">
-              <figure><img src="covers/gdr_jul_2016.webp" alt="Great Dane review Jul 2016" loading="lazy"/>
-                <figcaption>Great Dane review Jul 2016</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt43">
-              <figure><img src="covers/gdr_apr_2015.webp" alt="Great Dane review Apr 2015" loading="lazy"/>
-                <figcaption>Great Dane review Apr 2015</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt44">
-              <figure><img src="covers/gdr_jan_2019.webp" alt="Great Dane review Jan 2019" loading="lazy"/>
-                <figcaption>Great Dane review Jan 2019</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt45">
-              <figure><img src="covers/gdr_jan_2017.webp" alt="Great Dane review Jan 2017" loading="lazy"/>
-                <figcaption>Great Dane review Jan 2017</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt46">
-              <figure><img src="covers/gdr_jul_2015.webp" alt="Great Dane review Jul 2015" loading="lazy"/>
-                <figcaption>Great Dane review Jul 2015</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt47">
-              <figure><img src="covers/gdr_oct_2014.webp" alt="Great Dane review Oct 2014" loading="lazy"/>
-                <figcaption>Great Dane review Oct 2014</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt48">
-              <figure><img src="covers/gdr_apr_2017.webp" alt="Great Dane review Apr 2017" loading="lazy"/>
-                <figcaption>Great Dane review Apr 2017</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt49">
-              <figure><img src="covers/gdr_jul_2014.webp" alt="Great Dane review Jul 2014" loading="lazy"/>
-                <figcaption>Great Dane review Jul 2014</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt410">
-              <figure><img src="covers/gdr_apr_2025.webp" alt="Great Dane review flipbook Apr 2025" loading="lazy"/>
-                <figcaption>Great Dane review Apr 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt411">
-              <figure><img src="covers/gdr_aug_2025.webp" alt="Great Dane review flipbook Aug 2025" loading="lazy"/>
-                <figcaption>Great Dane review Aug 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt412">
-              <figure><img src="covers/gdr_feb_2025.webp" alt="Great Dane review flipbook Feb 2025" loading="lazy"/>
-                <figcaption>Great Dane review Feb 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt413">
-              <figure><img src="covers/gdr_jul_2025.webp" alt="Great Dane review flipbook Jul 2025" loading="lazy"/>
-                <figcaption>Great Dane review Jul 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt414">
-              <figure><img src="covers/gdr_jun_2025.webp" alt="Great Dane review flipbook Jun 2025" loading="lazy"/>
-                <figcaption>Great Dane review Jun 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt415">
-              <figure><img src="covers/gdr_mar_2025.webp" alt="Great Dane review flipbook Mar 2025" loading="lazy"/>
-                <figcaption>Great Dane review Mar 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt416">
-              <figure><img src="covers/gdr_may_2025.webp" alt="Great Dane review flipbook May 2025" loading="lazy"/>
-                <figcaption>Great Dane review May 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt417">
-              <figure><img src="covers/gdr_oct_2024.webp" alt="Great Dane review flipbook Oct 2024" loading="lazy"/>
-                <figcaption>Great Dane review Oct 2024 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt418">
-              <figure><img src="covers/gdr_sep_2025.webp" alt="Great Dane review flipbook Sep 2025" loading="lazy"/>
-                <figcaption>Great Dane review Sep 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt419">
-              <figure><img src="covers/gdr_nov_2025.webp" alt="Great Dane review flipbook Nov 2025" loading="lazy"/>
-                <figcaption>Great Dane review Nov 2025 flipbook</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt420">
-              <figure><img src="covers/gdr_oct_2025.webp" alt="Great Dane review flipbook Oct 2025" loading="lazy"/>
-                <figcaption>Great Dane review Oct 2025 flipbook</figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-      <a href="#close" class="css-modal-close"></a>
-    </div>
-
-    <div class="css-modal-target5" id="css-modal-target5">  <!-- Great Dane World -->
-      <div class="cmt">
-        <div class="swiper sample-slider-lib" style="">
-          <div class="swiper-wrapper">
-            <a class="swiper-slide" href="" id="mt51">
-              <figure><img src="covers/dw_may_2003.webp" alt="Great Dane World May/Jun 2003" loading="lazy"/>
-                <figcaption>Great Dane World May/Jun 2003</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt52">
-              <figure><img src="covers/dw_mar_2002.webp" alt="Great Dane World Mar/Apr 2002" loading="lazy"/>
-                <figcaption>Great Dane World Mar/Apr 2002</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt53">
-              <figure><img src="covers/dw_nov_2002.webp" alt="Great Dane World Nov/Dec 2002" loading="lazy"/>
-                <figcaption>Great Dane World Nov/Dec 2002</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt54">
-              <figure><img src="covers/dw_sep_2003.webp" alt="Great Dane World Sep/Oct 2003" loading="lazy"/>
-                <figcaption>Great Dane World Sep/Oct 2003</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt55">
-              <figure><img src="covers/dw_may_2002.webp" alt="Great Dane World May/Jun 2002" loading="lazy"/>
-                <figcaption>Great Dane World May/Jun 2002</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt56">
-              <figure><img src="covers/dw_jul_2002.webp" alt="Great Dane World Jul/Aug 2002" loading="lazy"/>
-                <figcaption>Great Dane World Jul/Aug 2002</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt57">
-              <figure><img src="covers/dw_jan_2002.webp" alt="Great Dane World Jan/Feb 2002" loading="lazy"/>
-                <figcaption>Great Dane World Jan/Feb 2002</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt58">
-              <figure><img src="covers/dw_ma_2003.webp" alt="Great Dane World Mar/Apr 2003" loading="lazy"/>
-                <figcaption>Great Dane World Mar/Apr 2003</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt59">
-              <figure><img src="covers/dw_oct_2001.webp" alt="Great Dane World Oct/Nov/Dec 2001" loading="lazy"/>
-                <figcaption>Great Dane World Oct/Nov/Dec 2001</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt510">
-              <figure><img src="covers/dw_sepoct_2002.webp" alt="Great Dane World Sep/Oct 2002" loading="lazy"/>
-                <figcaption>Great Dane World Sep/Oct 2002</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt511">
-              <figure><img src="covers/dw_julaug_2008.webp" alt="Great Dane World Jul/Aug 2008" loading="lazy"/>
-                <figcaption>Great Dane World Jul/Aug 2008</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt512">
-              <figure><img src="covers/dw_.webp" alt="Great Dane World ?" loading="lazy"/>
-                <figcaption>Great Dane World ?</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt513">
-              <figure><img src="covers/dw_1994.webp" alt="Great Dane World ? 1994" loading="lazy"/>
-                <figcaption>Great Dane World ? 1994</figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-      <a href="#close" class="css-modal-close"></a>
-    </div>
-
-    <div class="css-modal-target6" id="css-modal-target6">  <!-- Great Dane Quarterly -->
-      <div class="cmt">
-        <div class="swiper sample-slider-lib" style="">
-          <div class="swiper-wrapper">
-            <a class="swiper-slide" href="" id="mt61">
-              <figure><img src="covers/dq_jan_1992.webp" alt="Great Dane Quarterly Jan 1992" loading="lazy"/>
-                <figcaption>Great Dane Quarterly Jan 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt62">
-              <figure><img src="covers/dq_fall_1991.webp" alt="Great Dane Quarterly Fall 1991" loading="lazy"/>
-                <figcaption>Great Dane Quarterly Fall 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt63">
-              <figure><img src="covers/dq_win_1992.webp" alt="Great Dane Quarterly Winter 1992" loading="lazy"/>
-                <figcaption>Great Dane Quarterly Winter 1992</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt64">
-              <figure><img src="covers/dq_spring_1991.webp" alt="Great Dane Quarterly Spring 1991" loading="lazy"/>
-                <figcaption>Great Dane Quarterly Spring 1991</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt65">
-              <figure><img src="covers/dq_fall_1992.webp" alt="Great Dane Quarterly Fall 1992" loading="lazy"/>
-                <figcaption>Great Dane Quarterly Fall 1992</figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-      <a href="#close" class="css-modal-close"></a>
-    </div>
-
-    <div class="css-modal-target7" id="css-modal-target7">  <!-- DDC Almanach -->
-      <div class="cmt">
-        <div class="swiper sample-slider-lib" style="">
-          <div class="swiper-wrapper">
-            <a class="swiper-slide" href="" id="mt71">
-              <figure><img src="covers/DDC_almanach_1988.webp" alt="DDC Almanach" loading="lazy"/>
-                <figcaption>DDC Almanach 1988</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt72">
-              <figure><img src="covers/ddc_almanach_1986.jpg" alt="DDC Almanach" loading="lazy"/>
-                <figcaption>DDC Almanach 1986</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt73">
-              <figure><img src="covers/ddc_almanach_1984.jpg" alt="DDC Almanach" loading="lazy"/>
-                <figcaption>DDC Almanach 1984</figcaption>
-              </figure>
-            </a>
-            <a class="swiper-slide" href="" id="mt74">
-              <figure><img src="covers/ddc_almanach_1982.jpg" alt="DDC Almanach" loading="lazy"/>
-                <figcaption>DDC Almanach 1982</figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-      <a href="#close" class="css-modal-close"></a>
-    </div>
+</div>
+</div>
 
   </section>
 </main>
@@ -1963,22 +1139,22 @@
     <ul class="contacts__left-list" style="list-style-type:none; padding-left: 0px;">
 
       <li>
-      	<a href="mailto:oleg_vsh@umail.ru" style="margin-right:20px; margin-left:20px;" target="_blank"  aria-label="www">	<img src="img/email-icon.svg" width="40" height="40" alt="umail">
+      	<a  style="margin-right:20px; margin-left:20px;" target="_blank"  aria-label="www">	<img src="img/email-icon.svg" width="40" height="40" alt="umail">
 		</a>
       </li>
       
       <li>
-        <a href="https://api.whatsapp.com/send?phone=+79688762614" style="margin-right:20px;" target="_blank"  aria-label="вотсап" > <img src="img/whatsapp-icon.svg" width="40" height="40" alt="whatsapp">
+        <a  style="margin-right:20px;" target="_blank"  aria-label="вотсап" > <img src="img/whatsapp-icon.svg" width="40" height="40" alt="whatsapp">
         </a>
       </li>
       
       <li>
-        <a href="https://telegram.im/@gretdane" style="margin-right:20px;" target="_blank" aria-label="телеграм">
+        <a  style="margin-right:20px;" target="_blank" aria-label="телеграм">
           <img src="img/telegram-icon.svg" width="40" height="40" alt="telegram">
         </a>
       </li>
       <li>
-        <a href="https://www.facebook.com/gretdane" style="margin-right:10px;" target="_blank" aria-label="facebook">
+        <a  style="margin-right:10px;" target="_blank" aria-label="facebook">
           <img src="img/facebook-icon.svg" width="40" height="40" alt="telegram">
         </a>
       </li>
@@ -1997,261 +1173,12 @@
   </div>
 </footer>
 
-<script defer src="js/swiper.js"></script>
 <script defer src="js/focus-visible.min.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
+<script src="js/libx-slider.js"></script>
 
 <script>
-  // Функция для получения параметров из URL
-  function getUrlParams() {
-    const params = {};
-    const queryString = window.location.search.substring(1);
-    const pairs = queryString.split('&');
-
-    for (let i = 0; i < pairs.length; i++) {
-      const pair = pairs[i].split('=');
-      if (pair[0]) {
-        params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
-      }
-    }
-    return params;
-  }
-
-  // Функция для получения значения параметра из адресной строки (из старого скрипта)
-  function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-  }
-
-  // Функция для открытия модального окна и перехода к слайду
-  function openModalWithSlide(modalId, slideId) {
-    console.log('Opening modal:', modalId, 'with slide:', slideId);
-
-    // Проверяем существование модального окна
-    const modal = document.getElementById(modalId);
-    if (!modal) {
-      console.error(`Модальное окно с id="${modalId}" не найдено`);
-      return;
-    }
-
-    // Открываем модальное окно через hash
-    window.location.hash = modalId;
-
-    // Даем время на открытие модального окна
-    setTimeout(() => {
-      // Ищем Swiper внутри модального окна
-      const swiperContainer = modal.querySelector('.swiper');
-      if (!swiperContainer) {
-        console.error('Контейнер Swiper не найден в модальном окне');
-        return;
-      }
-
-      // Получаем экземпляр Swiper
-      const swiperInstance = swiperContainer.swiper;
-      if (!swiperInstance) {
-        console.error('Экземпляр Swiper не найден');
-        console.log('Trying to initialize Swiper manually...');
-
-        // Пробуем инициализировать Swiper если его нет
-        const newSwiper = new Swiper(swiperContainer, {
-          loop: true,
-          centeredSlides: true,
-          slidesPerView: 1,
-          navigation: {
-            nextEl: swiperContainer.querySelector(".swiper-button-next"),
-            prevEl: swiperContainer.querySelector(".swiper-button-prev"),
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 3,
-              centeredSlides: true,
-            },
-          },
-          on: {
-            init: function() {
-              goToSlideInSwiper(this, slideId);
-            }
-          }
-        });
-        return;
-      }
-
-      // Переходим к нужному слайду
-      goToSlideInSwiper(swiperInstance, slideId);
-
-    }, 100); // Уменьшил задержку
-  }
-
-  // Функция для перехода к слайду в Swiper
-  function goToSlideInSwiper(swiperInstance, slideId) {
-    console.log('Looking for slide:', slideId, 'in swiper:', swiperInstance);
-
-    if (!swiperInstance || !swiperInstance.slides) {
-      console.error('Swiper instance or slides not found');
-      return;
-    }
-
-    // Находим индекс слайда
-    let slideIndex = -1;
-
-    // Метод 1: Ищем по ID в слайдах
-    for (let i = 0; i < swiperInstance.slides.length; i++) {
-      const slide = swiperInstance.slides[i];
-      // Проверяем есть ли элемент с таким ID внутри слайда
-      if (slide.querySelector(`#${slideId}`)) {
-        slideIndex = i;
-        break;
-      }
-      // Также проверяем сам слайд
-      if (slide.id === slideId) {
-        slideIndex = i;
-        break;
-      }
-      // Проверяем data-swiper-slide-index
-      if (slide.getAttribute('data-swiper-slide-index') === slideId) {
-        slideIndex = i;
-        break;
-      }
-    }
-
-    // Метод 2: Если не нашли, ищем по всем элементам с таким ID
-    if (slideIndex === -1) {
-      const slideElement = document.getElementById(slideId);
-      if (slideElement) {
-        // Находим родительский слайд Swiper
-        const parentSlide = slideElement.closest('.swiper-slide');
-        if (parentSlide && swiperInstance.slides) {
-          for (let i = 0; i < swiperInstance.slides.length; i++) {
-            if (swiperInstance.slides[i] === parentSlide) {
-              slideIndex = i;
-              break;
-            }
-          }
-        }
-      }
-    }
-
-    console.log('Found slide index:', slideIndex);
-
-    if (slideIndex !== -1) {
-      // Переключаемся на слайд
-      swiperInstance.slideTo(slideIndex, 0);
-      console.log('Slided to index:', slideIndex);
-    } else {
-      console.error(`Слайд с id или содержащий элемент "${slideId}" не найден в Swiper`);
-      console.log('Available slides:', swiperInstance.slides.length);
-
-      // Выводим все ID элементов внутри слайдов для отладки
-      for (let i = 0; i < swiperInstance.slides.length; i++) {
-        const slide = swiperInstance.slides[i];
-        const elementsWithId = slide.querySelectorAll('[id]');
-        console.log(`Slide ${i} has elements with IDs:`,
-          Array.from(elementsWithId).map(el => el.id));
-      }
-    }
-  }
-
-  // Основная функция инициализации из URL
-  function initModalFromUrl() {
-    const params = getUrlParams();
-    console.log('URL params:', params);
-
-    if (params.modal && params.slide) {
-      // Открываем модальное окно с нужным слайдом
-      openModalWithSlide(params.modal, params.slide);
-    } else if (params.modal) {
-      // Если передан только modal, просто открываем его
-      window.location.hash = params.modal;
-    }
-  }
-
-  // Функция для проверки готовности Swiper
-  function waitForSwiper(selector, callback, maxAttempts = 10, interval = 100) {
-    let attempts = 0;
-
-    function check() {
-      attempts++;
-      const element = document.querySelector(selector);
-      if (element && element.swiper) {
-        callback(element.swiper);
-      } else if (attempts < maxAttempts) {
-        setTimeout(check, interval);
-      } else {
-        console.warn(`Swiper not found for selector: ${selector}`);
-        // Все равно вызываем инициализацию
-        setTimeout(initModalFromUrl, 500);
-      }
-    }
-
-    check();
-  }
-
-  // Функция для обработки радио-кнопок из старого скрипта
-  function initRadioButtonsFromUrl() {
-    // Получаем значение параметра id из адресной строки
-    var idFromUrl = getParameterByName('id');
-
-    // Если id присутствует в адресной строке
-    if (idFromUrl) {
-      // Устанавливаем радио-инпут в состояние "checked" по id
-      var radioInput = document.getElementById(idFromUrl);
-      if (radioInput) {
-        radioInput.checked = true;
-
-        // Прокручиваем страницу до радио-инпута
-        radioInput.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }
-  }
-
-  // Функция для инициализации Swiper слайдеров из старого скрипта
-  function initSwipers() {
-    // Инициализация первого слайдера (sample-slider)
-    const sampleSlider = document.querySelector('.sample-slider');
-    if (sampleSlider && !sampleSlider.swiper) {
-      var swiper1 = new Swiper('.sample-slider', {
-        loop: true,                         // loop
-        speed: 3000,
-        effect: 'fade',
-        fadeEffect: {           // added
-          crossFade: true     // added(resolve the overlapping of the slides)
-        },                      // added
-        autoplay: {                         // auto play
-          delay: 3000,
-        },
-      });
-    }
-
-    // Инициализация второго слайдера (sample-slider-lib)
-    const sampleSliderLib = document.querySelector('.sample-slider-lib');
-    if (sampleSliderLib && !sampleSliderLib.swiper) {
-      var swiper2 = new Swiper('.sample-slider-lib', {
-        loop: true,                         // loop
-        centeredSlides: true,
-        slidesPerView: 1,
-        navigation: {                       // navigation(arrows)
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-            centeredSlides: true,
-          },
-        },
-      });
-    }
-  }
-
   // Функция для инициализации меню из старого скрипта
   function initMenu() {
     // Проверяем наличие jQuery
@@ -2291,66 +1218,7 @@
       });
     });
   }
-
-  // Основная функция инициализации
-  function initAll() {
-    // Инициализация радио-кнопок из URL
-    initRadioButtonsFromUrl();
-
-    // Инициализация Swiper слайдеров
-    initSwipers();
-
-    // Инициализация меню
-    initMenu();
-
-    // Инициализация модальных окон из URL
-    setTimeout(() => {
-      // Проверяем все swiper контейнеры в модальных окнах
-      const modalSwipers = document.querySelectorAll('.cmt .swiper');
-      if (modalSwipers.length > 0) {
-        // Ждем пока первый Swiper инициализируется
-        waitForSwiper('.cmt .swiper', function() {
-          initModalFromUrl();
-        });
-      } else {
-        // Если нет swiper в модалках, все равно запускаем
-        setTimeout(initModalFromUrl, 500);
-      }
-    }, 500);
-  }
-
-  // Ждем загрузки DOM
-  document.addEventListener('DOMContentLoaded', function() {
-    initAll();
-  });
-
-  // Также обрабатываем изменения hash (если пользователь закрывает модалку)
-  window.addEventListener('hashchange', function() {
-    // Если hash изменился и у нас есть параметры в URL, переинициализируем
-    const params = getUrlParams();
-    if (params.modal && params.slide && window.location.hash.includes(params.modal)) {
-      // Даем немного времени на анимацию открытия
-      setTimeout(() => {
-        openModalWithSlide(params.modal, params.slide);
-      }, 300);
-    }
-  });
-  
-  // обработка нажатия на img в span
-  document.addEventListener("click", function (e) {
-const el = e.target.closest(".open-pdf-external");
-if (!el) return;
-
-e.preventDefault();
-e.stopPropagation();
-
-const viewer = el.dataset.viewer;
-const docId = el.dataset.doc;
-const page = Math.max(1, parseInt(el.dataset.page, 10) || 1);
-const back = el.dataset.back || (window.location.pathname + window.location.search + window.location.hash);
-const url = `${viewer}?doc=${encodeURIComponent(docId)}&page=${page}&back=${encodeURIComponent(back)}`;
-window.location.href = url;
-});
+  initMenu();
 </script>
 </body>
 </html>
