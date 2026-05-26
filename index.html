@@ -397,11 +397,16 @@ color: var(--font-grey);
 
 .libx-wrap .libx-bullets.swiper-pagination-bullets.swiper-pagination-horizontal {
 position: static;
-width: auto;
+width: min(220px, 90vw);
+
 display: flex;
+flex-wrap: wrap;
+
 align-items: center;
 justify-content: center;
-gap: 8px;
+
+gap: 8px 10px;
+margin: 0 auto;
 }
 
 .libx-wrap .libx-bullets .swiper-pagination-bullet {
@@ -434,10 +439,9 @@ overflow: hidden;
 }
 
 .libx-wrap .libx-pagination-row {
-position: relative;
-z-index: 2;
-margin-top: 1rem;
-padding-bottom: 0.5rem;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 /* lib background */
