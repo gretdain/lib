@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <title>Opening document…</title>
+</head>
+
+<body>
+
+<script>
+(function () {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    if (!id || !/^[A-Za-z0-9_-]+$/.test(id)) {
+        window.location.replace('/');
+        return;
+    }
+
+    const resolver = new URL('https://greatdaneworld.dog/');
+
+    resolver.searchParams.set('doc', id);
+    resolver.searchParams.set(
+        'back',
+        'https://gretdain.com/#books'
+    );
+
+    window.location.replace(resolver.toString());
+})();
+</script>
+
+</body>
+</html>
