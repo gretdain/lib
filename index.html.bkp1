@@ -1072,7 +1072,7 @@ right: calc(50% - min(21vw, 210px) - 78px);
 <div class="swiper-slide libx-slide"
 data-slide-id="comp_ant"
 data-action="pdf"
-data-target="/open/?id=complete_antology">
+data-target="https://greatdaneworld.dog/?doc=complete_antology&back=https://gretdain.com/#books">
 <div class="libx-card">
 <div class="libx-image-wrap">
 <img src="covers/complete_antology.webp" alt="complete_antology">
