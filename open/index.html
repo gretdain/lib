@@ -41,14 +41,12 @@
    * Everything else is a document object.
    * The backend resolver decides where the physical PDF lives.
    */
-  const back = 'https://gretdain.com/#books';
+	window.location.replace(
+	  'https://greatdaneworld.dog/?doc=' +
+	  encodeURIComponent(id) +
+  '&from=gretdain'
+);
 
-  window.location.replace(
-    'https://greatdaneworld.dog/?doc=' +
-    encodeURIComponent(id) +
-    '&back=' +
-    encodeURIComponent(back)
-  );
 })();
 </script>
 </body>
