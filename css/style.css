@@ -538,6 +538,15 @@ width: 100%;
 height: 100%;
 }
 
+.libx-slide {
+  color: inherit;
+  text-decoration: none;
+}
+
+.libx-slide:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
       .intro img {
         object-fit: contain;
