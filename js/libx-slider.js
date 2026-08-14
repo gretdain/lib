@@ -128,17 +128,21 @@ return;
 /*
  * Ordinary links.
  *
- * Их пока вообще не меняем.
  */
 
 if (action === 'link') {
+  const objectId = slide.dataset.object;
 
-const target = slide.dataset.target;
+  if (objectId && /^[A-Za-z0-9_-]+$/.test(objectId)) {
+    window.location.href = '/open/?id=' + encodeURIComponent(objectId);
+    return;
+  }
 
-if (target) {
-window.location.href = target;
-}
-
+  // Transitional fallback for link cards not migrated yet.
+  const legacyTarget = slide.dataset.target;
+  if (legacyTarget) {
+    window.location.href = legacyTarget;
+  }
 }
 
 });

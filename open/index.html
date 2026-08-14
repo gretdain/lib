@@ -1,34 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-    <title>Opening document…</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Opening…</title>
 </head>
 
 <body>
-
 <script>
 (function () {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
 
-    if (!id || !/^[A-Za-z0-9_-]+$/.test(id)) {
-        window.location.replace('/');
-        return;
-    }
+  if (!id || !/^[A-Za-z0-9_-]+$/.test(id)) {
+    window.location.replace('/#books');
+    return;
+  }
 
-    const resolver = new URL('https://greatdaneworld.dog/');
+  /*
+   * Logical link registry.
+   * Presentation pages know only object IDs.
+   * Physical destinations live here.
+   */
+  const links = {
+    udd: 'https://greatdaneworld.dog/?tag=udd',
+    std: 'https://greatdaneworld.dog/?tag=std',
+    gdca: 'https://greatdaneworld.dog/?tag=gdca',
+    gdm: 'https://greatdanemagazine.com/',
+    gdw: 'https://greatdaneworld.dog/',
+    dd: 'https://greatdaneworld.dog/?tag=dd',
+    ddc_almanach: 'https://greatdaneworld.dog/?tag=ddc_almanach'
+  };
 
-    resolver.searchParams.set('doc', id);
-    resolver.searchParams.set(
-        'back',
-        'https://gretdain.com/#books'
-    );
+  if (Object.prototype.hasOwnProperty.call(links, id)) {
+    window.location.replace(links[id]);
+    return;
+  }
 
-    window.location.replace(resolver.toString());
+  /*
+   * Everything else is a document object.
+   * The backend resolver decides where the physical PDF lives.
+   */
+  const back = 'https://gretdain.com/#books';
+
+  window.location.replace(
+    'https://greatdaneworld.dog/?doc=' +
+    encodeURIComponent(id) +
+    '&back=' +
+    encodeURIComponent(back)
+  );
 })();
 </script>
-
 </body>
 </html>
