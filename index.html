@@ -32,11 +32,7 @@
 
   <style>
 
-    /*   shared  */
-	
-	.f-carousel:not(.is-horizontal) {
-    visibility: hidden;
-	}
+    /* Shared */
 
     .footer {
       width: 100%;
@@ -48,19 +44,14 @@
 
     .footer-container {
       display: block;
-      align-items: center;
     }
 
     .contacts__left-list {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-pack: distribute;
       justify-content: center;
     }
 
-
-    /*        modal lib */
+    /* Swiper */
 
     .swiper {
       margin-left: 0;
@@ -74,7 +65,7 @@
     }
 
     .swiper-button-next {
-      margin-top: 0px;
+      margin-top: 0;
       position: absolute;
       top: 50%;
       right: 0;
@@ -92,391 +83,236 @@
       width: 25px;
       height: 45px;
       transform: translateY(-50%);
-      margin-top: 0px;
+      margin-top: 0;
       color: var(--grey-black);
     }
 
+    /* Prevent uninitialized Fancyapps carousel from flashing as a vertical image list */
 
-    /* Анимации */
-    @keyframes scale {
-      0% {
-        transform: scale(0);
-      }
-      100% {
-        transform: scale(1);
-      }
+    .f-carousel:not(.is-horizontal) {
+      visibility: hidden;
     }
 
-    @keyframes move {
-      0% {
-        right: -80px;
-      }
-      100% {
-        right: 20px;
-      }
+    /* Library */
+
+    .lib a:hover {
+      border-bottom: 0;
     }
 
-    @keyframes bg {
-      0% {
-        background: rgba(189, 189, 189, 0.2);
-      }
-      100% {
-        background: rgba(189, 189, 189, 0.7);
-      }
+    .lib {
+      clear: both;
+      overflow: hidden;
+      padding-bottom: 2rem;
     }
 
-    /* Контейнер для кнопки */
-    .css-modal-target-container, .css-modal-target-container1, .css-modal-target-container2, .css-modal-target-container3, .css-modal-target-container4, .css-modal-target-container5, .css-modal-target-container6, .css-modal-target-container7 {
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    section.lib#books {
+      background: linear-gradient(180deg, #f4efe4 0%, #e8dfcf 100%);
+      padding-top: 2rem;
+      padding-bottom: 2.5rem;
     }
 
-    .css-modal-open {
-      display: inline-flex;
-      margin: 15px;
-      margin-top: 45px;
-      text-decoration: none;
-      position: relative;
-      font-size: 20px;
-      line-height: 20px;
-      padding: 72px 30px 0 30px;
-      color: #FFF;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
+    .libx-wrap {
+      width: 100%;
       overflow: hidden;
     }
 
-    .css-modal-open:hover, .css-modal-open:active, .css-modal-open:focus {
-      color: #FFF;
+    .libx-wrap,
+    .libx-wrap * {
+      box-sizing: border-box;
     }
 
-    .css-modal-open:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -50px;
-      bottom: 0;
-      left: 0;
-      border-right: 50px solid transparent;
-      /*	border-top: 50px solid #2D6B9F; */
-      transition: transform 0.5s;
-      transform: translateX(-100%);
-      z-index: -1;
+    .libx-wrap .libx-shell {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
     }
 
-    .css-modal-open:hover:before, .css-modal-open:active:before, .css-modal-open:focus:before {
-      transform: translateX(0);
+    .libx-wrap .libx-slider.swiper {
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      float: none;
     }
 
-    /* Контейнер, который затемняет страницу */
-    .css-modal-target, .css-modal-target1, .css-modal-target2, .css-modal-target3, .css-modal-target4, .css-modal-target5, .css-modal-target6, .css-modal-target7 {
-      display: none;
+    .libx-wrap .libx-slider .swiper-wrapper {
+      align-items: stretch;
     }
 
-    .css-modal-target:target, .css-modal-target1:target, .css-modal-target2:target, .css-modal-target3:target, .css-modal-target4:target, .css-modal-target5:target, .css-modal-target6:target, .css-modal-target7:target {
+    .libx-wrap .libx-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .libx-wrap .libx-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #efe7d8;
+      padding: 8px;
+      border-radius: 12px;
+      box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(90, 70, 45, 0.16);
+    }
+
+    .libx-wrap .libx-image-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 4;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 4;
-      position: fixed;
+      overflow: hidden;
+      border-radius: 7px;
+    }
+
+    .libx-wrap .libx-image-wrap img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border: 0;
+    }
+
+    .libx-wrap .libx-caption {
+      position: absolute;
       left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      animation: bg 0.5s ease;
-      background: var(--target-background)
-    }
-
-    /* Модальное окно */
-    /*.css-modal-target*/
-
-    .cmt {
-      font-family: 'OpenSans', sans-serif;
-      padding: 5px;
-      max-width: 80%;
-      max-height: 60%;
-      transition: 0.5s;
-      border: 1px solid #3A3A3A;
-      border-radius: 12px;
-      background: var(--modal-background);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+      right: 0;
+      bottom: 0;
+      padding: 0.9em 1em 1em;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0));
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.28s ease, transform 0.28s ease;
+      pointer-events: none;
       text-align: center;
-      overflow: auto;
-      animation: scale 0.5s ease;
-      width: 600px;
-      height: 320px;
-      display: flex;
-      margin: 10%;
-      min-width: 50%;
-      min-height: 50%;
+      border-radius: 0 0 7px 7px;
     }
 
-    /* Кнопка с крестиком закрывающая окно */
-    .css-modal-close {
-      position: relative;
+    .libx-wrap .libx-slide.libx-caption-visible .libx-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .libx-wrap .libx-slide:hover .libx-caption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .libx-wrap .libx-nav {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    .libx-wrap .libx-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      border: 0;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+      cursor: pointer;
+      transition: background 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+      background: transparent;
+      box-shadow: none;
+      color: #8a8a8a;
+    }
+
+    .libx-wrap .libx-btn svg {
+      width: 22px;
+      height: 22px;
       display: block;
     }
 
-    .css-modal-close:after {
-      content: "";
-      width: 30px;
-      height: 30px;
-      border: 1px solid var(--font-grey);
-      border-radius: 6px;
-      position: fixed;
-      z-index: 10;
-      top: 60px;
-      right: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
-      background-image: url("img/cross.svg");
-      background-color: var(--modal-background);
-      background-size: cover;
-      animation: move 0.5s ease;
+    .libx-wrap .libx-btn:hover,
+    .libx-wrap .libx-btn:focus-visible {
+      background: transparent;
+      box-shadow: none;
+      color: #5f5f5f;
     }
 
-    .css-modal-close:before {
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      content: "";
+    .libx-wrap .libx-btn:disabled {
+      opacity: 0.45;
       cursor: default;
     }
 
-    /* links */
-
-    .lib a:hover {
-      border-bottom: 0px;
+    .libx-wrap .libx-pagination-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45em;
+      margin-top: 0.8em;
     }
-	.open-pdf-external {
-	}
-	
-	/* by ChatGPT */
-/* ===== libx slider: isolated drop-in block ===== */
 
-.libx-wrap {
-width: 100%;
-}
+    .libx-wrap .libx-fraction {
+      font-size: 0.95rem;
+      line-height: 1;
+      color: var(--font-grey);
+    }
 
-.libx-wrap,
-.libx-wrap * {
-box-sizing: border-box;
-}
+    .libx-wrap .libx-bullets.swiper-pagination-bullets.swiper-pagination-horizontal {
+      position: static;
+      width: min(220px, 90vw);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 10px;
+      margin: 0 auto;
+    }
 
-.libx-wrap .libx-shell {
-position: relative;
-width: 100%;
-}
+    .libx-wrap .libx-bullets .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      margin: 0 !important;
+      opacity: 1;
+      background: rgba(120, 120, 120, 0.45);
+    }
 
-.libx-wrap .libx-slider.swiper {
-width: 100%;
-overflow: hidden;
-margin: 0;
-padding: 0;
-border: 0;
-background: transparent;
-float: none;
-}
+    .libx-wrap .libx-bullets .swiper-pagination-bullet-active {
+      background: rgba(60, 60, 60, 0.95);
+    }
 
-.libx-wrap .libx-slider .swiper-wrapper {
-align-items: stretch;
-}
+    /* Shared responsive rules */
 
-.libx-wrap .libx-slide {
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-user-select: none;
-}
+    .swiper-slide figure {
+      max-width: 100%;
+      width: 80%;
+      border: none;
+    }
 
-.libx-wrap .libx-card {
-position: relative;
-width: 100%;
-height: 100%;
-box-shadow: 0 10px 28px rgba(0,0,0,0.32);
-}
+    .swiper-slide figcaption {
+      background-color: var(--modal-background);
+    }
 
-.libx-wrap .libx-image-wrap {
-position: relative;
-width: 100%;
-aspect-ratio: 3 / 4;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-}
-
-.libx-wrap .libx-image-wrap img {
-display: block;
-width: auto;
-height: auto;
-max-width: 100%;
-max-height: 100%;
-object-fit: contain;
-border: 0;
-}
-
-.libx-wrap .libx-caption {
-position: absolute;
-left: 0;
-right: 0;
-bottom: 0;
-padding: 0.9em 1em 1em;
-background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.36), rgba(0,0,0,0));
-color: #fff;
-font-size: 0.95rem;
-line-height: 1.35;
-opacity: 0;
-transform: translateY(12px);
-transition: opacity 0.28s ease, transform 0.28s ease;
-pointer-events: none;
-text-align:center;
-}
-
-.libx-wrap .libx-slide.libx-caption-visible .libx-caption {
-opacity: 1;
-transform: translateY(0);
-}
-
-@media (hover: hover) and (pointer: fine) {
-.libx-wrap .libx-slide:hover .libx-caption {
-opacity: 1;
-transform: translateY(0);
-}
-}
-
-.libx-wrap .libx-nav {
-position: absolute;
-inset: 0;
-pointer-events: none;
-z-index: 20;
-}
-
-.libx-wrap .libx-btn {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-width: 52px;
-height: 52px;
-border: 0;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-pointer-events: auto;
-cursor: pointer;
-transition: background 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
--webkit-tap-highlight-color: transparent;
-}
-
-.libx-wrap .libx-btn svg {
-width: 22px;
-height: 22px;
-display: block;
-}
-
-.libx-wrap .libx-btn:disabled {
-opacity: 0.45;
-cursor: default;
-}
-
-.libx-wrap .libx-pagination-row {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 0.45em;
-margin-top: 0.8em;
-}
-
-.libx-wrap .libx-fraction {
-font-size: 0.95rem;
-line-height: 1;
-color: var(--font-grey);
-}
-
-.libx-wrap .libx-bullets.swiper-pagination-bullets.swiper-pagination-horizontal {
-position: static;
-width: min(220px, 90vw);
-
-display: flex;
-flex-wrap: wrap;
-
-align-items: center;
-justify-content: center;
-
-gap: 8px 10px;
-margin: 0 auto;
-}
-
-.libx-wrap .libx-bullets .swiper-pagination-bullet {
-width: 8px;
-height: 8px;
-margin: 0 !important;
-opacity: 1;
-background: rgba(120, 120, 120, 0.45);
-}
-
-.libx-wrap .libx-bullets .swiper-pagination-bullet-active {
-background: rgba(60, 60, 60, 0.95);
-}
-
-.lib {
-clear: both;
-overflow: hidden;
-padding-bottom: 2rem;
-}
-
-.libx-wrap {
-width: 100%;
-overflow: hidden;
-}
-
-.libx-wrap .libx-shell {
-position: relative;
-width: 100%;
-overflow: hidden;
-}
-
-.libx-wrap .libx-pagination-row {
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-/* lib background */
-section.lib#books {
-background:
-linear-gradient(180deg, #f4efe4 0%, #e8dfcf 100%);
-padding-top: 2rem;
-padding-bottom: 2.5rem;
-}
-
-.libx-wrap .libx-card {
-background: #efe7d8;
-padding: 8px;
-border-radius: 12px;
-box-shadow:
-0 14px 34px rgba(0,0,0,0.25),
-0 0 0 1px rgba(90,70,45,0.16);
-}
-
-.libx-wrap .libx-image-wrap {
-border-radius: 7px;
-overflow: hidden;
-}
-
-.libx-wrap .libx-caption {
-border-radius: 0 0 7px 7px;
-}
-
-/* end of lib background */
-
-	/* by ChatGPT */
+    .lib img {
+      object-fit: contain;
+      color: var(--font-grey);
+      width: 100%;
+      height: 220px;
+    }
 
     @media (max-width: 767px) {
 
@@ -484,204 +320,98 @@ border-radius: 0 0 7px 7px;
         width: 100%;
       }
 
-      .sw__right {
-        display: none;
-      }
-
+      .sw__right,
       .sw__right-row {
         display: none;
       }
 
-      .swiper-slide figure {
-        max-width: 100%;
-        width: 80%;
-        border: none;
-      }
-
       .swiper-slide figcaption {
         width: 100%;
-        background-color: var(--modal-background);
-      }
-
-      .lib img {
-        object-fit: contain;
-        color: var(--font-grey);
-        width: 100%;
-        height: 220px;
       }
 
       .footer {
         padding: 10px 0;
       }
-      
-      /* by ChatGPT */
-      
-.libx-wrap {
-padding-left: 5%;
-padding-right: 5%;
-}
 
-.libx-wrap .libx-slider .swiper {
-width: 75%;
-margin-left: auto;
-margin-right: auto;
-}
+      .libx-wrap {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
 
-.libx-wrap .libx-card {
-width: 75%;
-}
+      .libx-wrap .libx-card {
+        width: 75%;
+      }
 
+      .libx-wrap .libx-btn {
+        width: 64px;
+        height: 64px;
+      }
 
-.libx-wrap .libx-btn {
-width: 64px;
-height: 64px;
-background: transparent;
-color: #fff;
-box-shadow: none;
-border-radius: 0;
-color: #8a8a8a;
-}
+      .libx-wrap .libx-btn svg {
+        width: 42px;
+        height: 42px;
+      }
 
-.libx-wrap .libx-btn svg{
-width: 42px;
-height: 42px;
-}
+      .libx-wrap .libx-btn-prev {
+        left: calc(12.5% - 58px);
+      }
 
-.libx-wrap .libx-btn:hover,
-.libx-wrap .libx-btn:focus-visible {
-background: transparent;
-box-shadow: none;
-color: #5f5f5f;
-}
-
-.libx-wrap .libx-btn-prev {
-left: calc(12.5% - 58px);
-}
-
-.libx-wrap .libx-btn-next {
-right: calc(12.5% - 58px);
-}   
-/* by ChatGPT */
-/* ******* end of max-width: 768px ******* */
+      .libx-wrap .libx-btn-next {
+        right: calc(12.5% - 58px);
+      }
     }
 
     @media (min-width: 768px) {
 
-      .swiper-slide figure {
-        max-width: 100%;
-        width: 80%;
-        border: none;
+      .libx-wrap {
+        padding-left: 10%;
+        padding-right: 10%;
+        max-width: 1602px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      .swiper-slide figcaption {
-        background-color: var(--modal-background);
+      .libx-wrap .libx-slider.swiper {
+        width: min(42vw, 420px);
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      .lib img {
-        object-fit: contain;
-        color: var(--font-grey);
+      .libx-wrap .libx-card {
+        display: inline-block;
+      }
+
+      .libx-wrap .libx-caption {
         width: 100%;
-        height: 220px;
+        max-width: 100%;
+        margin: 0;
+        padding: 1.05em 1.15em 1.1em;
+        font-size: 1rem;
+        box-sizing: border-box;
       }
-      
-      /* by ChatGPT */
-.libx-wrap {
-padding-left: 10%;
-padding-right: 10%;
-max-width: 1602px;
-margin-left: auto;
-margin-right: auto;
-}
 
-.libx-wrap .libx-slider.swiper {
-width: min(42vw, 420px);
-margin-left: auto;
-margin-right: auto;
-}
+      .libx-wrap .libx-slide:hover .libx-caption {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-.libx-wrap .libx-slide {
-display: flex;
-justify-content: center;
-align-items: center;
-}
+      .libx-wrap .libx-btn {
+        width: 96px;
+        height: 96px;
+      }
 
-.libx-wrap .libx-card {
-position: relative;
-display: inline-block;
-width: 100%;
-}
+      .libx-wrap .libx-btn svg {
+        width: 52px;
+        height: 52px;
+      }
 
-.libx-wrap .libx-image-wrap {
-position: relative;
-width: 100%;
-aspect-ratio: 3 / 4;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-}
+      .libx-wrap .libx-btn-prev {
+        left: calc(50% - min(21vw, 210px) - 78px);
+      }
 
-.libx-wrap .libx-image-wrap img {
-display: block;
-object-fit: contain;
-}
-
-.libx-wrap .libx-caption {
-position: absolute;
-left: 0;
-right: 0;
-bottom: 0;
-width: 100%;
-max-width: 100%;
-margin: 0;
-padding: 1.05em 1.15em 1.1em;
-font-size: 1rem;
-line-height: 1.35;
-box-sizing: border-box;
-background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.36), rgba(0,0,0,0));
-color: #fff;
-opacity: 0;
-transform: translateY(12px);
-transition: opacity 0.28s ease, transform 0.28s ease;
-pointer-events: none;
-}
-
-.libx-wrap .libx-slide:hover .libx-caption,
-.libx-wrap .libx-slide.libx-caption-visible .libx-caption {
-opacity: 1;
-transform: translateY(0);
-}
-
-.libx-wrap .libx-btn {
-width: 96px;
-height: 96px;
-background: transparent;
-box-shadow: none;
-border-radius: 0;
-color: #8a8a8a;
-}
-
-.libx-wrap .libx-btn svg {
-width: 52px;
-height: 52px;
-}
-
-.libx-wrap .libx-btn:hover,
-.libx-wrap .libx-btn:focus-visible {
-background: transparent;
-box-shadow: none;
-color: #5f5f5f;
-}
-
-.libx-wrap .libx-btn-prev {
-left: calc(50% - min(21vw, 210px) - 78px);
-}
-
-.libx-wrap .libx-btn-next {
-right: calc(50% - min(21vw, 210px) - 78px);
-}
-/* by ChatGPT */
-/* ******* end of min-width: 768px ******* */
+      .libx-wrap .libx-btn-next {
+        right: calc(50% - min(21vw, 210px) - 78px);
+      }
     }
 
   </style>
