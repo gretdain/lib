@@ -107,6 +107,8 @@ input[type=number] {
 html {
 font-family: 'OpenSans', sans-serif;
 font-weight: 400;
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 
 * {
@@ -366,13 +368,24 @@ position: fixed;
 	}
 
 .menu:hover .dropdown-content {
-	display: block;
-	}
+  display: block;
+}
 
 .links:hover .dropdown-content {
-	display: block;
-	}
+  display: block;
+}
 
+.menu.is-open .dropdown-content,
+.links.is-open .dropdown-content {
+  display: block;
+}
+
+/* После выбора ссылки принудительно закрываем,
+   даже если курсор ещё находится над меню */
+.menu.menu-closed .dropdown-content,
+.links.menu-closed .dropdown-content {
+  display: none;
+}
 .dropdown-content a {
 	display: block;
 	color: #000000;
@@ -516,11 +529,9 @@ max-width: 1080px;
 .gallery,
 .lib,
 .intro {
-		scroll-margin-top: 2em;
-		scroll-behavior: smooth;
-		padding-top: 50px;
-		padding-bottom: 2px;
-	border-bottom: 1px solid var(--amethyst);
+    padding-top: 50px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--amethyst);
 }
 
 .lib {
@@ -752,6 +763,12 @@ color: var(--amethyst);
 
 /* media */
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @media (max-width: 1300px) {}
 
 
@@ -932,6 +949,10 @@ color: var(--amethyst);
 
 	.menu-button {
 	display:block;
+	  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
 	}
 	.link-button {
 	display:block;
