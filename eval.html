@@ -3,841 +3,257 @@
 
 <head>
 <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Немецкий дог оценка by gret dain</title>
 
-<link rel="stylesheet" href="css/swiper-bundle.min.css">	
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
 <link rel="stylesheet" href="css/style.css">
 
-
-<!--references
-https://gretdain.com/eval.html#evans
-https://gretdain.com/eval.html#riggsbee
-https://gretdain.com/eval.html#move
-https://gretdain.com/eval.html#colors
-https://gretdain.com/eval.html#lib
-https://gretdain.com/eval.html#breedtype
-https://gretdain.com/eval.html#westminster
-
-https://gretdain.com/eval.html#square_j
-......
-https://gretdain.com/eval.html#balance_r
-......
-
--->
-
 <style>
-
-/* shared */
-	.heading1 {
-		scroll-margin-top: 3em;
-		scroll-behavior: smooth;
-	text-align:center !important;
-	font-size:120%;
-	}
-
-	.heading2 {
-		scroll-margin-top: 3em;
-		scroll-behavior: smooth;
-	text-align:center !important;
-/*	padding-top:65px; */
-	font-size:120%;
-	}
-
-	
-/*	body, html {
-	position: relative;
-	}*/
-
-	.f-left {
-	float:left;
-	}
-	.container p {
-	margin-top:6.0pt;
-	}
-	.table-wrap {
-	display: inline-block;
-	}	
-	table {
-	  width: 100%;
-	}
-	th, td {
-/*	font-size:80%;*/
-	text-align:center;
-	}
-	td p {
-	padding-left:1em;
-	margin-bottom:1.5em;
-	padding-right:1em;
-	}
-	.cell-capture {
-	padding-left:1em;
-	padding-right:1em;
-	padding-bottom:1.5em;
-	}
-	.cell-picture {
-	padding:5px; 
-	background-color:var(--l-grey);
-	}
-	.container-table {
-	margin-right: auto;
-	margin-left: auto;
-	/*padding: 0 160px;*/
-	/*	  text-align: center;*/
-	/*padding-left: 0;*/
-	/*padding-right: 0;*/
-	max-width: 1000px;
-	}
-	.article img {
-        object-fit: contain;
-        max-width: 90%;
-	max-height: 90%;
-	color: var(--font-grey);
-		}
-	  
-/*	DIV table*/
-
-.div-table {
-  display: table; 
-	table-layout:fixed;  
-  width: 100%;         
-/*  background-color: #eee;*/
-  border: 1px solid #666666;         
-/*  border-spacing: 5px; cellspacing:poor IE support for  this */
+/* Page headings */
+.heading1,
+.heading2 {
+  scroll-margin-top: 3em;
+  scroll-behavior: smooth;
+  text-align: center !important;
+  font-size: 120%;
 }
 
-.div-table-row {}
-/*  display: table-row;
-	border:none;
-  width: auto;
-  clear: both;*/
+/* Content */
+.container p {
+  margin-top: 6pt;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border: 1px solid grey;
+}
+
+th,
+td {
+  text-align: center;
+}
+
+td p {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 1.5em;
+}
+
+.cell-capture {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1.5em;
+}
+
+.cell-picture {
+  padding: 5px;
+  background-color: var(--l-grey);
+}
+
+.article img {
+  object-fit: contain;
+  max-width: 90%;
+  max-height: 90%;
+  color: var(--font-grey);
+}
+
+figcaption {
+  color: var(--font-grey);
+}
+
+/* DIV tables used around paired Swipers */
+.div-table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid #666666;
+}
 
 .div-table-col {
-  float: left; /* fix for  buggy browsers */
-  display: table-column;         
-  width: 50%; 
-	border:none;
-/*  background-color: #ccc;*/
-	padding-left:1em;
+  float: left;
+  display: table-column;
+  width: 50%;
+  border: none;
+  padding-left: 1em;
 }
 
-    .sample-slider img{
-	align-items: center; /* it works */
-    }
-<!--	.slideshow-container {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  width: 300px;
-	  height: 300px;
-	  border: 1px solid var(--amethyst);
-	  float: left;
-	  margin-right: 15px;
-	  margin-bottom: 15px;
-	  margin-top: 15px;
-	}-->
-
-	.swiper-wrapper {
-	align-items: center; /* it works */
-	}
-
-	.swiper-slide {
-	  display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-	}
-
-
-/*	double slide move	*/
-	.swiper_text, swiper_text1 {
-	display: flex;
-	}
-
-	.swiper_text .swiper_slide {
-	display:flex;
-	justify-content: center;
-	}
-
-	.swiper_text1 .swiper_slide {
-	display:flex;
-	justify-content: center;
-	}
-
-/* links */	    
-
-/*	a {
-	outline: none;
-	text-decoration: none;
-	padding: 1px;
-	}*/
-
-	a:link {
-	color: var(--amethyst);
-	}
-
-/*	a:focus,
-	a:hover {
-	border-bottom: 1px solid;
-	font-weight: bold;
-	color: var(--amethyst);
-	}*/
-
-	a:active {
-	color: var(--amethyst);
-	}
-
-/*	.ext_link {
-	background: url(img/ext_link2.svg) no-repeat 100% 0;
-	background-size: 16px 16px;
-	padding-right: 19px;
-	}*/
-
-
-/*	.header-top__container {
-	position: fixed;
-	z-index: 99;
-	background-color: var(--e5-bg);
-	}*/
-
-/*.dropdown-content {
-    display: none;
-    position: absolute;
-    max-width: 300px;
-    width: 800%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
-    padding: 5px 5px;
-    font-family: inherit;
-    border-radius: 8px;
-    background-color: rgba(210, 210, 210, 0.9);
-    border: 2px solid var(--amethyst);
-    color: var(--white-inversion);
-    z-index: 99;
-    top: 98%;
-}*/
-
-.swiper-button-next {
-  margin-top: 0px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 25px;
-  height: 45px;
-  transform: translateY(-50%);
-  outline: 0;
-	font-weight:bold;
-	color: var(--grey-black);
-
+/* Swiper */
+.swiper-wrapper {
+  align-items: center;
 }
 
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper_text {
+  display: flex;
+}
+
+.swiper-button-next,
 .swiper-button-prev {
   position: absolute;
   top: 50%;
-  left: 0;
   width: 25px;
   height: 45px;
+  margin-top: 0;
   transform: translateY(-50%);
-  margin-top: 0px;
-	font-weight:bold;
-	color: var(--grey-black);
-
+  font-weight: bold;
+  color: var(--grey-black);
 }
-    .sample-slider-lib {
-	display: flex;
-	  justify-content: center;
-	  align-items: center;
-	}
 
-/* ???? */
-/*  ids	*/
-	#evans p {
-	text-align:center;
-	}
-	#westminster {
-	text-align:-webkit-center;
-	text-align:-moz-center;
-	}
+.swiper-button-next {
+  right: 0;
+  outline: 0;
+}
 
-	.cmt {
-	font-family: 'OpenSans', sans-serif;
-	padding: 5px;
-	max-width: 80%;
-	max-height: 60%;
-	transition: 0.5s;
-	border: 1px solid #3A3A3A;
-	border-radius: 12px;
-	background: var(--modal-background);
-	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-	text-align: center;
-	overflow: auto;
-	animation: scale 0.5s ease;
-	width:600px;
- 	height:320px; 
-	display: flex;
-	margin: 10%;
-	min-width: 50%;
-	min-height: 50%;
-	}
+.swiper-button-prev {
+  left: 0;
+}
+
+.sample-slider-west {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Links */
+a:link,
+a:active {
+  color: var(--amethyst);
+}
+
+/* Section-specific */
+#evans p {
+  text-align: center;
+}
+
+#westminster {
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
 
 .cmt-west {
-	display:flex;
-    padding: 2px;
-    max-width: 690px;
-    max-height: 460px;
-	width:90%;
-	height:90%;
-    transition: 0.5s;
-    border: 6px solid #FFF;
-    border-radius: 10px;
-    background: #EEE;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-    overflow: auto;
+  display: flex;
+  padding: 2px;
+  max-width: 690px;
+  max-height: 460px;
+  width: 90%;
+  height: 90%;
+  transition: 0.5s;
+  border: 6px solid #fff;
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+  overflow: auto;
 }
 
-	.cmt-west .swiper-slide {
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	align-content:center;
-	}
-
-	.cmt-west figure {
-	max-width:100%;
-	width:90% !important;
-	margin:25px;
-	overflow:hidden;
-	border: none;
-	}
-
-	.cmt-west iframe {
-	max-width:100%;	
-	display: block; 
-	width: 100%; 
-	height: 360px; 
-	border: none;
-	flex-grow: 1; 
-	margin: 0; 
-	padding: 0;
-	border:none;
-	}
-	
-/* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
-.css-modal-details {
-/*    height: 70px;*/
-    display:contents;
-/*    align-items:center;
-    justify-content:center;
-	text-align: center;*/
+.cmt-west .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-/*                 banner                   */ 
-/* Кнопка для открытия баннера */
-.css-modal-details summary {
-    display: inline-flex;
-/*    margin: 5px; 
-    text-decoration: none;
-    position: relative;
-    font-size: 14px;
-    line-height: 20px;*/
-    padding: 12px 20px;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: var(--target-background);
-    cursor: pointer;
-    border: 2px solid #AAA;
-	border-radius: 5px;
-    overflow: hidden;
-/*    z-index: 1;
-	width:40%; */
-}
-
-/*	.css-modal-details summary:hover,
-	.css-modal-details summary:active,
-	.css-modal-details summary:focus {
-	color: #FFF;
-	}
-
-	.css-modal-details summary:before {
-	    content: '';
-	    position: absolute;
-	    top: 0;
-	    right: -50px;
-	    bottom: 0;
-	    left: 0;
-	    border-right: 50px solid transparent;
-	    border-top: 50px solid #2D6B9F;
-	    transition: transform 0.5s;
-	    transform: translateX(-100%);
-	    z-index: -1;
-	}
-
-	.css-modal-details summary:hover:before,
-	.css-modal-details summary:active:before,
-	.css-modal-details summary:focus:before {
-	transform: translateX(0);
-	} */
- 
-/* Кнопка при открытом окне переходит на весь экран */
-.css-modal-details details[open] summary {
-    cursor: default;
-    opacity: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-}
- 
-/* Контейнер, который затемняет страницу */
-.css-modal-details details .cmc {
-    display:flex;
-    align-items:center;
-    justify-content:center;    
-}
-.css-modal-details details[open] .cmc {
-    pointer-events: none;
-    z-index: 4;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    animation: bg 0.5s ease;
-    background: rgba(107, 107, 107, 0.7);
-}
- 
-/* Модальное окно */
-.css-modal-details details .cmt {
-    font-family: 'OpenSans', sans-serif;  
-    max-width: 600px;
-    max-height: 70%;
-    transition: 0.5s;
-/*    border: 6px solid #FFF;*/
-    border-radius: 10px;
-/*    background: #FFF;*/
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-    text-align: left;
-    overflow: auto;
-}
-.css-modal-details details[open] .cmt {
-    animation: scale 0.5s ease;
-    z-index: 4;
-    pointer-events: auto;
-}
- 
-/* Декоративная кнопка с крестиком */
-.css-modal-details details[open] .cmc:after {
-	content: "";
-	width: 30px;
-	height: 30px;
-	border: 1px solid var(--font-grey);
-	border-radius: 6px;
-	position: fixed;
-	z-index: 10;
-	top: 60px;
-	right: 20px;
-	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-	background-image: url("img/cross2.svg");
-	background-color: var(--modal-background);
-	background-size: cover;
-	animation: move 0.5s ease;
-}
-
-/* Кнопка с крестиком закрывающая окно */
-	.css-modal-close {
-	position: relative;
-	display: block;
-	}
-
-	.css-modal-close:after {
-	content: "";
-	width: 30px;
-	height: 30px;
-	border: 1px solid var(--font-grey);
-	border-radius: 6px;
-	position: fixed;
-	z-index: 10;
-	top: 60px;
-	right: 20px;
-	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-	background-image: url("img/cross.svg");
-	background-color: var(--modal-background);
-	background-size: cover;
-	animation: move 0.5s ease;
-	}
-
-	.css-modal-close:before {
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	content: "";
-	cursor: default;
-	}
-
-
-
-/*        modal lib */
-<!--	.sample-slider #lib{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40%;
-	height: auto;
-	border: 1px solid var(--amethyst);
-	float: left;
-	margin-right: 1em;
-	}
-
-    .sample-slider img  #lib {
-	align-items: center; 
-    }
-
-	.swiper   #lib {
-	margin-left:0;
-	padding:0.5em;
-	}
-	
-	.swiper-slide   #lib {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	}
-
-	.swiper-button-next   #lib {
-	margin-top: 0px;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	width: 25px;
-	height: 45px;
-	transform: translateY(-50%);
-	outline: 0;
-	color: var(--grey-black);
-	}
-
-	.swiper-button-prev   #lib {
-	  position: absolute;
-	  top: 50%;
-	  left: 0;
-	  width: 25px;
-	  height: 45px;
-	  transform: translateY(-50%);
-	  margin-top: 0px;
-	color: var(--grey-black);
-
-	}
-
-    .sample-slider-lib   #lib {
-	display: flex;
-	  justify-content: center;
-	  align-items: center;
-	}
-    .sample-slider-lib img  #lib {
-	  justify-content: center;
-	  align-items: center;
-	} -->
-
-    .sample-slider-west {
-	display: flex;
-	  justify-content: center;
-	  align-items: center;
-	}
-
-
-/* media  */
+/* Mobile */
 @media (max-width: 767px) {
-/*	.title-a {
-	display: none;
-  	}
-  	.title-b {
-	display: inline-block;
-  	}	*/
-  	table td {
-	display: inline-table;
-	/*border-style:none;*/
-	width: 100%;
-	text-align: center;
-	}
-	td p {
-	text-align:center !important
-	}
-.div-table-col {
-/*  float: left;  fix for  buggy browsers 
-  display: table-column;         */
-  width: 100%;         
-/*  background-color: #ccc;  */
-}	
-	.td-3 {
-	width:100%;
-	}
+  table td {
+    display: inline-table;
+    width: 100%;
+    text-align: center;
+  }
 
-	table {
-	border-collapse: collapse;
-	}
-	tr {
-	border: 1px solid grey; 
-	}
-/*	.cell-capture {
-	padding-left:0;
-	}*/
+  td p {
+    text-align: center !important;
+  }
 
-	.container {
-/*	padding-left: 5%;
-	padding-right: 5%;
-	padding-top:65px;*/
-	}
-		.article img {
-	padding-top:5px;
-		}
-/*	figure {
-	  float: left;
-	  width: 100%;
-	  text-align: center;
-	  font-style: italic;
-	  font-size: smaller;
-	  text-indent: 0;
-	  border: thin silver solid;
-	  margin-left: 0;
-	  margin-right: 0.5em;
-	  padding: 0.5em;
-	}	*/
-	figcaption {
-	/*  position: absolute;
-	  bottom: 0;
-	  padding:  15px;*/
-	  color: var(--font-grey);
-    font-size:0.8em;
-	/*  background-color: rgba( 29, 20, 17, .6);
-	  text-align: right;
-	  text-transform: uppercase;
-	  font-size: 1rem;
-	  width: 100%;*/
-	}
-	video {
-	width: 100%;
-	}
-/*      .article img {
-        object-fit: contain;
-        max-width: 90%;
-	max-height: 90%;
-	color: var(--font-grey);
-	}*/
-	img.scaled {
-	width: 100%;
-	}	
-/*	figcaption {
-	}*/
-/*	.table-wrap {
-    overflow-y: scroll;
-	}*/
-	.sample-slider{
-	  border: none;
-    }
+  .div-table-col,
+  .td-3 {
+    width: 100%;
+  }
 
-	.sample-slider p{
-	margin-left:15px;
-	margin-bottom:15px;
-	}
+  .article img {
+    padding-top: 5px;
+  }
 
-	.swiper-wrapper {
-	height:auto;
-	}
-/*	.button_menu {
-	background:var(--e5-bg);
-	height:50px;
-	width:50px;
-	}*/
-/*	.dropdown-content {
-    font-size: 20px;
-    line-height: 30px;
-	}*/
-		.css-modal-details summary {
-	width:80%;
-	}
-	.cmt-table td {
-	display: table-cell;
-	width:100% ;
-	font-size:12px;
-	}
-	.css-modal-details details .cmt {
-	/*    font-size: 12px;*/
-	padding: 5px;
-	width:90%;
-	}
-	.swiper-slide figure {
-	max-width:100%;
-	width:80%;
-	border:none;
-	}
-	.swiper-slide figcaption {
-	width:100%;
-	background-color: var(--modal-background);
-	}
-	.cmt img {
-        object-fit: contain;
-	color: var(--font-grey);
-	width:100%;
-	height:280px;
-	}
-	}  
+  figcaption {
+    font-size: 0.8em;
+  }
 
+  video {
+    width: 100%;
+  }
+
+  .sample-slider {
+    border: none;
+  }
+
+  .swiper-wrapper {
+    height: auto;
+  }
+}
+
+/* Desktop */
 @media (min-width: 768px) {
-/*	.title-b {
-	display: none;
-  	}
-  	.title-a {
-    	display: inline-block;
-  	}*/
-	.td-3 {
-	width:33%;
-	}
-	table td {
-	width: 50%;
-	}
-	table {
-	border-collapse: collapse;
-	}
-	tr {
-	border: 1px solid grey; 
-	}
-	td {
-	}
+  .td-3 {
+    width: 33%;
+  }
 
-/*	.cell-capture {
-	padding-left:1em;
-	}*/
-	.color_table {
-	width: 20%;
-	padding: 10px;
-	}
-/*	.container {
-	padding-left: 10%;
-	padding-right: 10%;
-	}*/
-/*	figure {
-	  float: left;
-	  width: 40%;
-	  text-align: left;
-	  font-style: italic;
-	  font-size: smaller;
-	  text-indent: 0;
-	  border: thin silver solid;
-	  padding-right: 0.5em;
-	margin: 0 0 0 0;
-	}	*/
-	figcaption {
-	/*  position: absolute;
-	  bottom: 0;
-	  padding:  15px;*/
-	  color: var(--font-grey);
-	/*  background-color: rgba( 29, 20, 17, .6);
-	  text-align: right;
-	  text-transform: uppercase;
-	  font-size: 1rem;
-	  width: 100%;*/
-	}
-figure {
-	margin: 0 auto;
-	text-align: center;
-	}
-figure img {
-  vertical-align: top;
-  width: 40em;
-	}
-	.width-80 {
-	max-width:1602px;
-	width: 80%;
-	margin-top:1em;
-	float:none;
-	}
-	.width-50 {
-	width: 50%;
-	}
-	video {
-	width: 50%;
-	}
-/*    .article img {
-    object-fit: contain;
-    max-width: 100%;
-	max-height: 100%;
-	color: var(--font-grey);
-	}*/
-	img.scaled {
-	width: 100%;
-	}	
-/*	figcaption {
-    font-size:0.8em;
-	}*/
-	.sample-slider{
-	display: block;
-/*	justify-content: center;
-	align-items: center;*/
-	width: 100%;
-	height: auto;
-	border: none;
-	float: left;
-	margin:0;
-/*	padding:5px;*/
-	}
-	.swiper-wrapper {
-	width:50%;
-	}
-	.swiper-zoom-container {
-	margin-left: 5%;
-/*	justify-content: left;*/
-	z-index: 1;
-	}
-/*	.dropdown-content {
-    font-size: 18px;
-    line-height: 35px;
-	}*/
-/*	.button_menu {
-	background:var(--e5-bg);
-	}*/
-/*	.link-button {
-	height:50px;
-	width:50px;
-	}*/
-		.css-modal-details summary {
-	width:80%;
-	}
-	.css-modal-details details .cmt {
-	font-size: 14px;
-	padding: 20px;
-	width:80%;
-	}
-	.swiper-slide figure {
-	max-width:100%;
-	width:80%;
-	border:none;
-	}
-	.swiper-slide figcaption {
-	width:100%;
-	background-color: var(--modal-background);
-	}
-	.cmt img {
-        object-fit: contain;
-	color: var(--font-grey);
-	width:100%;
-	height:280px;
-	}
+  table td {
+    width: 50%;
+  }
 
-    	}
+  .color_table {
+    width: 20%;
+    padding: 10px;
+  }
 
+  figure {
+    margin: 0 auto;
+    text-align: center;
+  }
 
+  figure img {
+    vertical-align: top;
+    width: 40em;
+  }
+
+  .width-80 {
+    max-width: 1602px;
+    width: 80%;
+    margin-top: 1em;
+    float: none;
+  }
+
+  video {
+    width: 50%;
+  }
+
+  .sample-slider {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    float: left;
+    margin: 0;
+  }
+
+  .swiper-wrapper {
+    width: 50%;
+  }
+
+  .swiper-zoom-container {
+    margin-left: 5%;
+    z-index: 1;
+  }
+}
 </style>
 
 </head>
@@ -861,7 +277,6 @@ figure img {
        style="left:1px"
        aria-label="Разделы сайта">
 
-    <a href="#eval">Оценка</a>
     <a href="#anatomy">Биология</a>
     <a href="#history">История</a>
     <a href="#faces">Лица</a>
@@ -976,7 +391,7 @@ figure img {
 <td> <img src="img/eval060.jpg"></td>
 <td> <img src="img/eval061.jpg"></td>
 </tr>
-</table> 		
+</table>
 <br>
 
 <table>
@@ -984,7 +399,7 @@ figure img {
 <td> <img src="img/eval062.jpg"><p> Удлиненное тело </p></td>
 <td> <img src="img/eval063.jpg"><p> Удлиненное тело </p></td>
 </tr>
-</table> 
+</table>
 <br>
 <p  class="heading2" id="head_j"><b>Голова</b></p>
 <br>
@@ -1004,6 +419,7 @@ figure img {
 <tr>
 <td> <img src="img/eval068.jpg"><p style="text-align:left;">Расхождение линий морды и черепа вызывается опущенной мордой...</p></td>
 <td> <img src="img/eval069.jpg"><p> ...или "завалом" черепа.</p> </td>
+</tr>
 <tr>
 <td> <img src="img/eval070.jpg"><p style="text-align:left;">Не следует путать опущенную морду с наличием линии экспрессии...</p></td>
 <td> <img src="img/eval071.jpg"><p style="text-align:left;">...которая в отличие от мастифоидов не является складкой кожи.</p></td>
@@ -1053,7 +469,7 @@ figure img {
 <td> <img src="img/eval090.jpg"><p>Излишне выраженные мышцы на щеках</p></td>
 <td> <img src="img/eval091.jpg"></td>
 </tr>
-</table> 
+</table>
 <br>
 <br>
 <p  class="heading2" id="eyes_j"><b>Глаза</b></p>
@@ -1064,7 +480,7 @@ figure img {
 <td class="td-3"> <img src="img/eval094.jpg"><p>Хорошо расположенные глаза</p></td>
 <td class="td-3"> <img src="img/eval095.jpg"><p>Глаза расположены очень узко</p></td>
 </tr>
-</table> 
+</table>
 <table>
 <tr>
 <td> <img src="img/eval092.jpg"><p>Правильные миндалевидные глаза</p></td>
@@ -1078,7 +494,7 @@ figure img {
 <td> <img src="img/eval100.jpg"><p>Энтропион. Заворот века</p></td>
 <td> <img src="img/eval101.jpg"><p>Эктропион. Выворот века</p></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <p class="heading2" id="ears_j"><b>Уши</b></p>
@@ -1090,14 +506,14 @@ figure img {
 <td class="td-3"> <img src="img/eval104.jpg"><p>Уши посажены низко</p></td>
 </tr>
 
-</table> 
+</table>
 <table>
 <tr>
 <td class="td-3"> <img src="img/eval105.jpg"><p>Уши маленькие</p></td>
 <td class="td-3"> <img src="img/eval106.jpg"><p>Уши большие</p></td>
 <td class="td-3"> <img src="img/eval107.jpg"><p>Уши смещены назад</p></td>
 </tr>
-</table> 
+</table>
 
 <table>
 <tr>
@@ -1105,7 +521,7 @@ figure img {
 <td class="td-3"> <img src="img/eval109.jpg"><p>Уши посажены высоко</p></td>
 <td class="td-3"> <img src="img/eval110.jpg"><p>Уши посажены низко</p></td>
 </tr>
-</table> 
+</table>
 
 <table>
 <tr>
@@ -1113,7 +529,7 @@ figure img {
 <td class="td-3"> <img src="img/eval112.jpg"><p>Уши смещены назад, очень маленькие</p></td>
 <td class="td-3"> <img src="img/eval113.jpg"><p>Уши завернуты</p></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <p class="heading2" id="neck_j"><b>Шея</b></p>
@@ -1131,7 +547,7 @@ figure img {
 <td class="td-3"> <img src="img/eval115.jpg"><p>Вертикально поставленная шея</p></td>
 <td class="td-3"> <img src="img/eval116.jpg"><p>Подвес</p></td>
 </tr>
-</table> 
+</table>
 
 <table>
 <tr>
@@ -1139,7 +555,7 @@ figure img {
 <td class="td-3"> <img src="img/eval118.jpg"><p>Шея без изгиба</p></td>
 <td class="td-3"> <img src="img/eval119.jpg"><p>Грубая, тяжелая шея</p></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <table>
@@ -1151,7 +567,7 @@ figure img {
 <td> <img src="img/eval122.jpg"><p>Прямая, грубая шея</p></td>
 <td> <img src="img/eval123.jpg"><p>Отвислая кожа на шее (подвес)</p></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <p class="heading2" id="body_j"><b>Корпус</b></p>
@@ -1166,7 +582,7 @@ figure img {
 <td> <img src="img/eval126.jpg"><p>Опущенная грудь</p></td>
 <td> <img src="img/eval127.jpg"><p>Мелкая грудь</p></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <table>
@@ -1175,7 +591,7 @@ figure img {
 <td class="td-3"> <img src="img/eval129.jpg"><p>Правильная грудная клетка</p></td>
 <td class="td-3"> <img src="img/eval130.jpg"><p>Бочкообразная грудная клетка</p></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <table>
@@ -1211,14 +627,14 @@ figure img {
 <td> <img src="img/eval145.jpg"><p>Горбатая спина</p></td>
 <td> <img src="img/eval146.jpg"><p>Поднятый зад</p></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <p  align=center style='margin-bottom:0in;margin-bottom:.0001pt;
-text-align:center; font-size:80%;'>Подборка рисунков Jill Evans. <a target=”_blank” class="ext_link" href="http://daneaffaire.com/aboutjill.html"> Опубликовано</a> Laura Munro.</p>
+text-align:center; font-size:80%;'>Подборка рисунков Jill Evans. <a target="_blank" class="ext_link" href="http://daneaffaire.com/aboutjill.html"> Опубликовано</a> Laura Munro.</p>
 <br>
-			<hr>	
-			<p style="text-align:center">***</p>	
+			<hr>
+			<p style="text-align:center">***</p>
 	</div>
 
 	<div class="container"  id="riggsbee">
@@ -1226,20 +642,20 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <p class="heading1"><b>Пропорции и баланс немецкого дога</b></p>
 
 <p style="font-size:80%" >Фрагменты, заключенные в двойные кавычки, взяты из стандарта породы Great Dane,
-принятого 28 апреля 1999 года, ранее доступного на сайте <a target=”_blank” class="ext_link" href="https://www.akc.org"> AKC</a> (American Kennel Club). Изменения стандарта, принятые в 2010 и 2018 годах, не касались баланса или пропорций.</p>
+принятого 28 апреля 1999 года, ранее доступного на сайте <a target="_blank" class="ext_link" href="https://www.akc.org"> AKC</a> (American Kennel Club). Изменения стандарта, принятые в 2010 и 2018 годах, не касались баланса или пропорций.</p>
 
 <p>При первом взгляде на породистую собаку обычно рассматривают отдельные ее части: голову, окрас, переднюю и
 заднюю часть, хвост.  По мере более внимательного изучения происходит переход к
 восприятию собаки в целом.  "Собака в целом" не означает, что отдельные, типичные черты породы менее важны.  Это значит,
 что типаж породы определяется всей собакой так же, как отдельными чертами.</p>
 
-<p>Сбалансированная, цельная собака не просто имеет правильные отдельные части. 
+<p>Сбалансированная, цельная собака не просто имеет правильные отдельные части.
 Эти части находятся в правильном соотношении друг с другом.  Стандарт описывает
 дога так: "...общее строение должно быть сбалансированным...." и
 "...это всегда единое целое - Аполлон среди собак". </p>
 
 <p>Словарь определяет баланс как "гармоничное или правильное соотношение". При оценке  судьи
-видят собак в целом и выделяют сначала тех из них, кто правильно сбалансирован, и потом будут рассматривать 
+видят собак в целом и выделяют сначала тех из них, кто правильно сбалансирован, и потом будут рассматривать
 какие-либо детали.  Если общая форма и баланс собаки неправильные, эта собака, скорее всего, не
 будет оцениваться.</p>
 
@@ -1259,7 +675,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 естественное.</p>
 </td>
 </tr>
-</table> 
+</table>
 <br>
 
 <p class="heading2" id="balance_r"><b>Баланс</b></p>
@@ -1276,9 +692,9 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 сочетание этих трех качеств - часть того, что отличает дога от других пород.</p>
 
 <p>Размер у дога - это его рост.  Стандарт устанавливает минимальную высоту 30 дюймов
-(около 75см) для кобелей и 28 дюймов (70см)  для сук (а желательно больше). 
+(около 75см) для кобелей и 28 дюймов (70см)  для сук (а желательно больше).
 Эти минимальные значения относятся к шестимесячным щенкам, когда они впервые выходят
-на ринг.  В иллюстрированном стандарте [Американского клуба породы]  говорится, 
+на ринг.  В иллюстрированном стандарте [Американского клуба породы]  говорится,
 что средний рост взрослых особей составляет 34
 дюйма (85см) для кобелей и 32 дюйма (80 см) для сук. Там также говорится, что
 при прочих равных условиях более крупные доги предпочтительнее. Большой рост
@@ -1289,13 +705,13 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 "подчеркнутая подтянутость".  Многие определения элегантности включают
 грациозность, которая происходит из плавных непрерывных чистых линий и изгибов.</p>
 
-<p>Основательность, сила и мощь проявляются в хорошей мускулатуре и костях.  
+<p>Основательность, сила и мощь проявляются в хорошей мускулатуре и костях.
 Глубина и ширина являются характеристиками корпуса и грудной клетки. Кобель
 "массивнее" чем сука, но оба крупные. Массивность должна быть
 уравновешена элегантностью.</p>
 <br>
 
-  <form id="divtable" style="position:relative;z-index:-1;">
+  <form style="position:relative;z-index:-1;">
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1312,7 +728,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 				</div>
                 <div class="div-table-col">
 				<p class="cell-capture">Суки на фото иллюстрируют баланс размера, элегантности и мощи; в них есть гармония.<br>Кобели на фото также обладают элегантностью при хорошем размере и мощи.</p>
-				</div>				
+				</div>
 			  </div>
             </div>
   </form>
@@ -1341,7 +757,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 роста, он становится пропорциональнее и сглаженнее.</p>
 <br>
 
-  <form id="divtable" style="position:relative;z-index:-1;">
+  <form style="position:relative;z-index:-1;">
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1354,7 +770,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 				</div>
                 <div class="div-table-col">
 				<p class="cell-capture">Палевый кобель на фото квадратный, тогда как суки, скорее, укороченные.</p>
-				</div>				
+				</div>
 			  </div>
             </div>
   </form>
@@ -1369,7 +785,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 соответствующей элегантностью, а кобель меньше, то это, скорее, в негативе для
 кобеля, чем к достоинству суки.</p>
 <br>
-  <form id="divtable" style="position:relative;z-index:-1;">
+  <form style="position:relative;z-index:-1;">
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1383,8 +799,8 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
                 <div class="div-table-col">
 	<p  class="cell-capture">На фото тигровый кобель и сука? Когда бы был категоризированный список недостатков,
 	кобель, выглядящий как сука  - серьезный недостаток, а сука, похожая на кобеля
-	- незначительный.  Поэтому сука будет более высоко оценена.</p>				
-		</div>			
+	- незначительный.  Поэтому сука будет более высоко оценена.</p>
+		</div>
 			  </div>
             </div>
   </form>
@@ -1403,7 +819,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 выраженный стоп. Более деликатно сформированная голова суки заметно менее
 глубокая и широкая.</p></td>
 </tr>
-</table> 
+</table>
 
 <br>
 <br clear="all">
@@ -1419,9 +835,9 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 (или высоты) и быть одинаковы по высоте на обоих концах.  Поэтому прямоугольная
 голова должна иметь одинаковую глубину черепа, равно как и глубину морды.</p>
 
-<p>Длина морды равна длине верхней части черепа, а глубина черепа и морды не меняется. 
+<p>Длина морды равна длине верхней части черепа, а глубина черепа и морды не меняется.
 Таким образом, когда голова хорошего дога в профиль разделена по вертикали на
-стопе, ни череп, ни морда не должны казаться больше друг друга.  У большинства 
+стопе, ни череп, ни морда не должны казаться больше друг друга.  У большинства
 догов в Европе морда слишком короткая и мелкая по сравнению с черепом, что делает голову
 несбалансированной.</p>
 
@@ -1429,8 +845,8 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 "параллельные стороны", "переносица должна быть как можно
 шире" и "уши должны быть высоко поставлены".</p>
 
-<p>Стандарт характеризует стоп как "явно выраженный при виде сбоку". 
-Выраженный стоп - это результат работы бровей, а не высокому подъему 
+<p>Стандарт характеризует стоп как "явно выраженный при виде сбоку".
+Выраженный стоп - это результат работы бровей, а не высокому подъему
 глаз.  Как часть маскулинности кобеля, стоп кобеля более выраженный, более высокий,
 чем у суки. Высота стопа в породе должна быть правильной, чтобы
 голова была правильной.  Правильная высота стопа у дога в
@@ -1444,14 +860,14 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <tr>
 <td  class="cell-picture"> <img src="img/eval015.png"></td>
 <td> <p  class="cell-capture">Голова
-суки на фото прямоугольная - глубина черепа и глубина морды одинаковы. 
+суки на фото прямоугольная - глубина черепа и глубина морды одинаковы.
 Она длинная, и длина морды равна длине черепа. Важно отметить, что уши находятся на
 голове, поэтому при сравнении длины морды и черепа затылок находится за ушами.</p></td>
 </tr>
-</table> 
+</table>
 <br>
 
-  <form id="divtable" style="position:relative;z-index:-1;">
+  <form style="position:relative;z-index:-1;">
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1467,17 +883,16 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 					</div>
 				</div>
                 <div class="div-table-col">
-<p  class="cell-capture">Головы на фото правильно пропорциональны и сбалансированы, как в фас, так и в профиль </p>				
-				</div>			
+<p  class="cell-capture">Головы на фото правильно пропорциональны и сбалансированы, как в фас, так и в профиль </p>
+				</div>
 			  </div>
             </div>
   </form>
 
 
-
 <p class="heading2" id="neck_r"><b>Шея</b></p>
 
-<p>Шея у дога длинная. У сбалансированной собаки шея примерно такой же длины, как и голова. 
+<p>Шея у дога длинная. У сбалансированной собаки шея примерно такой же длины, как и голова.
 Ширина шеи посредине примерно равна глубине черепа.  Шея должна
 "плавно перетекать в холку" и наоборот.  Правильная шея вносит
 значительный вклад в элегантность. Собака с хорошей шеей выглядит хорошо.</p>
@@ -1492,11 +907,12 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <tr>
 <td  class="cell-picture"><img src="img/eval023.png"></td>
 <td><p class="cell-capture">У суки на фото - хорошая шея .  С длинной шеей, плавно переходящей в холку и далее в спину, собака
-обладает элегантностью. Шея почти правильной 
+обладает элегантностью. Шея почти правильной
 длины.  Голова могла бы быть длиннее и больше в целом, с более длинной и глубокой
 мордой. Это улучшило бы ее баланс.</p>
 </td>
 </tr>
+<tr>
 <td class="cell-picture"><img src="img/eval024.png"></td>
 <td><p class="cell-capture">На фото красивая сука со сбалансированной головой и шеей. Можно обратить внимание на плавный
 переход от шеи к холке и спине и плавность линий в целом.  Капля воды,
@@ -1513,7 +929,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td><p  class="cell-capture">На фото
  красивая сука с балансированной головой и шеей. </p></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <p class="heading2" id="flegs_r"><b>Передние
@@ -1522,21 +938,21 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 конечностям.  "Лопатка ... образует, насколько это возможно, прямой угол
 ... с плечом".   Угол, под которым "возвращается" плечо, должен
 быть равен углу отведения плеча. Концепция плеча под
-прямым углом родилась благодаря Рейчел Пейдж Эллиот и ее <a target=”_blank” class="ext_link" href="https://www.iwclubofamerica.org/dog-steps-elliot">книге</a> "Оригинальные
-шаги собаки". Годы спустя доктор Квентин ЛаХэм <a target=”_blank” class="ext_link" href="https://caninechronicle.com/dog-show-history/the-anatomy-of-movement-chapter-1/" >оспорил</a> эту степень
+прямым углом родилась благодаря Рейчел Пейдж Эллиот и ее <a target="_blank" class="ext_link" href="https://www.iwclubofamerica.org/dog-steps-elliot">книге</a> "Оригинальные
+шаги собаки". Годы спустя доктор Квентин ЛаХэм <a target="_blank" class="ext_link" href="https://caninechronicle.com/dog-show-history/the-anatomy-of-movement-chapter-1/" >оспорил</a> эту степень
 угловатости на собаках с нормально пропорциональной длиной ног, и убедил
 мисс Эллиот, что угол должен быть несколько более открытым, чем девяносто
 градусов. Действующий на время публикации [2011] стандарт FCI определяет угол в 100 градусов.</p>
 
 <p>"Линия от верхнего окончания лопатки до задней части локтевого сустава должна быть перпендикулярна"
- (земле).  "Лопатка и плечо должны быть одинаковой длины". Находится 
+ (земле).  "Лопатка и плечо должны быть одинаковой длины". Находится
 верхняя часть лопатки.  Отвес, опущенный из этой точки вертикально на землю,
-должен попасть на заднюю часть локтя, а также на подушечку стопы. 
+должен попасть на заднюю часть локтя, а также на подушечку стопы.
 Когда собака на ринге издает стонущие звуки во время движения или в стойке, это следствие неправильных действий хэндлера, ее передняя часть при этом выглядит
 несбалансированной.</p>
 
 <p>Угол наклона лопатки и плеча должен
-направлять переднюю ногу под центр тяжести собаки  для наилучшей поддержки. 
+направлять переднюю ногу под центр тяжести собаки  для наилучшей поддержки.
 Передние ноги не должны опускаться под шеей собаки, что происходит при плохих
 углах или "передней постановке".  Когда передние ноги находятся под
 шеей, корпус не имеет достаточной опоры, и верхняя линия контура корпуса не будет строгой и ровной.</p>
@@ -1569,12 +985,13 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <tr>
 <td class="cell-picture"><img src="img/eval027.png"></td>
 <td><p  class="cell-capture">На фото плечо отведено назад, а верхняя часть ноги выходит
-примерно под тем же углом, так что локоть находится под верхним окончанием 
+примерно под тем же углом, так что локоть находится под верхним окончанием
 плеча.  Передние ноги находятся под корпусом, а не
 под шеей. Передние ноги немного длиннее глубины
 корпуса.</p>
 </td>
 </tr>
+<tr>
 <td class="cell-picture"><img src="img/eval028.png"></td>
 <td><p  class="cell-capture">На фото передняя четверть собаки хорошо сбалансирована с корпусом. Локоть под точкой плеча. Правую переднюю ногу не видно, так как она скрыта под собакой за передней частью груди.</p>
 </td>
@@ -1584,7 +1001,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td><p  class="cell-capture">На фото плечо отодвинуто назад, но лопатка не ввыходит под нужным углом. Отсутствие выхода
 приводит к тому, что передние ноги оказываются под шеей и поэтому не
 обеспечивают поддержку самой тяжелой части собаки. Это влияет на нижнюю линию
-контура - она намного длиннее от локтя до задних конечностей по сравнению с собаками на фото 
+контура - она намного длиннее от локтя до задних конечностей по сравнению с собаками на фото
 выше.</p></td>
 </tr>
 <tr>
@@ -1595,7 +1012,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 вклад в баланс всей собаки. Большая грудь, выставленная вперед у собаки, также
 негативно влияет на баланс и внешний вид.</p></td>
 </tr>
-</table> 
+</table>
 <br>
 <p class="heading2" id="body_r"><b>Корпус</b></p>
 
@@ -1628,6 +1045,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 от локтя до бедра.</p>
 </td>
 </tr>
+<tr>
 <td class="cell-picture"><img src="img/eval033.png"></td>
 <td><p  class="cell-capture">Голова и шея собаки на фото сбалансированы.  Плечо отведено
 назад, хотя верхняя часть лапы могла бы выходить больше.  Насколько сильно
@@ -1635,7 +1053,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 поясницей.</p>
 </td>
 </tr>
-</table> 
+</table>
 <br>
 
 <p class="heading2" id="contour_r"><b>Влияние контура на баланс</b></p>
@@ -1651,12 +1069,13 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td><p class="cell-capture">Утонченный контур. Элегантность без элегантности. Крайняя степень подтянутости.</p>
 </td>
 </tr>
+<tr>
 <td class="cell-picture"><img src="img/eval036.jpg"></td>
 <td><p class="cell-capture">Сочетание
-мощи и элегантности. Хорошо выраженный контур.</p> 
+мощи и элегантности. Хорошо выраженный контур.</p>
 </td>
 </tr>
-</table> 
+</table>
 <br>
 <p class="heading2" id="back_r"><b>Задняя четверть</b></p>
 <br>
@@ -1671,7 +1090,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <table>
 <tr>
 <td class="cell-picture"> <img src="img/eval039.png"></td>
-<td><p  class="cell-capture">У тигровой суки длина крупа не гармонирует с шириной верхней части бедра. 
+<td><p  class="cell-capture">У тигровой суки длина крупа не гармонирует с шириной верхней части бедра.
 Более широкое и мускулистое бедро выглядело бы лучше. Верхняя часть бедра имеет ту же длину, что и нижняя. Нижняя часть бедра имеет хорошую ширину.</p></td>
 </tr>
 <tr>
@@ -1679,12 +1098,13 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td><p  class="cell-capture">У тигрового кобеля хорошие углы передних и задних конечностей. Бедра относительно короткие.</p>
 </td>
 </tr>
+<tr>
 <td  class="cell-picture"><img src="img/eval038.png"></td>
 <td><p  class="cell-capture">У палевой собаки широкий круп обеспечивает сильную мускулатуру бедер
 сзади.</p>
 </td>
 </tr>
-</table> 
+</table>
 <br>
 <p class="heading2" id="move_r"><b>Баланс при движении</b></p>
 <br>
@@ -1725,15 +1145,15 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 передних ног не соответствует задним.  Линия спины "бежит вниз по склону". Передняя нога не опускается под носом.</p>
 </td>
 </tr>
-</table> 
+</table>
 <br>
 <p class="heading2" id="compare_r">Сравнение со стандартами других пород</p>
 <br>
-<p >Стандарты других пород также описывают пропорции, 
+<p >Стандарты других пород также описывают пропорции,
 которые могут быть интересны при рассмотрении пропорций догов.</p>
-<p> Стандарт самоеда говорит, что длина скакательного 
-сустава составляет "приблизительно 30 процентов от высоты бедра". 
-Стандарт догов требует "хорошо опущенного" - короткого - скакательного сустава.  
+<p> Стандарт самоеда говорит, что длина скакательного
+сустава составляет "приблизительно 30 процентов от высоты бедра".
+Стандарт догов требует "хорошо опущенного" - короткого - скакательного сустава.
 Треть от высоты бедра дает как раз такую пропорцию. </p>
 <br>
 <table>
@@ -1741,11 +1161,11 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td> <img src="img/eval045.png"></td>
 <td> <img src="img/eval046.png"></td>
 </tr>
-</table> 
+</table>
 <br>
 
-<p>Стандарт большого шнауцера описывает породу 
-как "почти квадратную".  Далее написано: "Общая 
+<p>Стандарт большого шнауцера описывает породу
+как "почти квадратную".  Далее написано: "Общая
 длина головы составляет примерно половину длины спины (от холки до основания хвоста)".  </p>
 
 <p>Применимость этой пропорции и к догу зависит от того, как измерять - от начала или от конца холки.</p>
@@ -1756,9 +1176,9 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td> <img src="img/eval047.png"></td>
 <td> <img src="img/eval048.png"></td>
 </tr>
-</table> 
+</table>
 
-<p>Стандарт ротвейлера требует, чтобы локоть находился на половине роста собаки. Для ротвейлера и палевого дога расстояние от локтя до земли составляет половину роста собаки в холке. Длина ноги тигровой суки от локтя до земли - на один дюйм больше, 
+<p>Стандарт ротвейлера требует, чтобы локоть находился на половине роста собаки. Для ротвейлера и палевого дога расстояние от локтя до земли составляет половину роста собаки в холке. Длина ноги тигровой суки от локтя до земли - на один дюйм больше,
 чем половина ее роста. Длинные ноги - это часть того, что делает  дога элегантной породой.</p>
 
 <br>
@@ -1771,11 +1191,11 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td> </td>
 <td> <img src="img/eval053.png"></td>
 </tr>
-</table> 
+</table>
 
-<p>В стандарте дога сказано, что голова 
-"длинная", но не сказано, насколько длинная.  В стандарте бладхаунда указано, 
-какой длины у них голова: 12 дюймов для кобелей, 11 дюймов для сук.  
+<p>В стандарте дога сказано, что голова
+"длинная", но не сказано, насколько длинная.  В стандарте бладхаунда указано,
+какой длины у них голова: 12 дюймов для кобелей, 11 дюймов для сук.
 Доги крупнее, чем бладхаунд; разумно ожидать, что голова дога будет длиннее...  </p>
 <br>
 <table>
@@ -1783,14 +1203,14 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td> <img src="img/eval049.png"></td>
 <td> <img src="img/eval050.png"></td>
 </tr>
-</table> 
+</table>
 <br>
 
 <p class="heading2" id="full_r"><b>Оценивайте собаку в целом</b></p>
 
 <table>
 <tr>
-<td class="cell-picture"> 
+<td class="cell-picture">
 <p>Некоторые вещи,  на которые следует обратить особенное внимание, являются частью баланса:</p>
 <p style="text-align:left !important;">
 1. Общий размер, мощь и элегантность<br>
@@ -1808,12 +1228,12 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 <td class="cell-capture"><p>На собаку важно смотреть целиком, особенно на на контур, чтобы увидеть пропорции и баланс.  Собака в движении - это реальная собака, а не презентация.</p>
  </td>
 </tr>
-</table> 
+</table>
 
 
 <table>
 <tr>
-<td class="cell-picture"> 
+<td class="cell-picture">
 <p>
 Что оценить у каждого представителя породы на фото в разрезе сбалансированности:</p>
 <p style="text-align:left !important;">
@@ -1839,9 +1259,9 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 </p>
  </td>
 </tr>
-</table> 
+</table>
 
-  <form id="divtable" style="position:relative;z-index:-1;">
+  <form style="position:relative;z-index:-1;">
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1858,33 +1278,33 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 				</div>
                 <div class="div-table-col">
 			<p  class="cell-capture">Недостаточно, чтобы у дога были хорошие отдельные части тела.  Хорошие части должны быть в правильном соотношении друг с другом.  Вся собака должна иметь баланс, соответствующий породе.  Баланс должен быть очевиден, когда собака в свободной стойке или двигается.  Только при наличии баланса у дога может быть отличительный типаж породы.</p>
-		</div>			
+		</div>
 				 </div>
 	            </div>
   </form>
 
-<p>Идеального дога не существует, поэтому вы вряд ли найдете дога с идеальным балансом.  
+<p>Идеального дога не существует, поэтому вы вряд ли найдете дога с идеальным балансом.
 Есть несколько способов решить, какие недостатки баланса являются более серьезными.
   </p>
-<p>Руководства предписывают снижать оценку за недостатки 
-в зависимости от степени их отклонения от стандарта.  Это может быть применимо и к балансу.  
+<p>Руководства предписывают снижать оценку за недостатки
+в зависимости от степени их отклонения от стандарта.  Это может быть применимо и к балансу.
 Небольшие отклонения в балансе менее серьезны, чем большие.  </p>
-<p>Существует мнение, что может быть оценка баланса, 
-которая уникально определяет породу.  Из первой фразы стандарта: "Дог сочетает 
-в себе ... силу и элегантность с большим размером..." баланс между ними имеет приоритет.   
-Головы в каждой породе уникальны, поэтому голова дога тоже должна считаться важной, 
-не только сама по себе, но и сбалансированной внутри и по отношению к остальным 
-частям собаки.  Надо добавить к оценке баланса шею, так как считается, 
+<p>Существует мнение, что может быть оценка баланса,
+которая уникально определяет породу.  Из первой фразы стандарта: "Дог сочетает
+в себе ... силу и элегантность с большим размером..." баланс между ними имеет приоритет.
+Головы в каждой породе уникальны, поэтому голова дога тоже должна считаться важной,
+не только сама по себе, но и сбалансированной внутри и по отношению к остальным
+частям собаки.  Надо добавить к оценке баланса шею, так как считается,
 что длинная шея важна для элегантности</p>
-<p>Когда оценивают дога, включают в эту оценку 
-баланс собаки в целом.  Если не отбирать собак по этому показателю, 
+<p>Когда оценивают дога, включают в эту оценку
+баланс собаки в целом.  Если не отбирать собак по этому показателю,
 его в породе не будет.</p>
 
 <p  align=center style='margin-bottom:0in;margin-bottom:.0001pt;
 text-align:center; font-size:80%;'>Опубликовано Никки Риггсби 01.01.2011</p>
 <br>
-			<hr>	
-			<p style="text-align:center">***</p>			
+			<hr>
+			<p style="text-align:center">***</p>
 </div>
 
 	<div class="container"  id="move">
@@ -1895,7 +1315,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <p>"Походка с длинными, легкими шагами демонстрирует силу и мощь, не приводит к подбрасыванию тела, перекатыванию или колебанию линии спины или всего корпуса. Верхняя линия контура тела должна выглядеть ровной и параллельной земле. Вынос передней ноги должен быть точно ниже носа, в то время как голова при этом должна смотреть вперед. Мощный зад должен быть сбалансирован с тянущей силой. С увеличением скорости возникает естественная тенденция к тому, чтобы ноги сходились к центральной линии равновесия под корпусом. Не должно быть скручивания в локтевом или тазобедренном суставах".</p>
 <p style="margin-bottom:6pt;">В стандарте много слов уделено описанию походки сбоку, или, по крайней мере, характеристикам, которые можно увидеть, рассматривая движущуюся собаку в профиль. Некоторое время назад судьи и заводчики за океаном провели опрос о важности компонентов движения для выставочных собак. Те, кто занимается более тридцати семи лет разведением догов и десять лет судят их на ринге, оценили компоненты движения по степени важности:</p>
 
-  <form id="divtable" style="position:relative;z-index:-1;">
+  <form style="position:relative;z-index:-1;">
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1947,7 +1367,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <br clear="all">
 <p style="padding-bottom:12pt;">Эксперты по догам также ранжировали список недостатков движений, от наиболее серьезных до наименее серьезных:</p>
 
- <form id="divtable" style="position:relative;z-index:-1;">
+ <form style="position:relative;z-index:-1;">
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -2008,14 +1428,14 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 
 <p  align=center style='margin-bottom:.0001pt;text-align:center; font-size:80%;'>Опубликовано Никки Риггсби</p>
 <br>
-			<hr>	
-			<p style="text-align:center">***</p>			
+			<hr>
+			<p style="text-align:center">***</p>
 	</div>
 
-<div class="container" text-align:-webkit-center id="westminster">
+<div class="container" id="westminster">
 <p class="heading2"><b>Great Dane. Westminster AKC show.</b></p>
 	<p>Порода впервые была представлена на выставке собак в Вестминстере (Нью-Йорк) в 1877 году. Немецкий дог никогда не выигрывал BIS. В 1931 году дог впервые занял первое место в группе 1, это был Gunar v Hollergarten Of Walnut Hill, (владелец Харкнесс Эдвардс). После этого Gunar также занял первое место в группе 1 в 1933 году, на этот раз зарегистрированный как CH Gunar v Hollergarten Of Walnut Gracie Hill. В третий раз победа в группе пришла в 1959 году к CH Honey Hollow Stormi Rudio, принадлежавшему Кэтрин Анджел Кларк. В четвертый раз - в 1962 году CH Honey Bun Of Marydane, принадлежавшему Эрне Хубер.Последний раз дог получил первое место в группе в Нью-Йорке в 1983 году, это был CH C & B Special-K Gribbin, принадлежавший J & F Campbell & J & M Benjamin.</p> <br>
-        <div class="cmt-west">						
+        <div class="cmt-west">
 			<div class="swiper sample-slider-west">
 				<div class="swiper-wrapper" style="width:100%;">
 					<div class="swiper-slide" id="2025">
@@ -2032,7 +1452,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
         type="video/mp4">
         </video>
 			<p style="position:absolute; bottom:0;"><i>Breed Judging 2024</i></p>
-					
+
 					</div>
 					<div class="swiper-slide"  id="2023">
 						<video preload="metadata" style="width:90%;" poster="img/eval_poster2023.png" controls>
@@ -2075,7 +1495,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 			<p style="position:absolute; bottom:0;"><i>Breed Judging 2019</i></p>
 
 					</div>
-					
+
 					<div class="swiper-slide" id="2018">
 						<video preload="metadata" style="width:90%;" poster="img/eval_poster2018.png" controls>
 			<source src="https://greatdaneworld.dog/video/westminster-2018"
@@ -2083,27 +1503,27 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
         </video>
 			<p style="position:absolute; bottom:0;"><i>Breed Judging 2018</i></p>
 					</div>
-					
+
 				</div>
 		       <div class="swiper-button-prev"></div>
 		       <div class="swiper-button-next"></div>
-			</div>			
+			</div>
 		</div>
 			<br>
-			<hr>	
-			<p style="text-align:center">***</p>			
+			<hr>
+			<p style="text-align:center">***</p>
 </div>
 
 
 	<div class="container"  id="colors">
 <p class="heading2"><b>Окрас</b></p>
 
-<p><i>[Информация по окрасу догов, визуализированная, с цитатами из Стандарта породы (на момент 2015г.) заимствована из <!-- a target=”_blank” class="ext_link" href="https://www.daneoutreach.org" -->работы Kate Ice</i></p>
+<p><i>[Информация по окрасу догов, визуализированная, с цитатами из Стандарта породы (на момент 2015г.) заимствована из работы Kate Ice</i></p>
 
 
 <p>Доги бывают шести <i>[с 1 января 2019 года - семи]</i> стандартных окрасов. Любой окрас, отличный от стандартного, считается нестандартным. Некоторые, но не все, нестандартные окрасы являются результатом нежелательного скрещивания определенных семейств окрасов. Для определения того, какой окрас несет собака, можно провести генетическое тестирование окраса, которое следует проводить, если есть сомнения в том, гены какого окраса (окрасов) несет собака.</p>
 <br>
-<!--  border="1" cellspacing="5" cellpadding="5" width="100%" -->
+
 <table style="word-break:break-all; table-layout: fixed">
 <tr>
 <td style="width: 100%; text-align:center;"><p style="margin-top:1em; margin-bottom:1em; text-align:center !important;"><b>окрас желательный</b></p></td>
@@ -2144,7 +1564,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <td class="color_table" bgcolor="#939393"> <img src="img/fawn09.png"></td>
 <td> </td>
 </tr>
-</table> 
+</table>
 <br clear="all">
 <table border="1" cellspacing="0" cellpadding="10px" width="100%">
 <tr>
@@ -2164,7 +1584,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <td class="color_table" bgcolor="#939393"> <img src="img/brindle09.png"></td>
 <td> </td>
 </tr>
-</table> 
+</table>
 <br clear="all">
 <table border="1" cellspacing="0" cellpadding="10px" width="100%">
 <tr>
@@ -2184,7 +1604,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <td class="color_table" bgcolor="#939393"> <img src="img/black09.png"></td>
 <td> </td>
 </tr>
-</table> 
+</table>
 <br clear="all">
 <table border="1" cellspacing="0" cellpadding="10px" width="100%">
 <tr>
@@ -2204,7 +1624,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <td class="color_table" bgcolor="#939393"> <img src="img/harle09.png"></td>
 <td> </td>
 </tr>
-</table> 
+</table>
 <br clear="all">
 <table border="1" cellspacing="0" cellpadding="10px" width="100%">
 <tr>
@@ -2224,7 +1644,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <td class="color_table" bgcolor="#939393"> <img src="img/blue09.png"></td>
 <td> </td>
 </tr>
-</table> 
+</table>
 <br clear="all">
 <table border="1" cellspacing="0" cellpadding="0" width="100%" style="word-break:break-all; table-layout: fixed">
 <tr align="center" valign="center">
@@ -2251,73 +1671,56 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <td class="color_table" bgcolor="#939393"> <img src="img/mantle09.png"></td>
 <td> </td>
 </tr>
-</table> 
-
-<p img
-width=390 height=360 id="Picture 1" src="img/eval000.png"></p>
-
+</table>
+<br>
+			<hr>
+			<p style="text-align:center">***</p>
 			<br>
-			<hr>	
-			<p style="text-align:center">***</p>			
-			<br>
-	
+
 </div>
 
 		<div class="container"  id="breedtype">
 			<p  class="heading2"><b>Породный тип*</b></p>
-			
-			<p>"Породный тип" (типаж) подразумевает совокупность признаков, характерных для определенной породы животного. Каждой [классифицированной или зарегистрированной] породе присущ единственный и неповторимый правильный тип. Единственный [известный на сегодня] путь, который может привести заводчика к желаемому результату - получению идеальной собаки правильного типа - это кропотливый и долгий отбор, а также подбор племенных пар. Так были получены все лучшие породные линии. В настоящее временя [в Европе в первую очередь] доги представлены настолько разнотипным поголовьем, что это кажется странным и грустным одновременно. Существует тест, который интересно предложить заводчикам. Необходимо в пятидесяти словах (в Стандарте - около 1350 слов) изложить, что они считают самым главным, то есть типичным для породы, которую они разводят. Можно очень удивиться увидев, как мало найдется знатоков, способных вразумительно сказать, что же действительно характеризует породу, с которой они же сами и работают. Как правило, приводится общее расплывчатое описание данной породы. 
+
+			<p>"Породный тип" (типаж) подразумевает совокупность признаков, характерных для определенной породы животного. Каждой [классифицированной или зарегистрированной] породе присущ единственный и неповторимый правильный тип. Единственный [известный на сегодня] путь, который может привести заводчика к желаемому результату - получению идеальной собаки правильного типа - это кропотливый и долгий отбор, а также подбор племенных пар. Так были получены все лучшие породные линии. В настоящее временя [в Европе в первую очередь] доги представлены настолько разнотипным поголовьем, что это кажется странным и грустным одновременно. Существует тест, который интересно предложить заводчикам. Необходимо в пятидесяти словах (в Стандарте - около 1350 слов) изложить, что они считают самым главным, то есть типичным для породы, которую они разводят. Можно очень удивиться увидев, как мало найдется знатоков, способных вразумительно сказать, что же действительно характеризует породу, с которой они же сами и работают. Как правило, приводится общее расплывчатое описание данной породы.
 			</p>
 			<p>Для каждой породы существуют свои правильные пропорции, независимо от того, говорится о них в действующем стандарте или нет. Эти пропорции определяют желательный внешний вид породы. Заводчик и судья, прежде чем приступить к разведению собак или к экспертизе на выставке, должны очень хорошо разбираться в том, как эти пропорции связаны между собой. Это - основа основ работы заводчика, который, как и строитель, прежде чем забить первый гвоздь, решает, каких размеров и форм должны быть отдельные части будущей конструкции и каким образом они будут соединяться в единое целое. Заводчик и судья, кроме того, должны хорошо знать историю породы. Эти знания помогут разрешить множество вопросов, на которые стандарт не дает ответа. Только овладев этими знаниями, заводчик может начать подбор родоначальников своего разведения. Самые известные заводчики пришли к успеху не случайно. Это далось им ценой кропотливого труда, знаний и умения объективно оценивать результаты своей работы.
 			</p>
-			<p>В своей работе <a target=”_blank” class="ext_link" href="https://www.amazon.com/-/es/Lt-Col-G-H-Badcock/dp/B0027UHT2S"> "Непослушные собаки"</a>, опубликованной в 1933 году, Г.Бабкок пишет: "Несомненно, что существует много знающих и ответственных заводчиков, приносящих пользу породе. Но есть и другие, которые рассматривают собаку исключительно как объект коммерции. Меркантильный дух наносит большой вред тому, что мы называем типом собаки...". Это верно и актуально и в наши дни. Потеряв тип, ротвейлер превратится в тяжелого добермана, афган - в мохнатую салюки, дог - в эклектичную смесь мастифа и грейхаунда. Типаж - решающий элемент для породы, который позволяет ее отличать от других. Эксперты, говоря о типе, часто избегают давать ему определение, подчеркивая тот факт, что речь идет о качествах, не поддающихся измерению, и что до конца разобраться в этом под силу только "настоящим кинологам". Если представлять тип таким образом, то можно подумать, что о нем может судить только узкий круг посвященных, а для понимания остальных он остается недоступным. Напрашивается вывод, что "эксперты" попросту уклоняются от того, чтобы дать однозначное определение типу, вместо этого рассуждая о множестве типов внутри породы.
+			<p>В своей работе <a target="_blank" class="ext_link" href="https://www.amazon.com/-/es/Lt-Col-G-H-Badcock/dp/B0027UHT2S"> "Непослушные собаки"</a>, опубликованной в 1933 году, Г.Бабкок пишет: "Несомненно, что существует много знающих и ответственных заводчиков, приносящих пользу породе. Но есть и другие, которые рассматривают собаку исключительно как объект коммерции. Меркантильный дух наносит большой вред тому, что мы называем типом собаки...". Это верно и актуально и в наши дни. Потеряв тип, ротвейлер превратится в тяжелого добермана, афган - в мохнатую салюки, дог - в эклектичную смесь мастифа и грейхаунда. Типаж - решающий элемент для породы, который позволяет ее отличать от других. Эксперты, говоря о типе, часто избегают давать ему определение, подчеркивая тот факт, что речь идет о качествах, не поддающихся измерению, и что до конца разобраться в этом под силу только "настоящим кинологам". Если представлять тип таким образом, то можно подумать, что о нем может судить только узкий круг посвященных, а для понимания остальных он остается недоступным. Напрашивается вывод, что "эксперты" попросту уклоняются от того, чтобы дать однозначное определение типу, вместо этого рассуждая о множестве типов внутри породы.
 			</p>
-			<p>В стремлении получить все более "совершенных" животных возрастает риск появления гротескных особей с переразвитым типом. Фил Дрэббл <a target=”_blank” class="ext_link" href="https://www.amazon.com/Pedigree-Sporting-Working-Dogs/dp/0907827055">писал:</a> "Ученые заводчики зачастую добиваются вычурных внешних форм за счет потери таких качеств, как выносливость, смелость и сообразительность. Большинство выставочных собак представляют собой жалкую карикатуру на тех собак, от которых они произошли и которые сделали эту породу известной". Таким образом, некоторые современные породы собак представляют собой не что иное, как карикатуры на животных, которые были их предками. В оригиналах стандартов редко обращается внимание на те черты, которые превращаются в манию у заводчиков и судей во имя победы на ринге. Смесь болезненных устремлений, театральности, незнания и недобросовестности настолько вредит породе, что может даже уничтожить смысл ее существования вообще. При этом проявляются и такие отрицательные моменты, как наследственные заболевания, контролировать которые становится все сложнее и сложнее. Такие проблемы ничуть не смущают отдельных владельцев собак, которые не озадачивают себя улучшением породы в целом, а стремятся, прежде всего, неважно какой ценой, победить на выставке и продать подороже как можно больше щенков.
+			<p>В стремлении получить все более "совершенных" животных возрастает риск появления гротескных особей с переразвитым типом. Фил Дрэббл <a target="_blank" class="ext_link" href="https://www.amazon.com/Pedigree-Sporting-Working-Dogs/dp/0907827055">писал:</a> "Ученые заводчики зачастую добиваются вычурных внешних форм за счет потери таких качеств, как выносливость, смелость и сообразительность. Большинство выставочных собак представляют собой жалкую карикатуру на тех собак, от которых они произошли и которые сделали эту породу известной". Таким образом, некоторые современные породы собак представляют собой не что иное, как карикатуры на животных, которые были их предками. В оригиналах стандартов редко обращается внимание на те черты, которые превращаются в манию у заводчиков и судей во имя победы на ринге. Смесь болезненных устремлений, театральности, незнания и недобросовестности настолько вредит породе, что может даже уничтожить смысл ее существования вообще. При этом проявляются и такие отрицательные моменты, как наследственные заболевания, контролировать которые становится все сложнее и сложнее. Такие проблемы ничуть не смущают отдельных владельцев собак, которые не озадачивают себя улучшением породы в целом, а стремятся, прежде всего, неважно какой ценой, победить на выставке и продать подороже как можно больше щенков.
 			</p>
 			<p>Защита типа - это основа разведения, его сохранение - совместное дело клубов пород, заводчиков, судей, национальных кинологических организаций. У каждого судьи складывается свое представление о том, какой должна быть идеальная собака данной породы. Породный клуб должен располагать не только детальным описанием собаки, но и фотографиями и рисунками с изображением животных желательного типа, приближающихся к идеалу породы. Тогда у судьи отпадет необходимость создавать мысленный образ, потому что в его распоряжении будут конкретные материалы. Грамотный судья может сделать очень многое для сохранения типа в породе.
 			</p>
-			<p>С. Дж. Дэвис <a target=”_blank” class="ext_link" href="https://www.amazon.com/Theory-Practice-Breeding-Application-Animals/dp/1846640202">писал: </a> "При разведении с учетом типа решающим может быть одно: отбор. Все остальное - второстепенное". Отбор часто начинается во время экспертизы на ринге, когда судья дает собаке оценку. Посмотрите на свою собаку и сравните ее с собаками, от которых произошла эта порода, благодаря которым установился ее определенный тип. Затем задайте себе вопрос: вам необходима победа в угоду текущей моде или вы хотите, чтобы самые ценные качества этой породы сохранились и в будущих ее поколениях? От заводчиков в этом случае требуется сила воли и желание, от судей - честность и глубокие знания.
+			<p>С. Дж. Дэвис <a target="_blank" class="ext_link" href="https://www.amazon.com/Theory-Practice-Breeding-Application-Animals/dp/1846640202">писал: </a> "При разведении с учетом типа решающим может быть одно: отбор. Все остальное - второстепенное". Отбор часто начинается во время экспертизы на ринге, когда судья дает собаке оценку. Посмотрите на свою собаку и сравните ее с собаками, от которых произошла эта порода, благодаря которым установился ее определенный тип. Затем задайте себе вопрос: вам необходима победа в угоду текущей моде или вы хотите, чтобы самые ценные качества этой породы сохранились и в будущих ее поколениях? От заводчиков в этом случае требуется сила воли и желание, от судей - честность и глубокие знания.
 			</p>
 			<p  align=center style='margin-bottom:.0001pt; text-align:center; font-size:80%;'>
 			*Массимо Сончини (перевод с французского Ольги Мищихи, журнал "Друг")
 			</p>
 
 			<br>
-			<hr>	
-		
+			<hr>
+
 			<p>Одна из попыток создания графического представления породного типа принадлежит перу Линды и Михаэлю ДеВинсент-Эсли. Чтобы оценить соответствие породныым требованиям авторы предлашают найти 6 красных точек на картинке, которые соответствуют верхней точке холки, плечу, нижней точки грудной клетки, ягодице, коленке, и средней части нижней части бедра. Затем следует соединить каждую тройку точек как показано на рисунке. По степени отклонения нарисованных линий, соединяющих точки на картинке вашей собаки авторы предлагают сделать вывод о степени отклонения от представлений о породе.</p>
 
-			<p>В условиях, когда стандарт не имеет количественных метрик и один судья может сделать собаку чемпионом, а другой при этом не дать даже хорошей оценки, остается только приветствовать создание иллюстрированных стандартов, как это сделал АКС. Тем более, что прообразом для идеального дога по мнению  Д.Готье стал <a target=”_blank” class="ext_link" href="https://greatdanegnosis.wordpress.com/2016/03/06/the-ignominious-beginning-of-the-great-dane-color-code-of-ethics/">Ch. Honey Hollow Stormi Rudio</a>.</p>
+			<p>В условиях, когда стандарт не имеет количественных метрик и один судья может сделать собаку чемпионом, а другой при этом не дать даже хорошей оценки, остается только приветствовать создание иллюстрированных стандартов, как это сделал АКС. Тем более, что прообразом для идеального дога по мнению  Д.Готье стал <a target="_blank" class="ext_link" href="https://greatdanegnosis.wordpress.com/2016/03/06/the-ignominious-beginning-of-the-great-dane-color-code-of-ethics/">Ch. Honey Hollow Stormi Rudio</a>.</p>
 
-			<p>Американский породный клуб GDCA в 2021 выпустил электронную <a target=”_blank” class="ext_link" href="https://gdca.org/wp-content/uploads/TheGreatDane/2021-GDCA-Power-Point-Presentation-10_19_21.pdf">брошюру, </a>дающую представление о породе, кратко - о ее истории. В брошюре на 94 страницах представлено множество фотографий современных догов. Также приводятся два рисунка, отражающие современный взгляд на отдельные пропорции породы. </p>
-			
-			<p>На сегодняшний день визуализированные пропорции дога наиболее полно отражены в <a target=”_blank” class="ext_link" href="https://www.doggen.de/en/service/publikationen-des-ddc"> Руководстве для судей, </a> опубликованном Немецким клубом породы в 2017 году. На 68 страницах Руководства представлено множество рисунков для желательных, допустимых и дисквалифицирующих характеристик стандарта породы. Много внимания уделено цвету и рисунку.</p>
+			<p>Американский породный клуб GDCA в 2021 выпустил электронную <a target="_blank" class="ext_link" href="https://gdca.org/wp-content/uploads/TheGreatDane/2021-GDCA-Power-Point-Presentation-10_19_21.pdf">брошюру, </a>дающую представление о породе, кратко - о ее истории. В брошюре на 94 страницах представлено множество фотографий современных догов. Также приводятся два рисунка, отражающие современный взгляд на отдельные пропорции породы. </p>
 
-			<br clear="all">	
+			<p>На сегодняшний день визуализированные пропорции дога наиболее полно отражены в <a target="_blank" class="ext_link" href="https://www.doggen.de/en/service/publikationen-des-ddc"> Руководстве для судей, </a> опубликованном Немецким клубом породы в 2017 году. На 68 страницах Руководства представлено множество рисунков для желательных, допустимых и дисквалифицирующих характеристик стандарта породы. Много внимания уделено цвету и рисунку.</p>
 
-<!--
-figure {
-  margin: 0 auto;
-  text-align: center;
-}
-figure img {
-  vertical-align: top;
-  width: 20em;
-}
-figure figcaption {
-  text-align: center;
-}
--->
+			<br clear="all">
+
 
 			<figure class="width-80">
 			<img src="img/anatomy003.jpg" alt="stormi">
 			<figcaption>Иллюстрация к <a href="index.html?id=slides_1#books">стандарту GDCA, 1976</a></figcaption>
 			</figure>
-			
+
 			<figure class="width-80">
 			<img src="img/anatomy004.jpg" alt="devincent">
-			<figcaption>Пропорции немецкого дога, <a target=”_blank” class="ext_link" href="https://davincidanes.wixsite.com/home/the-great-dane-blueprint">DeVincent Easley</a>, 2013</figcaption>
-			</figure>			
+			<figcaption>Пропорции немецкого дога, <a target="_blank" class="ext_link" href="https://davincidanes.wixsite.com/home/the-great-dane-blueprint">DeVincent Easley</a>, 2013</figcaption>
+			</figure>
 
 			<figure class="width-80">
 			<img src="img/anatomy010.png">
@@ -2332,27 +1735,27 @@ figure figcaption {
 			Ангуляция задней части дога (GDCA, 2021)
 			</figcaption>
 			</figure>
-		
+
 			<figure class="width-80">
 			<img src="img/anatomy012.png">
 			<figcaption>
 			Пропорции длины и высоты (DDC, 2018)
 			</figcaption>
-			</figure>			
-			
+			</figure>
+
 			<figure class="width-80">
 			<img src="img/anatomy013.png">
 			<figcaption>
 			Пропорции головы (DDC, 2018)
 			</figcaption>
-			</figure>				
+			</figure>
 
 			<figure class="width-80">
 			<img src="img/anatomy015.png">
 			<figcaption>
 			Баланс и равновесие (DDC, 2018)
 			</figcaption>
-			</figure>			
+			</figure>
 			<br clear="all">
 
 			<figure class="width-80">
@@ -2373,53 +1776,14 @@ figure figcaption {
 			</figure>
 
 			<br clear="all">
-			<hr>	
-			<p style="text-align:center">***</p>			
+			<hr>
+			<p style="text-align:center">***</p>
 			<br>
 </div>
 
 		<div class="container" style="display:flex; justify-content:center;margin-bottom:320px; margin-top:65px; text-align:center;" id="lib">
-
-<div class="css-modal-details">    
-    <details style="width:50%;">
-        <summary style="justify-content:center; font-size:1em;">Библиотека</summary>
-        <div class="cmc">
-            <div class="cmt">						
-			<div class="swiper sample-slider-lib">
-				<div class="swiper-wrapper">
-					<a class="swiper-slide" href="https://disk.yandex.ru/i/10lS6xQ8ePHCeA">
-						<figure><img src="img/eval158.jpg" alt="">
-						<figcaption></figcaption>
-						</figure></a>
-					<a class="swiper-slide" href="https://disk.yandex.ru/i/8oznGE2FXxfnxA">
-						<figure><img src="img/eval159.jpg" alt="">
-						<figcaption></figcaption>
-						</figure></a>
-					<a class="swiper-slide" href="https://disk.yandex.ru/i/ZYjgdggSwqEwHA">
-						<figure><img src="img/eval160.jpg" alt="">
-						<figcaption></figcaption>
-						</figure></a>
-					<a class="swiper-slide" href="https://disk.yandex.ru/i/Vq0OSs_eCZSXDQ">
-						<figure><img src="img/eval161.jpg" alt="">
-						<figcaption></figcaption>
-						</figure></a>
-												
-				</div>
-		       <div class="swiper-button-prev"></div>
-		       <div class="swiper-button-next"></div>
-			</div>			
-
-	</div>
-	<a href="#close" class="css-modal-close"></a> 
-	</div>
 </div>
-
-		</div>									
-
-
-
 </section>
-</body>
 
 <script src="js/swiper-bundle.min.js"></script>
 
@@ -2435,25 +1799,7 @@ figure figcaption {
             delay: 5000,
         },
     });
-
-	    var swiper2 = new Swiper('.sample-slider-lib', {
-        loop: true,                         // loop
-        centeredSlides: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        navigation: {                       // navigation(arrows)
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    	breakpoints: {
-        768: {
-            slidesPerView: 3,
-        spaceBetween: 30,
-        },
-	},
-    });
-
-	    var swiper3 = new Swiper('.sample-slider-west', {
+var swiper3 = new Swiper('.sample-slider-west', {
         loop: true,                         // loop
         centeredSlides: true,
         slidesPerView: 1,
@@ -2467,37 +1813,36 @@ figure figcaption {
 
 <script>
     const swiper_text = new Swiper('.swiper_text', {
-        loop: true, 
+        loop: true,
         slidesPerView: 1,
         allowTouchMove: false,
     })
     const swiper_main = new Swiper('.swiper_main', {
-        loop: true,                         
-        autoplay: {                         
-            delay: 8000,  
+        loop: true,
+        autoplay: {
+            delay: 8000,
         },
-        thumbs: {                           
-            swiper: swiper_text,            
+        thumbs: {
+            swiper: swiper_text,
         },
     })
 </script>
 
 <script>
     const swiper_text1 = new Swiper('.swiper_text1', {
-        loop: true, 
+        loop: true,
         slidesPerView: 1,
         allowTouchMove: false,
     })
     const swiper_main1 = new Swiper('.swiper_main1', {
-        loop: true,                         
-        autoplay: {                         
-            delay: 9000,  
+        loop: true,
+        autoplay: {
+            delay: 9000,
         },
-        thumbs: {                           
-            swiper: swiper_text1,            
+        thumbs: {
+            swiper: swiper_text1,
         },
     })
 </script>
-
-
+</body>
 </html>
