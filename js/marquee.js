@@ -36,16 +36,31 @@
             });
 
 
-            box.addEventListener('touchstart', function () {
-                paused = true;
-            }, { passive: true });
+			box.addEventListener('pointerdown', function () {
+				paused = true;
+			});
 
 
-            box.addEventListener('touchend', function () {
-                paused = false;
-            }, { passive: true });
+			box.addEventListener('pointerup', function () {
+
+				setTimeout(function () {
+					paused = false;
+				}, 3000);
+
+			});
 
 
+			box.addEventListener('pointercancel', function () {
+				paused = false;
+			});
+
+			// вот сюда
+			box.addEventListener('scroll', function () {
+				if (paused) {
+					position = box.scrollTop;
+				}
+			});
+	
             move();
 
         });
