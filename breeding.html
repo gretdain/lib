@@ -9,351 +9,169 @@
 	<link rel="stylesheet" href="css/style.css">
 	<style>
 
-/*     shared    */
-/*	html {
-	font-family: 'OpenSans', sans-serif;
-	font-weight: 400;
-	}*/
-/*	body, html {
-	margin: 0;
-	padding: 0;
-	position: relative;
-	height: 100%;
-	}*/
-/*	.container {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 100%;
-	}*/
-	.container article{
-	padding-left: 10%;
-	padding-right: 10%;
-	}
-	.table-wrap {
-	display: inline-block;
-	}	
-	table {
-	  width: 100%;
-/*	  margin:0;
-	  padding:0;
-	  border-collapse: collapse;
-	  border-spacing: 0;*/
-	}
-	.container-table {
-	margin-right: auto;
-	margin-left: auto;
-	/*padding: 0 160px;*/
-	/*	  text-align: center;*/
-	/*padding-left: 0;*/
-	/*padding-right: 0;*/
-	max-width: 1000px;
-	}
-/*	.article img {
-        object-fit: contain;
-        max-width: 100%;
-		max-height: 100%;
-		color: var(--font-gray);
-		} */
-	  
-/*	  .article p {
-		text-align: left;
-		line-height: 1.5em;
-		color: var(--font-gray);
-	  } */
-	  
-	p {
-	margin-top: 6.0pt;
-	}
-    .sample-slider img{
-	align-items: center; /* it works */
-    }
-<!--	.slideshow-container {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  width: 300px;
-	  height: 300px;
-	  border: 1px solid var(--amethyst);
-	  float: left;
-	  margin-right: 15px;
-	  margin-bottom: 15px;
-	  margin-top: 15px;
-	}
--->
-	.swiper-wrapper {
-	align-items: center; /* it works */
-	}
-	.swiper-slide {
-	  display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-	}	    
+<style>
 
-/* links */	    
+/* breeding page local styles */
 
-/*	a {
-	outline: none;
-	text-decoration: none;
-	padding: 1px;
-	} */
+.container article {
+    padding-left: 10%;
+    padding-right: 10%;
+}
 
-	a:link {
-	color: var(--amethyst);
-	} 
 
-/*	a:visited {
-	color: purple;
-	}*/
+.table-wrap {
+    display: inline-block;
+}
 
-/*	a:focus,
-	a:hover {
-	border-bottom: 1px solid;
-	font-weight: bold;
-	color: var(--amethyst);
-	} */
 
-/*	a:active {
-	color: var(--amethyst);
-	} */
+table {
+    width: 100%;
+}
 
-/*	a[href*="http"] {
-	background: url(img/ext_link2.svg) no-repeat 100% 0;
-	background-size: 16px 16px;
-	padding-right: 19px;
-	}*/
+.container table {
+    width:100%;
+}
 
-/*	.header-top__container {
-	position: fixed;
-	z-index: 99;
-	background-color: var(--e5-bg);
-	}*/
-/*.dropdown-content {
-    display: none;
-    position: absolute;
-    max-width: 300px;
-    width: 800%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
-    padding: 5px 5px;
-    font-family: inherit;
-    border-radius: 8px;
-    background-color: rgba(210, 210, 210, 0.9);
-    border: 2px solid var(--amethyst);
-    color: var(--white-inversion);
-    z-index: 99;
-    top: 98%;
-}*/
+.swiper-wrapper {
+    align-items: center;
+}
 
-  @media (max-width: 767px) {
-/*	.title-a {
-	display: none;
-  	}
-  	.title-b {
-    	display: inline-block;
-  	}*/
-/*	figure {
-	  float: left;
-	  width: 100%;
-	  text-align: center;
-	  font-style: italic;
-	  font-size: smaller;
-	  text-indent: 0;
-	  border: thin silver solid;
-	  margin-left: 0;
-	  margin-right: 0.5em;
-	  padding: 0.5em;
-	}*/
-/*	figcaption {
-	  position: absolute;
-	  bottom: 0;
-	  padding:  15px;
-	  color: var(--font-gray);
-	}*/
-/*	video {
-	width: 100%;
-	}*/
-      .article img {
-        object-fit: contain;
-        max-width: 100%;
-		max-height: 100%;
-		color: var(--font-gray);
-	}
-	img.scaled {
-	width: 100%;
-	}	
-/*	.sample-slider{
-	display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  width: 100%;
-	height: auto;
-	  border: 1px solid var(--amethyst);
-	  float: left;
-	  margin-right: 15px;
-	  margin-bottom: 15px;
-	  margin-top: 15px;
-    }*/
-/*	.container {
-	padding-left: 5%;
-	padding-right: 5%;
-	}*/
-	.v-spoiler {
-	height: 500px; /* высота нашего блока */
-	width: 100%; /* ширина нашего блока */
-	background: #D1D0D0; /* цвет фона, белый */
-	border: 3px solid #C1C1C1; /* размер и цвет границы блока */
-	/*overflow-x: scroll;  прокрутка по горизонтали */
-	overflow-y: scroll; /* прокрутка по вертикали */
-	scrollbar-width: thin;
-	border-radius: 10px;
-	}
-/*	.dropdown-content {
-    font-size: 20px;
-    line-height: 30px;
-	}*/
-	}
 
-@media (min-width: 768px) {
-/*	.title-b {
-	display: none;
-  	}
-  	.title-a {
-    	display: inline-block;
-  	}*/
-/*	figure {
-	  float: left;
-	  width: 30%;
-	  text-align: center;
-	  font-style: italic;
-	  font-size: smaller;
-	  text-indent: 0;
-	  border: thin silver solid;
-	  margin: 0.5em 1em 0.5em 0.5em;
-	  padding: 0.5em;
-	}*/
-/*	figcaption {
-	  position: absolute;
-	  bottom: 0;
-	  padding:  15px;
-	  color: var(--font-gray);
-	  background-color: rgba( 29, 20, 17, .6);
-	  text-align: right;
-	  text-transform: uppercase;
-	  font-size: 1rem;
-	  width: 100%;
-	} */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-	.figure60 {
-	width:60%;
-	max-width:60%;
-	margin-right: 1em;
-	}
 
-	.figure40 {
-	width:40%;
-	max-width:40%;
-	margin-right: 1em;
-	}
+.figure60 {
+    width: 60%;
+    max-width: 60%;
+    margin-right: 1em;
+}
 
-/*	video {
-	width: 50%;
-	} */
 
-    .article img {
+.figure40 {
+    width: 40%;
+    max-width: 40%;
+    margin-right: 1em;
+}
+
+
+.article img {
     object-fit: contain;
     max-width: 100%;
-	max-height: 100%;
-	color: var(--font-gray);
-	}
-	img.scaled {
-	width: 100%;
-	}	
-/*	figcaption {
-    font-size:0.8em;
-	}*/
-    
-/*	.sample-slider{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40%;
-	height: auto;
-	border: 1px solid var(--amethyst);
-	float: left;
-	margin:0.5em;
-	padding:0.5em;
-    }*/
-/*	.container {
-	padding-left: 10%;
-	padding-right: 10%;
-	}*/
-	.v-spoiler {
-	height: 300px; /* высота нашего блока */
-	width: 100%; /* ширина нашего блока */
-	background: #D1D0D0; /* цвет фона, белый */
-	border: 3px solid #C1C1C1; /* размер и цвет границы блока */
-	/*overflow-x: scroll;  прокрутка по горизонтали */
-	overflow-y: scroll; /* прокрутка по вертикали */
-	scrollbar-width: thin;
-	border-radius: 10px;
-	}
-/*	.dropdown-content {
-    font-size: 18px;
-    line-height: 35px;
-	}*/
-	}
+    max-height: 100%;
+    color: var(--font-gray);
+}
 
-	</style>
+
+img.scaled {
+    width: 100%;
+}
+
+
+/* temporary old spoiler style */
+
+.v-spoiler {
+
+    margin: 2em auto;
+    padding: 1.5em 2em;
+
+    max-height: 320px;
+
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.95),
+            rgba(245,245,245,0.95)
+        );
+
+    border: 1px solid rgba(120,120,120,0.45);
+
+    border-radius: 12px;
+
+    box-shadow:
+        inset 0 0 20px rgba(0,0,0,0.06),
+        0 3px 10px rgba(0,0,0,0.08);
+
+    scrollbar-width: thin;
+}
+
+</style>
 
 </head>
 
 <body>
 
 
-				<div class="container header-top__container">
-					<div class="menu">
-					<button type="button" class="menu-button"><img src="img/burger.svg" /*style="padding-top:5px;"*/ alt="Menu"> </button>
-						<div class="dropdown-content" style="left:1px">
-						<a href="index.html#eval">Оценка</a>
-						<a href="index.html#anatomy">Биология</a>
-						<a href="index.html#faces">Лица</a>
-						<a href="index.html#history">История</a>						
-						<a href="index.html#books">Библиотека</a>
-						<a href="index.html#woodhouse">Почти человек</a>					
-						<a href="index.html#vet">Здоровье</a>
-						</div>
-					</button>
-					</div>
-					<div class="title" style="/*font-size:1200%;*/">
-					<p class="title-b" style="">Немецкий дог</p>
-					<p class="title-a" style="">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
-					</div>
+      <div class="container header-top__container">
 
-					<div class="links">
-					<button type="button" class="link-button"><img src="img/ext_link.svg" /*style="padding:5px; width: 32px; height:32px;"*/ alt="Links"> </button>
-						<div class="dropdown-content" style="right:1px">
-						<a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
-						<a rel="noopener" target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
-						<a rel="noopener" target="_blank" href="https://greatdanes.dog">Российский портал</a>
-						<a rel="noopener" target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
-						<a rel="noopener" target="_blank" href="https://www.danesworld.info/pedigree.php?">Danesworld Pedigrees</a>	
-						<a rel="noopener" target="_blank" href="https://breedpedigrees.com/pedpoint/pp_search.php">River Rock Pedigrees</a>	
-						<a rel="noopener" target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
-						<a rel="noopener" target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
-						<a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея Eu Ch 1900-1980</a>
-						<a rel="noopener" target="_blank" href="https://gretdain.com/gd-foundation.html">Time traveller photos</a>
-						</div>
-					</button>	
-					</div>
-				</div>
+<div class="menu">
+
+  <button type="button"
+          class="menu-button"
+          aria-label="Меню"
+          aria-expanded="false"
+          aria-controls="site-menu">
+    <img src="img/burger.svg" alt="">
+  </button>
+
+  <nav id="site-menu"
+       class="dropdown-content"
+       style="left:1px"
+       aria-label="Разделы сайта">
+
+    <a href="index.html#eval">Оценка</a>
+    <a href="index.html#anatomy">Биология</a>
+    <a href="index.html#faces">Лица</a>
+    <a href="index.html#history">История</a>
+    <a href="index.html#books">Библиотека</a>
+    <a href="index.html#woodhouse">Почти человек</a>
+    <a href="index.html#vet">Здоровье</a>
+
+  </nav>
+
+</div>
+
+<div class="title">
+  <p class="title-b">Немецкий дог</p>
+  <p class="title-a">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
+</div>
+
+<div class="links">
+
+  <button type="button"
+          class="link-button"
+          aria-label="Ссылки"
+          aria-expanded="false"
+          aria-controls="links-menu">
+    <img src="img/ext_link.svg" alt="">
+  </button>
+
+  <nav id="links-menu"
+       class="dropdown-content"
+       style="right:1px"
+       aria-label="Внешние ссылки">
+
+    <a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
+    <a rel="noopener" target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
+    <a rel="noopener" target="_blank" href="https://greatdanes.dog">Российский портал</a>
+    <a rel="noopener" target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
+    <a rel="noopener" target="_blank" href="https://www.danesworld.info/pedigree.php?">Danesworld Pedigrees</a>
+    <a rel="noopener" target="_blank" href="https://breedpedigrees.com/pedpoint/pp_search.php">River Rock Pedigrees</a>
+    <a rel="noopener" target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
+    <a rel="noopener" target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
+    <a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея Eu Ch 1900-1980</a>
+    <a rel="noopener" target="_blank" href="https://gretdain.com/gd-foundation.html">Time traveller photos</a>
+
+  </nav>
+
+</div>
+
+      </div>
 
 <section id="blank" style="padding-top:65px;">
 </section>
@@ -401,7 +219,7 @@
 Породы (согласно FCI) классифицируются по территориальному признаку (ареал обитания), количеству и качеству труда, затраченного на их создание («культурные» («заводские»), «примитивные», «переходные»), по месту происхождения (географический признак).</p>
 <p>Разновидность, по определению Р.Трике, - это «подразделение внутри породы, представители которой имеют еще и общий наследственный признак, отличающий их от других представителей той же породы». Во многих породах допускаются разнообразные оттенки цвета, длины и текстуры шерсти, иногда разная постановка ушей в пределах одного стандарта.</p>
 
-<div class="v-spoiler" style="padding:2%; margin:2%; width:96%;">
+<div class="v-spoiler">
 <p>Вчитавшись в написанное проф. Р.Трике, не покидает ощущение, что породники живут «по понятиям», часто не принимая во внимание достижения генетики 21 века и оставаясь приверженцами законов и понятий науки времен Менделя. То есть то, то вполне логично объясняется общим термином вариабельности внутри вида (породы), потребовало зачем-то привлечения понятий, не требуемых для объяснения процессов происхождения и развития пород или отдельных особей. Зачем нужно использовать понятие рецессивного признака, если есть понятие рецессивной формы гена?</p>
 <p>Еще один пример творчества на породную тему. «Каждая достаточно распространенная порода состоит из большого количества популяций, более или менее обособленных друг от друга. В каждой породной популяции формируется свой собственный, несколько обособленный от других популяций геном. Таким
 образом, каждую породу нужно рассматривать как целую систему геномов, характеризующихся наличием определенных аллелей, их частотой, степенью гомозиготности или гетерозиготности, мутациями и т.д.». Для студентов сельскохозяйственных ВУЗов такое, наверное, приемлемо, но в жизни, там где нет санкций и закрытых границ, сегрегация ушла в прошлое. Лучшие образцы догов продавались в 1930-х в Америку из Германии, а в начале 2000-х – из Америки в Скандинавию. Лучшие индийские собаки импортировались из Америки. Популяционный геном дога– миф для тех, кто не читает научных статей и не выезжает за пределы своей страны.</p>
@@ -427,7 +245,7 @@
 	<p  align=center style='text-align:center'>оригинальный рисунок Jill Evans (с)2001</p>
 	<br>
 	</div>
-	<div class="container-table">
+	<div class="container">
 		<table border="1" cellspacing="7" cellpadding="5">
 		<tr>
 		<td width="50%"> <img src="img/6w-1.jpg"></td>
@@ -517,7 +335,7 @@
 	<p>COI дает ответственному заводчику значение вероятности того, что у особи (или особей в помете) будет выражен рецессивный ген или аутосомно-доминантный ген, так что на самом деле эти особи будут либо аа, либо АА. COI лучше всего понять при рассмотрении рецессивных генов (классическим примером которых у спаниэлей является мутация, приводящая к дефициту PDP1). Чтобы у особи проявилась болезнь (или, наоборот, ее отсутствие!), она должен получить один и тот же рецессивный ген от обоих родителей, по одному от каждого. "Проблема" с рецессивными генами заключается в том, что они могут скрываться в популяции, не проявляясь (если особь является аа, то признак выражен, и не аа, когда особь является носителем, но признак не выражен) в течение многих, многих поколений.</p>
 	<p>Поэтому заводчики иногда могут считать, что генетически рецессивный недостаток (или достоинство) убраны - но в один прекрасный день начинают появляться новые особи с этим достоинством (или болезнью), поскольку Аа и Аа скрещиваются вместе и рождаются и вырастают особи аа. По открытым родословным генетики могут дать заводчикам уверенность в том, что рецессивный (или доминантный) ген не проявится у особей, уменьшив количество вероятных носителей в родословной. Это концепция "удара в темноту", но она вполне работает. Нет никакой уверенности в том, что другие особи, ранее не использовавшиеся в питомнике, не окажутся "тайными" носителями той же проблемы (гена), но, как и при подбрасывании монетки, помогает статистика.</p>
 
-<div class="v-spoiler" style="padding:2%; margin:2%; width:96%;">
+<div class="v-spoiler">
 	<p>Большинство (если не все) пород собак возникло и развивалось путем инбридинга, инбридинг концентрирует в особях "желательные" признаки, и, естественно, для накопления желательных признаков в тех же собаках могут накапливаться другие, менее желательные признаки, поэтому относительная популяция "опасного" гена в племенном поголовье может увеличиваться.</p>
 	<p>Таким образом, заводчик, принимающий во внимание и уважающий необходимость низкого значения COI, может использовать генетический анализ для своей пользы. COI - это инструмент, и инструмент полезный - использование одной цифры проясняет то, что находится в родословной, и даже "высвечивает" незамеченный инбридинг, который неподготовленный читатель часто может не заметить при просмотре родословной - ведь в родословной масса имен!</p>
 	<p>Обычно заводчикам предлагают коэффициент близкородственного скрещивания Райта, и, как правило, вам не говорят, какая именно формула используется, что может привести к вариациям в COI, а иногда вам не говорят, сколько поколений включено, что опять же, может драматически изменить COI.</p>
@@ -590,7 +408,7 @@ COI для спаниэлей в Англии составляет 17,7%, у н�
 	<p>Серьезные заводчики разрабатывают стратегии разведения, проходят медицинские осмотры, тщательно обдумывают каждую вязку, и вынуждены констатировать, что на «свободном рынке» без какого-либо контроля регистрируется на 30 процентов больше собак, чем в VDH. Не говоря уже о неофициальных цифрах по собакам, не зарегистрированным даже в интернете. Если эти собаки нездоровы, не имеют устойчивого характера, не соответствуют стандарту или не социализированы должным образом они не доставят радости своим новым владельцам и, несмотря на все усилия, которые мы, как клуб заводчиков породистых собак и серьезные заводчики, прилагаем, они создают негативное впечатление о догах в обществе. Поступать как они и бесконтрольно вязать собак, безусловно, не является решением.</p>
 	<p>VDH проводит широкую просветительскую работу в форме пресс-релизов и информационных листовок. Серьезные заводчики, входящие в ассоциацию VDH, должны это поддержать. </p>
 
-<div class="v-spoiler" style="padding:2%; margin:2%; width:96%;">
+<div class="v-spoiler">
 	<p>Щенки не являются товаром.
 
 	<p>Недобросовестная торговля собаками имеет только одну цель - максимальную прибыль. В последние годы эта торговля превратилась в очень прибыльный бизнес в Германии. Размножать собак очень просто, спрос со стороны нетребовательных владельцев животных, по-видимому, безграничен, а прибыль торговцев огромна. Последствия этого серьезны. Помимо массовых недостатков, которые существуют при выращивании и транспортировке щенков,  возникают также опасности, которые позже исходят от собак, прошедших только минимальную социализацию и, в большинстве случаев, слишком рано отделенных от матерей и братьев с сестрами. Кроме того, в Германию "приезжают" инфекционные заболевания, которых раньше не было, или которые считались искорененными.</p>
@@ -691,7 +509,7 @@ COI для спаниэлей в Англии составляет 17,7%, у н�
 
 	<p>Мутация, которая укорачивает аминокислотную цепь, критическую для взаимодействия белков, была обнаружена в гене под названием APAF1. Исследование UC Davis  оценивает совокупное количество потерь телят голштинской породы за 30-летний период в более чем 100 000 в США и около полумиллиона во всем мире.</p>
 
-	<div class="v-spoiler" style="padding:2%; margin:2%; width:96%;">
+	<div class="v-spoiler">
 	<p>Проклятье популярного кобеля-производителя 
 	<br>
 	<p>Наиболее распространенный совет генетиков заводчикам — «избежать синдрома популярного производителя». В то же время наиболее распространенный совет одного заводчика другому — «вязать лучшего с лучшим». Так складывается очевидно парадоксальная ситуация с предсказуемым следствием: «лучшие» собаки являются самыми востребованными, поэтому эти кобели дают наибольшее количество потомков и становятся популярными производителями.</p>
@@ -761,5 +579,9 @@ Wellman, R. & J. Bennewitz. 2011. Identification and characterization of hierarc
 	</div>
 	
 </section>
+
+<script src="js/dropdown.js"></script>
+<script src="js/anchor.js"></script>
+
 </body>
 </html>
