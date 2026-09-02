@@ -51,117 +51,154 @@
     color: var(--amethyst);
   }
 
+  /* modal windows */
   .css-modal-details summary {
     display: inline-flex;
-    text-decoration: none;
+    align-items: center;
+    gap: 0.55rem;
     position: relative;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 6px 12px;
-    color: #FFF;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'OpenSans', sans-serif;
-    background: #BFBFBF;
+    box-sizing: border-box;
+    padding: 0.52rem 1rem 0.55rem;
+    color: var(--amethyst);
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(90,90,90,0.24);
+    border-left: 3px solid var(--amethyst);
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.96rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    text-decoration: none;
     cursor: pointer;
-    border: 1px solid #FFF;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5), 0 6px 20px rgba(0,0,0,0.19);
-    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+                border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .css-modal-details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .css-modal-details summary::marker {
+    content: "";
+  }
+
+  .css-modal-details summary::after {
+    content: "+";
+    margin-left: 0.12rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0.55;
   }
 
   .css-modal-details summary:hover,
-  .css-modal-details summary:active,
-  .css-modal-details summary:focus {
-    color: #FFF;
+  .css-modal-details summary:focus-visible {
+    background: rgba(255,255,255,0.34);
+    border-color: rgba(90,90,90,0.34);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.09);
+    transform: translateY(-1px);
+    outline: none;
   }
 
-  .css-modal-details summary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -50px;
-    bottom: 0;
-    left: 0;
-    border-right: 50px solid transparent;
-    border-top: 50px solid #2D6B9F;
-    transition: transform 0.5s;
-    transform: translateX(-100%);
-    z-index: -1;
-  }
-
-  .css-modal-details summary:hover::before,
-  .css-modal-details summary:active::before,
-  .css-modal-details summary:focus::before {
-    transform: translateX(0);
-  }
-
+  /* Invisible full-screen summary remains the click target outside the card. */
   .css-modal-details details[open] summary {
     cursor: default;
     opacity: 0;
     position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 3;
+    inset: 0;
+    z-index: 999;
     width: 100%;
     height: 100%;
+    transform: none;
   }
 
   .css-modal-details details .cmc {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
   }
 
   .css-modal-details details[open] .cmc {
     pointer-events: none;
-    z-index: 4;
     position: fixed;
-    left: 0;
-    top: 0;
+    inset: 0;
+    z-index: 1000;
     width: 100%;
     height: 100%;
-    animation: bg 0.5s ease;
-    background: rgba(107,107,107,0.7);
+    padding: 1.25rem;
+    background: rgba(28,28,28,0.58);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    animation: bg 0.3s ease;
   }
 
   .css-modal-details details .cmt {
-    font-family: 'OpenSans', sans-serif;
-    font-size: 14px;
-    padding: 20px;
-    max-width: 600px;
-    max-height: 70%;
-    transition: 0.5s;
-    border: 6px solid #FFF;
-    border-radius: 10px;
-    background: #EEE;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    position: relative;
+    box-sizing: border-box;
+    width: min(760px, calc(100vw - 2.5rem));
+    max-width: 760px;
+    max-height: 78vh;
+    padding: 2rem 2.35rem 2.25rem;
+    color: var(--font-grey);
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.48), rgba(255,255,255,0.12)),
+      var(--e5-bg);
+    border: 1px solid rgba(90,90,90,0.24);
+    border-top: 3px solid var(--amethyst);
+    border-radius: 4px;
+    box-shadow: 0 22px 55px rgba(0,0,0,0.24),
+                0 4px 14px rgba(0,0,0,0.12);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.62;
     text-align: left;
     overflow: auto;
-    align-content: center;
+    scrollbar-width: thin;
+  }
+
+  .css-modal-details details .cmt::before {
+    content: "СПРАВКА";
+    display: block;
+    margin-bottom: 1.15rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(90,90,90,0.18);
+    color: var(--amethyst);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.18em;
+  }
+
+  .css-modal-details details .cmt > p:first-of-type {
+    margin-top: 0;
   }
 
   .css-modal-details details[open] .cmt {
-    animation: scale 0.5s ease;
-    z-index: 4;
+    z-index: 1001;
     pointer-events: auto;
+    animation: scale 0.3s ease;
   }
 
+  /* Decorative close icon; clicking it falls through to the full-screen summary. */
   .css-modal-details details[open] .cmc::after {
-    content: '';
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--font-grey);
-    border-radius: 6px;
+    content: "";
     position: fixed;
-    z-index: 10;
-    top: 60px;
-    right: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-    background-image: url("img/cross.svg");
-    background-color: var(--modal-background);
-    background-size: cover;
-    animation: move 0.5s ease;
+    z-index: 1002;
+    top: 1.15rem;
+    right: 1.15rem;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255,255,255,0.42);
+    border-radius: 50%;
+    background: rgba(245,245,245,0.94) url("img/cross.svg") center / 18px 18px no-repeat;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+    pointer-events: none;
+    animation: move 0.3s ease;
   }
 
   .swiper-button-next,
@@ -197,8 +234,24 @@
       border: none;
     }
 
+    .css-modal-details details[open] .cmc {
+      padding: 0.65rem;
+    }
+
     .css-modal-details details .cmt {
-      width: 80%;
+      width: calc(100vw - 1.3rem);
+      max-height: 82vh;
+      padding: 1.4rem 1.25rem 1.6rem;
+      font-size: 0.96rem;
+      line-height: 1.58;
+    }
+
+    .css-modal-details details[open] .cmc::after {
+      top: 0.7rem;
+      right: 0.7rem;
+      width: 32px;
+      height: 32px;
+      background-size: 17px 17px;
     }
   }
 
@@ -224,11 +277,6 @@
       max-width: 100%;
       width: 80%;
       border: none;
-    }
-
-    .css-modal-details details .cmt {
-      width: 80%;
-      height: 50%;
     }
 
     .cmt .non-stand {
@@ -358,6 +406,8 @@
 
 <script src="js/dropdown.js"></script>
 
+<script src="js/anchor.js"></script>
+
       </div>
 
 	<section class="article" id="article">
@@ -392,7 +442,7 @@
 			<p>Собака пережила два «узких места» в популяции, первое из которых связано с одомашниванием, а второе - с формированием различных пород, причем последнее ответственно за большую часть потери генетического разнообразия. Это привело к значительному увеличению неравновесия связей у собак по сравнению с человеком. Хотя маркеры мтДНК не позволяют выявить породные признаки [пока], как микросателлитные локусы, так и SNPs способны отнести отдельных чистопородных собак к определенной группе. Тем не менее, на сегодняшний день генетические маркеры не всегда удается использовать для создания хорошо обоснованных филогенетических групп пород, в первую очередь из-за того, что большинство пород различаются скорее по частоте аллелей, чем по фиксированным различиям. Поэтому реконструкция общей филогении домашних собак значительно усложняется в связи с недавним происхождением многих пород в сочетании с высоким уровнем смешения в процессе породообразования.</p>	
 			<p>Расшифровка генетических причин морфологического разнообразия домашней собаки уже сейчас дает результаты.. Подходы «сверху вниз», использующие картирование QTL, картирование неравновесия сцепления и анализ ассоциаций - все это методы, использующие анализ последовательности генома собаки. Такие методы позволяют обойтись без больших родословных. Этот подход оказался полезным для выявления генов-кандидатов и мутаций, ответственных за признаки, связанные, например, с пятнистостью, или гребнем шерсти у родезийских риджбеков. Эти же методы позволили выявить хромосомный регион, вариации которого, по-видимому, связаны с различиями в размерах собак. Несмотря на эти достижения сравнительной геномики и картирования с помощью маркеров, расшифровка механизмов, ответственных за возникновение формы у домашней собаки, является сложной задачей. </p>
 			</div>
-		<div class="container" id="parker" style="padding-top:65px;">
+		<div class="container" id="parker"">
 			<p>До начала XXI века понимание происхождения пород было умозрительным, спекулятивным и зачастую основывалось на исторических записях (многие из которых не подтверждены) и археологических раскопках. Классификация пород основывалась, по большей части, на внешнем сходстве и особенностях использования. Все изменилось с началом работы подразделения сравнительной генетики национального института генетики человека, а точнее с работами <a target="_blank" class="ext_link" href="https://www.genome.gov/staff/Heidi-G-Parker-PhD">Хейди Паркер</a>. За прошедшие двадцать лет нашли научное подтверждение или опровержение многие догадки.</p>
 			<p>Во-первых, перестало вызывать сомнения, что предком собаки является серый волк. Не койот, не шакал, а волк.</p>
 			<p>Во-вторых, история собак неразрывно связана с историей человека. Не было стай диких собак, мигрировавших по миру. Собаки жили рядом или вместе с человеком и мигрировали и развивались вместе с ним, а с некоторых пор - под его контролем.</p>
@@ -438,7 +488,7 @@
 			<hr>	
 			<p style="text-align:center">***</p>			
 		</div>
-		<div class="container"  style="padding-top:65px;" id="color_genes">
+		<div class="container" id="color_genes">
 	<p  align=center style='text-align:center;font-size:120%;'><b>Формула цвета</b></p>
 	<p style='margin-top:6.0pt'> Цвет и его распределение по шерсти и коже собаки определяется выработкой двух пигментов.</p>
 	<p style='margin-top:6.0pt'>Несколько локусов - <a target="_blank" class="ext_link" href="https://labogen.com/en/coat-colours-coat-lenght-coat-structure-dog/a-locus-agouti-asip-analysis/"> Agouti (A)</a>, <a target="_blank" class="ext_link" href="https://labogen.com/en/coat-colours-coat-lenght-coat-structure-dog/e-locus-e1-apricot-cream-lemon-red-yellow/"> Extension (E)</a> и <a target="_blank" class="ext_link" href="https://labogen.com/en/coat-colours-coat-lenght-coat-structure-dog/k-locus-test-for-kb-allele-only/"> Black (K)</a> контролируют когда и где на теле собаки вырабатывается эумеланин (черный/коричневый пигмент) или феомеланин (красный/желтый пигмент). Межклеточные сигнальные пути сообщают меланоциту, какой тип меланина производить. Зависимое от времени, генно обусловленное переключение выработки пигментов может привести к появлению одного волоса с полосами эумеланина и феомеланина. Пространственно-зависимая, генно обусловленная, передача сигналов приводит к появлению участков тела с разным уровнем каждого пигмента.</p>
@@ -887,7 +937,7 @@ Blue brindle harlequin mantle 52
 			<hr>	
 			<p style="text-align:center">***</p>			
 		</div>
-		<div class="container" id="sense" style="padding-top:65px;">
+		<div class="container" id="sense">
 			<br clear="all">			
 			<p>У собаки есть два типа фоторецепторов колбочек, что делает ее дихроматом. Колбочки имеют максимальную чувствительность в спектре между 429 и 555нм. Поведенческие исследования показывают, что зрительный мир собак состоит из желтого, синего и серого цветов, но им трудно различать красный и зеленый, их цветовое зрение эквивалентно красно-зеленому дальтонизму у людей (дейтеранопия). Когда человек воспринимает объект как «красный», этот объект кажется собаке «желтым», человеческое восприятие «зеленого» кажется собаке «белым», оттенком серого. Эта белая область (нейтральная точка) находится около 480нм, для людей она -  сине-зеленая. Для собак длины волн света , превышающие нейтральную точку, неотличимы друг от друга, все они превращаются в  желтый.</p>
 			<p>Собаки используют цвет вместо яркости, чтобы различать светлый или темно-синий/желтый. Они менее чувствительны к различию в оттенках серого, чем люди, и также менее чувствительны к яркости (вдвое), чем люди. Зрительная система эволюционировала, чтобы помочь умелой охоте. Хотя у собак острота зрения низкая, их чувствительность к движущимся объектам очень высока. Собаки могут различать людей  на расстоянии от 800 до 900 метров; однако это расстояние уменьшается вдвое, если человек неподвижен.</p>
@@ -912,7 +962,7 @@ Blue brindle harlequin mantle 52
 			<hr>	
 			<p style="text-align:center">***</p>			
 
-			<div class="container" id="AI" style="padding-top:65px;">
+			<div class="container" id="AI">
 			<div class="swiper sample-slider">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide"><img src="img/anatomy016.jpg" ></div>

@@ -108,7 +108,6 @@ html {
 font-family: 'OpenSans', sans-serif;
 font-weight: 400;
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
 }
 
 * {
@@ -979,3 +978,9 @@ img.scaled {
 .bg-color {
 	background-color: #F8DEA9;
 }
+
+.article > .container {
+    display: flow-root;
+}
+
+
