@@ -20,33 +20,19 @@ https://gretdain.com/vet.html#dcm
 
 /* common part */	
 
-	.container {
-		scroll-margin-top: 3em;
-		scroll-behavior: smooth;
-	}
-
-	.container-table {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 1000px;
-	}
-
 	.article img {
         object-fit: contain;
         max-width: 100%;
 	max-height: 100%;
 	color: var(--font-grey);
-	}
-
-	a.hidden {
-	visibility: hidden;
-	opacity: 0;
-	}
-
-	.dropdown-content:hover a.hidden {
-        visibility: visible;
-        opacity: 1;
 	}	
+	
+	.article h2 {
+    text-align:center;
+    font-weight:400;
+    margin-top:1em;
+    margin-bottom:1.2em;
+	}
 
 /* Modal window */
 
@@ -228,11 +214,7 @@ https://gretdain.com/vet.html#dcm
 	margin-top: 1em;
 	margin-bottom: 1em;
 	}
-
-	figcaption {
-	  color: var(--font-grey);
-	}
-
+	
 	.css-modal-details summary {
 	width:80%;
 	}
@@ -260,16 +242,9 @@ https://gretdain.com/vet.html#dcm
 	border: 1px solid grey; 
 	}
 
-	td {
-	}
-
 	.grey-cell {
 	background-color: var(--cell-grey);
 	text-align:center;
-	}
-
-	figcaption {
-	  color: var(--font-grey);
 	}
 
 	video {
@@ -298,45 +273,71 @@ https://gretdain.com/vet.html#dcm
 
 <body>
 
+      <div class="container header-top__container">
 
-				<div class="container header-top__container">
-					<div class="menu">
-					<button type="button" class="menu-button" /*style="background-color:var(--e5-bg);height:30px;width:30px;"*/><img src="img/burger.svg" /*style="padding-top:5px;"*/ alt="Menu"> </button>
-						<div class="dropdown-content" style="left:1px">
-						<a href="index.html#eval">Оценка</a>
-						<a href="index.html#anatomy">Биология</a>
-						<a href="index.html#faces">Лица</a>
-						<a href="index.html#history">История</a>						
-						<a href="index.html#books">Библиотека</a>
-						<a href="index.html#woodhouse">Почти человек</a>					
-						<a href="index.html#breeding">Селекция</a>
-						</div>
-					</button>
-					</div>
-					<div class="title" style="/*font-size:1200%;*/">
-					<p class="title-b" style="">Немецкий дог</p>
-					<p class="title-a" style="">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
-					</div>
+<div class="menu">
 
-					<div class="links">
-					<button type="button"  class="link-button"><img src="img/ext_link.svg" /*style="padding:5px; width: 32px; height:32px;"*/ alt="Links"> </button>
-						<div class="dropdown-content" style="right:1px">
-						<a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
-						<a rel="noopener" target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
-						<a rel="noopener" target="_blank" href="https://greatdanes.dog">Российский портал</a>
-						<a rel="noopener" target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
-						<a rel="noopener" target="_blank" href="https://www.danesworld.info/pedigree.php?">Danesworld Pedigrees</a>	
-						<a rel="noopener" target="_blank" href="https://breedpedigrees.com/pedpoint/pp_search.php">River Rock Pedigrees</a>	
-						<a rel="noopener" target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
-						<a rel="noopener" target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
-						<a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея Eu Ch 1900-1980</a>
-						<a rel="noopener" target="_blank" href="https://gretdain.com/gd-foundation.html">Time traveller photos</a>
-						<a class="hidden" rel="noopener" target="_blank" href="https://gretdain.com/gallery.html">&nbsp;&nbsp;&nbsp;&nbsp</a>
-						<a class="hidden" rel="noopener" target="_blank" href="./greatdanemagazine/larsson.html">&nbsp;&nbsp;&nbsp;&nbsp</a>
-						</div>
-					</button>	
-					</div>
-				</div>
+  <button type="button"
+          class="menu-button"
+          aria-label="Меню"
+          aria-expanded="false"
+          aria-controls="site-menu">
+    <img src="img/burger.svg" alt="">
+  </button>
+
+  <nav id="site-menu"
+       class="dropdown-content"
+       style="left:1px"
+       aria-label="Разделы сайта">
+
+    <a href="index.html#eval">Оценка</a>
+    <a href="index.html#anatomy">Биология</a>
+    <a href="index.html#faces">Лица</a>
+    <a href="index.html#history">История</a>
+    <a href="index.html#books">Библиотека</a>
+    <a href="index.html#woodhouse">Почти человек</a>
+    <a href="index.html#breeding">Селекция</a>
+
+  </nav>
+
+</div>
+
+<div class="title">
+  <p class="title-b">Немецкий дог</p>
+  <p class="title-a">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
+</div>
+
+<div class="links">
+
+  <button type="button"
+          class="link-button"
+          aria-label="Ссылки"
+          aria-expanded="false"
+          aria-controls="links-menu">
+    <img src="img/ext_link.svg" alt="">
+  </button>
+
+  <nav id="links-menu"
+       class="dropdown-content"
+       style="right:1px"
+       aria-label="Внешние ссылки">
+
+    <a rel="noopener" target="_blank" href="https://greatdanegnosis.wordpress.com/">Great Dane Gnosis</a>
+    <a rel="noopener" target="_blank" href="http://nkp.greatdanes.dog">Российский клуб</a>
+    <a rel="noopener" target="_blank" href="https://greatdanes.dog">Российский портал</a>
+    <a rel="noopener" target="_blank" href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">Quintessa</a>
+    <a rel="noopener" target="_blank" href="https://www.danesworld.info/pedigree.php?">Danesworld Pedigrees</a>
+    <a rel="noopener" target="_blank" href="https://breedpedigrees.com/pedpoint/pp_search.php">River Rock Pedigrees</a>
+    <a rel="noopener" target="_blank" href="https://www.ginnie.com/greatdanes.htm">Ginnie's page</a>
+    <a rel="noopener" target="_blank" href="https://gesunde-dogge.de/">Gesunde-dogge Deutschland</a>
+    <a rel="noopener" target="_blank" href="https://gretdain.com/eu-gallery.html">Галлерея Eu Ch 1900-1980</a>
+    <a rel="noopener" target="_blank" href="https://gretdain.com/gd-foundation.html">Time traveller photos</a>
+
+  </nav>
+
+</div>
+
+      </div>
 
 <section id="blank" style="padding-top:3em;">
 </section>
@@ -346,7 +347,7 @@ https://gretdain.com/vet.html#dcm
 
 	<div class="container" id="piro">
 <br>
-<p  align=center style='text-align:center'><big><b>Пироплазмоз (бабезиоз)</b></big></p>
+<h2>Пироплазмоз (бабезиоз)</h2>
 <table cellspacing=7 >
 <tr>
 <td class="grey-cell" >Симптомы</td>
@@ -355,13 +356,13 @@ https://gretdain.com/vet.html#dcm
 На третьей стадии моча становится коричневой, оболочки глаза приобретают желтушный оттенок, собака встает только в туалет, может появиться понос.
 На четвертой стадии животное перестает вставать, а затем умирает.</td>
 </tr>
-<td class="grey-cell">Причина и описание заболевания</td>
+<tr><td class="grey-cell">Причина и описание заболевания</td>
 <td align="left">Возбудители бабезиоза собак одноклеточные Babesia canis, Babesia gibsoni и Babesia сonradae, использующие в качестве переносчиков иксодовых клещей, способны заразить домашнюю собаку любой породы. Заражение собаки происходит при укусе клеща. После прокусывания клещом кожи собаки наступает стадия цементации, на которой клещ закрепляется в коже. Это стадия длится до 24-36 часов, риск заражения на этой стадии минимален. Затем начинается стадия лизиса, при которой клещ через прокушенную кожу выделяет вещества, растворяющие ткань под кожей, риск заражения возрастает. На стадиии осморегуляции клещ активно всасывает кровь, раздувается, и избыток воды вводит обратно в кровоток собаки через слюнные железы. Происходит выброс в кровь огромного количества спорозоитов бабезий и, собственно, заражение. Попавшие в кровь спорозоиты бабезий проникают в эритроциты животного, размножаются путём деления, начинают питаться гемоглобином, разрушают эритроцит. Из разрушенного эритроцита в плазму крови попадает гемоглобин, в нормальном состоянии там отсутствующий, затем происходит фильтрация его через почки в мочу, начинается гемоглобиновый нефроз, почечная недостаточность.</td>
 </tr>
-<td class="grey-cell">Действия хозяина</td>
+<tr><td class="grey-cell">Действия хозяина</td>
 <td align="left">Любой клещ на кожном покрове или шерсти должен быть снят и уничтожен. Место укуса следует обработать спиртом. Считается разумным чистить покровы собаки щеткой и проводить визуальный осмотр поверхности собаки после каждого выхода на улицу. При появлении симптомов заболевания следует срочно провести в лаборатории ПЦР анализ с получением письменного результата уровня IgM (или провести  микроскопическое исследование окрашенного мазка периферической крови с письменным результатом количества пораженных эритроцитов в поле зрения). В исследование ПЦР разумно включить также пробу на боррелиоз и анаплазмоз. Вакцинацию собак от бешенства и других инфекционных заболеваний следует проводить в зимнее время, чтобы избежать риска наложения нестабильного иммунного статуса после вакцины и паразитарного заболевания.</td>
 </tr>
-<td class="grey-cell">Лечение</td>
+<tr><td class="grey-cell">Лечение</td>
 <td align="left">После установления диагноза вводится подкожно/внутримышечно препарат Пиростоп (раствор имидокарба 12%) из расчета 0,5мл на 10 кг массы животного. Для снижения температуры и исключения аллергических реакций вводятся отдельно анальгин и антигистаминные средства. Необходимость во внутривенных капельницах для нестарых, не больных хронически собак отсутствует.</td>
 </tr>
 </table> 		
@@ -373,20 +374,20 @@ https://gretdain.com/vet.html#dcm
 
 	<div class="container" id="mef">
 <br>
-<p  align=center style='text-align:center'><big><b>Мегаэзофагус</b></big></p>
+<h2>Мегаэзофагус</h2>
 <table cellspacing=7 >
 <tr>
 <td class="grey-cell" >Симптомы</td>
 <td align="left">Срыгивание непереваренной пищи сразу после кормления либо через несколько часов;<br>Усиление аппетита (волчий голод) или, наоборот, его потеря;<br>Усиленное выделение слюны;<br>Сильный запах изо рта;<br>Потеря веса, доходящая до полного истощения;<br>Жидкий стул с едким запахом;<br>Аспирационная пневмония как следствие затяжного течения болезни. Отказ от корма, повышение температуры тела, вялость, общая слабость, кашель с приступами одышки, слизистые выделения из носа.</td>
 </tr>
-<td class="grey-cell">Причина и описание заболевания</td>
+<tr><td class="grey-cell">Причина и описание заболевания</td>
 <td align="left">Мегаэзофагус представляет собой патологическое расширение пищевода у животных вследствие нарушения его моторной (перистальтической) функции - кардиальный сфинктер пищевода (в месте сочленения с желудком) постоянно находится в закрытом (в подавляющем числе случаев) или открытом состоянии. Считается, что причина может быть врожденной (в таком случае болезнь проявляется в молодом возрасте) или приобретенной (вследствие травм, перенесенных заболеваний). Часто подозрение на мегаэзофагус падает на щенков, у которых в силу незрелости тканей пищевода происходит срыгивание пищи. Однако, это болезнь зрелого возраста.</td>
 </tr>
-<td class="grey-cell">Действия хозяина</td>
+<tr><td class="grey-cell">Действия хозяина</td>
 <td align="left">При появлении одного или нескольких симптомов следует провести диагностику с целью установления истинной причины проблем ЖКТ. Единственным на сегодняшний день достоверным методом подтвердить наличие заболевания является рентгеноскопия пищевода (необходимости введения рентгенконтраста нет, за исключением случаев открытого кардиального сфинктера, впрочем, это требует введения рентгеноконтраста напрямую в желудок). Расширение органа или наличие пищи в нем свидетельствуют о проблеме в работе кардиального сфинктера. На основании рентгеноскопии ставится диагноз. Рентгеноскопия также позволяет исключить наличие в пищеводе инородных тел, новообразований, дивертикула, обструкции.<br>
 Дополнительные исследования микрофлоры кишечника и пищевода дают представление о тяжести заболевания и необходимости применения тех или иных методов лечения. Наличие грибковой микрофлоры в кишечнике (дисбактериоз), понос требуют восстановления его нормальной функции медикаментозной терапией. Появление патологической микрофлоры в пищеводе и в срыгиваемой пище свидетельствуют о тяжелой форме заболевания.</td>
 </tr>
-<td class="grey-cell">Лечение</td>
+<tr><td class="grey-cell">Лечение</td>
 <td align="left">Хирургические методы лечения не подтвердили эффективности. Применение висцеральных методов вряд ли возможно, вследствие закрытого расположения кардиального сфинктера.<br>
 Вылечить собаку при данной патологии невозможно, но можно предпринять меры для улучшения качества жизни питомца.<br>
 Кормление взрослых животных с таким диагнозом осуществляется в вертикальном положении. Миска при этом должна находиться на уровне холки. Такие меры помогают не допустить аспирации и развития пневмонии. Корм должен быть полужидким и высококалорийным (желательно использовать специализированные, сбалансированные диетические корма). Кормление должно осуществляться малыми порциями 4-6 раз в день.</td>
@@ -401,25 +402,25 @@ https://gretdain.com/vet.html#dcm
 
 	<div class="container" id="epilepsy">
 <br>
-<p  align=center style='text-align:center'><big><b>Эпилепсия</b></big></p>
+<h2>Эпилепсия</h2>
 <table cellspacing=7 >
 <tr>
 <td class="grey-cell">Симптомы</td>
 <td align="left">Собака замирает, выглядит испуганной, глаза выпучиваются, вскоре начинается жевание челюстями, затем - припадок, заваливание набок, потеря сознания, мышцы собаки напрягаются, глаза закатываются, дыхание становится тяжелым и громким. Происходит непрерывное жевание, конечности в постоянном движении. Возможна розовая пена изо рта как результат прикусывания губ. Возможно мочеиспускание и/или дефекация. Скулеж и визг. Длительность стадии составляет несколько минут, затем - <br>
 замедление и в полное прекращение судорог, возбуждение либо угнетение. Жажда. Голод</td>
 </tr>
-<td class="grey-cell">Возможная причина и описание заболевания</td>
+<tr><td class="grey-cell">Возможная причина и описание заболевания</td>
 <td align="left"><b>Идиопатическая эпилепсия</b> с предполагаемым генетическим происхождением. Повторные припадки у собак 1-5 лет. Точная причина припадков неизвестна. Описанная картина говорит об идиопатической  эпилепсии в 80% случаев для молодых (до года) собак. <b>Структурная эпилепсия</b> - припадки, которые происходят из-за наблюдаемого повреждения или пороков развития головного мозга (например, после воспалительного заболевания головного мозга, роста внутричерепной опухоли или после травмы головы). <b>Эпилепсия c неизвестной причиной</b> подразумевает отсутствие диагностированной структурной эпилепсии. Только в 10% случаев для взрослых (после 5 лет) картина говорит об идиопатической эпилепсии. Эпилепсия не смертельна и не является причиной эвтаназии.<br>
 Реактивные припадки возникают в ответ на определенные стимулы (такие как нарушение обмена веществ или токсин), не считаются формой эпилепсии, поскольку они не вызваны аномалиями мозга.</td>
 </tr>
-<td class="grey-cell">Действия хозяина</td>
+<tr><td class="grey-cell">Действия хозяина</td>
 <td align="left">Убрать все предметы вокруг собаки. Перевернуть собаку набок для избегания попадания слюны или рвотных масс в горло. Не делать попыток разжать зубы руками или предметами. Вывести из помещения собак и людей. Не прижимать собаку к полу. Можно накрыть собаку плотным одеялом. Если у собаки поставлен диагноз эпилепсия – быстро ввести препараты ректально или инъекционно. После припадка возможен прием небольшого количества пищи и воды. Возможна короткая прогулка без нагрузки.</td>
 </tr>
-<td class="grey-cell">Аптечка</td>
+<tr><td class="grey-cell">Аптечка</td>
 <td align="left">Реланиум (ректально, микроклизма) на заключительном этапе припадка. Фенобарбитал (паглюферал) сразу после припадка.</td>
 </tr>
 </tr>
-<td class="grey-cell">Уточнение диагноза после осмотра врача</td>
+<tr><td class="grey-cell">Уточнение диагноза после осмотра врача</td>
 <td align="left">Если идиопатическая эпилепсия не была диагностирована ранее:<br>
 • Развернутая биохимия крови и общий анализ без кормления накануне в течение 12 часов<br>
 • 076 Комплексная диагностика токсоплазмоза (ИФА, ПЦР)<br>
@@ -435,7 +436,7 @@ https://gretdain.com/vet.html#dcm
 
 	<div class="container" id="displasia">
 <br>
-<p  align=center style='text-align:center'><big><b>Дисплазия</b></big></p>
+<h2>Дисплазия</h2>
 <br>
 
 <table cellspacing=7 >
@@ -556,7 +557,7 @@ NA не измеряется, и в течение долгого времени
 
 	<div class="container" id="dcm">
 <br>
-<p  align=center style='text-align:center'><big><b>Кардиомиопатия</b></big></p>
+<h2>Кардиомиопатия</h2>
 <br>
 
 <table cellspacing=7 >
@@ -588,10 +589,11 @@ NA не измеряется, и в течение долгого времени
         <div class="cmc">
             <div class="cmt" style="height:90%;padding:0;width:auto;">
 	<br clear="all">
-	<figure style="width:auto;position: relative;overflow:hidden;max-width:96%;height:80%;">
-	<iframe style="top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.dropbox.com/scl/fi/9asy35t2fjdgzfr8bnoa4/DCM-In-Great-Danes-Russian-Version.mp4?rlkey=hv9f1tj7zvjvktog5jc9gkqpx&st=glki6nkz&raw=1" frameBorder="0"></iframe>
-	</figure>
-<!--	<video style="height:90%;" controls="" autoplay="" name="media"><source src="https://ucc273f1724a0f7fd1b9b341dab3.dl.dropboxusercontent.com/cd/0/inline/Cqq1mHQZPI9pE4fQMOYn-go4QLe2o8PeOMjE_qyOgLJYVqPJA7IA-DL4NTrLp9PmLaQko_5fXdCVhnMJQC91Ce8oLDTmm-NJxlqQvSGYGzpBaBLIlsiWQwZsNuKyDKwI0NBKbwC3tyugw8SwN2idhx6c/file#" type="video/mp4"></video> -->
+						<video preload="metadata" style="width:90%;" controls>
+			<source src="https://greatdaneworld.dog/video/dcm-great-danes-russian"
+        type="video/mp4">
+        </video>
+
 		</div>
         </div>
     </details>
@@ -649,7 +651,6 @@ L-карнитин (в сочетании с убихиноном/убихино
             <div class="cmt">
 Создание генетического теста - очень сложная задача, тест не дает результата да/нет, он может только дать информацию о том, сколько и какие рисковые и защитные гены дог несет в себе. Но при спаривании могут возникать бесконечные варианты сочетаний генов. Пока есть только ЭхоКГ тест, который говорит нам, здорова ли собака в настоящее время, но он не говорит разовьется ли у животного болезнь позже или передаст ли он ее потомству. Поэтому генетический тест крайне необходим для эффективной борьбы с болезнью. Для такой борьбы нужно сообщать о DCM умерших и живых собак, проводить сбор данных и избегать инбридинга, который является причиной накопления генов болезней в разведении. Кроме того, рекомендуется использовать в разведении только взрослых животных и животных с как можно большим количеством предков-долгожителей.
 DCM имеет у догов частоту до 30% в популяции, это означает, что почти все доги несут в себе DCM триггерные, рисковые гены. Таким образом, невозможно исключить из разведения всех животных, в родстве с которыми  обнаружилась DCM, потому что тогда просто не останется собак для размножения.
-	</figure>
             </div>
         </div>
     </details>
@@ -662,5 +663,7 @@ DCM имеет у догов частоту до 30% в популяции, эт
 </div>
 
 </section>
+<script src="js/dropdown.js"></script>
+<script src="js/anchor.js"></script>
 </body>
 </html>
