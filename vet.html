@@ -418,6 +418,84 @@ details[open] > summary {
 
 }
 
+/* ---------- video modal ---------- */
+
+.css-modal-details details .cmt.video-modal {
+    padding:0;
+    overflow:hidden;
+}
+
+.video-modal video {
+    display:block;
+    margin:0 auto;
+}
+
+
+/* portrait phone:
+   modal height follows video height */
+
+@media (orientation:portrait) and (max-width:767px) {
+
+    .css-modal-details details .cmt.video-modal {
+        width:90%;
+        height:auto;
+        max-height:none;
+        padding:0;
+        overflow:hidden;
+    }
+
+    .video-modal video {
+        width:100%;
+        height:auto;
+    }
+
+}
+
+
+/* landscape phone:
+   fit entire video inside screen, no scrolling */
+
+@media (orientation:landscape) and (max-height:600px) {
+
+    .css-modal-details details .cmt.video-modal {
+        width:auto;
+        height:auto;
+
+        max-width:95vw;
+        max-height:90vh;
+
+        padding:0;
+        overflow:hidden;
+    }
+
+    .video-modal video {
+        display:block;
+
+        width:auto;
+        height:auto;
+
+        max-width:95vw;
+        max-height:90vh;
+
+        object-fit:contain;
+    }
+
+}
+
+@media (min-width:768px) {
+
+    .css-modal-details details[open] .cmc {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .css-modal-details details .cmt.video-modal {
+        margin:0;
+    }
+
+}
+
 </style>
 
 </head>
@@ -754,12 +832,10 @@ NA не измеряется, и в течение долгого времени
 
                 <div class="cmc">
 
-				<div class="cmt"
-					 style="height:90%;padding:0;width:auto;">
+					<div class="cmt video-modal">
 
-					<video preload="metadata"
-						   style="display:block;width:100%;height:auto;"
-						   controls>
+						<video preload="metadata"
+							   controls>
 
 						<source
 							src="https://greatdaneworld.dog/video/dcm-great-danes-russian"
