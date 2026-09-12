@@ -229,25 +229,42 @@ body {
 
 /* desktop */
 
+/* desktop — show on hover with delay */
+
 @media (hover:hover) {
 
-    .table-photo:hover .photo-popup {
+    .photo-popup {
         display:block;
 
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+
+        transition:
+            opacity .15s ease 0s,
+            visibility 0s linear .15s;
+    }
+
+    .photo-tip:hover .photo-popup {
         position:fixed;
+
         left:50%;
         top:calc(50% + 32px);
+        bottom:auto;
 
         transform:translate(-50%, -50%);
 
         width:auto;
         max-width:80vw;
         max-height:calc(100vh - 100px);
+
+        opacity:1;
+        visibility:visible;
+
+        transition-delay:1s, 1s;
     }
 
-    .table-photo:hover .photo-popup img {
-        display:block;
-
+    .photo-tip:hover .photo-popup img {
         width:auto;
         height:auto;
 

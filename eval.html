@@ -25,17 +25,25 @@
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width:100%;
+    border-collapse:collapse;
+    border:none;
+
+    box-shadow:0 2px 10px rgba(80,60,30,.12);
 }
 
 tr {
-  border: 1px solid grey;
+    border:none;
 }
 
 th,
 td {
-  text-align: center;
+    text-align:center;
+    vertical-align:middle;
+}
+
+td:has(> img) {
+    vertical-align:top;
 }
 
 td p {
@@ -68,18 +76,31 @@ figcaption {
 
 /* DIV tables used around paired Swipers */
 .div-table {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  border: 1px solid #666666;
+    display:table;
+    table-layout:fixed;
+    width:100%;
+
+    border:none;
+    box-shadow:0 2px 10px rgba(80,60,30,.12);
+}
+
+#colors table,
+#colors tr,
+#colors td {
+    border:none !important;
+}
+
+#pics figure {
+    border:none;
+    padding:0;
 }
 
 .div-table-col {
-  float: left;
-  display: table-column;
-  width: 50%;
-  border: none;
-  padding-left: 1em;
+    float:left;
+    width:50%;
+    border:none;
+    padding-left:1em;
+    box-sizing:border-box;
 }
 
 /* Swiper */
@@ -166,6 +187,60 @@ a:active {
 /*	margin-top: 65px;*/
 	padding-top: 25px;
 	}
+	
+	/* ---------- vet pages ---------- */
+
+body {
+    background:#ddd;
+}
+
+.vet-page {
+    max-width:900px;
+
+    margin:40px auto;
+    padding:40px;
+
+    background:#faf8f2;
+
+    box-sizing:border-box;
+
+    border:1px solid rgba(120,95,55,.12);
+    box-shadow:0 2px 10px rgba(80,60,30,.10);
+}
+
+.vet-page p {
+    text-align:justify;
+    line-height:1.75;
+
+    margin-top:.4em;
+    margin-bottom:.4em;
+}
+
+.vet-item {
+    margin-top:1.5em;
+}
+
+.vet-item:first-of-type {
+    margin-top:.8em;
+}
+
+.vet-item p {
+    margin:0;
+}
+
+.vet-item strong {
+    font-weight:600;
+}
+
+.page-end {
+    text-align:center;
+
+    margin-top:3em;
+
+    letter-spacing:.5em;
+    color:#777;
+}
+
 
 /* Mobile */
 @media (max-width: 767px) {
@@ -203,6 +278,11 @@ a:active {
   .swiper-wrapper {
     height: auto;
   }
+  
+      .vet-page {
+        margin:20px auto;
+        padding:5%;
+    }
 }
 
 /* Desktop */
@@ -250,9 +330,9 @@ a:active {
     margin: 0;
   }
 
-  .swiper-wrapper {
+/*  .swiper-wrapper {
     width: 50%;
-  }
+  } */
 
   .swiper-zoom-container {
     margin-left: 5%;
@@ -378,10 +458,6 @@ a:active {
 
 </div>
 
-<script src="js/dropdown.js"></script>
-
-<script src="js/anchor.js"></script>
-
       </div>
 
 <section class="article" id="article">
@@ -390,7 +466,7 @@ a:active {
 	<br><br>
 	Экспертиза собаки</b></p>
 
-	<div class="container"  id="evans">
+	<div class="container vet-page"  id="evans">
 <p  class="heading2" id="square_j"><b>Квадрат</b></p>
 <br>
 <table>
@@ -639,12 +715,10 @@ a:active {
 
 <p  align=center style='margin-bottom:0in;margin-bottom:.0001pt;
 text-align:center; font-size:80%;'>Подборка рисунков Jill Evans. <a target="_blank" class="ext_link" href="http://daneaffaire.com/aboutjill.html"> Опубликовано</a> Laura Munro.</p>
-<br>
-			<hr>
-			<p style="text-align:center">***</p>
+	    <div class="page-end">***</div>
 	</div>
 
-	<div class="container"  id="riggsbee">
+	<div class="container vet-page"  id="riggsbee">
 
 <p class="heading1"><b>Пропорции и баланс немецкого дога</b></p>
 
@@ -718,7 +792,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 уравновешена элегантностью.</p>
 <br>
 
-  <form style="position:relative;z-index:-1;">
+  <div>
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -738,7 +812,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 				</div>
 			  </div>
             </div>
-  </form>
+  </div>
 
 <br>
 <p class="heading2" id="square_r"><b>Квадрат</b></p>
@@ -764,7 +838,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 роста, он становится пропорциональнее и сглаженнее.</p>
 <br>
 
-  <form style="position:relative;z-index:-1;">
+  <div>
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -780,7 +854,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 				</div>
 			  </div>
             </div>
-  </form>
+  </div>
 <br>
 <p class="heading2" id="sex_r"><b>Кобели и суки</b></p>
 
@@ -792,7 +866,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 соответствующей элегантностью, а кобель меньше, то это, скорее, в негативе для
 кобеля, чем к достоинству суки.</p>
 <br>
-  <form style="position:relative;z-index:-1;">
+  <div>
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -810,7 +884,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 		</div>
 			  </div>
             </div>
-  </form>
+  </div>
 <br>
 <p>В стандарте говорится, что "мужественность кобеля очень ярко выражена в структурном
 оформлении головы.  Голова суки более деликатно сложена".</p>
@@ -874,7 +948,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 </table>
 <br>
 
-  <form style="position:relative;z-index:-1;">
+  <div>
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -894,7 +968,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 				</div>
 			  </div>
             </div>
-  </form>
+  </div>
 
 
 <p class="heading2" id="neck_r"><b>Шея</b></p>
@@ -1268,7 +1342,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 </tr>
 </table>
 
-  <form style="position:relative;z-index:-1;">
+  <div>
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1288,7 +1362,7 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 		</div>
 				 </div>
 	            </div>
-  </form>
+  </div>
 
 <p>Идеального дога не существует, поэтому вы вряд ли найдете дога с идеальным балансом.
 Есть несколько способов решить, какие недостатки баланса являются более серьезными.
@@ -1309,12 +1383,10 @@ text-align:center; font-size:80%;'>Подборка рисунков Jill Evans.
 
 <p  align=center style='margin-bottom:0in;margin-bottom:.0001pt;
 text-align:center; font-size:80%;'>Опубликовано Никки Риггсби 01.01.2011</p>
-<br>
-			<hr>
-			<p style="text-align:center">***</p>
+	    <div class="page-end">***</div>
 </div>
 
-	<div class="container"  id="move">
+	<div class="container vet-page"  id="move">
 <br>
 <p  class="heading1"><b>Движение</b></p>
 
@@ -1322,7 +1394,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <p>"Походка с длинными, легкими шагами демонстрирует силу и мощь, не приводит к подбрасыванию тела, перекатыванию или колебанию линии спины или всего корпуса. Верхняя линия контура тела должна выглядеть ровной и параллельной земле. Вынос передней ноги должен быть точно ниже носа, в то время как голова при этом должна смотреть вперед. Мощный зад должен быть сбалансирован с тянущей силой. С увеличением скорости возникает естественная тенденция к тому, чтобы ноги сходились к центральной линии равновесия под корпусом. Не должно быть скручивания в локтевом или тазобедренном суставах".</p>
 <p style="margin-bottom:6pt;">В стандарте много слов уделено описанию походки сбоку, или, по крайней мере, характеристикам, которые можно увидеть, рассматривая движущуюся собаку в профиль. Некоторое время назад судьи и заводчики за океаном провели опрос о важности компонентов движения для выставочных собак. Те, кто занимается более тридцати семи лет разведением догов и десять лет судят их на ринге, оценили компоненты движения по степени важности:</p>
 
-  <form style="position:relative;z-index:-1;">
+  <div>
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1369,12 +1441,12 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 		  </div>
             </div>
 	</div>
-  </form>
+  </div>
 
 <br clear="all">
 <p style="padding-bottom:12pt;">Эксперты по догам также ранжировали список недостатков движений, от наиболее серьезных до наименее серьезных:</p>
 
- <form style="position:relative;z-index:-1;">
+ <div>
       <div class="div-table">
             <div class="div-table-row">
                 <div class="div-table-col" style="background-color:var(--l-grey);">
@@ -1421,7 +1493,7 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 		  </div>
             </div>
 	</div>
-  </form>
+  </div>
 
 <p>Может ли хендлер повлиять на движения дога или улучшить их? Если да, то что хендлер может сделать и каков будет результат? Значительное большинство опрошенных считает, что хендлер действительно может повлиять на движение дога, чаще негативно. В качестве неправильного поведения называлось слишком быстрое или слишком медленное для собаки движение. Некоторые считают, что это обычно делается для того, чтобы скрыть недостатки движения собаки. Жесткий поводок или натягивание ринговки также могут привести к ошибкам в движениях.</p>
 <p>Еще до выставки заводчики и судьи рекомендуют провести подготовку собаки. Тренированная собака будет двигаться с большей энергией. Занятия  позволят собаке двигаться на свободном поводке, по прямой линии и на хорошей для собаки скорости - все это позволит собаке выглядеть значительно лучше.</p>
@@ -1434,12 +1506,11 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 Многие участники опроса считают, что слишком много догов двигаются не так хорошо, как должны. В качестве основных недостатков упоминались вялость и слабая управляемость, а также боковое мотание. Некоторые эксперты считали, что наблюдение за движением дога показывает реальную собаку лучше, менее маскированной влиянием хэндлера.</p>
 
 <p  align=center style='margin-bottom:.0001pt;text-align:center; font-size:80%;'>Опубликовано Никки Риггсби</p>
-<br>
-			<hr>
-			<p style="text-align:center">***</p>
+	    <div class="page-end">***</div>
+
 	</div>
 
-<div class="container" id="westminster">
+<div class="container vet-page" id="westminster">
 <p class="heading2"><b>Great Dane. Westminster AKC show.</b></p>
 	<p>Порода впервые была представлена на выставке собак в Вестминстере (Нью-Йорк) в 1877 году. Немецкий дог никогда не выигрывал BIS. В 1931 году дог впервые занял первое место в группе 1, это был Gunar v Hollergarten Of Walnut Hill, (владелец Харкнесс Эдвардс). После этого Gunar также занял первое место в группе 1 в 1933 году, на этот раз зарегистрированный как CH Gunar v Hollergarten Of Walnut Gracie Hill. В третий раз победа в группе пришла в 1959 году к CH Honey Hollow Stormi Rudio, принадлежавшему Кэтрин Анджел Кларк. В четвертый раз - в 1962 году CH Honey Bun Of Marydane, принадлежавшему Эрне Хубер.Последний раз дог получил первое место в группе в Нью-Йорке в 1983 году, это был CH C & B Special-K Gribbin, принадлежавший J & F Campbell & J & M Benjamin.</p> <br>
         <div class="cmt-west">
@@ -1516,13 +1587,12 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 		       <div class="swiper-button-next"></div>
 			</div>
 		</div>
-			<br>
-			<hr>
-			<p style="text-align:center">***</p>
+	    <div class="page-end">***</div>
+
 </div>
 
 
-	<div class="container"  id="colors">
+	<div class="container vet-page"  id="colors">
 <p class="heading2"><b>Окрас</b></p>
 
 <p><i>[Информация по окрасу догов, визуализированная, с цитатами из Стандарта породы (на момент 2015г.) заимствована из работы Kate Ice</i></p>
@@ -1679,14 +1749,12 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 <td> </td>
 </tr>
 </table>
-<br>
-			<hr>
-			<p style="text-align:center">***</p>
-			<br>
+	    <div class="page-end">***</div>
+
 
 </div>
 
-		<div class="container"  id="breedtype">
+		<div class="container vet-page"  id="breedtype">
 			<p  class="heading2"><b>Породный тип*</b></p>
 
 			<p>"Породный тип" (типаж) подразумевает совокупность признаков, характерных для определенной породы животного. Каждой [классифицированной или зарегистрированной] породе присущ единственный и неповторимый правильный тип. Единственный [известный на сегодня] путь, который может привести заводчика к желаемому результату - получению идеальной собаки правильного типа - это кропотливый и долгий отбор, а также подбор племенных пар. Так были получены все лучшие породные линии. В настоящее временя [в Европе в первую очередь] доги представлены настолько разнотипным поголовьем, что это кажется странным и грустным одновременно. Существует тест, который интересно предложить заводчикам. Необходимо в пятидесяти словах (в Стандарте - около 1350 слов) изложить, что они считают самым главным, то есть типичным для породы, которую они разводят. Можно очень удивиться увидев, как мало найдется знатоков, способных вразумительно сказать, что же действительно характеризует породу, с которой они же сами и работают. Как правило, приводится общее расплывчатое описание данной породы.
@@ -1704,9 +1772,11 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 			<p  align=center style='margin-bottom:.0001pt; text-align:center; font-size:80%;'>
 			*Массимо Сончини (перевод с французского Ольги Мищихи, журнал "Друг")
 			</p>
+				    <div class="page-end">***</div>
+
 </div>
 
-		<div class="container"  id="pics">
+		<div class="container vet-page"  id="pics">
 			<p  class="heading2"><b>Породный тип на рисунке</b></p>
 			
 			<p>Одна из попыток создания графического представления породного типа принадлежит перу Линды и Михаэлю ДеВинсент-Эсли. Чтобы оценить соответствие породныым требованиям авторы предлашают найти 6 красных точек на картинке, которые соответствуют верхней точке холки, плечу, нижней точки грудной клетки, ягодице, коленке, и средней части нижней части бедра. Затем следует соединить каждую тройку точек как показано на рисунке. По степени отклонения нарисованных линий, соединяющих точки на картинке вашей собаки авторы предлагают сделать вывод о степени отклонения от представлений о породе.</p>
@@ -1782,11 +1852,8 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 			<img src="img/eval165.jpg" alt="Stormy Rudio">
 			<figcaption>2020. Flighty Autumnridge Rhythm And Roots</figcaption>
 			</figure>
+	    <div class="page-end">***</div>
 
-			<br clear="all">
-			<hr>
-			<p style="text-align:center">***</p>
-			<br>
 </div>
 
 </section>
@@ -1850,5 +1917,12 @@ var swiper3 = new Swiper('.sample-slider-west', {
         },
     })
 </script>
+
+<script src="js/dropdown.js"></script>
+<script src="js/anchor.js"></script>
+<script src="js/video-pause.js"></script>
+<script src="js/pictures-view.js"></script>
+<script src="js/row.js"></script>
+
 </body>
 </html>
