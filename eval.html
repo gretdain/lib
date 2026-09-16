@@ -46,6 +46,11 @@ td:has(> img) {
     vertical-align:top;
 }
 
+/* правая текстовая ячейка — по вертикали в центре */
+table tr > td:last-child:not(:has(img)) {
+    vertical-align:middle;
+}
+
 td p {
   padding-left: 1em;
   padding-right: 1em;
@@ -241,6 +246,100 @@ body {
     color:#777;
 }
 
+.photo-popup {
+    display:none;
+    position:absolute;
+
+    left:50%;
+    bottom:calc(100% + 12px);
+    transform:translateX(-50%);
+
+    width:360px;
+    max-width:80vw;
+
+    padding:6px;
+    background:#faf8f2;
+
+    border:1px solid rgba(90,90,90,.25);
+    border-radius:6px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    z-index:200;
+}
+
+.photo-tip {
+    position:relative;
+    cursor:pointer;
+    color:var(--amethyst);
+    border-bottom:1px dotted currentColor;
+}
+
+.photo-popup img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+@media (hover:hover) {
+
+    .photo-tip:hover .photo-popup {
+        display:block;
+
+        position:fixed;
+        left:50%;
+        top:calc(50% + 32px);
+        bottom:auto;
+
+        transform:translate(-50%, -50%);
+
+        width:auto;
+        max-width:80vw;
+        max-height:calc(100vh - 100px);
+
+        z-index:200;
+    }
+
+    .photo-tip:hover .photo-popup img {
+        width:auto;
+        height:auto;
+
+        max-width:80vw;
+        max-height:calc(100vh - 114px);
+
+        object-fit:contain;
+    }
+}
+
+@media (hover:none) {
+
+    .photo-tip.open .photo-popup {
+        display:block;
+
+        position:fixed;
+        left:50%;
+        top:50%;
+        bottom:auto;
+
+        transform:translate(-50%, -50%);
+
+        width:90vw;
+        max-width:500px;
+
+        z-index:1000;
+    }
+}
+
+.inline-icon {
+    width:1em;
+    height:1em;
+
+    display:inline-block;
+    vertical-align:-0.12em;
+
+    margin-left:.15em;
+}
+
 
 /* Mobile */
 @media (max-width: 767px) {
@@ -338,6 +437,24 @@ body {
     margin-left: 5%;
     z-index: 1;
   }
+  
+  .div-table-row {
+    display:flex;
+    align-items:stretch;
+}
+
+.div-table-col {
+    float:none;
+}
+
+.div-table-col:last-child {
+    display:flex;
+    align-items:center;
+}
+
+.div-table-col:last-child .cell-capture {
+    width:100%;
+}
 }
 </style>
 
@@ -1512,7 +1629,18 @@ text-align:center; font-size:80%;'>Опубликовано Никки Ригг�
 
 <div class="container vet-page" id="westminster">
 <p class="heading2"><b>Great Dane. Westminster AKC show.</b></p>
-	<p>Порода впервые была представлена на выставке собак в Вестминстере (Нью-Йорк) в 1877 году. Немецкий дог никогда не выигрывал BIS. В 1931 году дог впервые занял первое место в группе 1, это был Gunar v Hollergarten Of Walnut Hill, (владелец Харкнесс Эдвардс). После этого Gunar также занял первое место в группе 1 в 1933 году, на этот раз зарегистрированный как CH Gunar v Hollergarten Of Walnut Gracie Hill. В третий раз победа в группе пришла в 1959 году к CH Honey Hollow Stormi Rudio, принадлежавшему Кэтрин Анджел Кларк. В четвертый раз - в 1962 году CH Honey Bun Of Marydane, принадлежавшему Эрне Хубер.Последний раз дог получил первое место в группе в Нью-Йорке в 1983 году, это был CH C & B Special-K Gribbin, принадлежавший J & F Campbell & J & M Benjamin.</p> <br>
+	<p>Порода впервые была представлена на выставке собак в Вестминстере (Нью-Йорк) в 1877 году. Немецкий дог никогда не выигрывал BIS. В 1931 году дог впервые занял первое место в группе 1, это был
+<span class="photo-tip"
+      data-photo="img/eval060.webp">
+    Gunar v Hollergarten Of Walnut Hill
+    <img class="inline-icon" src="img/pictures-icon.svg" alt="">
+</span>
+(владелец Харкнесс Эдвардс). После этого Gunar также занял первое место в группе 1 в 1933 году, на этот раз зарегистрированный как CH Gunar v Hollergarten Of Walnut Gracie Hill. В третий раз победа в группе пришла в 1959 году к CH Honey Hollow Stormi Rudio, принадлежавшему Кэтрин Анджел Кларк. В четвертый раз - в 1962 году CH Honey Bun Of Marydane, принадлежавшему Эрне Хубер.Последний раз дог получил первое место в группе в Нью-Йорке в 1983 году, это был 
+<span class="photo-tip"
+      data-photo="img/eval061.webp">
+    CH C & B Special-K Gribbinl
+    <img class="inline-icon" src="img/pictures-icon.svg" alt="">
+</span>, принадлежавший J & F Campbell & J & M Benjamin.</p> <br>
         <div class="cmt-west">
 			<div class="swiper sample-slider-west">
 				<div class="swiper-wrapper" style="width:100%;">
