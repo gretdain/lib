@@ -212,6 +212,73 @@
     scroll-margin-top: 118px;
   }
   
+    .v-spoiler {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    box-sizing: border-box;
+
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding: 1.7rem 2.6rem 2.4rem;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.42) 0%,
+        rgba(255,255,255,0.10) 100%
+      ),
+      var(--e5-bg);
+
+    border: 1px solid rgba(90,90,90,0.22);
+    border-top: 3px solid var(--amethyst);
+    border-radius: 3px;
+
+    box-shadow:
+      0 12px 30px rgba(0,0,0,0.07),
+      0 2px 6px rgba(0,0,0,0.04);
+
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.65;
+
+    scrollbar-width: thin;
+  }
+
+  .v-spoiler::before {
+    content: "ИЗ АРХИВА";
+    display: block;
+    margin-bottom: 1.15rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+
+    color: var(--amethyst);
+  }
+
+  .v-spoiler > p:first-of-type {
+    margin-top: 0 !important;
+    margin-bottom: 1.15em;
+    padding-bottom: 0;
+
+    border-bottom: 0;
+
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.65;
+    text-align: left !important;
+  }
+
+  .v-spoiler > p:not(:first-of-type) {
+    margin-top: 0;
+    margin-bottom: 1.15em;
+  }
+  
   .history-sheet > p:first-of-type::first-letter {
     float: left;
     font-size: 3.2em;
@@ -253,11 +320,16 @@
 .history-toc a:nth-child(5)::after { content: "5"; }
 .history-toc a:nth-child(6)::after { content: "6"; }
 
-    .history-sheet {
-      margin-top: 26px;
-      padding: 5%;
-      scroll-margin-top: 110px;
-    }
+.history-sheet {
+    margin-top: 26px;
+    padding: 60px 5% 5%;
+    scroll-margin-top: 110px;
+}
+
+.v-spoiler {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
   }
 
   /* ---------- photo popup: same behavior as eval/vet ---------- */
@@ -356,72 +428,7 @@
     margin-left: .15em;
   }
   
-  .v-spoiler {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    box-sizing: border-box;
 
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    padding: 1.7rem 2.6rem 2.4rem;
-
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,0.42) 0%,
-        rgba(255,255,255,0.10) 100%
-      ),
-      var(--e5-bg);
-
-    border: 1px solid rgba(90,90,90,0.22);
-    border-top: 3px solid var(--amethyst);
-    border-radius: 3px;
-
-    box-shadow:
-      0 12px 30px rgba(0,0,0,0.07),
-      0 2px 6px rgba(0,0,0,0.04);
-
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.65;
-
-    scrollbar-width: thin;
-  }
-
-  .v-spoiler::before {
-    content: "ИЗ АРХИВА";
-    display: block;
-    margin-bottom: 1.15rem;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-
-    color: var(--amethyst);
-  }
-
-  .v-spoiler > p:first-of-type {
-    margin-top: 0 !important;
-    margin-bottom: 1.15em;
-    padding-bottom: 0;
-
-    border-bottom: 0;
-
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.65;
-    text-align: left !important;
-  }
-
-  .v-spoiler > p:not(:first-of-type) {
-    margin-top: 0;
-    margin-bottom: 1.15em;
-  }
 
 	</style>
 </head>
@@ -854,9 +861,19 @@ In the quaintly titled 'Dogs: their whims, instincts and peculiarities' of 1882,
 	Диану-Эссиг
 	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
 	</span>		
-	, а профессор Мэннер в Балтиморе купил Браво Плуто и Минку Миа. В питомник г-на Гуте во Франции отправились Фиделио, Либусса, Роланд и Райнперле.»</p> 
+	, а профессор Мэннер в Балтиморе купил Браво Плуто и 
+	<span class="photo-tip" data-photo="img/color-47.webp">	
+	Минку Миа
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>		
+	. В питомник г-на Гуте во Франции отправились Фиделио, Либусса, Роланд и Райнперле.»</p> 
 	<p>Прошлое породы в Америке было весьма незаметным. Одного из первых догов привезли в страну из питомника короля Вюртемберга в 1862 году, и он считался такой редкостью, что его выставили на углу Брум-стрит и Бродвея. Это была белая собака с голубыми пятнами, в конце концов его купила предприимчивая фирма филадельфийских пивоваров за 600 бочонков своего лучшего пива. В Нью-Йорке доги были впервые выставлены в 1886 году, когда их было одиннадцать; в 1887 году было выставлено только шесть; в 1888 году — семь; в 1889 году — семнадцать, а в 1890 — двадцать пять. В Чикаго на выставке Mascoutah Kennel Club Show в 1890 году было выставлено пятьдесят три. Американский клуб пригласил в Чикаго в качестве судьи известного немецкого заводчика.</p>
-	<p>Cedric of Saxon, отравленный несколько дней спустя после написания его портрета, отражает внешний вид импортных собак породы в Штатах в то время. Первый стандарт, принятый Американским клубом, скорее был ориентирован на мастифов, а не на тип, который предпочитали англичане и многие дальновидные немецкие заводчики. Американцам свойственно сопротивляться авторитетам, однако доги стали исключением из правила, стандарт вскоре был пересмотрен и стал почти под копирку отражением немецкого.</p>
+	<p>
+	<span class="photo-tip" data-photo="img/color-49.jpg">	
+	Cedric of Saxon
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>		
+	, отравленный несколько дней спустя после написания его портрета, отражает внешний вид импортных собак породы в Штатах в то время. Первый стандарт, принятый Американским клубом, скорее был ориентирован на мастифов, а не на тип, который предпочитали англичане и многие дальновидные немецкие заводчики. Американцам свойственно сопротивляться авторитетам, однако доги стали исключением из правила, стандарт вскоре был пересмотрен и стал почти под копирку отражением немецкого.</p>
 <!--	<figure class="float-right">
 		<img src="img/color-46.jpg">
 		<figcaption>
@@ -864,7 +881,12 @@ In the quaintly titled 'Dogs: their whims, instincts and peculiarities' of 1882,
 <!--		Ch. Joan von Luckner of Garicrest
 		</figcaption>
 	</figure> -->
-	<p>Дог также стал примером уважения AKC к авторитету (немецкого) породного клуба. Немецкие крови были основой американского фундамента породы, начиная с Принца, первого задокументированного импорта в 1857 году. Ровно три десятилетия спустя тигровая сука Юнона, привезенная из Германии, выиграла первый чемпионский титул AKC. В том же году доги стали одной из первых пород, занесенных в племенную книгу AKC.</p>
+	<p>Дог также стал примером уважения AKC к авторитету (немецкого) породного клуба. Немецкие крови были основой американского фундамента породы, начиная с Принца, первого задокументированного импорта в 1857 году. Ровно три десятилетия спустя тигровая сука 
+	<span class="photo-tip" data-photo="img/color-48.jpg">		
+	Юнона
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>		
+	, привезенная из Германии, выиграла первый чемпионский титул AKC. В том же году доги стали одной из первых пород, занесенных в племенную книгу AKC.</p>
 <!--	<figure class="float-left30">
 		<img src="img/color-07.png">
 		<figcaption>
@@ -903,14 +925,33 @@ In the quaintly titled 'Dogs: their whims, instincts and peculiarities' of 1882,
 		</figcaption>
 	</figure>
 	<p>А они таковыми не являлись. Постоянное разочарование в следовании этическому кодексу заводчика, предписывающему определенные правила разведения для сохранения предсказуемого окраса потомства побудило нескольких смельчаков, таких как Дж. Консил Паркер и Хьюго Гамбоа, изменить систему и скрещивать окрасы, чтобы придать элегантность, привнести желаемые черты характера и улучшить тип головы там, где наследование этих качеств было невозможно в силу ограниченности популяции определенного окраса.</p>
-	<p>Возможно, питомник, наиболее часто упоминаемый в связи со смешением окрасов, - это Honey Hollow, основанный в 1947 году бывшей звездой немого кино Линой Баскетт. Смелая и откровенная в суждениях, Баскетт выступала за скрещивание собак разных окрасов, чем вызывала скандалы в обществе любителей породы. Но с успехом ее подхода было трудно спорить. <a href="index.html#gallery-1"> Ch. Honey Hollow Stormi Rudio, </a> палевый из черного разведения, выиграл восемь Best in Show и Вестминстерскую рабочую группу 1959 года. Лина сама вела своих догов к победам, которые дали возможность переосмыслить конкурентный потенциал породы.</p>
-	<figure class="float-right30">
-		<img src="img/color019.jpg">
-		<figcaption>
-		L.Basquette и Great Donner
-		</figcaption>
-	</figure>
-	<p>Ее лучший черный дог, Ch. Honey Hollow Great Donner, выиграл 45 групп и четыре Best in Show. Она также выставляла Ch. Big Kim of Belladane, лучшего дога с 1966 по 1969 год, выиграв 90 групп, 24 BIS и награду Quaker Oats в 1968 году. Она показала его сына, Ch. Heideres Kolyer Kimbayh, с 28 BIS и его внучку Ch. С & B's Special К Gribbon, с 29 BIS.</p>
+	<p>Возможно, питомник, наиболее часто упоминаемый в связи со смешением окрасов, - это Honey Hollow, основанный в 1947 году бывшей звездой немого кино Линой Баскетт. Смелая и откровенная в суждениях, Баскетт выступала за скрещивание собак разных окрасов, чем вызывала скандалы в обществе любителей породы. Но с успехом ее подхода было трудно спорить. 
+	<span class="photo-tip" data-photo="img/1-1sw.webp">		
+	Ch. Honey Hollow Stormi Rudio
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>			
+	, палевый из черного разведения, выиграл восемь Best in Show и Вестминстерскую рабочую группу 1959 года. Лина сама вела своих догов к победам, которые дали возможность переосмыслить конкурентный потенциал породы.</p>
+	<p>Ее лучший черный дог, 
+	<span class="photo-tip" data-photo="img/color019.jpg">		
+	Ch. Honey Hollow Great Donner
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>			
+	, выиграл 45 групп и четыре Best in Show. Она также выставляла 
+	<span class="photo-tip" data-photo="img/color-51.jpg">	
+	Ch. Big Kim of Belladane
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>		
+	, лучшего дога с 1966 по 1969 год, выиграв 90 групп, 24 BIS и награду Quaker Oats в 1968 году. Она показала его сына, 
+	<span class="photo-tip" data-photo="img/color-51.jpg">	
+	Ch. Heideres Kolyer Kimbayh
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>		
+	, с 28 BIS и его внучку 
+	<span class="photo-tip" data-photo="img/eval061.webp">
+    CH C & B Special-K Gribbin
+    <img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>
+	, с 29 BIS.</p>
 	<figure class="float-left">
 		<img src="img/color-08.png">
 		<figcaption>
@@ -949,7 +990,7 @@ In the quaintly titled 'Dogs: their whims, instincts and peculiarities' of 1882,
 	<hr>	
 	<p style="text-align:center">***</p>			
 	<br>	
-	<p>По материалам <a target="_blank" class="ext_link" href="https://caninechronicle.com/current-articles/the-great-dane/"> статьи </a>Эми Фернандес в «Canine Chronicle» 2015 cтраницы 162-174 и <a href="index.html?id=slides_39#books">альманаха </a> D.D.C. 1888/1998 страницы 225-324.</p>
+	<p>По материалам <a target="_blank" class="ext_link" href="https://caninechronicle.com/current-articles/the-great-dane/"> статьи</a> Эми Фернандес в «Canine Chronicle» 2015 cтраницы 162-174 и <a href="/open/?id=ddc_almanach_1988">альманаха </a> D.D.C. 1888/1998 страницы 225-324.</p>
   </div>
 </div>
 </section>
