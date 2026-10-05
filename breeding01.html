@@ -1002,6 +1002,32 @@ Wellman, R. & J. Bennewitz. 2011. Identification and characterization of hierarc
         return placeholder;
     }
 
+    /*
+     * pictures-view.js runs before the EN/GE layers are created.
+     * Add the popup markup to dynamically inserted photo-tip elements here,
+     * so the site's existing hover CSS works in every language.
+     */
+    function prepareDynamicPhotoTips(root) {
+        if (!root) return;
+
+        root.querySelectorAll('.photo-tip[data-photo]').forEach(function (tip) {
+            if (tip.querySelector(':scope > .photo-popup')) return;
+
+            const photoSrc = tip.getAttribute('data-photo');
+            if (!photoSrc) return;
+
+            const popup = document.createElement('span');
+            popup.className = 'photo-popup';
+
+            const image = document.createElement('img');
+            image.src = photoSrc;
+            image.alt = '';
+
+            popup.appendChild(image);
+            tip.appendChild(popup);
+        });
+    }
+
     pages.forEach(function (page) {
         const ruLayer = document.createElement('div');
         ruLayer.className = 'lang-layer lang-ru';
@@ -1032,6 +1058,9 @@ Wellman, R. & J. Bennewitz. 2011. Identification and characterization of hierarc
         } else {
             geLayer.appendChild(makePlaceholder('German', page.id));
         }
+
+        prepareDynamicPhotoTips(enLayer);
+        prepareDynamicPhotoTips(geLayer);
 
         page.appendChild(ruLayer);
         page.appendChild(enLayer);
