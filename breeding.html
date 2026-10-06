@@ -137,7 +137,7 @@ img.scaled {
 .breeding-page {
     max-width:900px;
     margin:40px auto;
-    padding:40px;
+    padding:44px;
     background:#faf8f2;
     box-sizing:border-box;
     font-family:'OpenSans', sans-serif;
@@ -361,7 +361,7 @@ body {
 
     .breeding-page {
         margin:20px auto;
-        padding:5%;
+        padding:7%;
     }
 
     .v-spoiler {
@@ -380,6 +380,87 @@ body {
     margin:0 0 1em 0;
 	}
 
+}
+
+
+
+/* ---------- trilingual container prototype: cycling switch ---------- */
+
+.lang-switcher {
+    position: fixed;
+    top: 68px;
+    right: 22px;
+    z-index: 1200;
+
+    width: 42px;
+    height: 34px;
+    padding: 0;
+
+    border: 1px solid rgba(0, 91, 143, .30);
+    border-radius: 17px;
+    background: rgba(250, 248, 242, .96);
+    color: #005b8f;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+    backdrop-filter: blur(3px);
+
+    font-family: 'OpenSans', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .06em;
+
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.lang-switcher:hover {
+    background: #005b8f;
+    color: #fff;
+}
+
+.lang-switcher:active {
+    transform: scale(.96);
+}
+
+.lang-switcher[hidden] {
+    display: none !important;
+}
+
+.lang-layer[hidden] {
+    display: none !important;
+}
+
+.lang-placeholder {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3em 2em;
+    box-sizing: border-box;
+    color: #666;
+}
+
+.lang-placeholder strong {
+    display: block;
+    margin-bottom: .55em;
+    color: #005b8f;
+    font-weight: 500;
+    font-size: 1.15rem;
+}
+
+.lang-placeholder span {
+    font-size: .92rem;
+}
+
+@media (max-width: 767px) {
+    .lang-switcher {
+        top: 60px;
+        right: 10px;
+        width: 38px;
+        height: 30px;
+        font-size: 11px;
+    }
 }
 
 </style>
@@ -789,9 +870,19 @@ COI для спаниэлей в Англии составляет 17,7%, у н�
 		</figcaption>
 	</figure>
 	
-	<p>Одной из удивительных черт национального породного разведения является многократное использование кобелей-производителей без видимого на то основания. В самом деле, что  рациональное может подтолкнуть владельцев сук для вязки  <a target=”_blank” class="ext_link"  href="https://greatdanes.dog/showphotod.php?id=103796&n=7&fls=.jpg">кобелем</a>, не выезжавшим на выставки за пределы страны, прожившим в итоге менее 6 лет, не имеющим (хотя бы официально) иных тестов, кроме Cardio? На породном портале в статусе прямых потомков значатся 100 щенков, родившихся от него за 3 с половиной года. Это значит, что если следовать запрету FCI на участие одного производителя не более чем в 5% всего породного поголовья, общее количество зарегистрированных щенков немецкого дога в стране за этот период должно было быть более 2 тысяч.  В отечественной базе их указано вдвое меньше.</p>
+	<p>Одной из удивительных черт национального породного разведения является многократное использование кобелей-производителей без видимого на то основания. В самом деле, что  рациональное может подтолкнуть владельцев сук для вязки  
+	<span class="photo-tip" data-photo="img/breeding10.webp">	
+	кобелем
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>	
+	 не выезжавшим на выставки за пределы страны, прожившим в итоге менее 6 лет, не имеющим (хотя бы официально) иных тестов, кроме Cardio? На породном портале в статусе прямых потомков значатся 100 щенков, родившихся от него за 3 с половиной года. Это значит, что если следовать запрету FCI на участие одного производителя не более чем в 5% всего породного поголовья, общее количество зарегистрированных щенков немецкого дога в стране за этот период должно было быть более 2 тысяч.  В отечественной базе их указано вдвое меньше.</p>
 
-	<p>Многократное использование одного производителя, обладающего уникальными качествами, не является для кинологии или животноводстве в целом, чем-то необыкновенным. С одной стороны это позволяет определить облик породы (как это случилось с потомками <a target=”_blank” class="ext_link"  href="https://gretdain.com/index.html#gallery-3">Боско</a> за океаном). С другой стороны, любая генетическая проблема производителя становится проблемой целой страны или даже всей породы.</p>
+	<p>Многократное использование одного производителя, обладающего уникальными качествами, не является для кинологии или животноводстве в целом, чем-то необыкновенным. С одной стороны это позволяет определить облик породы (как это случилось с потомками 
+	<span class="photo-tip" data-photo="img/breeding11.jpg">	
+	Боско
+	<img class="inline-icon" src="img/pictures-icon.svg" alt="">
+	</span>	
+	за океаном). С другой стороны, любая генетическая проблема производителя становится проблемой целой страны или даже всей породы.</p>
 
 	<p>Pawnee Farm Arlinda Chief был одним из самых плодовитых быков в истории разведения голштинского скота, но он также привнес в популяцию смертельный ген, ответственный за примерно полмиллиона самопроизвольных абортов во всем мире. Родившийся в 1962 году, Chief произвел на свет 16 000 дочерей, 500 000 внучек и более 2 миллионов правнучек. Его сыновья также были популярными производителями. В результате генетический набор Chief составляет почти 14 процентов генома нынешней популяции голштинского скота в Соединенных Штатах. Исследователи выявили проблемный гаплотип на 5-й хромосоме коров голштинской породы, который был связан с более низкой фертильностью и потерей эмбрионов. И они проследили гаплотип всех предков вплоть до до Чифа.</p>
 
@@ -870,6 +961,12 @@ Wellman, R. & J. Bennewitz. 2011. Identification and characterization of hierarc
 <script src="js/dropdown.js"></script>
 <script src="js/anchor.js"></script>
 <script src="js/pictures-view.js"></script>
+
+
+
+<script src="js/breeding-translations.js"></script>
+
+<script src="js/language-switch.js"></script>
 
 </body>
 </html>
