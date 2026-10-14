@@ -13,10 +13,10 @@
 
     const config = Object.assign({
         pageSelector: '.breeding-page',
-        order: ['ru', 'en', 'ge'],
-        labels: { ru: 'RU', en: 'EN', ge: 'GE' },
-        titles: { ru: 'Русский', en: 'English', ge: 'Deutsch' },
-        htmlLang: { ru: 'ru', en: 'en', ge: 'de' },
+        order: ['ru', 'en', 'de'],
+        labels: { ru: 'RU', en: 'EN', de: 'DE' },
+        titles: { ru: 'Русский', en: 'English', de: 'Deutsch' },
+        htmlLang: { ru: 'ru', en: 'en', de: 'de' },
         defaultLanguage: 'ru',
         viewportTop: 65,
         targetViewportRatio: 0.38,
@@ -87,7 +87,10 @@
             return layer;
         }
 
-        const languageContent = translations[lang] || {};
+        const languageContent =
+            translations[lang] ||
+            (lang === 'de' ? translations.ge : null) ||
+            {};
         if (languageContent[page.id]) {
             layer.innerHTML = languageContent[page.id];
         } else {
