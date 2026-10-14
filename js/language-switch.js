@@ -48,29 +48,32 @@
     }
 
     /*
-     * External scripts such as pictures-view.js can run before translated
-     * layers are inserted. This prepares photo-tip popups for EN/GE content
-     * added dynamically by this controller.
+     * Popup images for translated layers are created lazily.
+     * Nothing is inserted into a photo-tip until the visitor actually
+     * hovers it (desktop) or taps it (touch). This keeps translated
+     * links structurally identical to the RU source and prevents popup
+     * images from ever appearing as ordinary inline content.
      */
-    function prepareDynamicPhotoTips(root) {
-        if (!root) return;
+    function ensurePhotoPopup(tip) {
+        if (!tip) return null;
 
-        root.querySelectorAll('.photo-tip[data-photo]').forEach(function (tip) {
-            if (tip.querySelector(':scope > .photo-popup')) return;
+        let popup = tip.querySelector(':scope > .photo-popup');
+        if (popup) return popup;
 
-            const photoSrc = tip.getAttribute('data-photo');
-            if (!photoSrc) return;
+        const photoSrc = tip.getAttribute('data-photo');
+        if (!photoSrc) return null;
 
-            const popup = document.createElement('span');
-            popup.className = 'photo-popup';
+        popup = document.createElement('span');
+        popup.className = 'photo-popup';
 
-            const image = document.createElement('img');
-            image.src = photoSrc;
-            image.alt = '';
+        const image = document.createElement('img');
+        image.src = photoSrc;
+        image.alt = '';
 
-            popup.appendChild(image);
-            tip.appendChild(popup);
-        });
+        popup.appendChild(image);
+        tip.appendChild(popup);
+
+        return popup;
     }
 
     function buildLanguageLayer(page, lang) {
@@ -83,7 +86,6 @@
             while (page.firstChild) {
                 layer.appendChild(page.firstChild);
             }
-            prepareDynamicPhotoTips(layer);
             return layer;
         }
 
@@ -99,7 +101,6 @@
             );
         }
 
-        prepareDynamicPhotoTips(layer);
         return layer;
     }
 
@@ -191,9 +192,25 @@
 
 
     /*
+     * Desktop: create the popup only when the pointer actually reaches
+     * a photo-tip. The existing :hover CSS then displays it.
+     */
+    document.addEventListener('pointerover', function (event) {
+        if (window.matchMedia('(hover: none)').matches) return;
+
+        const tip = event.target.closest('.photo-tip[data-photo]');
+        if (tip) ensurePhotoPopup(tip);
+    });
+
+    document.addEventListener('focusin', function (event) {
+        const tip = event.target.closest('.photo-tip[data-photo]');
+        if (tip) ensurePhotoPopup(tip);
+    });
+
+    /*
      * Mobile / touch: one tap opens any photo-tip, a second tap on the
      * open image or a tap elsewhere closes it. Event delegation means
-     * this works for RU as well as dynamically inserted EN/GE content.
+     * this works for RU as well as dynamically inserted EN/DE content.
      */
     function isTouchLayout() {
         return window.matchMedia('(hover: none), (pointer: coarse)').matches;
@@ -211,6 +228,7 @@
         const tip = event.target.closest('.photo-tip[data-photo]');
 
         if (tip) {
+            ensurePhotoPopup(tip);
             const popup = event.target.closest('.photo-popup');
 
             // Tapping the enlarged image closes it.
