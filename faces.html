@@ -119,7 +119,7 @@
   .faces-page {
     max-width: 900px;
     margin: 40px auto;
-    padding: 40px;
+    padding: 44px;
     background: #faf8f2;
     box-sizing: border-box;
     border: 1px solid rgba(120,95,55,.12);
@@ -135,11 +135,13 @@
     color:#777;
 }
 
-.faces-page > p:first-of-type {
+.faces-page > p:first-of-type,
+.faces-page > .lang-layer > p:first-of-type {
     margin-top:0;
 }
 
-.faces-page > p:first-of-type::first-letter {
+.faces-page > p:first-of-type::first-letter,
+.faces-page > .lang-layer > p:first-of-type::first-letter {
     float:left;
     font-size:3.2em;
     line-height:.8;
@@ -154,7 +156,7 @@
   @media (max-width: 767px) {
     .faces-page {
       margin: 20px auto;
-      padding: 5%;
+      padding: 7%;
     }
 
     video {
@@ -176,6 +178,96 @@
         height: 390px;
     }
   }
+
+
+  /* ---------- RU → EN → DE per Faces section ---------- */
+
+  .lang-switcher {
+    position: fixed;
+    top: 68px;
+    right: 22px;
+    z-index: 1200;
+
+    width: 42px;
+    height: 34px;
+    padding: 0;
+
+    border: 1px solid rgba(0, 91, 143, .30);
+    border-radius: 17px;
+    background: rgba(250, 248, 242, .96);
+    color: #005b8f;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+    backdrop-filter: blur(3px);
+
+    font-family: 'OpenSans', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .06em;
+
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease, transform .15s ease;
+  }
+
+  .lang-switcher:hover {
+    background: #005b8f;
+    color: #fff;
+  }
+
+  .lang-switcher:active {
+    transform: scale(.96);
+  }
+
+  .lang-switcher[hidden],
+  .lang-layer[hidden] {
+    display: none !important;
+  }
+
+  .lang-layer {
+    display: flow-root;
+  }
+
+  .lang-placeholder {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3em 2em;
+    box-sizing: border-box;
+    color: #666;
+  }
+
+  .lang-placeholder strong {
+    display: block;
+    margin-bottom: .55em;
+    color: #005b8f;
+    font-weight: 500;
+    font-size: 1.15rem;
+  }
+
+  .lang-placeholder span {
+    font-size: .92rem;
+  }
+
+  .lang-en .v-spoiler::before {
+    content: "FROM THE ARCHIVE";
+  }
+
+  .lang-de .v-spoiler::before {
+    content: "AUS DEM ARCHIV";
+  }
+
+  @media (max-width: 767px) {
+    .lang-switcher {
+      top: 60px;
+      right: 10px;
+      width: 38px;
+      height: 30px;
+      font-size: 11px;
+    }
+  }
+
 </style>
 
 </head>
@@ -990,6 +1082,19 @@
 </section>
 
 
+<script>
+window.LANGUAGE_SWITCH_CONFIG = {
+  pageSelector: '.faces-page',
+  viewportTop: 65,
+  targetViewportRatio: 0.38,
+  minimumTargetY: 120,
+  bottomReserve: 80
+};
+</script>
+
+<script src="js/faces-translations.js"></script>
+<script src="js/language-switch.js"></script>
+
 <script src="js/video-pause.js"></script>
 
 <script src="js/swiper-bundle.min.js"></script>
@@ -1019,25 +1124,54 @@ function openVideoPopup(url) {
     return false;
 }
 
-    const swiper = new Swiper('.sample-slider', {
-        loop: true,                         // loop
-		zoom: true,					//zoom
+    const facesSwiperOptions = {
+        loop: true,
+        zoom: true,
         speed: 1500,
-		effect: 'fade',
-		fadeEffect: {           // added
-        crossFade: true     // added(resolve the overlapping of the slides)
-		},                      // added
-		autoplay: {                         // auto play
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
             delay: 2000,
         },
-        pagination: {                       // pagination(dots)
+        pagination: {
             el: '.swiper-pagination',
         },
-        navigation: {                       // navigation(arrows)
+        navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    })
+    };
+
+    function initVisibleFacesSwipers(root) {
+        (root || document).querySelectorAll('.sample-slider').forEach(function (slider) {
+            if (slider.dataset.swiperReady === '1') return;
+            if (slider.offsetParent === null) return;
+
+            new Swiper(slider, facesSwiperOptions);
+            slider.dataset.swiperReady = '1';
+        });
+    }
+
+    initVisibleFacesSwipers(document);
+
+    const facesLanguageObserver = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (mutation.type !== 'attributes' || mutation.attributeName !== 'hidden') return;
+
+            const layer = mutation.target;
+            if (!layer.hidden) {
+                window.requestAnimationFrame(function () {
+                    initVisibleFacesSwipers(layer);
+                });
+            }
+        });
+    });
+
+    document.querySelectorAll('.lang-layer').forEach(function (layer) {
+        facesLanguageObserver.observe(layer, { attributes: true, attributeFilter: ['hidden'] });
+    });
 </script>
 
 
