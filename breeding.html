@@ -326,7 +326,12 @@ body {
 
 @media (hover:none) {
 
-    .table-photo.open .photo-popup {
+    .photo-tip {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .photo-tip.open .photo-popup {
         display:block;
 
         position:fixed;
@@ -342,7 +347,7 @@ body {
         z-index:1000;
     }
 
-    .table-photo.open .photo-popup img {
+    .photo-tip.open .photo-popup img {
         display:block;
 
         width:auto;

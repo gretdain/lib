@@ -83,6 +83,7 @@
             while (page.firstChild) {
                 layer.appendChild(page.firstChild);
             }
+            prepareDynamicPhotoTips(layer);
             return layer;
         }
 
@@ -184,6 +185,58 @@
             chooseActivePage();
         });
     }
+
+
+    /*
+     * Mobile / touch: one tap opens any photo-tip, a second tap on the
+     * open image or a tap elsewhere closes it. Event delegation means
+     * this works for RU as well as dynamically inserted EN/GE content.
+     */
+    function isTouchLayout() {
+        return window.matchMedia('(hover: none), (pointer: coarse)').matches;
+    }
+
+    function closeOpenPhotoTips(except) {
+        document.querySelectorAll('.photo-tip.open').forEach(function (tip) {
+            if (tip !== except) tip.classList.remove('open');
+        });
+    }
+
+    document.addEventListener('click', function (event) {
+        if (!isTouchLayout()) return;
+
+        const tip = event.target.closest('.photo-tip[data-photo]');
+
+        if (tip) {
+            const popup = event.target.closest('.photo-popup');
+
+            // Tapping the enlarged image closes it.
+            if (popup && tip.classList.contains('open')) {
+                tip.classList.remove('open');
+                event.preventDefault();
+                event.stopPropagation();
+                return;
+            }
+
+            // Tapping the source word/icon/photo toggles its popup.
+            const wasOpen = tip.classList.contains('open');
+            closeOpenPhotoTips(tip);
+            tip.classList.toggle('open', !wasOpen);
+
+            event.preventDefault();
+            event.stopPropagation();
+            return;
+        }
+
+        // Tap outside any photo closes the current popup.
+        closeOpenPhotoTips(null);
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeOpenPhotoTips(null);
+        }
+    });
 
     window.addEventListener('scroll', scheduleActiveCheck, { passive: true });
     window.addEventListener('resize', scheduleActiveCheck);
