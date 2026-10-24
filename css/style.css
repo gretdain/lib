@@ -1091,7 +1091,14 @@ a:active {
     margin-left: .15em;
 }
 
-.dropcap::first-letter {
+/* Shared initial for explicitly marked paragraphs and JS-rendered language layers.
+   Language scripts can insert a translated first paragraph without assigning a class. */
+/* By default translations use their opening paragraph, matching Faces.
+   data-dropcap-paragraph="2" skips a section heading; "none" disables the
+   automatic initial on all-diagram chapters. Explicit .dropcap always works. */
+.dropcap::first-letter,
+.inner-page:not([data-dropcap-paragraph]) > .lang-layer > p:first-of-type::first-letter,
+.inner-page[data-dropcap-paragraph="2"] > .lang-layer > p:nth-of-type(2)::first-letter {
     float: left;
 
     font-size: 3.2em;
@@ -1437,4 +1444,94 @@ body.anatomy-body{
 
 .lang-placeholder span {
   font-size: .92rem;
+}
+
+/* ==========================================================================
+   8. Shared translated archive headings — from faces.html (2026-10-24)
+   The common .v-spoiler::before uses --spoiler-title.
+   This applies to EN/DE language layers on Faces, Color and future pages.
+   Individual containers may override --spoiler-title inline.
+   ========================================================================== */
+.lang-en {
+    --spoiler-title: "FROM THE ARCHIVE";
+}
+
+.lang-de {
+    --spoiler-title: "AUS DEM ARCHIV";
+}
+
+
+/* ==========================================================================
+   9. Faces archive panels — 2026-10-24
+   .v-spoiler's core box, scrollbar and label live above in section 4.
+   These are Faces-specific presentation overrides, centralized in style.css
+   rather than repeated in faces.html. Color and Anatomy remain unchanged.
+   ========================================================================== */
+
+body.faces-body .v-spoiler {
+    position: relative;
+    overflow-x: hidden;
+    padding: 1.7rem 2.6rem 2.4rem;
+    background: linear-gradient(180deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.10) 100%), var(--e5-bg);
+    border: 1px solid rgba(90,90,90,.22);
+    border-top: 3px solid var(--amethyst);
+    border-radius: 3px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.07), 0 2px 6px rgba(0,0,0,.04);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.65;
+}
+
+body.faces-body .v-spoiler::before {
+    margin-bottom: 1.15rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    color: var(--amethyst);
+}
+
+/* In Faces, the first paragraph of an archive panel is its heading. */
+body.faces-body .v-spoiler > p:first-of-type {
+    margin-top: 0 !important;
+    margin-bottom: 1.25rem;
+    padding-bottom: .9rem;
+    border-bottom: 1px solid rgba(90,90,90,.18);
+    font-size: 1.10em;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: left !important;
+}
+
+body.faces-body .v-spoiler > p:not(:first-of-type) {
+    margin-top: 0;
+    margin-bottom: 1.15em;
+}
+
+@media (max-width: 767px) {
+    body.faces-body .v-spoiler {
+        height: 500px;
+        padding: 1.35rem 1.35rem 1.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    body.faces-body .v-spoiler {
+        height: 390px;
+    }
+}
+
+
+/* ===========================================================================
+   10. Shared mobile language switcher and translated dropcap placement
+   Reused by Breeding; the same 767px dimensions were previously local on
+   Faces, Color, and Breeding. Kept at the end of the global stylesheet.
+   =========================================================================== */
+@media (max-width: 767px) {
+    .lang-switcher {
+        top: 60px;
+        right: 10px;
+        width: 38px;
+        height: 30px;
+        font-size: 11px;
+    }
 }
