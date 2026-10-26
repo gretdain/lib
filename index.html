@@ -496,8 +496,8 @@ body.homepage { --home-header-height:50px; background:var(--home-cream); color:v
 /* Directory navigation */
 .home-directory { background:#e9e1d4; border-bottom:1px solid #d8ccbc; }
 .home-directory__inner { max-width:1320px; margin:auto; padding:18px 32px; display:flex; align-items:center; gap:clamp(14px,2.3vw,36px); justify-content:space-between; flex-wrap:wrap; }
-.home-directory a { color:#3c4e50; font-size:11px; font-weight:700; letter-spacing:.08em; line-height:normal; white-space:nowrap; border-bottom:1px solid transparent; }
-.home-directory a:hover { color:#00577e; border-bottom:1px solid #ae9170; }
+.home-directory a { color:#906b40; font-size:11px; font-weight:700; letter-spacing:.08em; line-height:normal; white-space:nowrap; border-bottom:1px solid transparent; }
+.home-directory a:hover { color:#6b4b2c; border-bottom:1px solid #ae9170; }
 /* Chapter groups */
 .home-editorial { width:min(1320px,100%); margin:auto; padding:clamp(66px,7.3vw,112px) clamp(20px,4.3vw,70px) 90px; }
 .home-editorial--people { padding-top:24px; }
@@ -508,7 +508,9 @@ body.homepage { --home-header-height:50px; background:var(--home-cream); color:v
 .home-section-title h2 em,.home-gallery__intro h2 em,.home-library__intro h2 em { color:#9f774b; font-weight:400; }
 .home-section-title > p { max-width:320px; color:#69736d; line-height:1.75; font-size:13px; padding-bottom:7px; }
 .home-stories { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
-.home-stories--three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+/* History and Faces remain full-size editorial cards at desktop widths.
+   The Almost Human book takes the row below, instead of squeezing the two cards. */
+.home-stories--three { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .home-story { position:relative; display:flex; flex-direction:column; overflow:hidden; min-width:0; background:var(--home-paper); border:1px solid #e0d8ca; box-shadow:0 7px 20px rgba(47,54,45,.035); transition:box-shadow .2s,transform .2s; }
 .home-story:hover { transform:translateY(-4px); box-shadow:0 18px 35px rgba(47,54,45,.1); }
 .home-story__visual { position:relative; display:block; width:100%; height:240px; background:linear-gradient(130deg,#e7dfd1,#cbd5d2); overflow:hidden; }
@@ -517,8 +519,36 @@ body.homepage { --home-header-height:50px; background:var(--home-cream); color:v
 .home-story__visual:hover img { transform:scale(1.045); }
 .home-story--history .home-story__visual,.home-story--faces .home-story__visual,.home-story--woodhouse .home-story__visual { height:230px; }
 .home-story--history .home-story__visual img,.home-story--faces .home-story__visual img,.home-story--woodhouse .home-story__visual img { padding:14px; }
-/* Almost Human illustration: half of the previous image height, centered within its panel. */
-.home-story--woodhouse .home-story__visual img { width:100%; height:50%; padding:0; }
+/* Almost Human — book cover and text sit side by side with no coloured image panel.
+   The cover keeps its natural proportions and a maximum width of 250px. */
+.home-stories--three .home-story--woodhouse {
+  grid-column:1 / -1;
+  display:flex;
+  flex-direction:row;
+  align-items:stretch;
+}
+.home-stories--three .home-story--woodhouse .home-story__visual {
+  flex:0 0 250px;
+  width:250px;
+  height:max-content;
+  align-self:flex-start;
+  min-height:0;
+  background:transparent;
+  overflow:hidden;
+}
+.home-story--woodhouse .home-story__visual-inner {
+  display:block;
+  width:100%;
+  height:auto;
+}
+.home-story--woodhouse .home-story__visual img {
+  display:block;
+  width:100%;
+  height:auto;
+  padding:0;
+  object-fit:contain;
+}
+.home-story--woodhouse .home-story__body { min-width:0; flex:1 1 0; align-self:stretch; }
 
 /* Editorial opening: first four words are enlarged like a drop cap, without a separate heading. */
 .home-story__body { padding:28px clamp(21px,2.5vw,37px) 27px; display:flex; flex-direction:column; flex:1; }
@@ -534,8 +564,8 @@ body.homepage { --home-header-height:50px; background:var(--home-cream); color:v
 .home-stories--three .home-story__visual { background:linear-gradient(135deg,#e2dbd0,#b8c8ca); }
 /* Existing Fancyapps gallery — new editorial surround. Carousel data and JS unchanged. */
 .homepage .home-gallery { background:var(--home-deep) !important; padding:76px 0 58px; border:0; overflow:hidden; }
-.home-gallery__intro { display:flex; gap:40px; justify-content:space-between; align-items:end; margin:0 auto 40px; max-width:1320px; padding:0 clamp(20px,4.3vw,70px) 24px; border-bottom:1px solid rgba(235,226,206,.22); }
-.home-gallery__intro h2 { color:#f1e9df; }
+.home-gallery__intro { display:flex; gap:40px; justify-content:center; align-items:center; text-align:center; margin:0 auto 40px; max-width:1320px; padding:0 clamp(20px,4.3vw,70px) 24px; border-bottom:1px solid rgba(235,226,206,.22); }
+.home-gallery__intro h2 { color:#f1e9df; width:100%; text-align:center; }
 .home-gallery__intro h2 em { color:#d0b38d; }
 .home-gallery .swipe { width:100%; }
 .home-gallery .f-carousel__slide img { filter:grayscale(.35); transition:filter .4s; }
@@ -564,8 +594,6 @@ body.homepage { --home-header-height:50px; background:var(--home-cream); color:v
   .home-hero h1 { font-size:clamp(58px,7.5vw,87px); }
   .home-story__visual { height:200px; }
   .home-stories--three { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  .home-stories--three .home-story:last-child { grid-column:1/-1; display:grid; grid-template-columns:45% 55%; }
-  .home-stories--three .home-story:last-child .home-story__visual { height:100%; min-height:285px; }
 }
 @media (max-width:767px) {
   .homepage .header { height:var(--home-header-height); min-height:var(--home-header-height); }
@@ -590,8 +618,20 @@ body.homepage { --home-header-height:50px; background:var(--home-cream); color:v
   .home-section-title h2,.home-gallery__intro h2,.home-library__intro h2 { font-size:clamp(37px,9vw,51px); }
   .home-section-title > p,.home-gallery__intro > p,.home-library__intro > p { max-width:none; font-size:13px; padding-top:15px; }
   .home-stories,.home-stories--three { grid-template-columns:1fr; gap:18px; }
-  .home-stories--three .home-story:last-child { display:flex; grid-column:auto; }
-  .home-stories--three .home-story:last-child .home-story__visual { height:230px; min-height:0; }
+  /* On phones the cover precedes the text, without a tall empty panel. */
+  .home-stories--three .home-story--woodhouse {
+    display:flex;
+    flex-direction:column;
+    grid-column:auto;
+  }
+  .home-stories--three .home-story--woodhouse .home-story__visual {
+    flex:none;
+    width:min(100%,250px);
+    height:max-content;
+    align-self:center;
+    margin:0 auto;
+  }
+  .home-stories--three .home-story--woodhouse .home-story__body { width:100%; }
   .home-story__visual { height:210px; }
   .home-story__body { padding:23px; }
   .home-story__lead { font-size:31px; }
@@ -786,7 +826,7 @@ body.homepage.homepage-lightbox-open .header {
 <h1 id="home-title">Немецкий <em>дог</em><span class="home-hero__period">.</span></h1>
 <p class="home-hero__tagline">1862 - 2026</p>
 <div class="home-hero__actions">
-<a class="home-action home-action--light" href="#chapters">Архив <span aria-hidden="true">↗</span></a>
+<a class="home-action home-action--ghost" href="#chapters">Архив <span aria-hidden="true">↗</span></a>
 <a class="home-action home-action--ghost" href="#gallery">Галерея <span aria-hidden="true">↗</span></a>
 <a class="home-action home-action--ghost" href="book.html">Almost Human <span aria-hidden="true">↗</span></a>
 </div>
@@ -816,14 +856,14 @@ body.homepage.homepage-lightbox-open .header {
 </a>
 <div class="home-story__body">
 <div class="home-story__excerpt"><p>
-        <span class="home-story__lead">При первом взгляде на</span> породистую собаку обычно рассматривают отдельные ее части: голову, окрас, переднюю и
+        <span class="home-story__lead">При первом взгляде</span> на породистую собаку обычно рассматривают отдельные ее части: голову, окрас, переднюю и
         заднюю часть, хвост.  По мере более внимательного изучения происходит переход к
         восприятию собаки в целом.  "Собака в целом" не означает, что типичные черты породы менее важны.  Это значит,
         что типаж породы определяется всей собакой, а не только отдельными частями. </p><p>Сбалансированная, цельная собака не просто имеет
         хорошие отдельные или все вместе части. Эти части должны находиться в правильном соотношении друг с другом.  Стандарт описывает
         дога так: "...его строение в целом должно быть сбалансированным...." и
         "...Это всегда единое целое - Аполлон среди собак..."</p></div>
-<a class="home-story__more" href="eval.html">Читать главу <span aria-hidden="true">↗</span></a>
+<a class="home-story__more" href="eval.html">Читать дальше <span aria-hidden="true">↗</span></a>
 </div>
 </article><article class="home-story home-story--anatomy" id="anatomy">
 <a aria-label="Открыть раздел Анатомия великана" class="home-story__visual" href="anatomy.html">
@@ -831,10 +871,10 @@ body.homepage.homepage-lightbox-open .header {
 </a>
 <div class="home-story__body">
 <div class="home-story__excerpt"><p>
-        <span class="home-story__lead">С зоологической точки зрения,</span> порода немецкий дог (англ. - great dane, нем. - deutsche doggen) относится к собакам (англ. – dog, нем. – doggen, лат. - canis lupus familiaris) —
+        <span class="home-story__lead">С зоологической точки зрения</span> порода немецкий дог (англ. - great dane, нем. - deutsche doggen) относится к собакам (англ. – dog, нем. – doggen, лат. - canis lupus familiaris) —
         плацентарным млекопитающим отряда хищных семейства псовых.</p><p>Немецкий дог был выведен человеком для охоты и охраны.</p><p>Будучи представителем хищных млекопитающих, дог имеет мощные мускулы, развитую сердечно-сосудистую систему, обеспечивающую как бег, так и выносливость, и зубы
         для ловли, удержания и разрыва.</p></div>
-<a class="home-story__more" href="anatomy.html">Читать главу <span aria-hidden="true">↗</span></a>
+<a class="home-story__more" href="anatomy.html">Читать дальше <span aria-hidden="true">↗</span></a>
 </div>
 </article><article class="home-story home-story--breeding" id="breeding">
 <a aria-label="Открыть раздел Порода и наследование" class="home-story__visual" href="breeding.html">
@@ -844,7 +884,7 @@ body.homepage.homepage-lightbox-open .header {
 <div class="home-story__excerpt"><p>
         <span class="home-story__lead">Чистокровность - набор свойств</span> породного животного, полученных в результате устойчивого наследования признаков, по которым производилось селекционное разведение.</p><p>Породность - наличие известной правдивой истории происхождения, отраженной в родословной.</p><p>Порода - многочисленная группа животных одного вида, образовавшаяся в результате селекционного разведения и характеризующаяся специфическими морфологическими
         свойствами, экстерьером, другими качествами.</p></div>
-<a class="home-story__more" href="breeding.html">Читать главу <span aria-hidden="true">↗</span></a>
+<a class="home-story__more" href="breeding.html">Читать дальше <span aria-hidden="true">↗</span></a>
 </div>
 </article><article class="home-story home-story--vet" id="vet">
 <a aria-label="Открыть раздел Здоровье и долголетие" class="home-story__visual" href="vet.html">
@@ -852,7 +892,7 @@ body.homepage.homepage-lightbox-open .header {
 </a>
 <div class="home-story__body">
 <div class="home-story__excerpt"><p>
-        <span class="home-story__lead">Средняя продолжительность жизни дога</span> вне зависимости от пола и окраса составляет 6,57 лет (проанализированы данные о смерти 7409 догов).
+        <span class="home-story__lead">Средняя продолжительность жизни</span> дога вне зависимости от пола и окраса составляет 6,57 лет (проанализированы данные о смерти 7409 догов).
         <!-- <a class="ext_link" target=”_blank” ></a> -->
 <br/>
         Самые частые причины смерти догов - это рак, заболевание сердца и заворот желудка в 629, 554 и 444 случаях соответственно. При этом проблемы с сердцем и заворот приводят к
@@ -867,7 +907,7 @@ body.homepage.homepage-lightbox-open .header {
         Вместе с кардиомиопатией другие заболевания сердца являются причиной смерти у 35,8% голубых догов, 27% у черно-мраморных и 26% у палево-тигровых.</p><p>Заворот желудка, онкологические заболевания (кроме остеосаркомы), почечная недостаточность и болезни опорно-двигательного аппарата более равномерно распределены
         по окрасным группам. Это дает основания говорить, что развитие этих заболеваний гораздо меньше определяется наследственными факторами, чем остеосаркома и болезни сердца.
       </p></div>
-<a class="home-story__more" href="vet.html">Читать главу <span aria-hidden="true">↗</span></a>
+<a class="home-story__more" href="vet.html">Читать дальше <span aria-hidden="true">↗</span></a>
 </div>
 </article></div>
 </section>
@@ -878,11 +918,11 @@ body.homepage.homepage-lightbox-open .header {
 </a>
 <div class="home-story__body">
 <div class="home-story__excerpt"><p>
-        <span class="home-story__lead">Cочетание силы, реакции, размера,</span> выносливости и смелости является основой для многих разновидностей собак, описываемых в разные времена. Это верно и для многих ранних породных
+        <span class="home-story__lead">Cочетание силы, реакции,</span> размера, выносливости и смелости является основой для многих разновидностей собак, описываемых в разные времена. Это верно и для многих ранних породных
         прототипов. Большинство из них исчезли после того, как Европа разделилась на части вслед за падением Рима. Предшественники догов стали исключением. Их основные формы, относящиеся к
         собирательному термину "алаунт", были описаны в средние века в охотничьих трактатах, таких как Livre de Chasse.</p><p>При переводе этого основополагающего источника информации о средневековом развитии чистокровной породы Уотсон в 1905 году утверждает, что к 1400 году типаж дога
         был уже устоявшимся, но далеко не единственным популярным вариантом.</p></div>
-<a class="home-story__more" href="color.html">Читать главу <span aria-hidden="true">↗</span></a>
+<a class="home-story__more" href="color.html">Читать дальше <span aria-hidden="true">↗</span></a>
 </div>
 </article><article class="home-story home-story--faces" id="faces">
 <a aria-label="Открыть раздел Лица и судьбы" class="home-story__visual" href="faces.html">
@@ -890,13 +930,13 @@ body.homepage.homepage-lightbox-open .header {
 </a>
 <div class="home-story__body">
 <div class="home-story__excerpt"><p>
-        <span class="home-story__lead">"Многие исправились благодаря религии.</span> Я исправилась благодаря собакам. Я пережила менопаузу, не приняв даже аспирина, потому что была очень занята выкармливанием щенков. Собаки
+        <span class="home-story__lead">"Многие выжили благодаря религии.</span> Я выжила благодаря собакам. Я пережила менопаузу, не приняв даже аспирина, потому что была очень занята выкармливанием щенков. Собаки
         спасли мне жизнь. Я рекомендую завести четвероногого животного, чтобы вылечить кризис среднего возраста".</p><p>"Я всегда говорю: "Вы хороши настолько, насколько хороши собаки, которых вы показываете. Вы приходите с лучшей собакой и выглядите потрясающе. Но если у вас посредственная собака,
         вы будете выглядеть довольно посредственно".</p><p>"Когда я познакомилась с Уорнером Гилмором, он был управляющим "Сэнт-Морица". После свадьбы мы жили за городом в доме, полном собак. Он заставил меня выбирать между ним и догами, и
         я выбрала собак. Мы развелись, и я никогда не жалела об этом. Я рассталась с парой супругов из-за собак, но пусть это вас не смущает - я все еще кладу глаз на мужчин, так же, как и
         на собак".</p><p>"Почему я все еще в здравии при той жизни, которая у меня была? Потому, что я вошла в этот сказочный мир собак, который начался как хобби и перерос в карьеру.
         Сколько женщин делают полноценную, выдающуюся карьеру в 81 год?"</p><p class="home-story__credit">Л.Баскетт<br/></p></div>
-<a class="home-story__more" href="faces.html">Читать главу <span aria-hidden="true">↗</span></a>
+<a class="home-story__more" href="faces.html">Читать дальше <span aria-hidden="true">↗</span></a>
 </div>
 </article><article class="home-story home-story--woodhouse" id="woodhouse">
 <a aria-label="Открыть раздел Почти человек" class="home-story__visual" href="book.html">
@@ -904,19 +944,19 @@ body.homepage.homepage-lightbox-open .header {
 </a>
 <div class="home-story__body">
 <div class="home-story__excerpt"><p>
-        <span class="home-story__lead">"Жить Джине оставалось всего</span> 20 часов, когда мне представилась возможность познакомиться с ней. Я была у моего старого друга в Хартбуме, недалеко от Стоктон-он-Тиза, когда его
+        <span class="home-story__lead">"Жить Джине оставалось всего 20 часов,</span>  когда мне представилась возможность познакомиться с ней. Я была у моего старого друга в Хартбуме, недалеко от Стоктон-он-Тиза, когда его
         пригласили на рюмочку соседи. Мы приехали туда все вместе, и я увидела огромного дога, лежащего на диване, к которому подошла поговорить. Она мгновенно прижалась ко мне, я спросила
         сколько ей лет, оказалось, что ей шесть, но самое печальное было то, что следующим утром ее собирались усыпить, так как хозяева не могли с ней справиться. У ее хозяев были две другие
-        собаки. Я спросила: "Можно мне ее забрать?" и, конечно, они пришли в восторг от этого предложения."</p><p>"На следующее утро я отправилась домой в Оксфорд на своем маленьком спортивном Wolseley Daytona с вынутым пассажирским сиденьем, чтобы Джина могла прилечь рядом
-        со мной на 200-мильном пути домой. Очевидно, хозяин Джины был гонщиком. В те далекие времена на дорогах было очень мало автомобилей, не было ограничений скорости, о которых можно
+        собаки. Я спросила: "Можно мне ее забрать?" и, конечно, они обрадовались этому предложению."</p><p>"На следующее утро я отправилась домой в Оксфорд на своем маленьком спортивном Wolseley Daytona с вынутым пассажирским сиденьем, чтобы Джина могла прилечь рядом
+        со мной на 200-мильном пути домой. Очевидно, хозяин Джины был гонщиком. В те далекие времена на дорогах было мало автомобилей, не было ограничений скорости, о которых можно
         было бы беспокоиться, и мой ярко-зеленый автомобиль пришелся ей по вкусу. Каждый раз, когда я тормозила, она садилась и поднимала голову, чтобы понять, почему я это делаю, а потом,
         довольная, сразу же успокаивалась при дальнейшем движении."</p></div>
-<a class="home-story__more" href="book.html">Читать главу <span aria-hidden="true">↗</span></a>
+<a class="home-story__more" href="book.html">Читать дальше <span aria-hidden="true">↗</span></a>
 </div>
 </article></div>
 </section>
 <section class="gallery home-gallery" id="gallery"><div class="home-gallery__intro">
-<h2>Портреты</h2>
+<h2>Портрет породы</h2>
 </div>
 <div class="swipe" id="app">
 <div class="sw__left">
