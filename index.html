@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW5C44BVJV"></script>
-  <script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MW5C44BVJV"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -15,22 +15,16 @@
 
     gtag('config', 'G-MW5C44BVJV');
   </script>
-
-
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Немецкий дог Deutsche Dogge Great Dane</title>
-  <link rel="shortcut icon" href="/static/favicon.ico"/>
-
-  
-
-  <link rel="stylesheet" href="css/card.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/carousel.css">
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Немецкий дог Deutsche Dogge Great Dane</title>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
+<link href="css/card.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/carousel.css" rel="stylesheet"/>
+<link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+<style>
 
     /* Shared */
 
@@ -414,929 +408,1100 @@
       }
     }
 
-  </style>
+  
 
-</head>
+/* ========================================================================
+   GRETD AIN · HOMEPAGE / EDITORIAL DESIGN / 2026-10-26
+   Only index.html. Shared css/style.css and the existing sliders are intact.
+   This CSS is intentionally scoped to body.homepage.
+   ======================================================================== */
+:root { --home-ink:#172d36; --home-deep:#14232a; --home-cream:#f5f0e6; --home-paper:#fffdf8; --home-gold:#c6a477; --home-muted:#66716f; --home-line:#dbd1c3; }
+body.homepage { --home-header-height:50px; background:var(--home-cream); color:var(--home-ink); }
+.homepage h1,.homepage h2,.homepage h3,.homepage p { margin:0; }
+.homepage a { text-decoration:none; padding:0; }
+.homepage a:hover,.homepage a:focus { font-weight:inherit; border-bottom:0; }
+.homepage a:focus-visible,.homepage button:focus-visible { outline:2px solid var(--home-gold); outline-offset:4px; }
+.homepage .header { height:var(--home-header-height); min-height:var(--home-header-height); overflow:visible; position:relative; z-index:1500; }
+.homepage .header-top,.homepage .header-top__container { height:var(--home-header-height); background:rgba(18,34,42,.98); }
+.homepage .header-top { z-index:1500; box-shadow:0 1px 0 rgba(246,236,216,.15); }
+.homepage .header-top__container { padding:0 clamp(18px,4.3vw,72px); max-width:none; color:#f6eee2; justify-content:space-between; }
+/* The sign is centered in the MENU BAR, independently of the two side buttons. */
+.homepage .header-top__container .title {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%, -50%);
+  margin:0; padding:0;
+  width:min(580px, calc(100% - 160px));
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; min-width:0;
+  pointer-events:none;
+}
+.homepage .site-mark { display:block; width:100%; }
+.homepage .site-mark__desktop,.homepage .site-mark__mobile {
+  display:block; width:100%; height:46px; overflow:visible;
+  filter:drop-shadow(0 1px 0 rgba(0,0,0,.22));
+}
+.homepage .site-mark__mobile { display:none; }
+.homepage .site-mark__frame { fill:rgba(251,244,231,.035); stroke:#d4b082; stroke-width:1.55; }
+.homepage .site-mark__corner { fill:none; stroke:#c9a06e; stroke-width:1.35; stroke-linecap:round; stroke-linejoin:round; }
+.homepage .site-mark__title { fill:#f4e9d8; font:normal 500 22px Georgia, 'Times New Roman', serif; letter-spacing:.03em; }
+.homepage .site-mark__sep { fill:#c7a170; font:normal 500 17px Georgia, 'Times New Roman', serif; }
+.homepage .menu-button,.homepage .link-button { background:transparent; width:48px; height:48px; display:grid; place-items:center; }
+.homepage .menu-button:hover,.homepage .link-button:hover { background:rgba(255,255,255,.08); }
+.homepage .menu-button img,.homepage .link-button img { width:28px; height:28px; padding:1px; filter:brightness(0) invert(1); opacity:.9; }
+/* Home dropdowns: dark slate, ivory type, subdued gold hover */
+.homepage .dropdown-content { top:50px; color:#f3eadb; background:rgba(38,54,61,.98); border:1px solid rgba(212,176,130,.35); border-radius:3px; box-shadow:0 20px 60px rgba(0,0,0,.32); padding:10px; width:275px; max-width:min(85vw,320px); font-family:'OpenSans',Arial,sans-serif; font-size:15px; line-height:1.5; }
+.homepage .dropdown-content a { border-radius:2px; padding:8px 12px; color:#f3eadb; }
+.homepage .dropdown-content a:hover,
+.homepage .dropdown-content a:focus-visible { background:#455964; color:#f8d6a7; }
+/* Hero */
+.homepage a.home-action--light { color:#172d36; }
+.homepage a.home-action--ghost { color:#f5efe4; }
+.home-hero { overflow:hidden; position:relative; background:var(--home-deep); color:#f8f1e6; }
+.home-hero:after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 75% 40%,rgba(131,148,125,.10),transparent 47%),linear-gradient(115deg,rgba(255,255,255,.02),transparent 55%); pointer-events:none; }
+.home-hero__noise { position:absolute; inset:0; pointer-events:none; background-image:repeating-linear-gradient(30deg,transparent 0 2px,rgba(255,255,255,.012) 2px 3px); opacity:.4; }
+.home-hero__layout { position:relative; z-index:1; width:min(1440px,100%); min-height:min(740px,calc(100vh - var(--home-header-height))); margin:0 auto; padding:clamp(62px,7.4vw,125px) clamp(26px,6vw,90px) 82px; display:grid; grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr); align-items:center; gap:clamp(22px,4vw,70px); }
+.home-eyebrow { color:#dec6a2; letter-spacing:.19em; font-size:11px; font-weight:600; display:flex; align-items:center; gap:14px; }
+.home-eyebrow__line { width:36px; height:1px; background:#c8a570; }
+.home-eyebrow__dot { color:#7b8d8e; }
+.home-hero__supra { margin-top:38px !important; font-size:13px; letter-spacing:.23em; color:#b9c4bf; text-transform:uppercase; }
+.home-hero h1 { margin:12px 0 18px !important; text-align:left; color:#fffaf1; font:normal clamp(65px,7.5vw,121px)/.99 Georgia,'Times New Roman',serif; letter-spacing:-.056em; white-space:nowrap; }
+.home-hero h1 em { font-weight:400; color:#d2b58a; }
+.home-hero__period { color:#bc9766; }
+.home-hero__tagline { margin-top:20px !important; font:normal clamp(22px,2.42vw,35px)/1.35 Georgia,'Times New Roman',serif; letter-spacing:-.012em; color:#f2ebe0; }
+.home-hero__tagline i { color:#d0b58c; font-style:italic; }
+.home-hero__actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:35px; }
+.homepage .home-action { display:inline-flex; align-items:center; justify-content:space-between; gap:20px; min-height:50px; padding:0 19px; font-size:12px; font-weight:600; letter-spacing:.06em; transition:background .2s,border-color .2s,transform .2s; }
+.home-action--light { color:#172d36; background:#e9d8bd; border:1px solid #e9d8bd; }
+.home-action--ghost { border:1px solid #77827e; color:#f5efe4; background:transparent; }
+.home-action:hover { transform:translateY(-2px); }
+.home-action--light:hover { background:#fff2df; }
+.home-action--ghost:hover { border-color:#f7e6ca; background:rgba(255,255,255,.07); }
+.home-hero__art { position:relative; height:clamp(390px,40vw,575px); min-width:0; isolation:isolate; }
+.home-hero__photo { position:absolute; overflow:hidden; background:#738083; border:9px solid #eee6d6; box-shadow:0 30px 65px rgba(0,0,0,.32); }
+.home-hero__photo:before { content:'GRETD AIN  ·  ARCHIVE'; position:absolute; inset:0; display:grid; place-items:center; text-align:center; font:14px Georgia,serif; letter-spacing:.22em; color:rgba(255,255,255,.22); z-index:0; }
+.home-hero__photo img { position:relative; width:100%; height:100%; display:block; object-fit:cover; filter:grayscale(1) contrast(1.03) sepia(.12); transition:transform .6s ease,filter .6s ease; }
+.home-hero__photo:hover img { transform:scale(1.04); filter:grayscale(.55) sepia(.12); }
+.home-hero__photo--main { inset:10px 14% 45px 2%; transform:rotate(-1.3deg); }
+.home-hero__photo--small { top:45%; right:0; width:37%; height:42%; border-width:7px; transform:rotate(4deg); z-index:2; }
+.home-hero__ornament { position:absolute; bottom:-25px; right:-35px; font:normal clamp(80px,11vw,170px)/1 Georgia,serif; color:rgba(210,190,163,.06); letter-spacing:-.18em; white-space:nowrap; z-index:-1; }
+/* Keep the first image/title in view after choosing a navigation anchor. */
+.homepage #chapters,
+.homepage #stories,
+.homepage #gallery,
+.homepage #books,
+.homepage .home-story {
+  scroll-margin-top:calc(var(--home-header-height) + 18px);
+}
+/* Directory navigation */
+.home-directory { background:#e9e1d4; border-bottom:1px solid #d8ccbc; }
+.home-directory__inner { max-width:1320px; margin:auto; padding:18px 32px; display:flex; align-items:center; gap:clamp(14px,2.3vw,36px); justify-content:space-between; flex-wrap:wrap; }
+.home-directory a { color:#3c4e50; font-size:11px; font-weight:700; letter-spacing:.08em; line-height:normal; white-space:nowrap; border-bottom:1px solid transparent; }
+.home-directory a:hover { color:#00577e; border-bottom:1px solid #ae9170; }
+/* Chapter groups */
+.home-editorial { width:min(1320px,100%); margin:auto; padding:clamp(66px,7.3vw,112px) clamp(20px,4.3vw,70px) 90px; }
+.home-editorial--people { padding-top:24px; }
+#chapters.home-editorial { padding-top:clamp(32px,4vw,56px); }
+.home-section-title { display:flex; justify-content:space-between; align-items:end; gap:30px; padding:0 0 25px; margin:0 0 32px; border-bottom:1px solid #bfb1a1; }
+.home-section-number { display:block; color:#a27a50; font-size:11px; font-weight:700; letter-spacing:.2em; margin-bottom:15px; }
+.home-section-title h2,.home-gallery__intro h2,.home-library__intro h2 { font:normal clamp(39px,4.2vw,64px)/1.09 Georgia,'Times New Roman',serif; color:var(--home-ink); letter-spacing:-.035em; }
+.home-section-title h2 em,.home-gallery__intro h2 em,.home-library__intro h2 em { color:#9f774b; font-weight:400; }
+.home-section-title > p { max-width:320px; color:#69736d; line-height:1.75; font-size:13px; padding-bottom:7px; }
+.home-stories { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.home-stories--three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.home-story { position:relative; display:flex; flex-direction:column; overflow:hidden; min-width:0; background:var(--home-paper); border:1px solid #e0d8ca; box-shadow:0 7px 20px rgba(47,54,45,.035); transition:box-shadow .2s,transform .2s; }
+.home-story:hover { transform:translateY(-4px); box-shadow:0 18px 35px rgba(47,54,45,.1); }
+.home-story__visual { position:relative; display:block; width:100%; height:240px; background:linear-gradient(130deg,#e7dfd1,#cbd5d2); overflow:hidden; }
+.home-story__visual-inner { display:flex; width:100%; height:100%; justify-content:center; align-items:center; }
+.home-story__visual img { display:block; object-fit:contain; width:100%; height:100%; padding:22px; filter:sepia(.16); transition:transform .5s ease; }
+.home-story__visual:hover img { transform:scale(1.045); }
+.home-story--history .home-story__visual,.home-story--faces .home-story__visual,.home-story--woodhouse .home-story__visual { height:230px; }
+.home-story--history .home-story__visual img,.home-story--faces .home-story__visual img,.home-story--woodhouse .home-story__visual img { padding:14px; }
+/* Almost Human illustration: half of the previous image height, centered within its panel. */
+.home-story--woodhouse .home-story__visual img { width:100%; height:50%; padding:0; }
 
-<body class="body">
+/* Editorial opening: first four words are enlarged like a drop cap, without a separate heading. */
+.home-story__body { padding:28px clamp(21px,2.5vw,37px) 27px; display:flex; flex-direction:column; flex:1; }
+.home-story__excerpt { position:relative; overflow:hidden; height:13em; font-size:13px; line-height:1.7; color:#5e6865; margin:0 0 30px; -webkit-mask-image:linear-gradient(to bottom,#000 75%,transparent 100%); mask-image:linear-gradient(to bottom,#000 75%,transparent 100%); }
+.home-story__lead { font:normal clamp(27px,2.7vw,39px)/1.12 Georgia,'Times New Roman',serif; color:#1c343c; letter-spacing:-.025em; }
+.home-story__excerpt p { margin:0 0 .7em !important; text-align:left; font:inherit; color:inherit; }
+.home-story__credit { font-style:italic !important; }
+.home-story__more { align-self:flex-start; margin-top:auto; border-top:1px solid #c9b9a1; padding-top:13px !important; color:#234957; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.11em; }
+.home-story__more span { font-size:16px; margin-left:22px; transition:margin .15s; }
+.home-story__more:hover span { margin-left:27px; }
+.home-stories--three .home-story__body { padding:26px 25px; }
+.home-stories--three .home-story__lead { font-size:clamp(25px,2.4vw,35px); }
+.home-stories--three .home-story__visual { background:linear-gradient(135deg,#e2dbd0,#b8c8ca); }
+/* Existing Fancyapps gallery — new editorial surround. Carousel data and JS unchanged. */
+.homepage .home-gallery { background:var(--home-deep) !important; padding:76px 0 58px; border:0; overflow:hidden; }
+.home-gallery__intro { display:flex; gap:40px; justify-content:space-between; align-items:end; margin:0 auto 40px; max-width:1320px; padding:0 clamp(20px,4.3vw,70px) 24px; border-bottom:1px solid rgba(235,226,206,.22); }
+.home-gallery__intro h2 { color:#f1e9df; }
+.home-gallery__intro h2 em { color:#d0b38d; }
+.home-gallery .swipe { width:100%; }
+.home-gallery .f-carousel__slide img { filter:grayscale(.35); transition:filter .4s; }
+.home-gallery .f-carousel__slide:hover img { filter:grayscale(0); }
+/* Existing Swiper library — restyle only its outer zone, keep nav classes/ids. */
+.homepage .home-library { padding:85px 0 92px; background:linear-gradient(180deg,#f4ece0 0%,#e9decd 100%) !important; border-bottom:0; }
+.home-library__intro { display:flex; gap:40px; justify-content:space-between; align-items:end; max-width:1320px; padding:0 clamp(20px,4.3vw,70px) 25px; margin:0 auto 32px; border-bottom:1px solid #cbbda8; }
+.home-library__intro h2 { width:100%; text-align:center; }
+.home-library__intro > p { max-width:320px; font-size:13px; line-height:1.75; color:#68716d; }
+.home-library .libx-wrap .libx-card { background:#e9dfce; border-radius:4px; padding:11px; box-shadow:0 12px 34px rgba(43,40,32,.18),0 0 0 1px rgba(85,64,44,.14); }
+.home-library .libx-wrap .libx-image-wrap { border-radius:2px; }
+.home-library .libx-wrap .libx-caption { border-radius:0; }
+/* Library covers and arrows retain their original size and positions. */
+/* Footer */
+.homepage .footer { padding:38px 0 28px; background:#152830; color:#cfcec6; }
+.homepage .footer .container { max-width:1200px; }
+.homepage .footer .contacts__left-list { padding-left:0; gap:9px; margin:0 0 29px; }
+.homepage .footer .contacts__left-list a { display:inline-flex; padding:7px; border:1px solid rgba(245,235,215,.17); border-radius:100px; transition:background .2s; margin:0 5px !important; }
+.homepage .footer .contacts__left-list a:hover { background:rgba(255,255,255,.09); }
+.homepage .footer .contacts__left-list img { width:25px; height:25px; filter:grayscale(1) brightness(2); opacity:.83; }
+.homepage .footer p { color:#a8b1ad; line-height:1.7; }
+/* Native focus, hover and reduced motion support */
+@media (prefers-reduced-motion: reduce) { .homepage *, .homepage *::before, .homepage *::after { transition:none !important; scroll-behavior:auto !important; } }
+@media (max-width:1000px) {
+  .home-hero__layout { grid-template-columns:minmax(0,1fr) minmax(0,.8fr); padding:60px 32px 70px; }
+  .home-hero h1 { font-size:clamp(58px,7.5vw,87px); }
+  .home-story__visual { height:200px; }
+  .home-stories--three { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .home-stories--three .home-story:last-child { grid-column:1/-1; display:grid; grid-template-columns:45% 55%; }
+  .home-stories--three .home-story:last-child .home-story__visual { height:100%; min-height:285px; }
+}
+@media (max-width:767px) {
+  .homepage .header { height:var(--home-header-height); min-height:var(--home-header-height); }
+  .homepage .header-top,.homepage .header-top__container { height:var(--home-header-height); }
+  .homepage .header-top__container { padding:0 12px; }
+  .homepage .menu-button,.homepage .link-button { width:42px; height:42px; }
+  .homepage .dropdown-content { top:46px; }
+  .home-hero__layout { min-height:auto; display:flex; flex-direction:column; align-items:stretch; padding:65px 24px 67px; gap:30px; }
+  .home-hero__supra { margin-top:25px !important; }
+  .home-hero h1 { font-size:clamp(62px,14vw,95px); margin:12px 0 !important; white-space:normal; }
+  .home-hero__tagline { font-size:clamp(25px,6vw,32px); }
+  .home-hero__actions { margin-top:26px; gap:10px; }
+  .homepage .home-action { font-size:11px; padding:0 15px; }
+  .home-hero__art { margin:12px 14px 0; height:clamp(295px,70vw,425px); }
+  .home-hero__photo--main { inset:0 17% 33px 0; }
+  .home-hero__photo--small { width:35%; height:47%; right:-7%; }
+  .home-directory__inner { padding:16px 24px; justify-content:flex-start; gap:12px 23px; }
+  .home-editorial { padding:66px 20px 40px; }
+  .home-editorial--people { padding-top:20px; padding-bottom:70px; }
+  #chapters.home-editorial { padding-top:30px; }
+  .home-section-title,.home-gallery__intro,.home-library__intro { display:block; margin-bottom:24px; }
+  .home-section-title h2,.home-gallery__intro h2,.home-library__intro h2 { font-size:clamp(37px,9vw,51px); }
+  .home-section-title > p,.home-gallery__intro > p,.home-library__intro > p { max-width:none; font-size:13px; padding-top:15px; }
+  .home-stories,.home-stories--three { grid-template-columns:1fr; gap:18px; }
+  .home-stories--three .home-story:last-child { display:flex; grid-column:auto; }
+  .home-stories--three .home-story:last-child .home-story__visual { height:230px; min-height:0; }
+  .home-story__visual { height:210px; }
+  .home-story__body { padding:23px; }
+  .home-story__lead { font-size:31px; }
+  .home-story__excerpt { height:11em; margin-bottom:22px; }
+  .homepage .home-gallery { padding:60px 0 48px; }
+  .home-gallery__intro,.home-library__intro { padding:0 21px 24px; }
+  .homepage .home-library { padding:60px 0 75px; }
+  .home-library .libx-wrap { padding-left:0; padding-right:0; }
+  .homepage .footer { padding:35px 0 27px; }
+}
+@media (max-width:370px) {
+  .home-hero h1 { font-size:56px; }
+  .home-hero__actions { flex-direction:column; align-items:flex-start; }
+  .home-hero__art { height:260px; }
+}
+/* Separate Russian-only SVG for tablets and phones (768px inclusive). */
+@media (max-width:768px) {
+  .homepage .header { height:var(--home-header-height); min-height:var(--home-header-height); }
+  .homepage .header-top,.homepage .header-top__container { height:var(--home-header-height); }
+  .homepage .header-top__container .title {
+    width:min(250px, calc(100% - 116px));
+  }
+  .homepage .site-mark__desktop { display:none; }
+  .homepage .site-mark__mobile { display:block; height:44px; }
+  .homepage .site-mark__title { font-size:30px; }
+}
+
+/* ------------------------------------------------------------
+   Fullscreen gallery: keep Fancybox above the fixed site header.
+   Mobile devices get a permanent, accessible close button.
+   ------------------------------------------------------------ */
+body.homepage .fancybox__container {
+  z-index: 10000 !important;
+}
+body.homepage.homepage-lightbox-open .header {
+  visibility: hidden;
+  pointer-events: none;
+}
+.homepage-gallery-close {
+  display: none;
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top, 0px) + 10px);
+  right: max(12px, env(safe-area-inset-right, 0px) + 10px);
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  border: 1px solid rgba(222, 194, 152, .75);
+  border-radius: 50%;
+  color: #f7efdf;
+  background: rgba(22, 38, 45, .92);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .3);
+  font: normal 34px/1 Georgia, 'Times New Roman', serif;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.homepage-gallery-close[hidden] {
+  display: none !important;
+}
+.homepage-gallery-close:hover,
+.homepage-gallery-close:focus-visible {
+  background: #344b53;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  /* Our accessible control replaces any default Fancybox close icons. */
+  body.homepage .fancybox__container [data-fancybox-close] {
+    display: none !important;
+  }
+  .homepage-gallery-close:not([hidden]) {
+    display: flex;
+  }
+}
+</style>
+<!-- Portrait carousel: the wheel scrolls the page, not the slides. -->
+<script>
+(function () {
+  window.addEventListener('wheel', function (event) {
+    if (!(event.target instanceof Element) ||
+        !event.target.closest('#gallery .f-carousel') ||
+        event.ctrlKey || event.metaKey ||
+        document.querySelector('.fancybox__container')) return;
+    if (Math.abs(event.deltaY) < 0.01) return;
+
+    // Carousel may prevent native wheel scrolling, so scroll the page
+    // explicitly and stop this one event before it reaches carousel code.
+    let pixels = event.deltaY;
+    if (event.deltaMode === 1) pixels *= 16; // lines
+    if (event.deltaMode === 2) pixels *= window.innerHeight; // pages
+    if (event.cancelable) event.preventDefault();
+    event.stopImmediatePropagation();
+    window.scrollBy({ top: pixels, left: 0, behavior: 'instant' });
+  }, { capture: true, passive: false });
+})();
+</script>
+<meta content="Немецкий дог — электронный архив породы: история, анатомия, экспертиза, селекция, здоровье, фотографии и библиотека редких изданий." name="description"/></head>
+<body class="body homepage">
 <header class="header">
-  <div class="add-swiper-container">
-    <div class="header__top header-top">
-      <div class="container header-top__container">
-
+<div class="add-swiper-container">
+<div class="header__top header-top">
+<div class="container header-top__container">
 <div class="menu">
-
-  <button type="button"
-          class="menu-button"
-          aria-label="Меню"
-          aria-expanded="false"
-          aria-controls="site-menu">
-    <img src="img/burger.svg" alt="">
-  </button>
-
-  <nav id="site-menu"
-       class="dropdown-content"
-       style="left:1px"
-       aria-label="Разделы сайта">
-
-    <a href="#eval">Оценка</a>
-    <a href="#anatomy">Биология</a>
-    <a href="#history">История</a>
-    <a href="#faces">Лица</a>
-    <a href="#breeding">Селекция</a>
-    <a href="#books">Библиотека</a>
-    <a href="#woodhouse">Почти человек</a>
-    <a href="#vet">Здоровье</a>
-
-  </nav>
-
+<button aria-controls="site-menu" aria-expanded="false" aria-label="Меню" class="menu-button" type="button">
+<img alt="" src="img/burger.svg"/>
+</button>
+<nav aria-label="Разделы сайта" class="dropdown-content" id="site-menu" style="left:1px">
+<a href="#eval">Оценка</a>
+<a href="#anatomy">Биология</a>
+<a href="#history">История</a>
+<a href="#faces">Лица</a>
+<a href="#breeding">Селекция</a>
+<a href="#books">Библиотека</a>
+<a href="#woodhouse">Почти человек</a>
+<a href="#vet">Здоровье</a>
+</nav>
 </div>
-
-        <div class="title">
-          <p class="title-b">Немецкий дог</p>
-          <p class="title-a">Немецкий дог&nbsp;&nbsp;&nbsp;&nbsp;Deutsche Dogge&nbsp;&nbsp;&nbsp;&nbsp;Great Dane</p>
-        </div>
-
+<div class="title">
+<div aria-label="Немецкий дог — Deutsche Dogge — Great Dane" class="site-mark" role="img">
+<svg class="site-mark__desktop" viewBox="0 0 720 68" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<g transform="translate(0 -9)">
+<rect class="site-mark__frame" x="16" y="14" width="688" height="58" rx="8" ry="8"/>
+<path class="site-mark__corner" d="M34 30c0-5 4-9 9-9h16M34 30v12M34 56v0c0 5 4 9 9 9h16"/>
+<path class="site-mark__corner" d="M686 30c0-5-4-9-9-9h-16M686 30v12M686 56v0c0 5-4 9-9 9h-16"/>
+<path class="site-mark__corner" d="M34 30c0-5 4-9 9-9 3 0 5 1 7 3 2-2 4-3 7-3M34 56c0 5 4 9 9 9 3 0 5-1 7-3 2 2 4 3 7 3"/>
+<path class="site-mark__corner" d="M686 30c0-5-4-9-9-9-3 0-5 1-7 3-2-2-4-3-7-3M686 56c0 5-4 9-9 9-3 0-5-1-7-3-2 2-4 3-7 3"/>
+<text class="site-mark__title" text-anchor="middle" x="360" y="49">Немецкий дог <tspan class="site-mark__sep">✦</tspan> Deutsche Dogge <tspan class="site-mark__sep">✦</tspan> Great Dane</text>
+</g>
+</svg>
+<svg class="site-mark__mobile" viewBox="0 0 320 68" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<g transform="translate(0 -9)">
+<rect class="site-mark__frame" x="12" y="14" width="296" height="58" rx="8" ry="8"/>
+<path class="site-mark__corner" d="M26 28c0-4 4-8 8-8h12M26 28v9M26 58c0 4 4 8 8 8h12"/>
+<path class="site-mark__corner" d="M294 28c0-4-4-8-8-8h-12M294 28v9M294 58c0 4-4 8-8 8h-12"/>
+<path class="site-mark__corner" d="M26 28c0-4 4-8 8-8 3 0 4 1 6 3 2-2 4-3 6-3M26 58c0 4 4 8 8 8 3 0 4-1 6-3 2 2 4 3 6 3"/>
+<path class="site-mark__corner" d="M294 28c0-4-4-8-8-8-3 0-4 1-6 3-2-2-4-3-6-3M294 58c0 4-4 8-8 8-3 0-4-1-6-3-2 2-4 3-6 3"/>
+<text class="site-mark__title" text-anchor="middle" x="160" y="49">Немецкий дог</text>
+</g>
+</svg>
+</div>
+</div>
 <div class="links">
-
-  <button type="button"
-          class="link-button"
-          aria-label="Ссылки"
-          aria-expanded="false"
-          aria-controls="links-menu">
-    <img src="img/ext_link.svg" alt="">
-  </button>
-
-  <nav id="links-menu"
-       class="dropdown-content"
-       style="right:1px"
-       aria-label="Внешние ссылки">
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://greatdanegnosis.wordpress.com/">
+<button aria-controls="links-menu" aria-expanded="false" aria-label="Ссылки" class="link-button" type="button">
+<img alt="" src="img/ext_link.svg"/>
+</button>
+<nav aria-label="Внешние ссылки" class="dropdown-content" id="links-menu" style="right:1px">
+<a href="https://greatdanegnosis.wordpress.com/" rel="noopener" target="_blank">
       Great Dane Gnosis
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="http://nkp.greatdanes.dog">
+<a href="http://nkp.greatdanes.dog" rel="noopener" target="_blank">
       Российский клуб
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://greatdanes.dog">
+<a href="https://greatdanes.dog" rel="noopener" target="_blank">
       Российский портал
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&pattern=dolf&db=Quintess.dbw&op=search">
+<a href="https://www.quintessa.net.au/cgi-bin/geneal.pl?gens=5&amp;pattern=dolf&amp;db=Quintess.dbw&amp;op=search" rel="noopener" target="_blank">
       Quintessa
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://www.danesworld.info/pedigree.php?">
+<a href="https://www.danesworld.info/pedigree.php?" rel="noopener" target="_blank">
       Danesworld Pedigrees
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://breedpedigrees.com/pedpoint/pp_search.php">
+<a href="https://breedpedigrees.com/pedpoint/pp_search.php" rel="noopener" target="_blank">
       River Rock Pedigrees
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://www.ginnie.com/greatdanes.htm">
+<a href="https://www.ginnie.com/greatdanes.htm" rel="noopener" target="_blank">
       Ginnie's page
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://gesunde-dogge.de/">
+<a href="https://gesunde-dogge.de/" rel="noopener" target="_blank">
       Gesunde-dogge Deutschland
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://gretdain.com/eu-gallery.html">
+<a href="https://gretdain.com/eu-gallery.html" rel="noopener" target="_blank">
       Галлерея Eu Ch 1900-1980
     </a>
-
-    <a rel="noopener"
-       target="_blank"
-       href="https://gretdain.com/gd-foundation.html">
+<a href="https://gretdain.com/gd-foundation.html" rel="noopener" target="_blank">
       Time traveller photos
     </a>
-
-  </nav>
-
+</nav>
 </div>
-
 <script src="js/dropdown.js"></script>
-
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </header>
 <main>
-  <section class="gallery" id="gallery" style="background-color: var(--main-bg);">
-    <div class="swipe" id="app">
-      <div class="sw__left">
-        <div class="f-carousel" id="Carousel-1">
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-1sw.webp">
-            <div class="sw__img" data-title="Am.Ch. HONEY HOLLOW STORMI RUDIO&#10{Red golden Fawn Male} W520558 15/07/1954&#10 7 BIS, 41 BOB&#10Bred by L.Gilmour owned by C.Clarke"><img
-                src="./img/1-1sw.webp" alt="gallery-1"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-2sw.webp">
-            <div class="sw__img" data-title="Am.Ch. DUCHESS OF ZEL THOR II&#10 Owned by G. Bordner dob 15/01/1952 &#10 W317997&#10 Westminster BOB"><img src="./img/1-2sw.webp" loading="lazy"
-                                                                                                                                                         alt="gallery-2"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-3sw.webp">
-            <div class="sw__img"
-                 data-title=" FAUNA MOGUNTIA (b. 25.11.1919) VDH/DDC3516 &#10 DOLF (b. 02.07.1924) VDH/DDC 008281 &#10 KARL FARBER &#10 ESSMA (b. 17/05/1925) &#10 BOSCO (b.08.08.1921) VDH/DDC4584">
-              <img src="./img/1-3sw.webp" loading="lazy" alt="gallery-3"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-32sw.webp">
-            <div class="sw__img" data-title="ALEXANDER VOM FERBERTURM b. 25/07/1922 VDH/DDC 005944 Owner M.Grass"><img src="./img/1-32sw.webp" loading="lazy" alt="gallery-4"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-5sw.webp">
-            <div class="sw__img" data-title="Am Ch FLIGHTY AUTUMRIDGE RHYTM AND ROOTS &#10 {F} WS60944401 b. 9/05/2018 &#10 owned and bred by Neil O'Sullivan"><img src="./img/1-5sw.webp"
-                                                                                                                                                                    loading="lazy"
-                                                                                                                                                                    alt="gallery-5"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-7sw.webp">
-            <div class="sw__img" data-title=" Am.Ch.  DION OF KENT, &#10 W145759. b. May 14, 1949. &#10 Breeders Mr. and Mrs. Chas. E. Rankin"><img src="./img/1-7sw.webp" loading="lazy"
-                                                                                                                                                    alt="gallery-6"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-8sw.webp">
-            <div class="sw__img"
-                 data-title=" Ger. and Am.Ch. ETFA VON DER SAALBURG&#10 b.17.05.1925  VDH/DDC9848 W674544&#10 breeder Karl Farber owner M.Hostetter&#10 Model for GD Illustrated standard 1934 &#10 6BIS @1928-1936">
-              <img src="./img/1-8sw.webp" loading="lazy" alt="gallery-7"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-9sw.webp">
-            <div class="sw__img" data-title=" GREGORY OF KENT&#10 owner Rafael L.Guirola&#10 Alanos de Oro kennels"><img src="./img/1-9sw.webp" loading="lazy" alt="gallery-8"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-10sw.webp">
-            <div class="sw__img" data-title=" Am.Ch. CHALOTT'S SIR ALISTAIR&#10 W386566&#10 owner V.Matthews"><img src="./img/1-10sw.webp" loading="lazy" alt="gallery-9"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-14sw.webp">
-            <div class="sw__img" data-title="Am.Ch. EDEN's SAMSON&#10{Fawn Male} W77254 b.12/09/1946&#10 bred by John G. McEdward, owned by Blake Edwards&#10 Sire of 19 Champions"><img
-                src="./img/1-14sw.webp" loading="lazy" alt="gallery-10"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-15sw.webp">
-            <div class="sw__img" data-title="Am.Ch. HANSI OF GARRICREST&#10 b.13-08-1938 A270531 &#10 br/own Vincent J.Garrity"><img src="./img/1-15sw.webp" loading="lazy" alt="gallery-11"/>
-            </div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-16sw.webp">
-            <div class="sw__img" data-title=" Am.Ch. IRWIN VON ODENWALD &#10 Ger. import owner M.Hostetter Ridge Crest kennel"><img src="./img/1-16sw.webp" loading="lazy" alt="gallery-12"/>
-            </div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-20sw.webp">
-            <div class="sw__img"><img src="./img/1-20sw.webp" loading="lazy" title="" style="height:100%" alt="gallery-13"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-18sw.webp">
-            <div class="sw__img"
-                 data-title="Am.Ch. CHALOTT'S LADY ALICIA&#10{Fawn Female} W386573 &#10 bred M.Holt under L.Gilmour's kennel prefix), owned by Mr. & Mrs. Freeman, Exeter Kennel West Newton, Massachusetts">
-              <img src="./img/1-18sw.webp" loading="lazy" alt="gallery-14"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-22sw.webp">
-            <div class="sw__img" data-title="Am.Ch. CASAARABAL’S THE HOLLY WARRIOR b.21.11.2014 WS49015507 multi BOB BOS RWD, owner/breeder C.Campor, F.Arce"><img src="./img/1-22sw.webp"
-                                                                                                                                                                   loading="lazy"
-                                                                                                                                                                   alt="gallery-15"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-23sw.webp">
-            <div class="sw__img" data-title="Am.Ch. DANELAGH'S TARLA   dob:12/21/1968, WB268815, (F), Fawn ( Danelagh's Ottar X Danelagh's Laara)"><img src="./img/1-23sw.webp" loading="lazy"
-                                                                                                                                                        alt="gallery-16"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-24sw.webp">
-            <div class="sw__img" data-title="Am.Ch. MONARCH OF HALECROFT 942791, owner D.E.Hale, multiple BIS, photo by W.Brown"><img src="./img/1-24sw.webp" loading="lazy"
-                                                                                                                                      alt="gallery-17"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-25sw.webp">
-            <div class="sw__img"
-                 data-title="DANE EDEN Kennel quartet, Harbor Cities (California) KC, 1948. Breeder G.McEdwards, handler R.Zimmerman. Second from the left Am.Ch. DELILAH - group winner. Photo by J.Ludwig">
-              <img src="./img/1-25sw.webp" loading="lazy" alt="gallery-18"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-26sw.webp">
-            <div class="sw__img"
-                 data-title="BMW PRIMA DONNA dob.21.11.1980 WE855567, BMW RUFFIAN dob.23.03.1980 WE932591, BMW MARDI GRAS dob.01.11.1979 WE376301, BMW FANTASIA dob. 21.11.1980 WE835102"><img
-                src="./img/1-26sw.webp" loading="lazy" alt="gallery-19"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-27sw.webp">
-            <div class="sw__img" data-title="Am. Ch. HEROLD VON ST. MAGN-OBERTRAUBLING dob.27/01/1957 W836251, multi BIS, photo E.Shafer"><img src="./img/1-27sw.webp" loading="lazy"
-                                                                                                                                               alt="gallery-20"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-28sw.webp">
-            <div class="sw__img" data-title="Am.Ch. MISS ERIKKE VON RIESENHOF dob.09/08/1954 W556995"><img src="./img/1-28sw.webp" loading="lazy" alt="gallery-21"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-29sw.webp">
-            <div class="sw__img" data-title="Am.Ch. KOLIER'S ZEUS NUKID TOWN dob.1981-12-15, WF097384, Owner Jim and Marie Maninon"><img src="./img/1-29sw.webp" loading="lazy"
-                                                                                                                                         alt="gallery-22"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-30sw.webp">
-            <div class="sw__img" data-title="Am.Ch. CASAARABAL'S SHIELD  MAIDEN AT GRANDVIEW, dob.10/17/2019 WS66321801, Fawn, breders F.Arce & C.Campos, owners S. & C. Lynn
-"><img src="./img/1-30sw.webp" loading="lazy" alt="gallery-23"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-31sw.webp">
-            <div class="sw__img" data-title="Am.Ch. LONGO'S PRIMO D'AQUINO, dob:07/19/1985, WF758557191, sire of 27 AKC Champions, 11 BIS. Breder M.R. & D.Aquino, owner J. & T. Longo
-"><img src="./img/1-31sw.webp" loading="lazy" alt="gallery-24"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-33sw.webp">
-            <div class="sw__img" data-title="Am.Ch. DANERIDGE CALIBAN dob 08.06.1960 W133737, 5 BIS in 1963, breeder/owner E.R.Fawcett
-"><img src="./img/1-33sw.webp" loading="lazy" alt="gallery-25"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-34sw.webp">
-            <div class="sw__img" data-title="Am.Ch. RAZZEL DAZZEL OF MARYDANE dob.28.04.1953 W421955, breeder/owner Mery & Jerry Johnson
-"><img src="./img/1-34sw.webp" loading="lazy" alt="gallery-26"/></div>
-          </div>
-          <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-35sw.webp">
-            <div class="sw__img" data-title="Am.Ch. REGGEN'S MADAS-L OF MARYDANE, BOB 238, GW 194, BIS 25, dob.05/17/1964, WA467754, breeder/owner Mery & Jerry Johnson
-"><img src="./img/1-35sw.webp" loading="lazy" alt="gallery-27"/></div>
-          </div>
-        </div>
-      </div>
-      <div class="sw__right">
-        <div class="sw__right-row">
-          <div class="f-carousel" id="Carousel-2">
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-27sw.jpg">
-              <div class="sw__img"
-                   data-title="Viele haben durch ihn den Hund sehen gelernt ….. Wenige Menschen hat es gegeben, gibt es und wird es geben, die fast alle Teile der Kynologie so durchforscht haben wie Richard Strebel">
-                <img src="./img/2-27sw.jpg" alt="gallery-28"/></div>
-            </div>
-          </div>
-        </div>
-        <div class="sw__right-row">
-          <div class="f-carousel" id="Carousel-3">
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-1sw.webp">
-              <div class="sw__img" data-title=" GAZELLE VON LOHELAND (OF OUBOROUGH)&#10 VDH/DDC17937 b.27.05.1929 &#10 owner: J.V.Rank sire:Elch Eddler v.d.Saalburg"><img
-                  src="./img/3-1sw.webp" alt="gallery-29"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-2sw.webp">
-              <div class="sw__img" data-title="Am.Ch. SCHWARZ SCHONHEIT {F} W188231"><img src="./img/3-2sw.webp" loading="lazy" style="height:100%" alt="gallery-30"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-3sw.webp">
-              <div class="sw__img" data-title="LONGO'S PRIMO D'AQUINO &#10 {B} WF758557 b.19/07/1985"><img src="./img/3-3sw.webp" loading="lazy" style="height:100%" alt="gallery-31"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-4sw.webp">
-              <div class="sw__img" data-title="Am.Ch. BMW TRUMP-E-TER OF MAGNUS &#10 {H} {M} WG468555 dob.3/11/1989 "><img src="./img/3-4sw.webp" loading="lazy" style="width:100%"
-                                                                                                                           alt="gallery-32"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-5sw.webp">
-              <div class="sw__img" data-title=" Am.Ch.TURKADANA BEN BEN &#10 WA77705 b.20.02.1960 &#10 owner Mr.& Mrs.Irving A.Baskind"><img src="./img/3-5sw.webp" loading="lazy"
-                                                                                                                                             alt="gallery-33"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-6sw.webp">
-              <div class="sw__img" data-title=" Can.Ch.DANAIDES CHEQUERS &#10 3233781 b.01.01.1953 &#10 owner Irene M.Bourassa"><img src="./img/3-6sw.webp" loading="lazy" alt="gallery-34"/>
-              </div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-7sw.webp">
-              <div class="sw__img" data-title=" Am.Can.Ch. HARMONY HILL FORTISSIMO &#10 WA111665 AK11665 &#10 owner Mr.& Mrs.Robert C.Thomas "><img src="./img/3-7sw.webp" loading="lazy"
-                                                                                                                                                    alt="gallery-35"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-8sw.webp">
-              <div class="sw__img" data-title="Am. Can.Ch. SHEELA'S SCHEHARAZADE &#10 b.01.05.1958 W954311 &#10 owner Mr. and Mrs. J. Blood"><img src="./img/3-8sw.webp" loading="lazy"
-                                                                                                                                                  alt="gallery-36"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-9sw.webp">
-              <div class="sw__img" data-title="Rolf of Ouborough &#10 {F} {M} b.10/06/1921"><img src="./img/3-9sw.webp" loading="lazy" style="height:100%" alt="gallery-37"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-10sw.webp">
-              <div class="sw__img" data-title=" Am.Ch. BMW DYNAMIC &#10 b.05.03.1983 WF532747 &#10 breder & owner L.Kiaulenas"><img src="./img/3-10sw.webp" loading="lazy" alt="gallery-38"/>
-              </div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-11sw.webp">
-              <div class="sw__img" data-title="Ger.Ch. DOLF VON DER SAALBURG &#10 {B} {M} VDH/DDC 8281 b.2/07/1924"><img src="./img/3-11sw.webp" loading="lazy" style="height:100%"
-                                                                                                                         alt="gallery-39"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-14sw.webp">
-              <div class="sw__img" data-title="EU Ch. '86 '87 '88 FABIENNE VON TRAUTHEIM VDHDDC 86936 b.25.01.1984, breeder Frank Wenzel"><img src="./img/3-14sw.webp" loading="lazy"
-                                                                                                                                               style="height:100%" alt="gallery-40"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-15sw.webp">
-              <div class="sw__img"
-                   data-title="OERLANG VON  LOHELAND A60123 b.03.04.1932, imported and owned by Ernest E. Ferguson, inbred Fauna Moguntia 4:3,4 Bosco v.d. Saalburg 4, 4:3, 4"><img
-                  src="./img/3-15sw.webp" loading="lazy" style="height:100%" alt="gallery-41"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-17sw.webp">
-              <div class="sw__img" data-title="Oil on canvas by Donald Gauthier"><img src="./img/3-17sw.webp" loading="lazy" style="height:100%" alt="gallery-42"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-18sw.webp">
-              <div class="sw__img" data-title="Am.Ch. JOCOPA EBONY  FARIKWEN OF T.R., WA269704 owner Glen Mills, photo W.Brown."><img src="./img/3-18sw.webp" loading="lazy"
-                                                                                                                                      style="height:100%" alt="gallery-43"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-19sw.webp">
-              <div class="sw__img" data-title="Am.Ch. DINRO TALISMAN WA739211 owned by Dr. & Mrs. L.E.Harville Jr."><img src="./img/3-19sw.webp" loading="lazy" style="height:100%"
-                                                                                                                         alt="gallery-44"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-20sw.webp">
-              <div class="sw__img" data-title="Am.Ch. DAYNAKIN-KNUDTSEN WRIT' N THE STARS (SKY), 119081"><img src="./img/3-20sw.webp" loading="lazy" style="height:100%" alt="gallery-45"/>
-              </div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-21sw.webp">
-              <div class="sw__img" data-title="Am.Ch. CHEROKEE OF DANE OAKS  &#010; 50x BOB and 8 Group placement in 1970s"><img src="./img/3-21sw.webp" loading="lazy" style="height:100%"
-                                                                                                                                 alt="gallery-46"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-22sw.webp">
-              <div class="sw__img" data-title="REBEL ADVOCATE UD WE667452 {b} {f}"><img src="./img/3-22sw.webp" loading="lazy" style="height:100%" alt="gallery-47"/></div>
-            </div>
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-23sw.webp">
-              <div class="sw__img" data-title="DANELAGH INGRID  WA102555, DANELAGH JUNGFRAU"><img src="./img/3-23sw.webp" loading="lazy" style="height:100%" alt="gallery-48"/></div>
-            </div>
+<section aria-labelledby="home-title" class="home-hero" id="top">
+<div aria-hidden="true" class="home-hero__noise"></div>
+<div class="home-hero__layout">
+<div class="home-hero__copy">
+<p class="home-eyebrow"><span class="home-eyebrow__line"></span> DEUTSCHE DOGGE <span class="home-eyebrow__dot">·</span> GREAT DANE</p>
+<p class="home-hero__supra">Электронный архив породы</p>
+<h1 id="home-title">Немецкий <em>дог</em><span class="home-hero__period">.</span></h1>
+<p class="home-hero__tagline">1862 - 2026</p>
+<div class="home-hero__actions">
+<a class="home-action home-action--light" href="#chapters">Архив <span aria-hidden="true">↗</span></a>
+<a class="home-action home-action--ghost" href="#gallery">Галерея <span aria-hidden="true">↗</span></a>
+<a class="home-action home-action--ghost" href="book.html">Almost Human <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+<div aria-label="Исторические фотографии немецких догов" class="home-hero__art">
+<div class="home-hero__photo home-hero__photo--main">
+<img alt="Американский чемпион Great Dane Honey Hollow Stormi Rudio, 1954" fetchpriority="high" src="img/1-1sw.webp"/>
+</div>
+<div class="home-hero__photo home-hero__photo--small">
+<img alt="Газель фон Лоэленд, историческая фотография немецкого дога" loading="eager" src="img/3-1sw.webp"/>
+</div>
+<div aria-hidden="true" class="home-hero__ornament">D D</div>
+</div>
+</div>
+</section>
+<nav aria-label="Разделы архива" class="home-directory">
+<div class="home-directory__inner">
+<a href="eval.html">Оценка</a><a href="anatomy.html">Биология</a><a href="color.html">История</a>
+<a href="faces.html">Люди</a><a href="breeding.html">Селекция</a><a href="vet.html">Здоровье</a><a href="#books">Библиотека</a>
+</div>
+</nav>
 
-            <div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-24sw.webp">
-              <div class="sw__img" data-title="Am.Ch. AUTOPILOT OF KANEDANE, W176095 BOB Westminster 1952"><img src="./img/3-24sw.webp" loading="lazy" style="height:100%" alt="gallery-49"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="./js/swiper.js"></script>
-  </section>
-
-  <!-- from lib -->
-
-  <section class="intro" id="eval">
-    <div class="container">
-      <p><img align="left" src="img/eval000.png">
-        При первом взгляде на породистую собаку обычно рассматривают отдельные ее части: голову, окрас, переднюю и
+<section aria-label="Разделы о породе" class="home-editorial" id="chapters">
+<div class="home-stories home-stories--four" id="coreStories"><article class="home-story home-story--eval" id="eval">
+<a aria-label="Открыть раздел Искусство видеть целое" class="home-story__visual" href="eval.html">
+<span class="home-story__visual-inner"><img alt="Искусство видеть целое" loading="lazy" src="img/eval000.png"/></span>
+</a>
+<div class="home-story__body">
+<div class="home-story__excerpt"><p>
+        <span class="home-story__lead">При первом взгляде на</span> породистую собаку обычно рассматривают отдельные ее части: голову, окрас, переднюю и
         заднюю часть, хвост.  По мере более внимательного изучения происходит переход к
         восприятию собаки в целом.  "Собака в целом" не означает, что типичные черты породы менее важны.  Это значит,
-        что типаж породы определяется всей собакой, а не только отдельными частями. </p>
-      <p class="fade bottom">Сбалансированная, цельная собака не просто имеет
+        что типаж породы определяется всей собакой, а не только отдельными частями. </p><p>Сбалансированная, цельная собака не просто имеет
         хорошие отдельные или все вместе части. Эти части должны находиться в правильном соотношении друг с другом.  Стандарт описывает
         дога так: "...его строение в целом должно быть сбалансированным...." и
-        "...Это всегда единое целое - Аполлон среди собак..."</p>
-      <br clear="all">
-      <a href="eval.html">Читать полностью...</a>
-    </div>
-  </section>
-
-  <section class="intro" id="anatomy">
-    <div class="container">
-      <p><img align="left" src="img/anatomy001.webp">
-        С&nbsp;зоологической точки зрения, порода немецкий дог (англ. - great dane, нем. - deutsche doggen) относится к собакам (англ. – dog, нем. – doggen, лат. - canis lupus familiaris) —
-        плацентарным млекопитающим отряда хищных семейства псовых.</p>
-      <p>Немецкий дог был выведен человеком для охоты и охраны.</p>
-      <p class="fade bottom">Будучи представителем хищных млекопитающих, дог имеет мощные мускулы, развитую сердечно-сосудистую систему, обеспечивающую как бег, так и выносливость, и зубы
-        для ловли, удержания и разрыва.</p>
-      <br clear="all">
-      <a href="anatomy.html">Читать полностью...</a>
-    </div>
-  </section>
-
-  <section class="intro" id="history">
-    <div class="container">
-      <p><img align="left" src="img/color-01.webp">
-        Cочетание силы, реакции, размера, выносливости и смелости является основой для многих разновидностей собак, описываемых в разные времена. Это верно и для многих ранних породных
-        прототипов. Большинство из них исчезли после того, как Европа разделилась на части вслед за падением Рима. Предшественники догов стали исключением. Их основные формы, относящиеся к
-        собирательному термину "алаунт", были описаны в средние века в охотничьих трактатах, таких как Livre de Chasse.</p>
-      <p class="fade bottom">При переводе этого основополагающего источника информации о средневековом развитии чистокровной породы Уотсон в 1905 году утверждает, что к 1400 году типаж дога
-        был уже устоявшимся, но далеко не единственным популярным вариантом.</p>
-      <br clear="all">
-      <a href="color.html">Читать полностью...</a>
-    </div>
-  </section>
-
-  <section class="intro" id="faces">
-    <div class="container">
-      <p><img align="left" src="img/faces.png">
-        "Многие&nbsp;исправились благодаря религии. Я исправилась благодаря собакам. Я пережила менопаузу, не приняв даже аспирина, потому что была очень занята выкармливанием щенков. Собаки
-        спасли мне жизнь. Я рекомендую завести четвероногого животного, чтобы вылечить кризис среднего возраста".</p>
-      <p>"Я всегда говорю: "Вы хороши настолько, насколько хороши собаки, которых вы показываете. Вы приходите с лучшей собакой и выглядите потрясающе. Но если у вас посредственная собака,
-        вы будете выглядеть довольно посредственно".</p>
-      <p>"Когда я познакомилась с Уорнером Гилмором, он был управляющим "Сэнт-Морица". После свадьбы мы жили за городом в доме, полном собак. Он заставил меня выбирать между ним и догами, и
-        я выбрала собак. Мы развелись, и я никогда не жалела об этом. Я рассталась с парой супругов из-за собак, но пусть это вас не смущает - я все еще кладу глаз на мужчин, так же, как и
-        на собак".</p>
-      <p class="fade bottom">"Почему я все еще в здравии при той жизни, которая у меня была? Потому, что я вошла в этот сказочный мир собак, который начался как хобби и перерос в карьеру.
-        Сколько женщин делают полноценную, выдающуюся карьеру в 81 год?"</p>
-      <p style="color:var(--lib);">Л.Баскетт<br></p>
-      <br clear="all">
-      <a href="faces.html">Читать полностью...</a>
-    </div>
-  </section>
-
-  <section class="intro" id="breeding">
-    <div class="container">
-      <p><img align="left" src="img/breeding.png">
-        Чистокровность - набор свойств породного животного, полученных в результате устойчивого наследования признаков, по которым производилось селекционное разведение.</p>
-      <p>Породность - наличие известной правдивой истории происхождения, отраженной в родословной.</p>
-      <p class="fade bottom">Порода - многочисленная группа животных одного вида, образовавшаяся в результате селекционного разведения и характеризующаяся специфическими морфологическими
-        свойствами, экстерьером, другими качествами.</p>
-      <br clear="all">
-      <a href="breeding.html">Читать дальше...</a>
-    </div>
-  </section>
-
-  <section class="intro" id="woodhouse">
-    <div class="container">
-      <p><img align="left" src="img/bw01.webp">
-        "Жить&nbsp;Джине оставалось всего 20 часов, когда мне представилась возможность познакомиться с ней. Я была у моего старого друга в Хартбуме, недалеко от Стоктон-он-Тиза, когда его
-        пригласили на рюмочку соседи. Мы приехали туда все вместе, и я увидела огромного дога, лежащего на диване, к которому подошла поговорить. Она мгновенно прижалась ко мне, я спросила
-        сколько ей лет, оказалось, что ей шесть, но самое печальное было то, что следующим утром ее собирались усыпить, так как хозяева не могли с ней справиться. У ее хозяев были две другие
-        собаки. Я спросила: "Можно мне ее забрать?" и, конечно, они пришли в восторг от этого предложения."</p>
-      <p class="fade bottom">"На следующее утро я отправилась домой в Оксфорд на своем маленьком спортивном Wolseley Daytona с вынутым пассажирским сиденьем, чтобы Джина могла прилечь рядом
-        со мной на 200-мильном пути домой. Очевидно, хозяин Джины был гонщиком. В те далекие времена на дорогах было очень мало автомобилей, не было ограничений скорости, о которых можно
-        было бы беспокоиться, и мой ярко-зеленый автомобиль пришелся ей по вкусу. Каждый раз, когда я тормозила, она садилась и поднимала голову, чтобы понять, почему я это делаю, а потом,
-        довольная, сразу же успокаивалась при дальнейшем движении."</p>
-      <br clear="all">
-      <a href="book.html" target="_blank">Читать книгу...</a>
-    </div>
-  </section>
-
-  <section class="intro" id="vet">
-    <div class="container">
-      <p><img align="left" src="img/vet01.png">
-        Средняя продолжительность жизни дога вне зависимости от пола и окраса составляет 6,57 лет (проанализированы данные о смерти 7409 догов).
+        "...Это всегда единое целое - Аполлон среди собак..."</p></div>
+<a class="home-story__more" href="eval.html">Читать главу <span aria-hidden="true">↗</span></a>
+</div>
+</article><article class="home-story home-story--anatomy" id="anatomy">
+<a aria-label="Открыть раздел Анатомия великана" class="home-story__visual" href="anatomy.html">
+<span class="home-story__visual-inner"><img alt="Анатомия великана" loading="lazy" src="img/anatomy001.webp"/></span>
+</a>
+<div class="home-story__body">
+<div class="home-story__excerpt"><p>
+        <span class="home-story__lead">С зоологической точки зрения,</span> порода немецкий дог (англ. - great dane, нем. - deutsche doggen) относится к собакам (англ. – dog, нем. – doggen, лат. - canis lupus familiaris) —
+        плацентарным млекопитающим отряда хищных семейства псовых.</p><p>Немецкий дог был выведен человеком для охоты и охраны.</p><p>Будучи представителем хищных млекопитающих, дог имеет мощные мускулы, развитую сердечно-сосудистую систему, обеспечивающую как бег, так и выносливость, и зубы
+        для ловли, удержания и разрыва.</p></div>
+<a class="home-story__more" href="anatomy.html">Читать главу <span aria-hidden="true">↗</span></a>
+</div>
+</article><article class="home-story home-story--breeding" id="breeding">
+<a aria-label="Открыть раздел Порода и наследование" class="home-story__visual" href="breeding.html">
+<span class="home-story__visual-inner"><img alt="Порода и наследование" loading="lazy" src="img/breeding.png"/></span>
+</a>
+<div class="home-story__body">
+<div class="home-story__excerpt"><p>
+        <span class="home-story__lead">Чистокровность - набор свойств</span> породного животного, полученных в результате устойчивого наследования признаков, по которым производилось селекционное разведение.</p><p>Породность - наличие известной правдивой истории происхождения, отраженной в родословной.</p><p>Порода - многочисленная группа животных одного вида, образовавшаяся в результате селекционного разведения и характеризующаяся специфическими морфологическими
+        свойствами, экстерьером, другими качествами.</p></div>
+<a class="home-story__more" href="breeding.html">Читать главу <span aria-hidden="true">↗</span></a>
+</div>
+</article><article class="home-story home-story--vet" id="vet">
+<a aria-label="Открыть раздел Здоровье и долголетие" class="home-story__visual" href="vet.html">
+<span class="home-story__visual-inner"><img alt="Здоровье и долголетие" loading="lazy" src="img/vet01.png"/></span>
+</a>
+<div class="home-story__body">
+<div class="home-story__excerpt"><p>
+        <span class="home-story__lead">Средняя продолжительность жизни дога</span> вне зависимости от пола и окраса составляет 6,57 лет (проанализированы данные о смерти 7409 догов).
         <!-- <a class="ext_link" target=”_blank” ></a> -->
-        <br>
+<br/>
         Самые частые причины смерти догов - это рак, заболевание сердца и заворот желудка в 629, 554 и 444 случаях соответственно. При этом проблемы с сердцем и заворот приводят к
         максимальной частоте смерти у собак в возрасте 5,5 лет, а онкологические заболевания - в 6,5 лет, так как болезнь наступает в более позднем возрасте.
-        <br>
+        <br/>
         Проблемы с опорно-двигательной функцией наступают позже, примерно в 6,8 лет и являются причиной смерти номер 4. Это типично возрастное явление, при том, что такие проблемы как
         Вобблер синдром, дегенеративный люмбо-сакральный стеноз и некоторые другие могут развиваться и в молодом возрасте.
-        <br>
+        <br/>
         Остеосаркома становится причиной смерти у 23,6% собак палево-тигровой группы и 9,3% у собак черно-мраморной группы. У собак голубого окраса эта цифра составляет 9,7%. Таким
         образом, остеосаркома встречается более чем в два раза чаще у собак палево-тигровой группы!
-        <br>
-        Вместе с кардиомиопатией другие заболевания сердца являются причиной смерти у 35,8% голубых догов, 27% у черно-мраморных и 26% у палево-тигровых.</p>
-      <p class="fade bottom">Заворот желудка, онкологические заболевания (кроме остеосаркомы), почечная недостаточность и болезни опорно-двигательного аппарата более равномерно распределены
+        <br/>
+        Вместе с кардиомиопатией другие заболевания сердца являются причиной смерти у 35,8% голубых догов, 27% у черно-мраморных и 26% у палево-тигровых.</p><p>Заворот желудка, онкологические заболевания (кроме остеосаркомы), почечная недостаточность и болезни опорно-двигательного аппарата более равномерно распределены
         по окрасным группам. Это дает основания говорить, что развитие этих заболеваний гораздо меньше определяется наследственными факторами, чем остеосаркома и болезни сердца.
-      </p>
-      <br clear="all">
-      <a href="vet.html">Здоровье ...</a>
-    </div>
-  </section>
-
-<section class="lib" id="books">
-
-  <div class="container" style="padding-top:1vw;">
-    <p style="text-align:center;">Библиотека</p>
-  </div>
-
-  <div class="libx-wrap" id="lib" style="padding-top:1vw;">
-    <div class="libx-shell">
-
-      <div class="libx-slider swiper" id="librarySlider">
-        <div class="swiper-wrapper">
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="comp_ant"
-             data-object="complete_antology"
-             href="/open/?id=complete_antology">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/complete_antology.webp" alt="complete_antology">
-              </div>
-              <div class="libx-caption">Complete Antology 1860-1940</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="krau_rus"
-             data-object="krau_rus"
-             href="/open/?id=krau_rus">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/krau_rus.webp" loading="lazy" alt="Krautwurst_ru">
-              </div>
-              <div class="libx-caption">Ф.Краутвюрст 2008</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="past_present"
-             data-object="past_present"
-             href="/open/?id=past_present">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/past_and_present.webp" loading="lazy" alt="past_and_present">
-              </div>
-              <div class="libx-caption">M.MacKenzie 1912</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="ruzhich"
-             data-object="ruzhich"
-             href="/open/?id=ruzhich">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/ruzhich.webp" loading="lazy" alt="Ruzhich">
-              </div>
-              <div class="libx-caption">Л.Ружич 2015</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="denlinger-1950"
-             data-object="denlinger"
-             href="/open/?id=denlinger">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/denlinger-1950.webp"loading="lazy" alt="denlinger-1950">
-              </div>
-              <div class="libx-caption">M.G.Denlinger 1950</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="uvarov"
-             data-object="uvarov"
-             href="/open/?id=uvarov">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/uvarov.webp" loading="lazy" alt="Uvarov">
-              </div>
-              <div class="libx-caption">В.Уваров 1994</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="raise_and_train"
-             data-object="rise_and_train"
-             href="/open/?id=rise_and_train">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/rise_and_train.webp" loading="lazy" alt="Basquette-1">
-              </div>
-              <div class="libx-caption">L.Basquette 1961</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="ozerova"
-             data-object="ozerova"
-             href="/open/?id=ozerova">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/ozerova.webp" loading="lazy" alt="ozerova">
-              </div>
-              <div class="libx-caption">Т.Озерова</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="send_manor"
-             data-object="send_manor"
-             href="/open/?id=send_manor">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/send_manor.webp" loading="lazy" alt="Heal Send Manor">
-              </div>
-              <div class="libx-caption">R.Heal 2003</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="your_great_dane"
-             data-object="your_great_dane"
-             href="/open/?id=your_great_dane">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/your_great_dane.webp" loading="lazy" alt="Basquette Your Great Dane">
-              </div>
-              <div class="libx-caption">L.Basquette 1972</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="krau_deu"
-             data-object="krau_deu"
-             href="/open/?id=krau_deu">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/krau_de.webp" loading="lazy" alt="Krautwurst Deutsche Dogge">
-              </div>
-              <div class="libx-caption">F.Krautwurst 1995</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="mwe_2018"
-             data-object="mwegdc2018"
-             href="/open/?id=mwegdc2018">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/mwegdc_2018.webp" loading="lazy"
-                     alt="Midwest England great dane club 2018">
-              </div>
-              <div class="libx-caption">Midwest England club annual 2018</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="siggers"
-             data-object="siggers"
-             href="/open/?id=siggers">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/bill_siggers.webp" loading="lazy" alt="Bill Siggers">
-              </div>
-              <div class="libx-caption">R.Heal 1985</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="woodhouse"
-             data-object="almost_human"
-             href="/open/?id=almost_human">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/bw01.webp" loading="lazy" alt="Almost Human">
-              </div>
-              <div class="libx-caption">B.Woodhouse 1976</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="mwegdc2000"
-             data-object="mwegdc2020"
-             href="/open/?id=mwegdc2020">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/mwegdc_2000.webp" loading="lazy" 
-                     alt="Midwest England club annual 2020">
-              </div>
-              <div class="libx-caption">Midwest England club annual 2020</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="gdr_best"
-             data-object="gdr_best"
-             href="/open/?id=gdr_best">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/gdr_best.webp" loading="lazy" alt="gdr_best">
-              </div>
-              <div class="libx-caption">Great Dane Reporter 1976-1981</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="gardner"
-             data-object="gardner"
-             href="/open/?id=gardner">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/gardner.webp" loading="lazy" alt="gardner">
-              </div>
-              <div class="libx-caption">A.B.Gardner 1936</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="hale"
-             data-object="hale"
-             href="/open/?id=hale">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/hale.webp" loading="lazy" alt="hale">
-              </div>
-              <div class="libx-caption">D.E.Hale 1932</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="gdi"
-             data-object="gdi"
-			href="/open/?id=gdi">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/gdi.webp" loading="lazy" alt="gdi">
-              </div>
-              <div class="libx-caption">Great Dane International</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="udd"
-             data-object="udd"
-             href="/open/?id=udd">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/udd.webp" loading="lazy" alt="unsere">
-              </div>
-              <div class="libx-caption">Unsere Deutsche Dogge 1989-1993</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="std"
-             data-object="std"
-             href="/open/?id=std">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img style="max-width:80%; max-height:80%;"
-                     src="covers/st.png" loading="lazy" 
-                     alt="standards">
-              </div>
-              <div class="libx-caption">DDC, FCI, GDCA, RKF Standards</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="gdjg_2018"
-             data-object="gdjg_2018"
-             href="/open/?id=gdjg_2018">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/ddc_judge_guide.webp" loading="lazy" 
-                     alt="DD Judge Guide 2018">
-              </div>
-              <div class="libx-caption">DDC Judge Guide 2018</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="gdca"
-             data-object="gdca"
-             href="/open/?id=gdca">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/yearbook.webp" loading="lazy" 
-                     alt="great dane club of America">
-              </div>
-              <div class="libx-caption">Great Dane Club of America Annual</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="stammbuch_1913"
-             data-object="stammbuch_1913"
-             href="/open/?id=stammbuch_1913">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/stammbuch_1913.webp" loading="lazy" 
-                     alt="stammbuch_1913">
-              </div>
-              <div class="libx-caption">Stammbuch band IV-V. 1913</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="gdm"
-             data-object="gdm"
-             href="/open/?id=gdm">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/gdm.jpg" loading="lazy" alt="great dane magazine">
-              </div>
-              <div class="libx-caption">Great Dane Magazine</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="gdw"
-             data-object="gdw"
-             href="/open/?id=gdw">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/dw.webp" loading="lazy" alt="great dane world">
-              </div>
-              <div class="libx-caption">Great Dane World</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="dd"
-             data-object="dd"
-             href="/open/?id=dd">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/dd.png" loading="lazy" alt="dane dispatch">
-              </div>
-              <div class="libx-caption">Dane Dispatch 1966 - 1970</div>
-            </div>
-          </a>
-
-          <a class="swiper-slide libx-slide"
-             data-slide-id="ddc_almanach"
-             data-object="ddc_almanach"
-             href="/open/?id=ddc_almanach">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/ddc_almanach.webp" loading="lazy" alt="DDC almanach">
-              </div>
-              <div class="libx-caption">DDC almanach 1982-1988</div>
-            </div>
-          </a>
-		  
-          <a class="swiper-slide libx-slide"
-             data-slide-id="gdc1987-2000"
-             data-object="gdc1987-2000"
-             href="/open/?id=gdc1987-2000">
-            <div class="libx-card">
-              <div class="libx-image-wrap">
-                <img src="covers/gdc1987-2000.webp" loading="lazy" 
-                     alt="gdc1987-2000">
-              </div>
-              <div class="libx-caption">Camino Great Dane Champions</div>
-            </div>
-          </a>		  
-
-        </div>
-      </div>
-
-
-      <div class="libx-nav">
-
-        <button class="libx-btn libx-btn-prev"
-                id="librarySliderPrev"
-                type="button"
-                aria-label="Previous slide">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M15.5 4.5L8 12l7.5 7.5"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-            </path>
-          </svg>
-        </button>
-
-        <button class="libx-btn libx-btn-next"
-                id="librarySliderNext"
-                type="button"
-                aria-label="Next slide">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M8.5 4.5L16 12l-7.5 7.5"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-            </path>
-          </svg>
-        </button>
-
-      </div>
-
-
-      <div class="libx-pagination-row">
-        <div class="libx-bullets swiper-pagination"
-             id="librarySliderPagination">
-        </div>
-      </div>
-
-    </div>
-  </div>
-
+      </p></div>
+<a class="home-story__more" href="vet.html">Читать главу <span aria-hidden="true">↗</span></a>
+</div>
+</article></div>
 </section>
-</main>
+<section aria-label="Люди и история породы" class="home-editorial home-editorial--people" id="stories">
+<div class="home-stories home-stories--three" id="heritageStories"><article class="home-story home-story--history" id="history">
+<a aria-label="Открыть раздел От алаунта до дога" class="home-story__visual" href="color.html">
+<span class="home-story__visual-inner"><img alt="От алаунта до дога" loading="lazy" src="img/color-01.webp"/></span>
+</a>
+<div class="home-story__body">
+<div class="home-story__excerpt"><p>
+        <span class="home-story__lead">Cочетание силы, реакции, размера,</span> выносливости и смелости является основой для многих разновидностей собак, описываемых в разные времена. Это верно и для многих ранних породных
+        прототипов. Большинство из них исчезли после того, как Европа разделилась на части вслед за падением Рима. Предшественники догов стали исключением. Их основные формы, относящиеся к
+        собирательному термину "алаунт", были описаны в средние века в охотничьих трактатах, таких как Livre de Chasse.</p><p>При переводе этого основополагающего источника информации о средневековом развитии чистокровной породы Уотсон в 1905 году утверждает, что к 1400 году типаж дога
+        был уже устоявшимся, но далеко не единственным популярным вариантом.</p></div>
+<a class="home-story__more" href="color.html">Читать главу <span aria-hidden="true">↗</span></a>
+</div>
+</article><article class="home-story home-story--faces" id="faces">
+<a aria-label="Открыть раздел Лица и судьбы" class="home-story__visual" href="faces.html">
+<span class="home-story__visual-inner"><img alt="Лица и судьбы" loading="lazy" src="img/faces.png"/></span>
+</a>
+<div class="home-story__body">
+<div class="home-story__excerpt"><p>
+        <span class="home-story__lead">"Многие исправились благодаря религии.</span> Я исправилась благодаря собакам. Я пережила менопаузу, не приняв даже аспирина, потому что была очень занята выкармливанием щенков. Собаки
+        спасли мне жизнь. Я рекомендую завести четвероногого животного, чтобы вылечить кризис среднего возраста".</p><p>"Я всегда говорю: "Вы хороши настолько, насколько хороши собаки, которых вы показываете. Вы приходите с лучшей собакой и выглядите потрясающе. Но если у вас посредственная собака,
+        вы будете выглядеть довольно посредственно".</p><p>"Когда я познакомилась с Уорнером Гилмором, он был управляющим "Сэнт-Морица". После свадьбы мы жили за городом в доме, полном собак. Он заставил меня выбирать между ним и догами, и
+        я выбрала собак. Мы развелись, и я никогда не жалела об этом. Я рассталась с парой супругов из-за собак, но пусть это вас не смущает - я все еще кладу глаз на мужчин, так же, как и
+        на собак".</p><p>"Почему я все еще в здравии при той жизни, которая у меня была? Потому, что я вошла в этот сказочный мир собак, который начался как хобби и перерос в карьеру.
+        Сколько женщин делают полноценную, выдающуюся карьеру в 81 год?"</p><p class="home-story__credit">Л.Баскетт<br/></p></div>
+<a class="home-story__more" href="faces.html">Читать главу <span aria-hidden="true">↗</span></a>
+</div>
+</article><article class="home-story home-story--woodhouse" id="woodhouse">
+<a aria-label="Открыть раздел Почти человек" class="home-story__visual" href="book.html">
+<span class="home-story__visual-inner"><img alt="Почти человек" loading="lazy" src="img/bw01.webp"/></span>
+</a>
+<div class="home-story__body">
+<div class="home-story__excerpt"><p>
+        <span class="home-story__lead">"Жить Джине оставалось всего</span> 20 часов, когда мне представилась возможность познакомиться с ней. Я была у моего старого друга в Хартбуме, недалеко от Стоктон-он-Тиза, когда его
+        пригласили на рюмочку соседи. Мы приехали туда все вместе, и я увидела огромного дога, лежащего на диване, к которому подошла поговорить. Она мгновенно прижалась ко мне, я спросила
+        сколько ей лет, оказалось, что ей шесть, но самое печальное было то, что следующим утром ее собирались усыпить, так как хозяева не могли с ней справиться. У ее хозяев были две другие
+        собаки. Я спросила: "Можно мне ее забрать?" и, конечно, они пришли в восторг от этого предложения."</p><p>"На следующее утро я отправилась домой в Оксфорд на своем маленьком спортивном Wolseley Daytona с вынутым пассажирским сиденьем, чтобы Джина могла прилечь рядом
+        со мной на 200-мильном пути домой. Очевидно, хозяин Джины был гонщиком. В те далекие времена на дорогах было очень мало автомобилей, не было ограничений скорости, о которых можно
+        было бы беспокоиться, и мой ярко-зеленый автомобиль пришелся ей по вкусу. Каждый раз, когда я тормозила, она садилась и поднимала голову, чтобы понять, почему я это делаю, а потом,
+        довольная, сразу же успокаивалась при дальнейшем движении."</p></div>
+<a class="home-story__more" href="book.html">Читать главу <span aria-hidden="true">↗</span></a>
+</div>
+</article></div>
+</section>
+<section class="gallery home-gallery" id="gallery"><div class="home-gallery__intro">
+<h2>Портреты</h2>
+</div>
+<div class="swipe" id="app">
+<div class="sw__left">
+<div class="f-carousel" id="Carousel-1">
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-1sw.webp">
+<div class="sw__img" data-title="Am.Ch. HONEY HOLLOW STORMI RUDIO
+{Red golden Fawn Male} W520558 15/07/1954
+ 7 BIS, 41 BOB
+Bred by L.Gilmour owned by C.Clarke"><img alt="gallery-1" src="./img/1-1sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-2sw.webp">
+<div class="sw__img" data-title="Am.Ch. DUCHESS OF ZEL THOR II
+ Owned by G. Bordner dob 15/01/1952 
+ W317997
+ Westminster BOB"><img alt="gallery-2" loading="lazy" src="./img/1-2sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-3sw.webp">
+<div class="sw__img" data-title=" FAUNA MOGUNTIA (b. 25.11.1919) VDH/DDC3516 
+ DOLF (b. 02.07.1924) VDH/DDC 008281 
+ KARL FARBER 
+ ESSMA (b. 17/05/1925) 
+ BOSCO (b.08.08.1921) VDH/DDC4584">
+<img alt="gallery-3" loading="lazy" src="./img/1-3sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-32sw.webp">
+<div class="sw__img" data-title="ALEXANDER VOM FERBERTURM b. 25/07/1922 VDH/DDC 005944 Owner M.Grass"><img alt="gallery-4" loading="lazy" src="./img/1-32sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-5sw.webp">
+<div class="sw__img" data-title="Am Ch FLIGHTY AUTUMRIDGE RHYTM AND ROOTS 
+ {F} WS60944401 b. 9/05/2018 
+ owned and bred by Neil O'Sullivan"><img alt="gallery-5" loading="lazy" src="./img/1-5sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-7sw.webp">
+<div class="sw__img" data-title=" Am.Ch.  DION OF KENT, 
+ W145759. b. May 14, 1949. 
+ Breeders Mr. and Mrs. Chas. E. Rankin"><img alt="gallery-6" loading="lazy" src="./img/1-7sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-8sw.webp">
+<div class="sw__img" data-title=" Ger. and Am.Ch. ETFA VON DER SAALBURG
+ b.17.05.1925  VDH/DDC9848 W674544
+ breeder Karl Farber owner M.Hostetter
+ Model for GD Illustrated standard 1934 
+ 6BIS @1928-1936">
+<img alt="gallery-7" loading="lazy" src="./img/1-8sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-9sw.webp">
+<div class="sw__img" data-title=" GREGORY OF KENT
+ owner Rafael L.Guirola
+ Alanos de Oro kennels"><img alt="gallery-8" loading="lazy" src="./img/1-9sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-10sw.webp">
+<div class="sw__img" data-title=" Am.Ch. CHALOTT'S SIR ALISTAIR
+ W386566
+ owner V.Matthews"><img alt="gallery-9" loading="lazy" src="./img/1-10sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-14sw.webp">
+<div class="sw__img" data-title="Am.Ch. EDEN's SAMSON
+{Fawn Male} W77254 b.12/09/1946
+ bred by John G. McEdward, owned by Blake Edwards
+ Sire of 19 Champions"><img alt="gallery-10" loading="lazy" src="./img/1-14sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-15sw.webp">
+<div class="sw__img" data-title="Am.Ch. HANSI OF GARRICREST
+ b.13-08-1938 A270531 
+ br/own Vincent J.Garrity"><img alt="gallery-11" loading="lazy" src="./img/1-15sw.webp"/>
+</div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-16sw.webp">
+<div class="sw__img" data-title=" Am.Ch. IRWIN VON ODENWALD 
+ Ger. import owner M.Hostetter Ridge Crest kennel"><img alt="gallery-12" loading="lazy" src="./img/1-16sw.webp"/>
+</div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-20sw.webp">
+<div class="sw__img"><img alt="gallery-13" loading="lazy" src="./img/1-20sw.webp" style="height:100%" title=""/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-18sw.webp">
+<div class="sw__img" data-title="Am.Ch. CHALOTT'S LADY ALICIA
+{Fawn Female} W386573 
+ bred M.Holt under L.Gilmour's kennel prefix), owned by Mr. &amp; Mrs. Freeman, Exeter Kennel West Newton, Massachusetts">
+<img alt="gallery-14" loading="lazy" src="./img/1-18sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-22sw.webp">
+<div class="sw__img" data-title="Am.Ch. CASAARABAL’S THE HOLLY WARRIOR b.21.11.2014 WS49015507 multi BOB BOS RWD, owner/breeder C.Campor, F.Arce"><img alt="gallery-15" loading="lazy" src="./img/1-22sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-23sw.webp">
+<div class="sw__img" data-title="Am.Ch. DANELAGH'S TARLA   dob:12/21/1968, WB268815, (F), Fawn ( Danelagh's Ottar X Danelagh's Laara)"><img alt="gallery-16" loading="lazy" src="./img/1-23sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-24sw.webp">
+<div class="sw__img" data-title="Am.Ch. MONARCH OF HALECROFT 942791, owner D.E.Hale, multiple BIS, photo by W.Brown"><img alt="gallery-17" loading="lazy" src="./img/1-24sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-25sw.webp">
+<div class="sw__img" data-title="DANE EDEN Kennel quartet, Harbor Cities (California) KC, 1948. Breeder G.McEdwards, handler R.Zimmerman. Second from the left Am.Ch. DELILAH - group winner. Photo by J.Ludwig">
+<img alt="gallery-18" loading="lazy" src="./img/1-25sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-26sw.webp">
+<div class="sw__img" data-title="BMW PRIMA DONNA dob.21.11.1980 WE855567, BMW RUFFIAN dob.23.03.1980 WE932591, BMW MARDI GRAS dob.01.11.1979 WE376301, BMW FANTASIA dob. 21.11.1980 WE835102"><img alt="gallery-19" loading="lazy" src="./img/1-26sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-27sw.webp">
+<div class="sw__img" data-title="Am. Ch. HEROLD VON ST. MAGN-OBERTRAUBLING dob.27/01/1957 W836251, multi BIS, photo E.Shafer"><img alt="gallery-20" loading="lazy" src="./img/1-27sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-28sw.webp">
+<div class="sw__img" data-title="Am.Ch. MISS ERIKKE VON RIESENHOF dob.09/08/1954 W556995"><img alt="gallery-21" loading="lazy" src="./img/1-28sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-29sw.webp">
+<div class="sw__img" data-title="Am.Ch. KOLIER'S ZEUS NUKID TOWN dob.1981-12-15, WF097384, Owner Jim and Marie Maninon"><img alt="gallery-22" loading="lazy" src="./img/1-29sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-30sw.webp">
+<div class="sw__img" data-title="Am.Ch. CASAARABAL'S SHIELD  MAIDEN AT GRANDVIEW, dob.10/17/2019 WS66321801, Fawn, breders F.Arce &amp; C.Campos, owners S. &amp; C. Lynn
+"><img alt="gallery-23" loading="lazy" src="./img/1-30sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-31sw.webp">
+<div class="sw__img" data-title="Am.Ch. LONGO'S PRIMO D'AQUINO, dob:07/19/1985, WF758557191, sire of 27 AKC Champions, 11 BIS. Breder M.R. &amp; D.Aquino, owner J. &amp; T. Longo
+"><img alt="gallery-24" loading="lazy" src="./img/1-31sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-33sw.webp">
+<div class="sw__img" data-title="Am.Ch. DANERIDGE CALIBAN dob 08.06.1960 W133737, 5 BIS in 1963, breeder/owner E.R.Fawcett
+"><img alt="gallery-25" loading="lazy" src="./img/1-33sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-34sw.webp">
+<div class="sw__img" data-title="Am.Ch. RAZZEL DAZZEL OF MARYDANE dob.28.04.1953 W421955, breeder/owner Mery &amp; Jerry Johnson
+"><img alt="gallery-26" loading="lazy" src="./img/1-34sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/1-35sw.webp">
+<div class="sw__img" data-title="Am.Ch. REGGEN'S MADAS-L OF MARYDANE, BOB 238, GW 194, BIS 25, dob.05/17/1964, WA467754, breeder/owner Mery &amp; Jerry Johnson
+"><img alt="gallery-27" loading="lazy" src="./img/1-35sw.webp"/></div>
+</div>
+</div>
+</div>
+<div class="sw__right">
+<div class="sw__right-row">
+<div class="f-carousel" id="Carousel-2">
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/2-27sw.jpg">
+<div class="sw__img" data-title="Viele haben durch ihn den Hund sehen gelernt ….. Wenige Menschen hat es gegeben, gibt es und wird es geben, die fast alle Teile der Kynologie so durchforscht haben wie Richard Strebel">
+<img alt="gallery-28" src="./img/2-27sw.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="sw__right-row">
+<div class="f-carousel" id="Carousel-3">
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-1sw.webp">
+<div class="sw__img" data-title=" GAZELLE VON LOHELAND (OF OUBOROUGH)
+ VDH/DDC17937 b.27.05.1929 
+ owner: J.V.Rank sire:Elch Eddler v.d.Saalburg"><img alt="gallery-29" src="./img/3-1sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-2sw.webp">
+<div class="sw__img" data-title="Am.Ch. SCHWARZ SCHONHEIT {F} W188231"><img alt="gallery-30" loading="lazy" src="./img/3-2sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-3sw.webp">
+<div class="sw__img" data-title="LONGO'S PRIMO D'AQUINO 
+ {B} WF758557 b.19/07/1985"><img alt="gallery-31" loading="lazy" src="./img/3-3sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-4sw.webp">
+<div class="sw__img" data-title="Am.Ch. BMW TRUMP-E-TER OF MAGNUS 
+ {H} {M} WG468555 dob.3/11/1989 "><img alt="gallery-32" loading="lazy" src="./img/3-4sw.webp" style="width:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-5sw.webp">
+<div class="sw__img" data-title=" Am.Ch.TURKADANA BEN BEN 
+ WA77705 b.20.02.1960 
+ owner Mr.&amp; Mrs.Irving A.Baskind"><img alt="gallery-33" loading="lazy" src="./img/3-5sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-6sw.webp">
+<div class="sw__img" data-title=" Can.Ch.DANAIDES CHEQUERS 
+ 3233781 b.01.01.1953 
+ owner Irene M.Bourassa"><img alt="gallery-34" loading="lazy" src="./img/3-6sw.webp"/>
+</div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-7sw.webp">
+<div class="sw__img" data-title=" Am.Can.Ch. HARMONY HILL FORTISSIMO 
+ WA111665 AK11665 
+ owner Mr.&amp; Mrs.Robert C.Thomas "><img alt="gallery-35" loading="lazy" src="./img/3-7sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-8sw.webp">
+<div class="sw__img" data-title="Am. Can.Ch. SHEELA'S SCHEHARAZADE 
+ b.01.05.1958 W954311 
+ owner Mr. and Mrs. J. Blood"><img alt="gallery-36" loading="lazy" src="./img/3-8sw.webp"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-9sw.webp">
+<div class="sw__img" data-title="Rolf of Ouborough 
+ {F} {M} b.10/06/1921"><img alt="gallery-37" loading="lazy" src="./img/3-9sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-10sw.webp">
+<div class="sw__img" data-title=" Am.Ch. BMW DYNAMIC 
+ b.05.03.1983 WF532747 
+ breder &amp; owner L.Kiaulenas"><img alt="gallery-38" loading="lazy" src="./img/3-10sw.webp"/>
+</div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-11sw.webp">
+<div class="sw__img" data-title="Ger.Ch. DOLF VON DER SAALBURG 
+ {B} {M} VDH/DDC 8281 b.2/07/1924"><img alt="gallery-39" loading="lazy" src="./img/3-11sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-14sw.webp">
+<div class="sw__img" data-title="EU Ch. '86 '87 '88 FABIENNE VON TRAUTHEIM VDHDDC 86936 b.25.01.1984, breeder Frank Wenzel"><img alt="gallery-40" loading="lazy" src="./img/3-14sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-15sw.webp">
+<div class="sw__img" data-title="OERLANG VON  LOHELAND A60123 b.03.04.1932, imported and owned by Ernest E. Ferguson, inbred Fauna Moguntia 4:3,4 Bosco v.d. Saalburg 4, 4:3, 4"><img alt="gallery-41" loading="lazy" src="./img/3-15sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-17sw.webp">
+<div class="sw__img" data-title="Oil on canvas by Donald Gauthier"><img alt="gallery-42" loading="lazy" src="./img/3-17sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-18sw.webp">
+<div class="sw__img" data-title="Am.Ch. JOCOPA EBONY  FARIKWEN OF T.R., WA269704 owner Glen Mills, photo W.Brown."><img alt="gallery-43" loading="lazy" src="./img/3-18sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-19sw.webp">
+<div class="sw__img" data-title="Am.Ch. DINRO TALISMAN WA739211 owned by Dr. &amp; Mrs. L.E.Harville Jr."><img alt="gallery-44" loading="lazy" src="./img/3-19sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-20sw.webp">
+<div class="sw__img" data-title="Am.Ch. DAYNAKIN-KNUDTSEN WRIT' N THE STARS (SKY), 119081"><img alt="gallery-45" loading="lazy" src="./img/3-20sw.webp" style="height:100%"/>
+</div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-21sw.webp">
+<div class="sw__img" data-title="Am.Ch. CHEROKEE OF DANE OAKS  
+ 50x BOB and 8 Group placement in 1970s"><img alt="gallery-46" loading="lazy" src="./img/3-21sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-22sw.webp">
+<div class="sw__img" data-title="REBEL ADVOCATE UD WE667452 {b} {f}"><img alt="gallery-47" loading="lazy" src="./img/3-22sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-23sw.webp">
+<div class="sw__img" data-title="DANELAGH INGRID  WA102555, DANELAGH JUNGFRAU"><img alt="gallery-48" loading="lazy" src="./img/3-23sw.webp" style="height:100%"/></div>
+</div>
+<div class="f-carousel__slide" data-fancybox="gallery" data-src="./img/3-24sw.webp">
+<div class="sw__img" data-title="Am.Ch. AUTOPILOT OF KANEDANE, W176095 BOB Westminster 1952"><img alt="gallery-49" loading="lazy" src="./img/3-24sw.webp" style="height:100%"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="./js/swiper.js"></script>
+</section><section class="lib home-library" id="books"><div class="home-library__intro">
+<h2>БИБЛИОТЕКА</h2>
+</div>
 
+<div class="libx-wrap" id="lib" style="padding-top:1vw;">
+<div class="libx-shell">
+<div class="libx-slider swiper" id="librarySlider">
+<div class="swiper-wrapper">
+<a class="swiper-slide libx-slide" data-object="complete_antology" data-slide-id="comp_ant" href="/open/?id=complete_antology">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="complete_antology" src="covers/complete_antology.webp"/>
+</div>
+<div class="libx-caption">Complete Antology 1860-1940</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="krau_rus" data-slide-id="krau_rus" href="/open/?id=krau_rus">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Krautwurst_ru" loading="lazy" src="covers/krau_rus.webp"/>
+</div>
+<div class="libx-caption">Ф.Краутвюрст 2008</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="past_present" data-slide-id="past_present" href="/open/?id=past_present">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="past_and_present" loading="lazy" src="covers/past_and_present.webp"/>
+</div>
+<div class="libx-caption">M.MacKenzie 1912</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="ruzhich" data-slide-id="ruzhich" href="/open/?id=ruzhich">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Ruzhich" loading="lazy" src="covers/ruzhich.webp"/>
+</div>
+<div class="libx-caption">Л.Ружич 2015</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="denlinger" data-slide-id="denlinger-1950" href="/open/?id=denlinger">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="denlinger-1950" loading="lazy" src="covers/denlinger-1950.webp"/>
+</div>
+<div class="libx-caption">M.G.Denlinger 1950</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="uvarov" data-slide-id="uvarov" href="/open/?id=uvarov">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Uvarov" loading="lazy" src="covers/uvarov.webp"/>
+</div>
+<div class="libx-caption">В.Уваров 1994</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="rise_and_train" data-slide-id="raise_and_train" href="/open/?id=rise_and_train">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Basquette-1" loading="lazy" src="covers/rise_and_train.webp"/>
+</div>
+<div class="libx-caption">L.Basquette 1961</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="ozerova" data-slide-id="ozerova" href="/open/?id=ozerova">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="ozerova" loading="lazy" src="covers/ozerova.webp"/>
+</div>
+<div class="libx-caption">Т.Озерова</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="send_manor" data-slide-id="send_manor" href="/open/?id=send_manor">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Heal Send Manor" loading="lazy" src="covers/send_manor.webp"/>
+</div>
+<div class="libx-caption">R.Heal 2003</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="your_great_dane" data-slide-id="your_great_dane" href="/open/?id=your_great_dane">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Basquette Your Great Dane" loading="lazy" src="covers/your_great_dane.webp"/>
+</div>
+<div class="libx-caption">L.Basquette 1972</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="krau_deu" data-slide-id="krau_deu" href="/open/?id=krau_deu">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Krautwurst Deutsche Dogge" loading="lazy" src="covers/krau_de.webp"/>
+</div>
+<div class="libx-caption">F.Krautwurst 1995</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="mwegdc2018" data-slide-id="mwe_2018" href="/open/?id=mwegdc2018">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Midwest England great dane club 2018" loading="lazy" src="covers/mwegdc_2018.webp"/>
+</div>
+<div class="libx-caption">Midwest England club annual 2018</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="siggers" data-slide-id="siggers" href="/open/?id=siggers">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Bill Siggers" loading="lazy" src="covers/bill_siggers.webp"/>
+</div>
+<div class="libx-caption">R.Heal 1985</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="almost_human" data-slide-id="woodhouse" href="/open/?id=almost_human">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Almost Human" loading="lazy" src="covers/bw01.webp"/>
+</div>
+<div class="libx-caption">B.Woodhouse 1976</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="mwegdc2020" data-slide-id="mwegdc2000" href="/open/?id=mwegdc2020">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="Midwest England club annual 2020" loading="lazy" src="covers/mwegdc_2000.webp"/>
+</div>
+<div class="libx-caption">Midwest England club annual 2020</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="gdr_best" data-slide-id="gdr_best" href="/open/?id=gdr_best">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="gdr_best" loading="lazy" src="covers/gdr_best.webp"/>
+</div>
+<div class="libx-caption">Great Dane Reporter 1976-1981</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="gardner" data-slide-id="gardner" href="/open/?id=gardner">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="gardner" loading="lazy" src="covers/gardner.webp"/>
+</div>
+<div class="libx-caption">A.B.Gardner 1936</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="hale" data-slide-id="hale" href="/open/?id=hale">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="hale" loading="lazy" src="covers/hale.webp"/>
+</div>
+<div class="libx-caption">D.E.Hale 1932</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="gdi" data-slide-id="gdi" href="/open/?id=gdi">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="gdi" loading="lazy" src="covers/gdi.webp"/>
+</div>
+<div class="libx-caption">Great Dane International</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="udd" data-slide-id="udd" href="/open/?id=udd">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="unsere" loading="lazy" src="covers/udd.webp"/>
+</div>
+<div class="libx-caption">Unsere Deutsche Dogge 1989-1993</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="std" data-slide-id="std" href="/open/?id=std">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="standards" loading="lazy" src="covers/st.png" style="max-width:80%; max-height:80%;"/>
+</div>
+<div class="libx-caption">DDC, FCI, GDCA, RKF Standards</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="gdjg_2018" data-slide-id="gdjg_2018" href="/open/?id=gdjg_2018">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="DD Judge Guide 2018" loading="lazy" src="covers/ddc_judge_guide.webp"/>
+</div>
+<div class="libx-caption">DDC Judge Guide 2018</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="gdca" data-slide-id="gdca" href="/open/?id=gdca">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="great dane club of America" loading="lazy" src="covers/yearbook.webp"/>
+</div>
+<div class="libx-caption">Great Dane Club of America Annual</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="stammbuch_1913" data-slide-id="stammbuch_1913" href="/open/?id=stammbuch_1913">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="stammbuch_1913" loading="lazy" src="covers/stammbuch_1913.webp"/>
+</div>
+<div class="libx-caption">Stammbuch band IV-V. 1913</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="gdm" data-slide-id="gdm" href="/open/?id=gdm">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="great dane magazine" loading="lazy" src="covers/gdm.jpg"/>
+</div>
+<div class="libx-caption">Great Dane Magazine</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="gdw" data-slide-id="gdw" href="/open/?id=gdw">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="great dane world" loading="lazy" src="covers/dw.webp"/>
+</div>
+<div class="libx-caption">Great Dane World</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="dd" data-slide-id="dd" href="/open/?id=dd">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="dane dispatch" loading="lazy" src="covers/dd.png"/>
+</div>
+<div class="libx-caption">Dane Dispatch 1966 - 1970</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="ddc_almanach" data-slide-id="ddc_almanach" href="/open/?id=ddc_almanach">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="DDC almanach" loading="lazy" src="covers/ddc_almanach.webp"/>
+</div>
+<div class="libx-caption">DDC almanach 1982-1988</div>
+</div>
+</a>
+<a class="swiper-slide libx-slide" data-object="gdc1987-2000" data-slide-id="gdc1987-2000" href="/open/?id=gdc1987-2000">
+<div class="libx-card">
+<div class="libx-image-wrap">
+<img alt="gdc1987-2000" loading="lazy" src="covers/gdc1987-2000.webp"/>
+</div>
+<div class="libx-caption">Camino Great Dane Champions</div>
+</div>
+</a>
+</div>
+</div>
+<div class="libx-nav">
+<button aria-label="Previous slide" class="libx-btn libx-btn-prev" id="librarySliderPrev" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M15.5 4.5L8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+</path>
+</svg>
+</button>
+<button aria-label="Next slide" class="libx-btn libx-btn-next" id="librarySliderNext" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M8.5 4.5L16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+</path>
+</svg>
+</button>
+</div>
+<div class="libx-pagination-row">
+<div class="libx-bullets swiper-pagination" id="librarySliderPagination">
+</div>
+</div>
+</div>
+</div>
+</section></main>
 <footer class="footer" id="footer">
-  <div class="container footer-container">
-    <p class="footer__contacts">
-    <ul class="contacts__left-list" style="list-style-type:none; padding-left: 0px;">
-
-      <li>
-      	<a href="mailto:great.dane@greatdaneworld.dog" style="margin-right:20px; margin-left:20px;" target="_blank"  aria-label="www">	<img src="img/email-icon.svg" width="40" height="40" alt="umail">
-		</a>
-      </li>
-      
-      <li>
-        <a href="https://api.whatsapp.com/send?phone=+79688762614" style="margin-right:20px;" target="_blank"  aria-label="вотсап" > <img src="img/whatsapp-icon.svg" width="40" height="40" alt="whatsapp">
-        </a>
-      </li>
-      
-      <li>
-        <a href="https://telegram.im/@gretdane" style="margin-right:20px;" target="_blank" aria-label="телеграм">
-          <img src="img/telegram-icon.svg" width="40" height="40" alt="telegram">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/gretdane" style="margin-right:10px;" target="_blank" aria-label="facebook">
-          <img src="img/facebook-icon.svg" width="40" height="40" alt="telegram">
-        </a>
-      </li>
-    </ul>
-    </p>
-    <p style="font-size:7px;text-align:center;">
+<div class="container footer-container">
+<p class="footer__contacts">
+<ul class="contacts__left-list" style="list-style-type:none; padding-left: 0px;">
+<li>
+<a aria-label="www" href="mailto:great.dane@greatdaneworld.dog" style="margin-right:20px; margin-left:20px;" target="_blank"> <img alt="umail" height="40" src="img/email-icon.svg" width="40"/>
+</a>
+</li>
+<li>
+<a aria-label="вотсап" href="https://api.whatsapp.com/send?phone=+79688762614" style="margin-right:20px;" target="_blank"> <img alt="whatsapp" height="40" src="img/whatsapp-icon.svg" width="40"/>
+</a>
+</li>
+<li>
+<a aria-label="телеграм" href="https://telegram.im/@gretdane" style="margin-right:20px;" target="_blank">
+<img alt="telegram" height="40" src="img/telegram-icon.svg" width="40"/>
+</a>
+</li>
+<li>
+<a aria-label="facebook" href="https://www.facebook.com/gretdane" style="margin-right:10px;" target="_blank">
+<img alt="telegram" height="40" src="img/facebook-icon.svg" width="40"/>
+</a>
+</li>
+</ul>
+</p>
+<p style="font-size:7px;text-align:center;">
       Уведомление об авторских правах. Вся информация на сайте
       получена из открытых источников.
       Все права на фото и рисунки принадлежат их правообладателям.
       Издатель не несет ответственности за использование информации,
-      размещенной на сайте.<br>
+      размещенной на сайте.<br/>
       Copyright disclaimer. This site is a public domain. Photos and pictures
       belong to their owners. Author is not responsible
       for site data misuse.
     </p>
-  </div>
+</div>
 </footer>
-
-<script defer src="js/focus-visible.min.js"></script>
+<!-- Mobile Fancybox close control: visible only while a lightbox is open -->
+<button id="homepage-gallery-close" class="homepage-gallery-close" type="button"
+        aria-label="Закрыть фотографию" title="Закрыть фотографию" hidden>&times;</button>
+<script defer="" src="js/focus-visible.min.js"></script>
 <!--<script src="js/jquery-3.6.0.min.js"></script>-->
 <script src="js/swiper-bundle.min.js"></script>
-<script src="js/libx-slider.js"></script>
+<!-- Library carousel: one Swiper instance and repeatable navigation. -->
+<script>
+(function () {
+  function initializeLibrary() {
+    const element = document.getElementById('librarySlider');
+    const nextButton = document.getElementById('librarySliderNext');
+    const prevButton = document.getElementById('librarySliderPrev');
+    if (!element || !nextButton || !prevButton || typeof window.Swiper !== 'function') return;
 
+    const library = new Swiper(element, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 420,
+      allowTouchMove: true,
+      watchOverflow: true,
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: '#librarySliderPagination',
+        clickable: true
+      }
+    });
 
+    // Use explicit arrow handlers so each press moves one book and
+    // the buttons remain functional after any number of presses.
+    function move(delta) {
+      if (library.destroyed) return;
+      const count = element.querySelectorAll('.swiper-wrapper > .swiper-slide').length;
+      if (count < 2) return;
+      const next = (library.activeIndex + delta + count) % count;
+      library.slideTo(next, 420);
+    }
+    nextButton.addEventListener('click', function () { move(1); });
+    prevButton.addEventListener('click', function () { move(-1); });
+
+    // Keep descriptive overlays accessible on hover and keyboard focus.
+    element.querySelectorAll('.libx-slide').forEach(function (slide) {
+      slide.addEventListener('focus', function () {
+        slide.classList.add('libx-caption-visible');
+      });
+      slide.addEventListener('blur', function () {
+        slide.classList.remove('libx-caption-visible');
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeLibrary, { once: true });
+  } else {
+    initializeLibrary();
+  }
+})();
+</script>
 <!--  // Функция для инициализации меню из старого скрипта
   function initMenu() {
     // Проверяем наличие jQuery
@@ -1377,6 +1542,40 @@
     });
   }
   initMenu(); -->
-  
+
+<!-- Fullscreen gallery: synchronize the mobile close button with Fancybox -->
+<script>
+(function () {
+  const closeButton = document.getElementById('homepage-gallery-close');
+  if (!closeButton) return;
+
+  function syncGalleryControls() {
+    const lightbox = document.querySelector('.fancybox__container');
+    const isOpen = Boolean(lightbox);
+    closeButton.hidden = !isOpen;
+    document.body.classList.toggle('homepage-lightbox-open', isOpen);
+  }
+
+  // Fancybox creates and removes its dialog dynamically. This also handles
+  // closing via swipe, backdrop, keyboard or the library's own controls.
+  const observer = new MutationObserver(syncGalleryControls);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['class']
+  });
+  syncGalleryControls();
+
+  closeButton.addEventListener('click', function () {
+    if (window.Fancybox && typeof window.Fancybox.close === 'function') {
+      window.Fancybox.close();
+    } else {
+      // Compatible fallback for builds that expose only the close control.
+      document.querySelector('.fancybox__container [data-fancybox-close], .fancybox__container .f-button.is-close-btn')?.click();
+    }
+  });
+})();
+</script>
 </body>
 </html>
