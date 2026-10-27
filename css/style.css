@@ -362,7 +362,9 @@ position: fixed;
 	padding: 5px 5px;
 	font-size: 14px;
 	line-height: 25px;
-	font-family: inherit;
+	font-family: "GeorgiaEditorial", Georgia, "Times New Roman", serif;
+	font-weight: 400;
+	letter-spacing: 0.012em;
 	border-radius: 8px;
 	background-color: rgba(210,210,210,0.9);
 	border: 2px solid var(--amethyst);
@@ -1091,14 +1093,7 @@ a:active {
     margin-left: .15em;
 }
 
-/* Shared initial for explicitly marked paragraphs and JS-rendered language layers.
-   Language scripts can insert a translated first paragraph without assigning a class. */
-/* By default translations use their opening paragraph, matching Faces.
-   data-dropcap-paragraph="2" skips a section heading; "none" disables the
-   automatic initial on all-diagram chapters. Explicit .dropcap always works. */
-.dropcap::first-letter,
-.inner-page:not([data-dropcap-paragraph]) > .lang-layer > p:first-of-type::first-letter,
-.inner-page[data-dropcap-paragraph="2"] > .lang-layer > p:nth-of-type(2)::first-letter {
+.dropcap::first-letter {
     float: left;
 
     font-size: 3.2em;
@@ -1160,13 +1155,12 @@ a:active {
     display: none !important;
 }
 
-/* Inherited defaults: a --cmt-label on an individual .cmt overrides these. */
-.inner-page[data-lang="en"] {
-    --cmt-label: "REFERENCE";
+.inner-page[data-lang="en"] .css-modal-details details .cmt::before {
+    content: "REFERENCE";
 }
 
-.inner-page[data-lang="de"] {
-    --cmt-label: "HINWEIS";
+.inner-page[data-lang="de"] .css-modal-details details .cmt::before {
+    content: "HINWEIS";
 }
 
 /* 2. Page sheet / paper layout. Scope background to Anatomy only. */
@@ -1386,152 +1380,159 @@ body.anatomy-body{
 
 }
 
-/* ========================================================================
-   Shared styles extracted from color.html — 2026-10-23
-   Global site components only: 30%-width floating figures and multilingual
-   content containers. Six-sheet navigation remains in color.html.
-   ======================================================================== */
 
-/* 6. Figure floats at 30% width — same naming pattern as .float-left50. */
-@media (min-width: 768px) {
-  .float-right30 {
-    max-width: 30%;
-    margin: 0.5rem 0 0.5rem 1rem;
-    float: right;
-  }
+/* ==========================================================================
+   11. Shared ornate banner mark for thematic pages.
+   Use by adding class="ornate-banner" to .header-top__container and placing
+   the inline SVG banner inside .title. Works on desktop and mobile.
+   ========================================================================== */
 
-  .float-left30 {
-    max-width: 30%;
-    margin: 0.5rem 1rem 0.5rem 0;
-    float: left;
-  }
+.header-top__container.ornate-banner {
+  top: 0;
+  min-height: 50px;
+  height: 50px;
+  background-color: #5b5b5b;
+  align-items: center;
 }
 
-@media (max-width: 767px) {
-  .float-right30 {
-    max-width: 100%;
-    margin: 0.5rem 0 0.5rem 1rem;
-  }
-}
-
-/* 7. Content containers used by JavaScript-driven RU/EN/DE translations. */
-.lang-layer[hidden] {
-  display: none !important;
-}
-
-.lang-layer {
-  display: flow-root;
-}
-
-.lang-placeholder {
-  min-height: 220px;
+.header-top__container.ornate-banner .menu-button,
+.header-top__container.ornate-banner .link-button {
+  background-color: #5b5b5b;
+  height: 50px;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Light controls against the graphite header; shared by all thematic pages. */
+.header-top__container.ornate-banner .menu-button img,
+.header-top__container.ornate-banner .link-button img {
+  filter: brightness(0) invert(1);
+}
+
+.header-top__container.ornate-banner .title {
+  margin: auto;
   text-align: center;
-  padding: 3em 2em;
-  box-sizing: border-box;
-  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  flex: 1 1 auto;
+  padding: 0 10px;
 }
 
-.lang-placeholder strong {
+.header-top__container.ornate-banner .site-mark {
   display: block;
-  margin-bottom: .55em;
-  color: #005b8f;
-  font-weight: 500;
-  font-size: 1.15rem;
+  width: min(100%, 520px);
 }
 
-.lang-placeholder span {
-  font-size: .92rem;
+.header-top__container.ornate-banner .site-mark__desktop,
+.header-top__container.ornate-banner .site-mark__mobile {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
+
+.header-top__container.ornate-banner .site-mark__mobile {
+  display: none;
+}
+
+.header-top__container.ornate-banner .site-mark__frame {
+  fill: rgba(251,244,231,.025);
+  stroke: #d4b082;
+  stroke-width: 1.35;
+}
+
+.header-top__container.ornate-banner .site-mark__corner {
+  fill: none;
+  stroke: #c9a06e;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.header-top__container.ornate-banner .site-mark__title {
+  fill: #f4e9d8;
+  font: normal 500 20px Georgia, 'Times New Roman', serif;
+  letter-spacing: .028em;
+}
+
+.header-top__container.ornate-banner .site-mark__sep {
+  fill: #c7a170;
+  font: normal 500 16px Georgia, 'Times New Roman', serif;
+}
+
+@media (max-width: 768px) {
+  .header-top__container.ornate-banner {
+    min-height: 50px;
+    height: 50px;
+  }
+
+  .header-top__container.ornate-banner .title {
+    padding: 0 8px;
+  }
+
+  .header-top__container.ornate-banner .site-mark {
+    width: min(100%, 250px);
+  }
+
+  .header-top__container.ornate-banner .site-mark__desktop {
+    display: none;
+  }
+
+  .header-top__container.ornate-banner .site-mark__mobile {
+    display: block;
+  }
+
+  .header-top__container.ornate-banner .site-mark__title {
+    font-size: 26px;
+  }
+}
+
 
 /* ==========================================================================
-   8. Shared translated archive headings — from faces.html (2026-10-24)
-   The common .v-spoiler::before uses --spoiler-title.
-   This applies to EN/DE language layers on Faces, Color and future pages.
-   Individual containers may override --spoiler-title inline.
-   ========================================================================== */
-.lang-en {
-    --spoiler-title: "FROM THE ARCHIVE";
-}
+   12. Shared Georgia headings — themed editorial pages.
 
-.lang-de {
-    --spoiler-title: "AUS DEM ARCHIV";
-}
-
-
-/* ==========================================================================
-   9. Faces archive panels — 2026-10-24
-   .v-spoiler's core box, scrollbar and label live above in section 4.
-   These are Faces-specific presentation overrides, centralized in style.css
-   rather than repeated in faces.html. Color and Anatomy remain unchanged.
+   Webfont installation, when licensed Georgia WOFF files are available:
+   put Georgia-Regular.woff2 and Georgia-Regular.woff in /fonts/
+   (relative to /css/style.css the directory is ../fonts/).
+   Until then, use locally installed Georgia; no substitute face is embedded.
    ========================================================================== */
 
-body.faces-body .v-spoiler {
-    position: relative;
-    overflow-x: hidden;
-    padding: 1.7rem 2.6rem 2.4rem;
-    background: linear-gradient(180deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.10) 100%), var(--e5-bg);
-    border: 1px solid rgba(90,90,90,.22);
-    border-top: 3px solid var(--amethyst);
-    border-radius: 3px;
-    box-shadow: 0 12px 30px rgba(0,0,0,.07), 0 2px 6px rgba(0,0,0,.04);
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.65;
+@font-face {
+  font-family: "GeorgiaEditorial";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Georgia-Regular.woff2") format("woff2"),
+       url("../fonts/Georgia-Regular.woff") format("woff");
 }
 
-body.faces-body .v-spoiler::before {
-    margin-bottom: 1.15rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: .68rem;
-    font-weight: 600;
-    letter-spacing: .18em;
-    color: var(--amethyst);
+/* Only editorial section titles change; body remains OpenSans. */
+.article .heading1,
+.article .heading2 {
+  font-family: "GeorgiaEditorial", Georgia, "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #383735;
+  text-align: center;
+  letter-spacing: 0.012em;
+  line-height: 1.35;
 }
 
-/* In Faces, the first paragraph of an archive panel is its heading. */
-body.faces-body .v-spoiler > p:first-of-type {
-    margin-top: 0 !important;
-    margin-bottom: 1.25rem;
-    padding-bottom: .9rem;
-    border-bottom: 1px solid rgba(90,90,90,.18);
-    font-size: 1.10em;
-    font-weight: 600;
-    line-height: 1.35;
-    text-align: left !important;
+.article .heading1 {
+  font-size: clamp(1.5rem, 1.25rem + 0.5vw, 1.875rem);
 }
 
-body.faces-body .v-spoiler > p:not(:first-of-type) {
-    margin-top: 0;
-    margin-bottom: 1.15em;
+.article .heading2 {
+  font-size: clamp(1.3rem, 1.15rem + 0.35vw, 1.6rem);
 }
 
-@media (max-width: 767px) {
-    body.faces-body .v-spoiler {
-        height: 500px;
-        padding: 1.35rem 1.35rem 1.8rem;
-    }
-}
-
-@media (min-width: 768px) {
-    body.faces-body .v-spoiler {
-        height: 390px;
-    }
-}
-
-
-/* ===========================================================================
-   10. Shared mobile language switcher and translated dropcap placement
-   Reused by Breeding; the same 767px dimensions were previously local on
-   Faces, Color, and Breeding. Kept at the end of the global stylesheet.
-   =========================================================================== */
-@media (max-width: 767px) {
-    .lang-switcher {
-        top: 60px;
-        right: 10px;
-        width: 38px;
-        height: 30px;
-        font-size: 11px;
-    }
+.article .heading1 b,
+.article .heading1 strong,
+.article .heading2 b,
+.article .heading2 strong {
+  font-weight: 400;
 }
