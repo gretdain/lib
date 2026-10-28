@@ -318,6 +318,55 @@ body.history-page .lang-switcher { top: 84px; }
 body.history-page .lang-en { --spoiler-title: "FROM THE ARCHIVE"; }
 body.history-page .lang-de { --spoiler-title: "AUS DEM ARCHIV"; }
 
+
+/* Restore text wrapping around historical illustrations.
+   Scoped to this page so other site layouts remain unchanged. */
+@media (min-width: 768px) {
+  body.history-page .history-sheet figure.float-left,
+  body.history-page .history-sheet figure.float-left30 {
+    display: block;
+    float: left;
+    clear: none;
+    margin: 0.35em 1.5em 1em 0;
+  }
+
+  body.history-page .history-sheet figure.float-right,
+  body.history-page .history-sheet figure.float-right30 {
+    display: block;
+    float: right;
+    clear: none;
+    margin: 0.35em 0 1em 1.5em;
+  }
+
+  body.history-page .history-sheet figure.float-left,
+  body.history-page .history-sheet figure.float-right { width: 40%; }
+
+  body.history-page .history-sheet figure.float-left30,
+  body.history-page .history-sheet figure.float-right30 { width: 30%; }
+}
+
+body.history-page .history-sheet figure.float-left img,
+body.history-page .history-sheet figure.float-right img,
+body.history-page .history-sheet figure.float-left30 img,
+body.history-page .history-sheet figure.float-right30 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  body.history-page .history-sheet figure.float-left,
+  body.history-page .history-sheet figure.float-right,
+  body.history-page .history-sheet figure.float-left30,
+  body.history-page .history-sheet figure.float-right30 {
+    float: none;
+    display: block;
+    width: min(100%, 420px);
+    margin: 1em auto;
+  }
+}
+
 </style>
 </head>
 
