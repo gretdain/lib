@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="ru">
+<!-- Links -->
+<!--
+https://gretdain.com/index.html#book-uvarov
+-->
 <head>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MW5C44BVJV"></script>
@@ -956,7 +960,7 @@ body.homepage.homepage-lightbox-open .header {
 </article></div>
 </section>
 <section class="gallery home-gallery" id="gallery"><div class="home-gallery__intro">
-<h2>Портрет породы</h2>
+<h2>Лучше тысячи слов</h2>
 </div>
 <div class="swipe" id="app">
 <div class="sw__left">
@@ -1512,6 +1516,36 @@ Bred by L.Gilmour owned by C.Clarke"><img alt="gallery-1" src="./img/1-1sw.webp"
         clickable: true
       }
     });
+
+    // Deep links: index.html#book-uvarov opens the selected library cover.
+    // data-object is the canonical book identifier, matching /open/?id=...
+    function showLinkedBook() {
+      const match = /^#book-(.+)$/.exec(window.location.hash);
+      if (!match || library.destroyed) return;
+      let bookId;
+      try { bookId = decodeURIComponent(match[1]); } catch (_) { return; }
+      const slides = Array.from(element.querySelectorAll('.swiper-wrapper > .swiper-slide'));
+      const index = slides.findIndex(function (slide) {
+        return slide.dataset.object === bookId;
+      });
+      if (index < 0) return;
+      library.slideTo(index, 0);
+      // After Swiper positions the selected book, center its cover vertically.
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          const activeSlide = library.slides[library.activeIndex];
+          if (activeSlide) {
+            activeSlide.scrollIntoView({
+              behavior: 'instant',
+              block: 'center',
+              inline: 'nearest'
+            });
+          }
+        });
+      });
+    }
+    showLinkedBook();
+    window.addEventListener('hashchange', showLinkedBook);
 
     // Use explicit arrow handlers so each press moves one book and
     // the buttons remain functional after any number of presses.
