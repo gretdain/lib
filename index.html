@@ -1548,7 +1548,32 @@ Bred by L.Gilmour owned by C.Clarke"><img alt="gallery-1" src="./img/1-1sw.webp"
 
     // Use explicit arrow handlers so each press moves one book and
     // the buttons remain functional after any number of presses.
-    function move(delta) {
+
+      // Direct links: #book-dd, #book-gdm, #book-gdca ...
+if (window.location.hash.startsWith('#book-')) {
+
+    const bookId = window.location.hash.substring(6);
+
+    const slides = Array.from(
+        element.querySelectorAll('.swiper-wrapper > .swiper-slide')
+    );
+
+    const index = slides.findIndex(function (slide) {
+        return slide.dataset.object === bookId;
+    });
+
+    if (index !== -1) {
+        library.slideTo(index, 0);
+
+        requestAnimationFrame(function () {
+            document.getElementById('books').scrollIntoView({
+                block: 'start'
+            });
+        });
+    }
+}
+    
+      function move(delta) {
       if (library.destroyed) return;
       const count = element.querySelectorAll('.swiper-wrapper > .swiper-slide').length;
       if (count < 2) return;
